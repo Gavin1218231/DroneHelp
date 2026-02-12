@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exam - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chapters/regulations.html">1. Regulations</a></li>
+                        <li><a href="chapters/airspace.html">2. Airspace</a></li>
+                        <li><a href="chapters/weather.html">3. Weather</a></li>
+                        <li><a href="chapters/loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="chapters/operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="practice-exam.html" class="active">Practice Exam</a></li>
+                <li><a href="reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="exam-hero">
+        <div class="container">
+            <h1>Part 107 Practice Exam</h1>
+            <p>Simulate the real FAA knowledge test with 60 questions and a 120-minute time limit</p>
+        </div>
+    </section>
+
+    <div id="examSetup">
+        <div class="exam-setup">
+            <h2>Ready to Test Your Knowledge?</h2>
+            <div class="exam-info-cards">
+                <div class="exam-info-card">
+                    <div class="number">60</div>
+                    <div class="label">Questions</div>
+                </div>
+                <div class="exam-info-card">
+                    <div class="number">120</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="exam-info-card">
+                    <div class="number">70%</div>
+                    <div class="label">To Pass</div>
+                </div>
+            </div>
+            <p style="color:#5f6368;margin-bottom:24px;">Questions are drawn from all five knowledge areas in proportions similar to the actual exam. Your score and detailed review will be shown after completion.</p>
+            <button class="btn btn-action" onclick="startExam()" style="font-size:1.1rem;padding:14px 40px;">Start Practice Exam</button>
+        </div>
+    </div>
+
+    <div id="examScreen" style="display:none;">
+        <div class="container" style="max-width:900px;padding:32px 24px;">
+            <!-- Top bar with timer and progress -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px;">
+                <div class="timer" id="timer">02:00:00</div>
+                <span style="font-weight:600;" id="examProgress">Question 1 of 60</span>
+                <button class="btn btn-secondary" onclick="submitExam()" id="submitBtn">Submit Exam</button>
+            </div>
+
+            <!-- Question navigation grid -->
+            <div class="exam-question-nav" id="questionNav"></div>
+
+            <!-- Question display area -->
+            <div style="background:white;border:1px solid #dadce0;border-radius:12px;padding:32px;margin-top:24px;" id="questionArea">
+            </div>
+
+            <!-- Prev/Next/Flag buttons -->
+            <div style="display:flex;justify-content:space-between;margin-top:16px;">
+                <button class="btn btn-secondary" onclick="prevQuestion()">Previous</button>
+                <button class="btn btn-secondary" onclick="flagQuestion()" id="flagBtn">Flag for Review</button>
+                <button class="btn btn-action" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultsScreen" style="display:none;">
+        <div class="container" style="max-width:900px;padding:48px 24px;">
+            <div style="text-align:center;margin-bottom:40px;">
+                <h2>Exam Results</h2>
+                <div class="score-display" id="examScore" style="font-size:4rem;font-weight:800;margin:16px 0;"></div>
+                <p id="examResultMsg" style="font-size:1.1rem;color:#5f6368;"></p>
+                <div style="display:flex;justify-content:center;gap:16px;margin-top:24px;">
+                    <button class="btn btn-action" onclick="location.reload()">Retake Exam</button>
+                    <a href="index.html" class="btn btn-secondary">Back to Study Guide</a>
+                </div>
+            </div>
+
+            <!-- Category breakdown -->
+            <div id="categoryBreakdown" style="margin-bottom:40px;"></div>
+
+            <!-- Detailed review -->
+            <h3 style="margin-bottom:16px;">Detailed Review</h3>
+            <div id="reviewArea"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This practice exam is for study purposes only. It does not contain actual FAA test questions.</p>
+            <p>&copy; 2026 Part 107 Exam Guide</p>
+        </div>
+    </footer>
+
+    <script src="js/progress.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+    /* =============================================
+       Part 107 Practice Exam - 60 Questions
+       ============================================= */
+
+    var examQuestions = [
+        // ===== REGULATIONS (12 questions) =====
+        {
+            id: 1,
+            category: "regulations",
+            question: "Under 14 CFR Part 107, a remote pilot in command must be at least what age to operate a small unmanned aircraft system for commercial purposes?",
+            options: [
+                "14 years old",
+                "16 years old",
+                "18 years old"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.61, a person must be at least 16 years of age to obtain a remote pilot certificate and operate a small UAS commercially."
+        },
+        {
+            id: 2,
+            category: "regulations",
+            question: "A remote pilot certificate issued under Part 107 must be renewed by completing recurrent training or testing every:",
+            options: [
+                "12 calendar months",
+                "24 calendar months",
+                "36 calendar months"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.65, a remote pilot must complete recurrent training or testing every 24 calendar months to maintain the privileges of the certificate."
+        },
+        {
+            id: 3,
+            category: "regulations",
+            question: "Under Part 107, the maximum allowable ground speed for a small unmanned aircraft is:",
+            options: [
+                "87 knots (100 mph)",
+                "100 knots (115 mph)",
+                "120 knots (138 mph)"
+            ],
+            answer: 0,
+            explanation: "14 CFR 107.51 limits the ground speed of a small UAS to no more than 87 knots (100 mph)."
+        },
+        {
+            id: 4,
+            category: "regulations",
+            question: "Under Part 107, who is directly responsible for and is the final authority regarding the operation of a small UAS?",
+            options: [
+                "The visual observer",
+                "The remote pilot in command",
+                "The person manipulating the controls"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.19, the remote pilot in command is directly responsible for and is the final authority as to the operation of the small UAS."
+        },
+        {
+            id: 5,
+            category: "regulations",
+            question: "An sUAS accident must be reported to the FAA within 10 calendar days when it results in:",
+            options: [
+                "Any damage to the small unmanned aircraft",
+                "Serious injury to any person or loss of consciousness",
+                "Any property damage exceeding $100"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.9, the remote PIC must report any operation that results in serious injury to any person, loss of consciousness, or damage to any property (other than the small unmanned aircraft) of at least $500 within 10 calendar days."
+        },
+        {
+            id: 6,
+            category: "regulations",
+            question: "A remote pilot has consumed alcohol. Under Part 107, how many hours must elapse from the last consumption of alcohol before that person may act as a remote PIC?",
+            options: [
+                "8 hours",
+                "12 hours",
+                "24 hours"
+            ],
+            answer: 0,
+            explanation: "Under 14 CFR 107.27, no person may act as a remote PIC or visual observer if they have consumed any alcoholic beverage within the preceding 8 hours, or are under the influence of alcohol or any drug."
+        },
+        {
+            id: 7,
+            category: "regulations",
+            question: "Standard Remote ID requires a small unmanned aircraft to broadcast which of the following?",
+            options: [
+                "Remote pilot's name, certificate number, and home address",
+                "The UA's serial number or session ID, location and altitude of the UA, the control station location, and a time mark",
+                "Only the UA's serial number and current altitude"
+            ],
+            answer: 1,
+            explanation: "Standard Remote ID broadcasts the UA's identity (serial number or session ID), location and altitude of the UA, location and altitude of the control station, a time mark, and an emergency status indication."
+        },
+        {
+            id: 8,
+            category: "regulations",
+            question: "Under Part 107, which operation requires a waiver from the FAA?",
+            options: [
+                "Flying a 0.4-pound drone over non-participants in open-air assemblies",
+                "Operating a small UAS over people not directly participating in the operation who are not under a covered structure (when not meeting Category 1-4 requirements)",
+                "Operating a small UAS during the day with anti-collision lighting"
+            ],
+            answer: 1,
+            explanation: "Operations over people who are not directly participating require either meeting Category 1 through 4 requirements under Subpart D, or obtaining a waiver under 14 CFR 107.200."
+        },
+        {
+            id: 9,
+            category: "regulations",
+            question: "Under Part 107, which of the following operations does NOT require prior authorization from the FAA?",
+            options: [
+                "Operating in Class G airspace at or below 400 feet AGL",
+                "Operating in Class D airspace",
+                "Operating at night without anti-collision lighting"
+            ],
+            answer: 0,
+            explanation: "Operations in uncontrolled (Class G) airspace at or below 400 feet AGL do not require prior FAA authorization. Operations in Class B, C, D, or surface area E airspace require prior authorization (e.g., via LAANC)."
+        },
+        {
+            id: 10,
+            category: "regulations",
+            question: "A Category 2 small unmanned aircraft operating over people must not cause an injury to a human being that is more severe than:",
+            options: [
+                "A laceration requiring stitches",
+                "A minor bruise",
+                "A severity level that would be caused by a rigid object with a kinetic energy threshold of 11 ft-lbs"
+            ],
+            answer: 2,
+            explanation: "Under 14 CFR 107.120, Category 2 small unmanned aircraft must not cause injury severity exceeding that of a rigid object transferring 11 ft-lbs of kinetic energy upon impact with a person, as demonstrated by the manufacturer."
+        },
+        {
+            id: 11,
+            category: "regulations",
+            question: "What is the maximum allowable takeoff weight for a small unmanned aircraft under Part 107?",
+            options: [
+                "25 pounds including everything on board at the time of takeoff",
+                "55 pounds including everything on board or otherwise attached at the time of takeoff",
+                "55 pounds not including the payload"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.3, a small unmanned aircraft weighs less than 55 pounds on takeoff, including everything that is on board or otherwise attached to the aircraft."
+        },
+        {
+            id: 12,
+            category: "regulations",
+            question: "Under Part 107, the remote PIC must ensure that the small unmanned aircraft yields the right of way to:",
+            options: [
+                "Only manned helicopters and airplanes",
+                "All other aircraft, manned or unmanned",
+                "Only aircraft on final approach to land"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.37, a remote PIC must yield the right of way to all other aircraft. The responsibility to see and avoid other aircraft is always the remote PIC's duty."
+        },
+
+        // ===== AIRSPACE (13 questions) =====
+        {
+            id: 13,
+            category: "airspace",
+            question: "An airport with an operating control tower and servicing regularly scheduled carrier operations with more than 4 million passenger enplanements annually is surrounded by which class of airspace?",
+            options: [
+                "Class B",
+                "Class C",
+                "Class D"
+            ],
+            answer: 0,
+            explanation: "Class B airspace surrounds the busiest airports in the country, typically those with more than 4 million annual passenger enplanements or significant IFR operations."
+        },
+        {
+            id: 14,
+            category: "airspace",
+            question: "A magenta shaded area on a sectional chart extending from the surface up to but not including a designated altitude indicates:",
+            options: [
+                "Class C airspace",
+                "Class D airspace",
+                "Class E airspace starting at the surface"
+            ],
+            answer: 2,
+            explanation: "A magenta (dashed) line on a sectional chart depicts the boundary of Class E airspace that extends from the surface upward. This is commonly found at airports without an operating control tower but with instrument approaches."
+        },
+        {
+            id: 15,
+            category: "airspace",
+            question: "Where Class E airspace does not exist at the surface, uncontrolled Class G airspace typically extends from the surface up to but not including:",
+            options: [
+                "700 feet AGL",
+                "1,200 feet AGL",
+                "14,500 feet MSL"
+            ],
+            answer: 1,
+            explanation: "In most areas, Class G airspace extends from the surface up to but not including 1,200 feet AGL, where Class E airspace then begins. This is the default floor for Class E airspace unless otherwise designated."
+        },
+        {
+            id: 16,
+            category: "airspace",
+            question: "To operate a small UAS in Class C airspace, a remote PIC must:",
+            options: [
+                "Obtain prior authorization from the FAA, such as through LAANC",
+                "Notify the airport control tower by telephone at least 24 hours in advance",
+                "Simply maintain two-way radio communication with ATC while airborne"
+            ],
+            answer: 0,
+            explanation: "Under 14 CFR 107.41, operations in Class B, C, D, or within the lateral boundaries of the surface area of Class E airspace designated for an airport require prior authorization from the FAA. LAANC is the most common method to receive near-real-time authorization."
+        },
+        {
+            id: 17,
+            category: "airspace",
+            question: "A Temporary Flight Restriction (TFR) has been issued for a wildfire suppression operation. A remote PIC with a Part 107 certificate:",
+            options: [
+                "May operate within the TFR if below 400 feet AGL",
+                "May not operate within the TFR unless specifically authorized",
+                "May operate within the TFR as long as a visual observer is used"
+            ],
+            answer: 1,
+            explanation: "TFRs are legally binding restrictions. No UAS operations are permitted within a TFR area unless specifically authorized by the authority managing the airspace. Flying in a TFR is a violation of federal aviation regulations."
+        },
+        {
+            id: 18,
+            category: "airspace",
+            question: "A blue segmented circle on a sectional chart surrounding an airport indicates:",
+            options: [
+                "Class B airspace",
+                "Class C airspace",
+                "Class D airspace"
+            ],
+            answer: 2,
+            explanation: "Class D airspace is depicted on sectional charts by a blue dashed (segmented) line. Class B uses solid blue lines, and Class C uses solid magenta lines."
+        },
+        {
+            id: 19,
+            category: "airspace",
+            question: "Under Part 107, when operating in the vicinity of a non-towered airport that lies within Class G airspace, the maximum altitude allowed is:",
+            options: [
+                "200 feet AGL",
+                "300 feet AGL",
+                "400 feet AGL"
+            ],
+            answer: 2,
+            explanation: "In Class G airspace, the general altitude limit under 14 CFR 107.51 is 400 feet AGL. No additional authorization is needed to operate up to 400 feet AGL in Class G airspace, though the remote PIC must remain aware of manned traffic near non-towered airports."
+        },
+        {
+            id: 20,
+            category: "airspace",
+            question: "LAANC (Low Altitude Authorization and Notification Capability) provides Part 107 pilots with:",
+            options: [
+                "Automated weather briefings for the planned flight area",
+                "Near-real-time processing for airspace authorizations in controlled airspace near airports",
+                "Automatic TFR notifications delivered to the pilot's mobile device"
+            ],
+            answer: 1,
+            explanation: "LAANC is an FAA system that automates the processing of airspace authorizations for Part 107 operators in controlled airspace. It provides near-real-time approval based on UAS Facility Maps."
+        },
+        {
+            id: 21,
+            category: "airspace",
+            question: "On a sectional chart, the number '30' inside a scalloped magenta line surrounding an airport indicates the UAS Facility Map ceiling for that grid is:",
+            options: [
+                "30 feet AGL",
+                "300 feet AGL",
+                "3,000 feet MSL"
+            ],
+            answer: 1,
+            explanation: "UAS Facility Map altitudes shown on sectional charts represent the maximum altitude in tens of feet AGL at which automated LAANC authorization can be obtained. A value of '30' means 300 feet AGL."
+        },
+        {
+            id: 22,
+            category: "airspace",
+            question: "A remote PIC plans to fly near a military operations area (MOA). What is true regarding MOAs?",
+            options: [
+                "MOAs restrict all aircraft, and no UAS operations are permitted",
+                "MOAs separate military training activities from IFR traffic, but VFR traffic (including UAS in Class G) is not prohibited from the area",
+                "MOAs are only active between sunset and sunrise"
+            ],
+            answer: 1,
+            explanation: "Military Operations Areas (MOAs) separate certain military training activities from IFR traffic. VFR traffic, including UAS operations in Class G airspace, is not prohibited, though extreme caution should be exercised due to military flight activity."
+        },
+        {
+            id: 23,
+            category: "airspace",
+            question: "When operating a small UAS within 400 feet of a structure, the maximum allowable altitude under Part 107 is:",
+            options: [
+                "400 feet AGL regardless of the structure's height",
+                "400 feet above the structure's uppermost limit",
+                "200 feet above the structure's uppermost limit"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.51, when operating within a 400-foot radius of a structure, the small UAS may fly up to 400 feet above the structure's uppermost limit, provided it does not enter controlled airspace without authorization."
+        },
+        {
+            id: 24,
+            category: "airspace",
+            question: "Which of the following correctly describes Class E airspace that begins at 700 feet AGL on a sectional chart?",
+            options: [
+                "Outlined by a solid magenta line",
+                "Indicated by a fading magenta shading (vignette) on the chart",
+                "Outlined by a dashed blue line"
+            ],
+            answer: 1,
+            explanation: "Class E airspace with a floor of 700 feet AGL is indicated on sectional charts by a fading magenta vignette (shading that fades from the boundary inward). This means Class G extends from the surface to 700 feet AGL in those areas."
+        },
+        {
+            id: 25,
+            category: "airspace",
+            question: "A remote pilot needs to determine if there are any NOTAMs affecting the planned operation area. The most reliable source for current NOTAMs is:",
+            options: [
+                "The airport's automated weather observation system (AWOS)",
+                "The FAA NOTAM Search at notams.aim.faa.gov or a flight service briefing",
+                "The local news and weather forecast"
+            ],
+            answer: 1,
+            explanation: "Current NOTAMs should be obtained from the FAA NOTAM system or by contacting Flight Service (1-800-WX-BRIEF). These are the official sources for Notices to Air Missions that may affect planned operations."
+        },
+
+        // ===== WEATHER (8 questions) =====
+        {
+            id: 26,
+            category: "weather",
+            question: "In the METAR observation 'KORD 121856Z 27015G25KT 1SM +TSRA BKN015 OVC040 18/16 A2978', what does '+TSRA' indicate?",
+            options: [
+                "Light thunderstorms with rain",
+                "Heavy thunderstorms with rain",
+                "Thunderstorms in the vicinity with rain"
+            ],
+            answer: 1,
+            explanation: "In METAR reports, the '+' prefix indicates heavy intensity. 'TS' means thunderstorm and 'RA' means rain. Therefore, '+TSRA' indicates heavy thunderstorms with rain."
+        },
+        {
+            id: 27,
+            category: "weather",
+            question: "A TAF includes the line 'FM182200 31012KT P6SM SKC'. This means that from 2200Z on the 18th:",
+            options: [
+                "Winds from 310 degrees at 12 knots, visibility greater than 6 statute miles, sky clear",
+                "Winds from 310 degrees at 12 knots gusting to 20, visibility 6 statute miles, scattered clouds",
+                "Winds variable at 12 knots, visibility at least 6 statute miles, few clouds"
+            ],
+            answer: 0,
+            explanation: "FM (From) indicates a rapid change expected at the specified time. '31012KT' means wind from 310 degrees at 12 knots. 'P6SM' means visibility greater than 6 statute miles. 'SKC' means sky clear."
+        },
+        {
+            id: 28,
+            category: "weather",
+            question: "Which weather condition is most likely to create hazardous low-level turbulence for small UAS operations?",
+            options: [
+                "High pressure system with clear skies",
+                "Strong surface winds combined with nearby buildings or terrain features",
+                "A temperature inversion at 3,000 feet AGL"
+            ],
+            answer: 1,
+            explanation: "Strong surface winds flowing around buildings, terrain, or other obstructions create mechanical turbulence at low altitudes. This is particularly hazardous for small UAS due to their relatively light weight and susceptibility to wind gusts."
+        },
+        {
+            id: 29,
+            category: "weather",
+            question: "A temperature inversion near the surface is significant for UAS operations because it:",
+            options: [
+                "Causes extreme turbulence below the inversion layer",
+                "Traps fog, haze, smoke, and pollutants near the surface, reducing visibility",
+                "Increases density altitude and reduces UAS performance"
+            ],
+            answer: 1,
+            explanation: "A surface-based temperature inversion traps pollutants, fog, haze, and smoke at the surface because the warm air above acts as a lid preventing vertical mixing. This can significantly reduce surface visibility."
+        },
+        {
+            id: 30,
+            category: "weather",
+            question: "What is the primary cause of all weather phenomena?",
+            options: [
+                "Unequal heating of the Earth's surface",
+                "Rotation of the Earth on its axis",
+                "Gravitational pull of the Moon"
+            ],
+            answer: 0,
+            explanation: "Unequal heating of the Earth's surface by the sun is the primary driver of all weather. It creates pressure differences that cause wind, and it drives the evaporation and convection processes that produce clouds and precipitation."
+        },
+        {
+            id: 31,
+            category: "weather",
+            question: "In a METAR, the ceiling is defined as the lowest layer of clouds reported as:",
+            options: [
+                "Few (FEW) or greater coverage",
+                "Scattered (SCT) or greater coverage",
+                "Broken (BKN) or overcast (OVC)"
+            ],
+            answer: 2,
+            explanation: "The ceiling is defined as the lowest broken (BKN) or overcast (OVC) layer, or vertical visibility into an obscuration. FEW and SCT are not considered ceiling layers."
+        },
+        {
+            id: 32,
+            category: "weather",
+            question: "Density altitude increases when:",
+            options: [
+                "Temperature decreases and humidity decreases",
+                "Temperature increases and/or humidity increases",
+                "Atmospheric pressure increases and temperature decreases"
+            ],
+            answer: 1,
+            explanation: "Density altitude increases (air becomes less dense) with higher temperature, higher humidity, and lower atmospheric pressure. All of these factors reduce air density, which degrades aircraft performance."
+        },
+        {
+            id: 33,
+            category: "weather",
+            question: "A remote pilot checks the local METAR and finds 'VV005'. This indicates:",
+            options: [
+                "Variable visibility at 5 statute miles",
+                "Vertical visibility of 500 feet, indicating an indefinite ceiling due to an obscuration",
+                "Visual conditions with 5 miles visibility"
+            ],
+            answer: 1,
+            explanation: "'VV' in a METAR stands for vertical visibility, which is reported when the sky is obscured (e.g., by fog or heavy precipitation). 'VV005' means vertical visibility is 500 feet. This constitutes an indefinite ceiling."
+        },
+
+        // ===== LOADING & PERFORMANCE (5 questions) =====
+        {
+            id: 34,
+            category: "loading",
+            question: "A remote pilot is planning a flight at a location that is 5,000 feet MSL on a day when the temperature is 95 degrees Fahrenheit. Compared to a flight at sea level on a standard day (59 degrees F), the UAS will experience:",
+            options: [
+                "Improved performance due to thinner air reducing drag",
+                "Degraded performance due to high density altitude reducing propeller efficiency and lift",
+                "No change in performance because electric motors are not affected by air density"
+            ],
+            answer: 1,
+            explanation: "High elevation and high temperature both increase density altitude significantly. At 5,000 feet MSL and 95 degrees F, the density altitude could exceed 8,500 feet. The thinner air reduces propeller efficiency and the lift generated by the rotors, degrading overall performance."
+        },
+        {
+            id: 35,
+            category: "loading",
+            question: "Adding a heavy camera payload to a multirotor UAS will most directly affect:",
+            options: [
+                "The maximum ground speed of the aircraft",
+                "The available flight time and climb performance",
+                "The radio control range"
+            ],
+            answer: 1,
+            explanation: "Adding payload weight increases the total weight the motors must support. This requires more power to maintain flight, directly reducing available flight time (battery endurance) and degrading climb performance."
+        },
+        {
+            id: 36,
+            category: "loading",
+            question: "If the center of gravity (CG) of a small UAS is too far aft, the aircraft will likely:",
+            options: [
+                "Become nose-heavy and difficult to flare for landing",
+                "Become unstable in pitch and potentially uncontrollable",
+                "Consume less battery power due to reduced drag"
+            ],
+            answer: 1,
+            explanation: "An aft CG condition makes an aircraft increasingly unstable in pitch. For a multirotor, this can cause excessive pitch oscillation or inability to maintain stable flight. For fixed-wing UAS, an aft CG reduces longitudinal stability and can lead to loss of control."
+        },
+        {
+            id: 37,
+            category: "loading",
+            question: "A remote pilot notices shorter flight times than expected at a high-altitude mountain location. The most likely cause is:",
+            options: [
+                "Cold temperatures increasing battery internal resistance and high density altitude requiring more power",
+                "Thinner air causing the GPS to lose accuracy",
+                "Increased radio signal absorption at high altitudes"
+            ],
+            answer: 0,
+            explanation: "At high altitude, the lower air density (high density altitude) forces the motors to work harder to generate the same lift, consuming more battery power. Additionally, cold temperatures common at altitude increase battery internal resistance, reducing the available capacity."
+        },
+        {
+            id: 38,
+            category: "loading",
+            question: "Before each flight, a remote PIC should verify that the total weight of the UAS (including payload) does not exceed:",
+            options: [
+                "The manufacturer's maximum takeoff weight for the aircraft",
+                "25 pounds, which is the Part 107 limit for all payloads",
+                "The weight listed on the remote pilot certificate"
+            ],
+            answer: 0,
+            explanation: "While Part 107 limits the total weight to under 55 pounds, the manufacturer's maximum takeoff weight may be lower. Exceeding the manufacturer's weight limit can cause structural failure, degraded flight characteristics, or loss of control. Always follow the more restrictive limit."
+        },
+
+        // ===== OPERATIONS (22 questions) =====
+        {
+            id: 39,
+            category: "operations",
+            question: "Under Part 107, operations at night require the small UAS to be equipped with:",
+            options: [
+                "Infrared position lights visible for 1 statute mile",
+                "Anti-collision lighting visible for at least 3 statute miles with a flash rate sufficient to avoid a collision",
+                "A continuous white light visible for at least 1 statute mile"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.29, for night operations the small UAS must have lighted anti-collision lighting visible for at least 3 statute miles with a flash rate sufficient to avoid a collision. The remote PIC may reduce the light intensity if it causes a safety hazard."
+        },
+        {
+            id: 40,
+            category: "operations",
+            question: "A remote PIC is conducting an operation and a manned helicopter approaches at low altitude. The remote PIC should:",
+            options: [
+                "Maintain altitude and course since the helicopter pilot should see the drone",
+                "Immediately land the UAS regardless of conditions",
+                "Take immediate action to ensure the UAS does not interfere with or endanger the helicopter's flight path"
+            ],
+            answer: 2,
+            explanation: "Under 14 CFR 107.37, the remote PIC must yield right of way to all manned aircraft. The PIC should take whatever action is necessary to avoid the manned aircraft, which may include changing altitude, moving laterally, or landing."
+        },
+        {
+            id: 41,
+            category: "operations",
+            question: "During a preflight inspection, a remote PIC discovers a small crack in one propeller. The correct action is to:",
+            options: [
+                "Fly the mission but monitor the propeller closely through the camera",
+                "Replace the propeller before flight because a cracked propeller can fail in flight",
+                "Continue the flight if the crack is less than 1 inch long"
+            ],
+            answer: 1,
+            explanation: "A cracked propeller is a significant safety hazard. Centrifugal forces during flight can cause the crack to propagate rapidly, leading to propeller failure, loss of control, or injury from debris. The propeller must be replaced before flight."
+        },
+        {
+            id: 42,
+            category: "operations",
+            question: "Which crew member is required for every Part 107 operation?",
+            options: [
+                "A visual observer",
+                "The remote pilot in command",
+                "Both a remote PIC and a visual observer"
+            ],
+            answer: 1,
+            explanation: "Under Part 107, the only crew member required for every operation is the remote PIC. A visual observer is optional but, if used, can help the PIC maintain situational awareness. The PIC can also use the person manipulating the controls as a separate role."
+        },
+        {
+            id: 43,
+            category: "operations",
+            question: "A remote PIC who is using a visual observer must ensure that:",
+            options: [
+                "The visual observer maintains a pilot certificate",
+                "Effective communication is maintained between the PIC and visual observer at all times",
+                "The visual observer has passed the Part 107 knowledge test"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.33, the remote PIC must ensure effective communication is maintained between all persons involved in the operation. The visual observer does not need a pilot certificate but must be able to communicate effectively with the PIC."
+        },
+        {
+            id: 44,
+            category: "operations",
+            question: "Aeronautical Decision Making (ADM) is best described as:",
+            options: [
+                "A systematic approach to the mental process used by pilots to determine the best course of action in response to a given set of circumstances",
+                "A software-based autopilot system that makes flight decisions automatically",
+                "The FAA's regulatory decision process for granting waivers"
+            ],
+            answer: 0,
+            explanation: "ADM is a systematic approach to risk assessment and stress management in aviation. It involves identifying hazards, assessing risk, choosing the best course of action, and evaluating the outcome, forming a continuous decision-making loop."
+        },
+        {
+            id: 45,
+            category: "operations",
+            question: "The IMSAFE checklist is used by a remote PIC to evaluate:",
+            options: [
+                "The airworthiness of the small unmanned aircraft",
+                "Personal fitness to fly, including illness, medication, stress, alcohol, fatigue, and eating/hydration",
+                "The safety of the launch and recovery site"
+            ],
+            answer: 1,
+            explanation: "IMSAFE stands for Illness, Medication, Stress, Alcohol, Fatigue, and Eating/Emotion. It is a personal checklist pilots use to assess their own fitness to fly before each operation."
+        },
+        {
+            id: 46,
+            category: "operations",
+            question: "A remote PIC is experiencing task saturation during a complex operation. The best application of Crew Resource Management (CRM) would be to:",
+            options: [
+                "Continue the operation and focus harder on the primary task",
+                "Delegate tasks such as visual scanning to a trained visual observer and communicate the situation",
+                "Land immediately without telling anyone"
+            ],
+            answer: 1,
+            explanation: "CRM involves effective use of all available resources, including other crew members. Delegating tasks to qualified crew members and communicating the situation helps manage workload and reduces the risk of errors due to task saturation."
+        },
+        {
+            id: 47,
+            category: "operations",
+            question: "Hypoxia is a concern for remote pilots primarily when:",
+            options: [
+                "Operating at high altitude ground locations where the control station is located",
+                "Operating in hot and humid conditions at sea level",
+                "Using a monitor screen in direct sunlight"
+            ],
+            answer: 0,
+            explanation: "While remote pilots are on the ground, hypoxia can still be a concern when operating at high-altitude locations. At elevations above 5,000 feet, the reduced oxygen can impair judgment, vision, and reaction time, especially during prolonged operations."
+        },
+        {
+            id: 48,
+            category: "operations",
+            question: "Under Part 107, operations from a moving vehicle are permitted only when:",
+            options: [
+                "The operation is over a populated area and moving at less than 10 mph",
+                "The operation is conducted over a sparsely populated area or the UAS is not being flown over people",
+                "The remote PIC has obtained a waiver"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.25, operations from a moving vehicle are allowed only over sparsely populated areas. Operations from a moving aircraft are not permitted without a waiver."
+        },
+        {
+            id: 49,
+            category: "operations",
+            question: "Before every flight, the remote PIC must:",
+            options: [
+                "File a flight plan with the nearest Flight Service Station",
+                "Assess the operating environment, including airspace, weather, terrain, and obstacles",
+                "Notify local law enforcement of the planned UAS operation"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.49, prior to flight the remote PIC must assess the operating environment and ensure the operation can be conducted safely. This includes checking weather, airspace, local conditions, and any obstacles or hazards."
+        },
+        {
+            id: 50,
+            category: "operations",
+            question: "A remote pilot is hired to inspect a cell tower that is 350 feet tall. Under Part 107, the maximum altitude the UAS may fly during this inspection is:",
+            options: [
+                "400 feet AGL from the ground surface",
+                "750 feet AGL, which is 400 feet above the top of the 350-foot structure",
+                "350 feet AGL, even with the top of the structure"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.51, when operating within a 400-foot radius of a structure, the UAS may fly up to 400 feet above the structure's uppermost limit. For a 350-foot tower, that allows up to 750 feet AGL (350 + 400)."
+        },
+        {
+            id: 51,
+            category: "operations",
+            question: "Which of the following is an example of a hazardous attitude that could affect a remote pilot's decision making?",
+            options: [
+                "Deciding to postpone a flight due to deteriorating weather",
+                "Thinking 'it won't happen to me' when ignoring a known risk (invulnerability)",
+                "Performing a thorough preflight inspection before every operation"
+            ],
+            answer: 1,
+            explanation: "Invulnerability ('it won't happen to me') is one of the five hazardous attitudes identified in ADM. Others include anti-authority, impulsivity, macho, and resignation. Recognizing these attitudes is the first step to counteracting them."
+        },
+        {
+            id: 52,
+            category: "operations",
+            question: "During a commercial UAS operation, the remote PIC notices the battery voltage dropping faster than expected. The best course of action is to:",
+            options: [
+                "Continue the mission and try to complete it quickly before the battery fails",
+                "Initiate a return and landing while there is still sufficient battery reserve for a safe recovery",
+                "Switch to sport mode for faster flight back to save time"
+            ],
+            answer: 1,
+            explanation: "When battery performance is degraded or dropping faster than expected, the safe action is to bring the aircraft back and land while adequate power reserves remain. Continuing the mission risks complete power loss and an uncontrolled descent."
+        },
+        {
+            id: 53,
+            category: "operations",
+            question: "Under Part 107, the remote PIC may allow a person who does not hold a remote pilot certificate to manipulate the flight controls of the small UAS, provided that:",
+            options: [
+                "The person has at least 10 hours of flight experience",
+                "The remote PIC maintains the ability to direct the flight of the small UAS to ensure compliance with Part 107",
+                "The person passes a written test administered by the PIC"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.12, a person manipulating the controls does not need a remote pilot certificate as long as a certificated remote PIC directly supervises the operation and has the ability to immediately take direct control of the small UAS."
+        },
+        {
+            id: 54,
+            category: "operations",
+            question: "The effect of alcohol on the human body that is most relevant to safe UAS operations is:",
+            options: [
+                "Alcohol improves night vision capability",
+                "Even small amounts of alcohol impair judgment, reaction time, and visual processing",
+                "Alcohol only affects motor skills, not cognitive function"
+            ],
+            answer: 1,
+            explanation: "Alcohol impairs virtually all aspects of pilot performance: judgment, reaction time, coordination, visual processing, and decision-making. Even small amounts below the legal intoxication level can degrade aviation performance significantly."
+        },
+        {
+            id: 55,
+            category: "operations",
+            question: "A Category 1 small unmanned aircraft for operations over people must weigh:",
+            options: [
+                "Less than 25 pounds including payload",
+                "0.55 pounds or less including everything on board or attached at the time of takeoff",
+                "Less than 5 pounds with no exposed rotating parts"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.110, Category 1 small unmanned aircraft must weigh 0.55 pounds (250 grams) or less including everything on board or otherwise attached at the time of takeoff, and may not contain any exposed rotating parts that would lacerate human skin."
+        },
+        {
+            id: 56,
+            category: "operations",
+            question: "When conducting operations near an airport, the remote PIC observes a manned aircraft on final approach. The PIC should:",
+            options: [
+                "Climb to a higher altitude to be more visible to the manned aircraft",
+                "Descend and move the UAS clear of the approach path",
+                "Flash the UAS lights to signal the manned aircraft"
+            ],
+            answer: 1,
+            explanation: "The remote PIC must always yield right of way to manned aircraft. When observing an aircraft on final approach, the safest action is to descend and clear the approach path. Climbing could place the UAS directly in the aircraft's flight path."
+        },
+        {
+            id: 57,
+            category: "operations",
+            question: "What visual illusion can affect a remote pilot's perception when operating a UAS at night?",
+            options: [
+                "Autokinesis, where a stationary light appears to move against a dark background",
+                "The Coriolis illusion caused by head movements",
+                "Runway incline illusion"
+            ],
+            answer: 0,
+            explanation: "Autokinesis is an illusion where a stationary point of light viewed against a dark, featureless background appears to move. This can cause a remote pilot to perceive the UAS's position lights as moving when the aircraft is actually stationary, or misjudge its movement."
+        },
+        {
+            id: 58,
+            category: "operations",
+            question: "Under Part 107, visual line of sight (VLOS) means the remote PIC or visual observer must be able to see the UAS:",
+            options: [
+                "Through a first-person-view (FPV) camera feed at all times",
+                "With vision unaided by any device other than corrective lenses",
+                "On a radar or ADS-B tracking display"
+            ],
+            answer: 1,
+            explanation: "Under 14 CFR 107.31, visual line of sight means the ability to see the unmanned aircraft with vision unaided by any device other than corrective lenses (glasses or contacts). FPV goggles, binoculars, or camera feeds do not satisfy the VLOS requirement."
+        },
+        {
+            id: 59,
+            category: "operations",
+            question: "A remote PIC is evaluating a potential flight site for a commercial mapping mission. Using the PAVE risk assessment model, which of the following represents the 'E' (External Pressures) factor?",
+            options: [
+                "The current wind speed and direction at the site",
+                "The client insisting the mission be completed today despite marginal weather conditions",
+                "The battery capacity of the UAS"
+            ],
+            answer: 1,
+            explanation: "PAVE stands for Pilot, Aircraft, enVironment, and External pressures. External pressures include factors such as client deadlines, financial incentives, or social pressure that might tempt the PIC to take unnecessary risks. Recognizing and managing these pressures is critical to safe operations."
+        },
+        {
+            id: 60,
+            category: "operations",
+            question: "If a remote PIC loses the control link to the UAS during flight, the first priority should be:",
+            options: [
+                "Immediately call 911 to report a flyaway",
+                "Follow the manufacturer's lost-link procedures and monitor the UAS until the link is restored or the aircraft executes its failsafe (e.g., return-to-home or land)",
+                "Leave the area immediately for personal safety"
+            ],
+            answer: 1,
+            explanation: "Most UAS have programmable lost-link (failsafe) procedures such as return-to-home, hover in place, or land. The PIC should follow the manufacturer's lost-link procedures, attempt to restore the link, and maintain visual contact with the aircraft to warn others if necessary."
+        }
+    ];
+
+    /* =============================================
+       Exam State Variables
+       ============================================= */
+    var currentQuestionIdx = 0;
+    var userAnswers = [];
+    var flaggedQuestions = [];
+    var timerInterval = null;
+    var timeRemaining = 120 * 60; // 120 minutes in seconds
+    var examActive = false;
+    var shuffledQuestions = [];
+
+    /* =============================================
+       Shuffle Array (Fisher-Yates)
+       ============================================= */
+    function shuffleArray(arr) {
+        var shuffled = arr.slice();
+        for (var i = shuffled.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = shuffled[i];
+            shuffled[i] = shuffled[j];
+            shuffled[j] = temp;
+        }
+        return shuffled;
+    }
+
+    /* =============================================
+       Start Exam
+       ============================================= */
+    function startExam() {
+        shuffledQuestions = shuffleArray(examQuestions);
+        userAnswers = new Array(shuffledQuestions.length).fill(-1);
+        flaggedQuestions = new Array(shuffledQuestions.length).fill(false);
+        currentQuestionIdx = 0;
+        timeRemaining = 120 * 60;
+        examActive = true;
+
+        document.getElementById('examSetup').style.display = 'none';
+        document.querySelector('.exam-hero').style.display = 'none';
+        document.getElementById('examScreen').style.display = 'block';
+
+        buildQuestionNav();
+        showQuestion(0);
+        startTimer();
+    }
+
+    /* =============================================
+       Timer Logic
+       ============================================= */
+    function startTimer() {
+        updateTimerDisplay();
+        timerInterval = setInterval(function () {
+            timeRemaining--;
+            if (timeRemaining <= 0) {
+                timeRemaining = 0;
+                clearInterval(timerInterval);
+                examActive = false;
+                alert('Time is up! Your exam will be submitted automatically.');
+                calculateAndShowResults();
+            }
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        var hours = Math.floor(timeRemaining / 3600);
+        var minutes = Math.floor((timeRemaining % 3600) / 60);
+        var seconds = timeRemaining % 60;
+
+        var display = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+        var timerEl = document.getElementById('timer');
+        timerEl.textContent = display;
+
+        if (timeRemaining <= 600) {
+            timerEl.classList.add('warning');
+        } else {
+            timerEl.classList.remove('warning');
+        }
+    }
+
+    function pad(n) {
+        return n < 10 ? '0' + n : '' + n;
+    }
+
+    /* =============================================
+       Question Navigation Grid
+       ============================================= */
+    function buildQuestionNav() {
+        var nav = document.getElementById('questionNav');
+        nav.innerHTML = '';
+        for (var i = 0; i < shuffledQuestions.length; i++) {
+            var btn = document.createElement('button');
+            btn.className = 'q-nav-btn';
+            btn.textContent = i + 1;
+            btn.setAttribute('data-idx', i);
+            btn.onclick = (function (idx) {
+                return function () {
+                    showQuestion(idx);
+                };
+            })(i);
+            nav.appendChild(btn);
+        }
+        updateQuestionNav();
+    }
+
+    function updateQuestionNav() {
+        var buttons = document.querySelectorAll('.q-nav-btn');
+        for (var i = 0; i < buttons.length; i++) {
+            var idx = parseInt(buttons[i].getAttribute('data-idx'));
+            buttons[i].className = 'q-nav-btn';
+            if (idx === currentQuestionIdx) {
+                buttons[i].classList.add('current');
+            } else if (flaggedQuestions[idx]) {
+                buttons[i].classList.add('flagged');
+            } else if (userAnswers[idx] !== -1) {
+                buttons[i].classList.add('answered');
+            }
+        }
+    }
+
+    /* =============================================
+       Show Question
+       ============================================= */
+    function showQuestion(idx) {
+        if (idx < 0 || idx >= shuffledQuestions.length) return;
+        currentQuestionIdx = idx;
+
+        var q = shuffledQuestions[idx];
+        var area = document.getElementById('questionArea');
+
+        var categoryLabels = {
+            regulations: 'Regulations',
+            airspace: 'Airspace',
+            weather: 'Weather',
+            loading: 'Loading & Performance',
+            operations: 'Operations'
+        };
+
+        var html = '<div style="margin-bottom:8px;">';
+        html += '<span style="font-size:0.8rem;background:#e8f0fe;color:#1a73e8;padding:4px 10px;border-radius:12px;font-weight:600;">' + (categoryLabels[q.category] || q.category) + '</span>';
+        html += '</div>';
+        html += '<h3 style="font-size:1.1rem;margin-bottom:24px;line-height:1.6;">' + (idx + 1) + '. ' + q.question + '</h3>';
+        html += '<div style="display:flex;flex-direction:column;gap:12px;">';
+
+        for (var i = 0; i < q.options.length; i++) {
+            var selectedClass = (userAnswers[idx] === i) ? ' selected' : '';
+            html += '<button class="quiz-option' + selectedClass + '" onclick="selectAnswer(' + idx + ',' + i + ')" style="text-align:left;cursor:pointer;">';
+            html += String.fromCharCode(65 + i) + '. ' + q.options[i];
+            html += '</button>';
+        }
+
+        html += '</div>';
+        area.innerHTML = html;
+
+        document.getElementById('examProgress').textContent = 'Question ' + (idx + 1) + ' of ' + shuffledQuestions.length;
+
+        // Update flag button text
+        var flagBtn = document.getElementById('flagBtn');
+        if (flaggedQuestions[idx]) {
+            flagBtn.textContent = 'Unflag Question';
+            flagBtn.style.borderColor = '#fbbc04';
+            flagBtn.style.color = '#f57c00';
+        } else {
+            flagBtn.textContent = 'Flag for Review';
+            flagBtn.style.borderColor = '';
+            flagBtn.style.color = '';
+        }
+
+        updateQuestionNav();
+    }
+
+    /* =============================================
+       Select Answer
+       ============================================= */
+    function selectAnswer(qIdx, optIdx) {
+        userAnswers[qIdx] = optIdx;
+        showQuestion(qIdx);
+    }
+
+    /* =============================================
+       Navigation
+       ============================================= */
+    function nextQuestion() {
+        if (currentQuestionIdx < shuffledQuestions.length - 1) {
+            showQuestion(currentQuestionIdx + 1);
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestionIdx > 0) {
+            showQuestion(currentQuestionIdx - 1);
+        }
+    }
+
+    /* =============================================
+       Flag Question
+       ============================================= */
+    function flagQuestion() {
+        flaggedQuestions[currentQuestionIdx] = !flaggedQuestions[currentQuestionIdx];
+        showQuestion(currentQuestionIdx);
+    }
+
+    /* =============================================
+       Submit Exam
+       ============================================= */
+    function submitExam() {
+        var unanswered = 0;
+        for (var i = 0; i < userAnswers.length; i++) {
+            if (userAnswers[i] === -1) unanswered++;
+        }
+
+        var msg = 'Are you sure you want to submit your exam?';
+        if (unanswered > 0) {
+            msg += '\n\nYou have ' + unanswered + ' unanswered question' + (unanswered > 1 ? 's' : '') + '.';
+        }
+
+        if (confirm(msg)) {
+            examActive = false;
+            clearInterval(timerInterval);
+            calculateAndShowResults();
+        }
+    }
+
+    /* =============================================
+       Calculate Results and Show
+       ============================================= */
+    function calculateAndShowResults() {
+        var correct = 0;
+        var categoryStats = {};
+
+        for (var i = 0; i < shuffledQuestions.length; i++) {
+            var q = shuffledQuestions[i];
+            var cat = q.category;
+
+            if (!categoryStats[cat]) {
+                categoryStats[cat] = { correct: 0, total: 0 };
+            }
+            categoryStats[cat].total++;
+
+            if (userAnswers[i] === q.answer) {
+                correct++;
+                categoryStats[cat].correct++;
+            }
+        }
+
+        var pct = Math.round((correct / shuffledQuestions.length) * 100);
+        var passed = pct >= 70;
+
+        // Save to progress
+        if (typeof Progress !== 'undefined' && Progress.saveExamAttempt) {
+            Progress.saveExamAttempt(correct, shuffledQuestions.length);
+        }
+
+        // Show results screen
+        document.getElementById('examScreen').style.display = 'none';
+        document.getElementById('resultsScreen').style.display = 'block';
+
+        var scoreEl = document.getElementById('examScore');
+        scoreEl.textContent = pct + '%';
+        scoreEl.style.color = passed ? '#34a853' : '#ea4335';
+
+        var msgEl = document.getElementById('examResultMsg');
+        if (passed) {
+            msgEl.textContent = 'Congratulations! You passed with ' + correct + ' out of ' + shuffledQuestions.length + ' correct. (70% required)';
+        } else {
+            msgEl.textContent = 'You scored ' + correct + ' out of ' + shuffledQuestions.length + ' correct. You need 70% to pass. Keep studying!';
+        }
+
+        // Category breakdown
+        showCategoryBreakdown(categoryStats);
+
+        // Detailed review
+        showDetailedReview();
+    }
+
+    /* =============================================
+       Category Breakdown
+       ============================================= */
+    function showCategoryBreakdown(stats) {
+        var container = document.getElementById('categoryBreakdown');
+        var categoryLabels = {
+            regulations: 'Regulations',
+            airspace: 'Airspace',
+            weather: 'Weather',
+            loading: 'Loading & Performance',
+            operations: 'Operations'
+        };
+        var categoryColors = {
+            regulations: '#1a73e8',
+            airspace: '#4285f4',
+            weather: '#fbbc04',
+            loading: '#ea4335',
+            operations: '#34a853'
+        };
+
+        var html = '<h3 style="margin-bottom:16px;">Score by Category</h3>';
+        html += '<div style="background:white;border:1px solid #dadce0;border-radius:12px;padding:24px;">';
+
+        var cats = ['regulations', 'airspace', 'weather', 'loading', 'operations'];
+        for (var c = 0; c < cats.length; c++) {
+            var cat = cats[c];
+            if (!stats[cat]) continue;
+
+            var catPct = Math.round((stats[cat].correct / stats[cat].total) * 100);
+            var color = categoryColors[cat] || '#1a73e8';
+            var passed = catPct >= 70;
+
+            html += '<div style="margin-bottom:' + (c < cats.length - 1 ? '20' : '0') + 'px;">';
+            html += '<div style="display:flex;justify-content:space-between;margin-bottom:6px;">';
+            html += '<span style="font-weight:600;font-size:0.95rem;">' + categoryLabels[cat] + '</span>';
+            html += '<span style="font-size:0.9rem;color:' + (passed ? '#34a853' : '#ea4335') + ';font-weight:600;">' + stats[cat].correct + '/' + stats[cat].total + ' (' + catPct + '%)</span>';
+            html += '</div>';
+            html += '<div style="height:10px;background:#e8eaed;border-radius:5px;overflow:hidden;">';
+            html += '<div style="height:100%;width:' + catPct + '%;background:' + color + ';border-radius:5px;transition:width 0.8s;"></div>';
+            html += '</div>';
+            html += '</div>';
+        }
+
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    /* =============================================
+       Detailed Review
+       ============================================= */
+    function showDetailedReview() {
+        var container = document.getElementById('reviewArea');
+        var html = '';
+
+        var categoryLabels = {
+            regulations: 'Regulations',
+            airspace: 'Airspace',
+            weather: 'Weather',
+            loading: 'Loading & Performance',
+            operations: 'Operations'
+        };
+
+        for (var i = 0; i < shuffledQuestions.length; i++) {
+            var q = shuffledQuestions[i];
+            var userAnswer = userAnswers[i];
+            var isCorrect = userAnswer === q.answer;
+            var borderColor = isCorrect ? '#34a853' : '#ea4335';
+            var bgColor = isCorrect ? '#f0faf0' : '#fef2f2';
+
+            html += '<div style="background:white;border:1px solid #dadce0;border-left:4px solid ' + borderColor + ';border-radius:8px;padding:24px;margin-bottom:16px;">';
+            html += '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;flex-wrap:wrap;gap:8px;">';
+            html += '<span style="font-size:0.8rem;background:#e8f0fe;color:#1a73e8;padding:3px 10px;border-radius:12px;font-weight:600;">' + (categoryLabels[q.category] || q.category) + '</span>';
+            html += '<span style="font-size:0.85rem;font-weight:700;color:' + borderColor + ';">' + (isCorrect ? 'Correct' : 'Incorrect') + '</span>';
+            html += '</div>';
+            html += '<p style="font-weight:600;margin-bottom:12px;line-height:1.5;">' + (i + 1) + '. ' + q.question + '</p>';
+
+            for (var j = 0; j < q.options.length; j++) {
+                var optLabel = String.fromCharCode(65 + j);
+                var optStyle = 'padding:8px 12px;border-radius:6px;margin-bottom:4px;font-size:0.925rem;';
+
+                if (j === q.answer && j === userAnswer) {
+                    optStyle += 'background:#e8f5e9;border:1px solid #34a853;font-weight:600;';
+                } else if (j === q.answer) {
+                    optStyle += 'background:#e8f5e9;border:1px solid #34a853;font-weight:600;';
+                } else if (j === userAnswer) {
+                    optStyle += 'background:#fce8e6;border:1px solid #ea4335;text-decoration:line-through;';
+                } else {
+                    optStyle += 'background:#f8f9fa;border:1px solid #e8eaed;';
+                }
+
+                html += '<div style="' + optStyle + '">' + optLabel + '. ' + q.options[j] + '</div>';
+            }
+
+            if (userAnswer === -1) {
+                html += '<div style="padding:8px 12px;margin-top:4px;font-size:0.9rem;color:#ea4335;font-weight:600;">Not answered</div>';
+            }
+
+            html += '<div style="margin-top:12px;padding:12px 16px;background:' + bgColor + ';border-radius:6px;font-size:0.9rem;line-height:1.6;">';
+            html += '<strong>Explanation:</strong> ' + q.explanation;
+            html += '</div>';
+            html += '</div>';
+        }
+
+        container.innerHTML = html;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Weather - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="regulations.html">1. Regulations</a></li>
+                        <li><a href="airspace.html">2. Airspace</a></li>
+                        <li><a href="weather.html">3. Weather</a></li>
+                        <li><a href="loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../flashcards.html">Flashcards</a></li>
+                <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li><a href="../reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="chapter-hero">
+        <div class="container">
+            <div class="chapter-label">Chapter 3</div>
+            <h1>Weather</h1>
+            <p class="chapter-desc">Aviation weather theory, reading METARs and TAFs, density altitude, wind shear, and weather decision making.</p>
+        </div>
+    </section>
+
+    <div class="chapter-content">
+
+        <!-- ============================================
+             SECTION 1: PRESENTATION SLIDES
+             ============================================ -->
+        <div class="presentation">
+            <h2>Presentation: Aviation Weather for Drone Pilots</h2>
+
+            <div class="slide-deck" id="slideDeck1">
+
+                <!-- Slide 1: Title -->
+                <div class="slide active">
+                    <h3>Why Weather Matters for Drone Pilots</h3>
+                    <p>Weather is one of the most critical factors in safe sUAS operations. Unlike manned aircraft, small drones are extremely sensitive to wind, temperature, and precipitation. Understanding weather allows you to:</p>
+                    <ul>
+                        <li>Make informed go/no-go decisions before every flight</li>
+                        <li>Anticipate how conditions will change during your operation</li>
+                        <li>Maintain compliance with Part 107 visibility and cloud clearance requirements</li>
+                        <li>Protect your equipment and avoid in-flight emergencies</li>
+                    </ul>
+                    <div class="key-point">Weather-related questions make up approximately 11&ndash;14% of the Part 107 knowledge test. You must be able to read METARs, TAFs, and understand density altitude.</div>
+                    <p>The atmosphere is a dynamic system. Conditions can shift rapidly, especially at low altitudes where sUAS operate. A solid grasp of weather theory is essential for every remote pilot in command.</p>
+                </div>
+
+                <!-- Slide 2: Atmosphere Basics -->
+                <div class="slide">
+                    <h3>Atmosphere Basics</h3>
+                    <p>The atmosphere is the blanket of air surrounding the Earth. For aviation, we focus on the troposphere &mdash; the lowest layer, where nearly all weather occurs.</p>
+                    <h4>Standard Atmosphere (ISA)</h4>
+                    <ul>
+                        <li><strong>Sea-level temperature:</strong> 15&deg;C (59&deg;F)</li>
+                        <li><strong>Sea-level pressure:</strong> 29.92 inHg (1013.25 hPa)</li>
+                        <li><strong>Temperature lapse rate:</strong> decreases approximately 2&deg;C per 1,000 feet of altitude gain</li>
+                        <li><strong>Pressure lapse rate:</strong> approximately 1 inHg per 1,000 feet near sea level</li>
+                    </ul>
+                    <div class="key-point">The standard atmosphere is a theoretical model. Real conditions almost always differ. Deviations from standard are what create density altitude changes and affect aircraft performance.</div>
+                    <p>Air density decreases with altitude, higher temperature, and higher humidity. Lower air density means reduced propeller efficiency and degraded drone performance.</p>
+                </div>
+
+                <!-- Slide 3: Wind -->
+                <div class="slide">
+                    <h3>Wind</h3>
+                    <p>Wind is the horizontal movement of air caused by pressure differences. It flows from areas of high pressure toward areas of low pressure.</p>
+                    <h4>Key Wind Concepts</h4>
+                    <ul>
+                        <li><strong>Reported direction:</strong> Wind is always reported as the direction it blows FROM (e.g., 270&deg; means wind comes from the west)</li>
+                        <li><strong>Speed units:</strong> Aviation uses knots (1 knot = 1.15 mph)</li>
+                        <li><strong>Gusts:</strong> Indicated by &ldquo;G&rdquo; in reports (e.g., 15G25KT = 15 knots, gusting to 25 knots)</li>
+                        <li><strong>Variable winds:</strong> Indicated by &ldquo;VRB&rdquo; when direction varies</li>
+                    </ul>
+                    <div class="warning-box"><strong>Drone impact:</strong> Wind directly affects battery consumption, flight time, and controllability. Most small drones cannot safely operate in sustained winds above 20&ndash;25 knots. Always check gusts, not just sustained speed.</div>
+                    <p><strong>Crosswinds</strong> push a drone laterally and require constant correction. <strong>Headwinds</strong> reduce ground speed and drain battery faster. <strong>Tailwinds</strong> increase ground speed but can cause difficulty with precise hovering and landing.</p>
+                </div>
+
+                <!-- Slide 4: Clouds and Visibility -->
+                <div class="slide">
+                    <h3>Clouds and Visibility</h3>
+                    <p>Clouds form when moist air cools to its dew point. The type of cloud tells you about the atmospheric conditions that created it.</p>
+                    <h4>Primary Cloud Types</h4>
+                    <ul>
+                        <li><strong>Cumulus:</strong> Puffy, cauliflower-shaped; indicate unstable air and convective activity</li>
+                        <li><strong>Stratus:</strong> Flat, layered; indicate stable air, often associated with steady precipitation and low ceilings</li>
+                        <li><strong>Cirrus:</strong> Thin, wispy, high-altitude (above 20,000 ft); made of ice crystals</li>
+                        <li><strong>Cumulonimbus (CB):</strong> Towering thunderstorm clouds; always avoid</li>
+                    </ul>
+                    <div class="key-point"><strong>Part 107 Cloud Clearance &amp; Visibility Minimums:</strong><br>
+                    &bull; Visibility: 3 statute miles from the control station<br>
+                    &bull; Cloud clearance: 500 feet below clouds, 1,000 feet above clouds, 2,000 feet horizontal from clouds</div>
+                    <p>These minimums are not waivable for visibility but cloud clearance may be waived with proper authorization.</p>
+                </div>
+
+                <!-- Slide 5: Temperature and Dew Point -->
+                <div class="slide">
+                    <h3>Temperature and Dew Point</h3>
+                    <p>The dew point is the temperature to which air must cool to become saturated. The relationship between temperature and dew point is one of the most important weather concepts for pilots.</p>
+                    <h4>Critical Relationships</h4>
+                    <ul>
+                        <li>When temperature and dew point are close together (spread of 4&deg;F / 2&deg;C or less), fog or low clouds are likely</li>
+                        <li>When they converge, relative humidity approaches 100%</li>
+                        <li>Temperature-dew point spread decreases as the surface cools (typically after sunset)</li>
+                        <li>A small spread combined with light winds often produces radiation fog</li>
+                    </ul>
+                    <div class="example-box"><strong>Example:</strong> METAR reports Temp 08&deg;C, Dew Point 07&deg;C &mdash; spread is only 1&deg;C. Fog or mist is very likely, especially near dawn. Flight visibility may drop below 3 SM minimums.</div>
+                    <p><strong>Relative humidity</strong> is the percentage of moisture in the air compared to the maximum it can hold at that temperature. Higher humidity also reduces air density, degrading drone performance.</p>
+                </div>
+
+                <!-- Slide 6: Density Altitude -->
+                <div class="slide">
+                    <h3>Density Altitude</h3>
+                    <p>Density altitude is pressure altitude corrected for non-standard temperature. It represents the altitude at which the aircraft &ldquo;thinks&rdquo; it is flying based on air density.</p>
+                    <h4>The &ldquo;3 H&rsquo;s&rdquo; of High Density Altitude</h4>
+                    <ul>
+                        <li><strong>High altitude:</strong> Higher elevation airports/launch sites have thinner air</li>
+                        <li><strong>Hot temperatures:</strong> Warm air is less dense than cold air</li>
+                        <li><strong>Humid air:</strong> Water vapor is lighter than nitrogen and oxygen, so humid air is less dense</li>
+                    </ul>
+                    <div class="warning-box"><strong>Performance effects:</strong> High density altitude reduces propeller efficiency, decreases maximum thrust, shortens flight time, and reduces payload capacity. A drone that performs well at sea level on a cool day may struggle at a high-elevation site on a hot afternoon.</div>
+                    <div class="example-box"><strong>Example:</strong> An airport at 5,000 ft MSL on a 95&deg;F day may have a density altitude of 8,500 ft or higher. Your drone will perform as if it were at 8,500 ft in standard conditions.</div>
+                </div>
+
+                <!-- Slide 7: Thunderstorms & Microbursts -->
+                <div class="slide">
+                    <h3>Thunderstorms &amp; Microbursts</h3>
+                    <p>Thunderstorms are among the most dangerous weather phenomena for all aircraft. Every thunderstorm contains severe turbulence, wind shear, and potentially hail and lightning.</p>
+                    <h4>Three Stages of a Thunderstorm</h4>
+                    <ul>
+                        <li><strong>Cumulus (building) stage:</strong> Characterized by updrafts; the cloud grows vertically</li>
+                        <li><strong>Mature stage:</strong> Most dangerous; contains both updrafts and downdrafts, heaviest rain, hail, lightning, and possible tornadoes</li>
+                        <li><strong>Dissipating stage:</strong> Dominated by downdrafts; rainfall diminishes but hazards still exist</li>
+                    </ul>
+                    <div class="warning-box"><strong>Microbursts:</strong> Intense, localized downdrafts that spread outward upon hitting the surface, producing wind speeds up to 45 knots. They can occur with or without rain and last 5&ndash;15 minutes. Microbursts are extremely dangerous at low altitudes.</div>
+                    <div class="key-point"><strong>Avoidance rule:</strong> Do not fly within 30 minutes of a thunderstorm passing through your operating area. Maintain at least 20 statute miles from any thunderstorm identified as severe.</div>
+                </div>
+
+                <!-- Slide 8: Wind Shear & Temperature Inversions -->
+                <div class="slide">
+                    <h3>Wind Shear &amp; Temperature Inversions</h3>
+                    <h4>Wind Shear</h4>
+                    <p>Wind shear is a sudden change in wind speed and/or direction over a short distance. It can occur at any altitude and is hazardous because it causes abrupt changes in airspeed and lift.</p>
+                    <ul>
+                        <li>Can be horizontal (change in wind across the surface) or vertical (change in wind with altitude)</li>
+                        <li>Common near thunderstorms, frontal boundaries, and temperature inversions</li>
+                        <li>Low-level wind shear (below 2,000 ft AGL) is most dangerous for sUAS operations</li>
+                    </ul>
+                    <h4>Temperature Inversions</h4>
+                    <p>A temperature inversion occurs when a warm air layer sits above cooler air near the surface, reversing the normal lapse rate.</p>
+                    <ul>
+                        <li>Trap pollutants, haze, and smoke near the surface, reducing visibility</li>
+                        <li>Produce very stable air that resists vertical mixing</li>
+                        <li>Cause significant wind shear at the top of the inversion layer</li>
+                        <li>Most common on clear nights with calm winds (radiation inversions)</li>
+                    </ul>
+                    <div class="key-point">A drone climbing through the top of a temperature inversion may encounter sudden wind shear and turbulence as it transitions from calm surface air to faster winds aloft.</div>
+                </div>
+
+                <!-- Slide 9: Reading METARs -->
+                <div class="slide">
+                    <h3>Reading METARs</h3>
+                    <p>A METAR (Meteorological Aerodrome Report) is an aviation routine weather observation. METARs are issued hourly (or more frequently as a SPECI when conditions change significantly).</p>
+                    <h4>METAR Format Breakdown</h4>
+                    <ul>
+                        <li><strong>Report type:</strong> METAR or SPECI</li>
+                        <li><strong>Station ID:</strong> 4-letter ICAO identifier (e.g., KJFK)</li>
+                        <li><strong>Date/Time:</strong> Day of month + time in Zulu/UTC (e.g., 121856Z = 12th day, 18:56 UTC)</li>
+                        <li><strong>Wind:</strong> Direction (3 digits, true north) + speed in knots + gusts if present (e.g., 31012G20KT)</li>
+                        <li><strong>Visibility:</strong> In statute miles (e.g., 10SM = 10 statute miles)</li>
+                        <li><strong>Weather phenomena:</strong> Codes like RA (rain), SN (snow), FG (fog), BR (mist), TS (thunderstorm)</li>
+                        <li><strong>Cloud cover:</strong> SKC/CLR, FEW (1/8&ndash;2/8), SCT (3/8&ndash;4/8), BKN (5/8&ndash;7/8), OVC (8/8), followed by height in hundreds of feet AGL</li>
+                        <li><strong>Temperature/Dew point:</strong> In Celsius, separated by &ldquo;/&rdquo;; &ldquo;M&rdquo; prefix = minus (e.g., M04/M18 = &minus;4&deg;C / &minus;18&deg;C)</li>
+                        <li><strong>Altimeter setting:</strong> &ldquo;A&rdquo; followed by 4 digits in inches of mercury (e.g., A3038 = 30.38 inHg)</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 10: METAR Example -->
+                <div class="slide">
+                    <h3>METAR Decoding Example</h3>
+                    <div class="example-box">METAR KORD 121856Z 31012G20KT 10SM FEW250 M04/M18 A3038</div>
+                    <h4>Decoded:</h4>
+                    <ul>
+                        <li><strong>METAR:</strong> Routine weather observation</li>
+                        <li><strong>KORD:</strong> Chicago O&rsquo;Hare International Airport</li>
+                        <li><strong>121856Z:</strong> 12th day of the month at 18:56 UTC (Zulu)</li>
+                        <li><strong>31012G20KT:</strong> Wind from 310&deg; (northwest) at 12 knots, gusting to 20 knots</li>
+                        <li><strong>10SM:</strong> Visibility 10 statute miles</li>
+                        <li><strong>FEW250:</strong> Few clouds at 25,000 feet AGL</li>
+                        <li><strong>M04/M18:</strong> Temperature &minus;4&deg;C, Dew point &minus;18&deg;C (large spread = dry air)</li>
+                        <li><strong>A3038:</strong> Altimeter setting 30.38 inches of mercury</li>
+                    </ul>
+                    <div class="key-point"><strong>Flight assessment:</strong> Good VFR conditions. Visibility and cloud clearance exceed Part 107 minimums. The gusty northwest wind (up to 20 knots) is the primary concern &mdash; evaluate your drone&rsquo;s wind tolerance before flying.</div>
+                </div>
+
+                <!-- Slide 11: Reading TAFs -->
+                <div class="slide">
+                    <h3>Reading TAFs</h3>
+                    <p>A TAF (Terminal Aerodrome Forecast) is a weather forecast for the area within 5 statute miles of an airport. TAFs are typically issued every 6 hours and cover a 24- or 30-hour period.</p>
+                    <h4>TAF Format</h4>
+                    <ul>
+                        <li><strong>Header:</strong> TAF + station + issue date/time + valid period</li>
+                        <li><strong>Body:</strong> Same format as METAR (wind, visibility, weather, clouds)</li>
+                    </ul>
+                    <h4>Change Groups</h4>
+                    <ul>
+                        <li><strong>FM (From):</strong> A permanent, significant change expected at the time specified (e.g., FM1800 = from 18:00Z)</li>
+                        <li><strong>TEMPO:</strong> Temporary fluctuations expected, lasting less than 1 hour at a time</li>
+                        <li><strong>BECMG:</strong> A gradual change expected during the time period specified</li>
+                        <li><strong>PROB:</strong> Probability of conditions occurring (e.g., PROB40 = 40% probability)</li>
+                    </ul>
+                    <div class="example-box"><strong>Example:</strong> TAF KJFK 121730Z 1218/1324 28010KT P6SM SKC FM130200 33015G25KT P6SM BKN040<br><br>
+                    Translation: Valid from 12th at 18Z to 13th at 24Z. Initial: wind 280 at 10 kt, visibility more than 6 SM, sky clear. From 13th at 02Z: wind 330 at 15 gusting 25 kt, visibility more than 6 SM, broken clouds at 4,000 ft.</div>
+                </div>
+
+                <!-- Slide 12: Weather Resources -->
+                <div class="slide">
+                    <h3>Weather Resources for Remote Pilots</h3>
+                    <p>As a remote pilot in command, you are responsible for obtaining adequate weather information before every flight. Here are the primary sources:</p>
+                    <h4>Official Aviation Weather Sources</h4>
+                    <ul>
+                        <li><strong>Aviation Weather Center (aviationweather.gov):</strong> METARs, TAFs, Prog Charts, AIRMETs, SIGMETs, and radar</li>
+                        <li><strong>1800WxBrief (1800wxbrief.com):</strong> FAA-approved source for official weather briefings; includes standard, abbreviated, and outlook briefings</li>
+                        <li><strong>Convective SIGMETs:</strong> Warn of thunderstorms, tornadoes, and severe weather affecting a wide area</li>
+                        <li><strong>AIRMETs:</strong> Advisories for moderate icing (AIRMET Zulu), moderate turbulence (AIRMET Tango), and IFR/mountain obscuration (AIRMET Sierra)</li>
+                    </ul>
+                    <div class="tip-box"><strong>Best practice:</strong> Check weather at least 1 hour before your planned operation, and recheck at the field before launch. Conditions can change rapidly. Have predefined personal minimums (e.g., maximum wind speed, minimum visibility) and stick to them.</div>
+                    <div class="key-point">The FAA expects Part 107 pilots to obtain weather information from official aviation sources &mdash; not just consumer weather apps. You should be comfortable reading METARs and TAFs.</div>
+                </div>
+
+                <!-- Slide Controls -->
+                <div class="slide-controls">
+                    <button class="slide-btn prev" disabled>&larr; Previous</button>
+                    <span class="slide-counter">Slide 1 of 12</span>
+                    <button class="slide-btn next">Next &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 2: IN-DEPTH READING
+             ============================================ -->
+        <div class="reading-section">
+            <h2>In-Depth Reading: Aviation Weather</h2>
+
+            <div class="reading-content">
+
+                <h3>Introduction to Aviation Weather</h3>
+                <p>Weather is a leading factor in aviation accidents across all aircraft types, and small unmanned aircraft are no exception. Remote pilots must understand how weather affects their operations, how to interpret aviation weather products, and how to make sound go/no-go decisions. This chapter provides a comprehensive overview of the weather topics covered on the Part 107 knowledge test and essential knowledge for safe sUAS operations.</p>
+                <p>Unlike manned aircraft pilots who may fly above or around weather, drone pilots operate at very low altitudes &mdash; typically below 400 feet AGL. This means you are directly affected by surface-level conditions: ground-hugging fog, thermals from heated surfaces, low-level wind shear, and turbulence caused by buildings and terrain. Understanding these phenomena is not just academic; it is a practical safety necessity.</p>
+
+                <h3>The Atmosphere and Standard Conditions</h3>
+                <p>The atmosphere is divided into layers. The troposphere, extending from the surface to approximately 36,000 feet in mid-latitudes, is where virtually all weather occurs. Temperature generally decreases with altitude in the troposphere at an average rate of about 2 degrees Celsius per 1,000 feet (known as the standard lapse rate).</p>
+                <p>The International Standard Atmosphere (ISA) establishes baseline conditions for aviation calculations:</p>
+                <ul>
+                    <li>Temperature at sea level: 15 degrees Celsius (59 degrees Fahrenheit)</li>
+                    <li>Pressure at sea level: 29.92 inches of mercury (inHg) or 1013.25 hectopascals (hPa)</li>
+                    <li>Temperature lapse rate: approximately 2 degrees Celsius per 1,000 feet</li>
+                </ul>
+                <p>When actual conditions differ from ISA, aircraft performance changes. Warmer-than-standard temperatures create higher density altitude and reduce performance. Colder-than-standard temperatures have the opposite effect.</p>
+
+                <div class="info-box"><strong>Why this matters for the exam:</strong> Questions about the standard atmosphere, lapse rate, and pressure are common. Remember: 15 degrees Celsius, 29.92 inHg, and a lapse rate of 2 degrees Celsius per 1,000 feet.</div>
+
+                <h3>Wind and Its Effects on Drone Operations</h3>
+                <p>Wind is the horizontal movement of air from areas of high pressure to areas of low pressure. In the Northern Hemisphere, the Coriolis effect causes winds to flow clockwise around high-pressure systems and counterclockwise around low-pressure systems.</p>
+                <p>Wind is always reported in aviation as the direction FROM which it blows, measured in degrees from true north, and speed is reported in knots. For example, a wind reported as 27015KT means wind from 270 degrees (west) at 15 knots.</p>
+                <p>For drone pilots, wind is one of the most limiting operational factors:</p>
+                <ul>
+                    <li><strong>Headwinds</strong> reduce ground speed, requiring more power and draining battery faster. A drone flying into a 15-knot headwind uses significantly more energy than in calm conditions.</li>
+                    <li><strong>Crosswinds</strong> push the drone laterally and require constant correction inputs, which also increases power consumption.</li>
+                    <li><strong>Gusty winds</strong> are particularly hazardous because they create sudden, unpredictable forces. A drone may handle a steady 15-knot wind but could lose control in gusts to 25 knots.</li>
+                    <li><strong>Mechanical turbulence</strong> occurs when wind flows over and around obstacles such as buildings, trees, and terrain features. Expect turbulence on the downwind side of obstructions.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Practical tip:</strong> Fly your planned route INTO the wind at the start of your mission when battery is full. Return with a tailwind when battery is lower. This provides a safety margin. Always set personal wind limits that are below your drone manufacturer's maximum rated wind speed.</div>
+
+                <h3>Cloud Types and Their Significance</h3>
+                <p>Clouds are visible collections of water droplets or ice crystals suspended in the atmosphere. The type and altitude of clouds provide valuable information about current and forecast weather conditions.</p>
+
+                <table>
+                    <tr>
+                        <th>Cloud Type</th>
+                        <th>Altitude</th>
+                        <th>Appearance</th>
+                        <th>Weather Significance</th>
+                    </tr>
+                    <tr>
+                        <td>Cirrus (CI)</td>
+                        <td>Above 20,000 ft</td>
+                        <td>Thin, wispy, white</td>
+                        <td>Made of ice crystals; may indicate approaching front</td>
+                    </tr>
+                    <tr>
+                        <td>Cirrostratus (CS)</td>
+                        <td>Above 20,000 ft</td>
+                        <td>Thin, sheet-like</td>
+                        <td>Creates halo around sun/moon; warm front approaching</td>
+                    </tr>
+                    <tr>
+                        <td>Altocumulus (AC)</td>
+                        <td>6,500&ndash;20,000 ft</td>
+                        <td>White/gray patches or rolls</td>
+                        <td>On a warm, humid morning, may indicate afternoon thunderstorms</td>
+                    </tr>
+                    <tr>
+                        <td>Altostratus (AS)</td>
+                        <td>6,500&ndash;20,000 ft</td>
+                        <td>Gray/blue sheet</td>
+                        <td>Sun dimly visible; continuous precipitation likely</td>
+                    </tr>
+                    <tr>
+                        <td>Cumulus (CU)</td>
+                        <td>Below 6,500 ft</td>
+                        <td>Puffy, flat base</td>
+                        <td>Fair weather; indicate unstable air and convection</td>
+                    </tr>
+                    <tr>
+                        <td>Stratus (ST)</td>
+                        <td>Below 6,500 ft</td>
+                        <td>Flat, gray, uniform</td>
+                        <td>Stable air; may produce drizzle; low ceilings</td>
+                    </tr>
+                    <tr>
+                        <td>Stratocumulus (SC)</td>
+                        <td>Below 6,500 ft</td>
+                        <td>Lumpy, gray masses</td>
+                        <td>Usually does not produce significant precipitation</td>
+                    </tr>
+                    <tr>
+                        <td>Nimbostratus (NS)</td>
+                        <td>Below 6,500 ft</td>
+                        <td>Dark, thick, shapeless</td>
+                        <td>Steady rain or snow; very low visibility</td>
+                    </tr>
+                    <tr>
+                        <td>Cumulonimbus (CB)</td>
+                        <td>Low base to 60,000+ ft</td>
+                        <td>Towering, anvil top</td>
+                        <td>Thunderstorms; severe turbulence, hail, lightning, tornadoes</td>
+                    </tr>
+                </table>
+
+                <div class="warning-box"><strong>Cumulonimbus (CB) clouds are always hazardous.</strong> They produce thunderstorms with severe turbulence, lightning, hail, heavy rain, microbursts, and possible tornadoes. Never fly near cumulonimbus clouds.</div>
+
+                <h3>Part 107 Weather Minimums</h3>
+                <p>Under 14 CFR Part 107, the following weather minimums apply to all sUAS operations (unless a waiver has been obtained):</p>
+
+                <table>
+                    <tr>
+                        <th>Requirement</th>
+                        <th>Minimum</th>
+                    </tr>
+                    <tr>
+                        <td>Flight visibility (from control station)</td>
+                        <td>3 statute miles</td>
+                    </tr>
+                    <tr>
+                        <td>Distance below clouds</td>
+                        <td>500 feet</td>
+                    </tr>
+                    <tr>
+                        <td>Distance above clouds</td>
+                        <td>1,000 feet</td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal distance from clouds</td>
+                        <td>2,000 feet</td>
+                    </tr>
+                </table>
+
+                <div class="info-box"><strong>Exam tip:</strong> These numbers appear frequently on the Part 107 test. The memory aid &ldquo;5-1-2-3&rdquo; can help: 500 below, 1,000 above, 2,000 horizontal, 3 SM visibility. Since Part 107 operations are limited to 400 feet AGL (or within 400 feet of a structure), the &ldquo;1,000 feet above&rdquo; requirement effectively means you cannot fly through clouds at all.</div>
+
+                <h3>Temperature, Dew Point, and Fog</h3>
+                <p>The dew point is the temperature at which air becomes fully saturated and water vapor begins to condense into visible moisture (clouds or fog). The difference between the current temperature and the dew point is called the temperature-dew point spread.</p>
+                <p>When the spread narrows to approximately 2 degrees Celsius (4 degrees Fahrenheit) or less, fog, mist, or low clouds become likely. If the temperature continues to fall and reaches the dew point, the air is saturated at 100% relative humidity.</p>
+                <p>Types of fog most relevant to drone operations:</p>
+                <ul>
+                    <li><strong>Radiation fog:</strong> Forms on clear, calm nights when the ground cools and chills the air above it. Most common in valleys and low areas. Typically burns off after sunrise.</li>
+                    <li><strong>Advection fog:</strong> Forms when warm, moist air moves over a cooler surface. Can occur day or night and may persist for extended periods. Common along coastlines.</li>
+                    <li><strong>Upslope fog:</strong> Forms when moist air is pushed uphill by wind, cooling adiabatically. Common in mountainous terrain.</li>
+                    <li><strong>Precipitation-induced fog (frontal fog):</strong> Occurs when warm rain falls through a layer of cooler air, saturating it.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Planning tip:</strong> If the METAR shows a temperature-dew point spread of 3 degrees Celsius or less and temperatures are falling (such as in the late afternoon or evening), expect visibility to deteriorate. Plan to complete your mission before conditions drop below minimums.</div>
+
+                <h3>Density Altitude: The Performance Killer</h3>
+                <p>Density altitude is pressure altitude corrected for non-standard temperature. In simpler terms, it tells you the effective altitude your drone is operating at based on actual air density. Higher density altitude means thinner air and reduced performance.</p>
+                <p>Three factors increase density altitude (the &ldquo;3 H&rsquo;s&rdquo;):</p>
+                <ol>
+                    <li><strong>High altitude:</strong> Higher elevation means lower atmospheric pressure and thinner air.</li>
+                    <li><strong>Hot temperature:</strong> Warm air is less dense. On a hot day, density altitude may be thousands of feet higher than the actual elevation.</li>
+                    <li><strong>Humid air:</strong> Contrary to intuition, humid air is LESS dense than dry air because water vapor molecules (molecular weight 18) replace heavier nitrogen (28) and oxygen (32) molecules.</li>
+                </ol>
+
+                <div class="warning-box"><strong>Real-world example:</strong> A drone operator at a field elevation of 5,000 feet MSL on a summer day with a temperature of 35 degrees Celsius (95 degrees Fahrenheit) may face a density altitude of approximately 8,500 feet. The drone&rsquo;s motors must work much harder to generate the same thrust, battery drain increases, maximum altitude capability decreases, and payload capacity is reduced.</div>
+
+                <p>To calculate density altitude, start with pressure altitude (elevation corrected for non-standard pressure) and adjust for temperature. The general rule: for every 1 degree Celsius above standard temperature at your altitude, add approximately 120 feet to pressure altitude to get density altitude.</p>
+
+                <div class="info-box"><strong>Calculating pressure altitude:</strong> Pressure Altitude = Field Elevation + [(29.92 - Current Altimeter Setting) x 1,000]. For example, if your field elevation is 2,000 ft and the altimeter setting is 29.72 inHg: PA = 2,000 + [(29.92 - 29.72) x 1,000] = 2,000 + 200 = 2,200 ft.</div>
+
+                <h3>Thunderstorms: Identification and Avoidance</h3>
+                <p>Thunderstorms are the most dangerous weather phenomenon for any aircraft. Three ingredients are required for thunderstorm formation: sufficient moisture, an unstable atmosphere, and a lifting mechanism (fronts, terrain, daytime heating).</p>
+                <p>Every thunderstorm progresses through three stages:</p>
+                <ol>
+                    <li><strong>Cumulus (developing) stage:</strong> Characterized by strong updrafts. The cloud builds rapidly upward. No precipitation reaches the ground yet, but conditions are deteriorating.</li>
+                    <li><strong>Mature stage:</strong> The most hazardous phase. Both updrafts and downdrafts exist within the storm. Heavy rain, hail, lightning, severe turbulence, and microbursts occur. Tornadoes are most likely during this stage.</li>
+                    <li><strong>Dissipating stage:</strong> Downdrafts dominate. Precipitation weakens. However, hazards such as turbulence, low-level wind shear, and lightning continue.</li>
+                </ol>
+                <p>Thunderstorm avoidance rules for drone pilots:</p>
+                <ul>
+                    <li>Never fly within or near a thunderstorm at any stage.</li>
+                    <li>Wait at least 30 minutes after the last observed lightning, thunder, or heavy rain before resuming operations.</li>
+                    <li>Stay at least 20 statute miles away from any thunderstorm classified as severe (winds 50+ knots, hail 1 inch or larger, or tornadoes).</li>
+                    <li>Be aware that anvil clouds can extend 20+ miles from the main cell and may produce lightning and hail.</li>
+                    <li>Gust fronts can extend 15 or more miles ahead of a thunderstorm, bringing sudden wind shifts and dangerous turbulence.</li>
+                </ul>
+
+                <div class="warning-box"><strong>Microbursts</strong> are concentrated downdrafts within or near thunderstorms that produce damaging outflow winds at the surface. A microburst can produce wind speeds of 45 knots or more over an area as small as 1&ndash;2 miles across. Microbursts may occur with or without visible precipitation (wet or dry microbursts). They typically last 5 to 15 minutes but can destroy a drone instantly.</div>
+
+                <h3>Temperature Inversions and Low-Level Effects</h3>
+                <p>A temperature inversion occurs when air temperature increases with altitude instead of decreasing as is normal. This creates a very stable layer that acts like a lid on the atmosphere.</p>
+                <p>Effects of temperature inversions on drone operations:</p>
+                <ul>
+                    <li><strong>Trapped pollution and haze:</strong> The inversion traps particles, smoke, and haze below it, significantly reducing surface visibility. This may prevent operations that require 3 SM visibility.</li>
+                    <li><strong>Low-level wind shear:</strong> Wind speed and direction can change dramatically at the top of the inversion layer. A drone flying through this transition may experience sudden, unexpected turbulence.</li>
+                    <li><strong>Fog formation:</strong> Surface-based inversions (especially radiation inversions on clear, calm nights) are prime conditions for fog development.</li>
+                    <li><strong>Smooth surface air with turbulence aloft:</strong> Conditions may appear calm at the surface, but significant wind and turbulence may exist just a few hundred feet up at the inversion boundary.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Recognition:</strong> Temperature inversions are indicated on METARs when the temperature-dew point spread is small, visibility is reduced due to haze or fog, and winds are light at the surface. On sounding charts (Skew-T diagrams), inversions appear where the temperature line slopes to the right (increasing) with altitude.</div>
+
+                <h3>METAR Decoding Guide</h3>
+                <p>The METAR is the most important weather report for drone pilots. It provides current observed conditions at a specific location. Here is a component-by-component breakdown:</p>
+
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Format</th>
+                        <th>Example</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>Report Type</td>
+                        <td>METAR or SPECI</td>
+                        <td>METAR</td>
+                        <td>Routine report (SPECI = special/unscheduled)</td>
+                    </tr>
+                    <tr>
+                        <td>Station ID</td>
+                        <td>4-letter ICAO code</td>
+                        <td>KDEN</td>
+                        <td>Denver International Airport</td>
+                    </tr>
+                    <tr>
+                        <td>Date/Time</td>
+                        <td>DDHHMMz</td>
+                        <td>121456Z</td>
+                        <td>12th day, 14:56 UTC</td>
+                    </tr>
+                    <tr>
+                        <td>Wind</td>
+                        <td>dddssKT or dddssGggKT</td>
+                        <td>27015G25KT</td>
+                        <td>From 270 degrees at 15 knots, gusting 25</td>
+                    </tr>
+                    <tr>
+                        <td>Visibility</td>
+                        <td>SM (statute miles)</td>
+                        <td>5SM</td>
+                        <td>5 statute miles</td>
+                    </tr>
+                    <tr>
+                        <td>Weather</td>
+                        <td>Intensity + descriptor + type</td>
+                        <td>-RA</td>
+                        <td>Light rain (- = light, no prefix = moderate, + = heavy)</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Cover</td>
+                        <td>Amount + height (hundreds ft AGL)</td>
+                        <td>BKN025</td>
+                        <td>Broken clouds at 2,500 ft AGL</td>
+                    </tr>
+                    <tr>
+                        <td>Temp/Dew Point</td>
+                        <td>TT/DD (Celsius)</td>
+                        <td>18/12</td>
+                        <td>Temp 18 degrees C, dew point 12 degrees C</td>
+                    </tr>
+                    <tr>
+                        <td>Altimeter</td>
+                        <td>Annnn</td>
+                        <td>A2992</td>
+                        <td>Altimeter setting 29.92 inHg</td>
+                    </tr>
+                    <tr>
+                        <td>Remarks</td>
+                        <td>RMK followed by coded data</td>
+                        <td>RMK AO2 SLP013</td>
+                        <td>Automated station with precipitation sensor; sea level pressure 1001.3 hPa</td>
+                    </tr>
+                </table>
+
+                <p>Common weather codes you should know:</p>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Meaning</th>
+                        <th>Code</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>RA</td>
+                        <td>Rain</td>
+                        <td>BR</td>
+                        <td>Mist (visibility 5/8 to 6 SM)</td>
+                    </tr>
+                    <tr>
+                        <td>SN</td>
+                        <td>Snow</td>
+                        <td>FG</td>
+                        <td>Fog (visibility below 5/8 SM)</td>
+                    </tr>
+                    <tr>
+                        <td>TS</td>
+                        <td>Thunderstorm</td>
+                        <td>HZ</td>
+                        <td>Haze</td>
+                    </tr>
+                    <tr>
+                        <td>DZ</td>
+                        <td>Drizzle</td>
+                        <td>FU</td>
+                        <td>Smoke</td>
+                    </tr>
+                    <tr>
+                        <td>SH</td>
+                        <td>Showers</td>
+                        <td>VA</td>
+                        <td>Volcanic ash</td>
+                    </tr>
+                    <tr>
+                        <td>GR</td>
+                        <td>Hail</td>
+                        <td>DU</td>
+                        <td>Widespread dust</td>
+                    </tr>
+                </table>
+
+                <p>Cloud cover abbreviations:</p>
+                <table>
+                    <tr>
+                        <th>Abbreviation</th>
+                        <th>Coverage</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>SKC / CLR</td>
+                        <td>0/8</td>
+                        <td>Sky clear (SKC = manual report, CLR = automated)</td>
+                    </tr>
+                    <tr>
+                        <td>FEW</td>
+                        <td>1/8 to 2/8</td>
+                        <td>Few clouds</td>
+                    </tr>
+                    <tr>
+                        <td>SCT</td>
+                        <td>3/8 to 4/8</td>
+                        <td>Scattered clouds</td>
+                    </tr>
+                    <tr>
+                        <td>BKN</td>
+                        <td>5/8 to 7/8</td>
+                        <td>Broken clouds (constitutes a ceiling)</td>
+                    </tr>
+                    <tr>
+                        <td>OVC</td>
+                        <td>8/8</td>
+                        <td>Overcast (constitutes a ceiling)</td>
+                    </tr>
+                </table>
+
+                <div class="info-box"><strong>What is a ceiling?</strong> The ceiling is the lowest layer of clouds reported as broken (BKN) or overcast (OVC). FEW and SCT layers do NOT constitute a ceiling. This is important for Part 107 operations because cloud clearance requirements are measured from the cloud bases, and a ceiling determines whether VFR conditions exist.</div>
+
+                <h3>TAF Decoding Guide</h3>
+                <p>A TAF (Terminal Aerodrome Forecast) provides expected weather conditions over a 24- or 30-hour period. It uses the same codes as METARs but includes forecast time periods and change indicators.</p>
+                <p>TAF structure:</p>
+                <ol>
+                    <li><strong>Header:</strong> TAF [AMD] KXXX DDHHMM Z DDHH/DDHH &mdash; identifies the station, issue time, and valid period</li>
+                    <li><strong>Initial forecast:</strong> Expected conditions at the beginning of the valid period</li>
+                    <li><strong>Change groups:</strong> Describe how conditions are expected to change</li>
+                </ol>
+                <p>Change group details:</p>
+                <ul>
+                    <li><strong>FM (From):</strong> Indicates a rapid, significant, and sustained change. All conditions after FM replace previous conditions. Example: FM182000 25012KT P6SM SCT040 &mdash; From the 18th at 20:00Z, wind 250 at 12 knots, visibility greater than 6 SM, scattered clouds at 4,000 ft.</li>
+                    <li><strong>TEMPO:</strong> Temporary fluctuations expected to last less than one hour at a time and occur during less than half the time period. Example: TEMPO 1820/1824 3SM TSRA BKN020CB &mdash; Temporarily between 18th 20Z and 18th 24Z, visibility 3 SM in thunderstorm and rain, broken cumulonimbus at 2,000 ft.</li>
+                    <li><strong>BECMG:</strong> A gradual or permanent change expected during the specified time period. Example: BECMG 1814/1816 31015KT &mdash; Becoming between 18th 14Z and 18th 16Z, wind 310 at 15 knots.</li>
+                    <li><strong>PROB:</strong> Probability of occurrence (typically PROB30 or PROB40). PROB30 means a 30% chance. Example: PROB40 1802/1806 1SM +TSRA &mdash; 40% probability between 18th 02Z and 18th 06Z of visibility 1 SM in heavy thunderstorm and rain.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Exam tip:</strong> When interpreting a TAF, read it sequentially. Start with the initial forecast and apply each change group in order. FM groups completely replace all previous conditions. TEMPO conditions are temporary deviations from the prevailing forecast. BECMG transitions happen gradually during the specified window.</div>
+
+                <h3>How to Get a Weather Briefing</h3>
+                <p>The FAA expects all pilots, including remote pilots, to obtain adequate weather information before flight. For Part 107 operations, the following resources are available:</p>
+                <ul>
+                    <li><strong>1800WxBrief.com (or call 1-800-WX-BRIEF):</strong> The FAA-contracted flight service provider. Offers three types of briefings:
+                        <ul>
+                            <li><strong>Standard briefing:</strong> Most complete; requested when you have not received a previous briefing. Includes adverse conditions, current and forecast weather, winds aloft, NOTAMs, and ATC delays.</li>
+                            <li><strong>Abbreviated briefing:</strong> Requested when you need to update a previous briefing or only need specific information.</li>
+                            <li><strong>Outlook briefing:</strong> Requested when your planned flight is 6+ hours away. Provides a general overview of expected conditions.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aviation Weather Center (aviationweather.gov):</strong> Provides METARs, TAFs, prognostic charts, radar, satellite imagery, AIRMETs, SIGMETs, and convective SIGMETs.</li>
+                    <li><strong>Notices to Air Missions (NOTAMs):</strong> While not strictly weather, NOTAMs may include temporary flight restrictions (TFRs) related to weather events such as firefighting or disaster response.</li>
+                </ul>
+
+                <div class="warning-box"><strong>Important:</strong> Consumer weather apps and websites (phone weather apps, Weather.com, etc.) can supplement your planning but should NOT be your primary source for aviation weather. They lack critical information like cloud heights, visibility in statute miles, winds at altitude, and aviation-specific hazards. Always use official aviation weather sources.</div>
+
+                <h3>Weather Decision Making</h3>
+                <p>Good weather decision making is about setting personal minimums, recognizing deteriorating conditions, and being willing to cancel or postpone a flight. Consider establishing the following personal minimums before every mission:</p>
+                <ul>
+                    <li><strong>Wind limits:</strong> Set a maximum sustained wind speed and gust factor for your specific drone. Consider that manufacturer specs are tested in ideal conditions.</li>
+                    <li><strong>Visibility limits:</strong> The legal minimum is 3 SM, but consider requiring higher visibility for certain missions, especially those near other aircraft or obstacles.</li>
+                    <li><strong>Precipitation:</strong> Most consumer and commercial drones are not water-resistant. Any precipitation should ground your operation.</li>
+                    <li><strong>Temperature limits:</strong> Lithium batteries perform poorly in very cold temperatures (below 32 degrees Fahrenheit / 0 degrees Celsius) and may have reduced capacity by 20% or more. Extreme heat degrades battery life and can cause overheating.</li>
+                    <li><strong>Density altitude awareness:</strong> If operating at high elevations or in hot conditions, reduce payload and planned flight time to account for decreased performance.</li>
+                </ul>
+
+                <div class="tip-box"><strong>The PAVE checklist</strong> is a useful personal minimums framework: <strong>P</strong>ilot (Am I fit to fly?), <strong>A</strong>ircraft (Is the drone airworthy?), en<strong>V</strong>ironment (Weather, airspace, terrain), <strong>E</strong>xternal pressures (Am I being pressured to fly in marginal conditions?). If any element is unsatisfactory, do not fly.</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 3: CHAPTER QUIZ
+             ============================================ -->
+        <div class="quiz-section">
+            <h2>Chapter Quiz: Weather</h2>
+            <div class="quiz-container" id="chapterQuiz"></div>
+        </div>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-nav">
+            <a href="airspace.html">
+                <span class="nav-label">&larr; Previous Chapter</span>
+                <span class="nav-title">2. Airspace</span>
+            </a>
+            <a href="loading-performance.html" style="text-align: right;">
+                <span class="nav-label">Next Chapter &rarr;</span>
+                <span class="nav-title">4. Loading &amp; Performance</span>
+            </a>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <p><strong>Part 107 Exam Guide</strong> &mdash; A free study resource for the FAA Remote Pilot Certificate knowledge test.</p>
+        <p>This guide is for educational purposes only. Always refer to the <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107">official 14 CFR Part 107 regulations</a> and current FAA guidance for authoritative information.</p>
+        <p>&copy; 2025 Part 107 Exam Guide. Not affiliated with the FAA.</p>
+    </footer>
+
+    <script src="../js/progress.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/slides.js"></script>
+    <script src="../js/quiz-engine.js"></script>
+    <script>
+        var deck = new SlideDeck('slideDeck1');
+        var quiz = new QuizEngine('chapterQuiz', [
+            {
+                question: "Given the following METAR, what is the wind condition? METAR KORD 121856Z 31012G20KT 10SM FEW250 M04/M18 A3038",
+                options: [
+                    "Wind from 310 degrees at 12 knots, gusting to 20 knots",
+                    "Wind from 120 degrees at 31 knots, gusting to 20 knots",
+                    "Wind from 310 degrees at 20 knots, gusting to 12 knots"
+                ],
+                answer: 0,
+                explanation: "In a METAR, wind is reported as a 5-digit group: the first 3 digits are direction (310 degrees, northwest), the next 2 are speed (12 knots), and G20 indicates gusts to 20 knots. KT confirms the unit is knots."
+            },
+            {
+                question: "What are the minimum weather visibility requirements for sUAS operations under Part 107?",
+                options: [
+                    "1 statute mile from the control station",
+                    "3 statute miles from the control station",
+                    "5 statute miles from the control station"
+                ],
+                answer: 1,
+                explanation: "14 CFR 107.51(c) requires a minimum flight visibility of 3 statute miles as observed from the location of the control station."
+            },
+            {
+                question: "What is the standard sea-level temperature and pressure used in the International Standard Atmosphere (ISA)?",
+                options: [
+                    "20 degrees C and 30.12 inHg",
+                    "15 degrees C and 29.92 inHg",
+                    "10 degrees C and 28.92 inHg"
+                ],
+                answer: 1,
+                explanation: "The International Standard Atmosphere (ISA) baseline conditions are 15 degrees Celsius and 29.92 inches of mercury at sea level. These values are used as the reference for all aviation performance calculations."
+            },
+            {
+                question: "Which three factors contribute to high density altitude?",
+                options: [
+                    "Low altitude, cold temperature, dry air",
+                    "High altitude, hot temperature, humid air",
+                    "High altitude, cold temperature, dry air"
+                ],
+                answer: 1,
+                explanation: "The '3 H's' of high density altitude are: High altitude, Hot temperature, and Humid air. All three reduce air density, causing the aircraft to perform as if it were at a higher altitude than its actual elevation."
+            },
+            {
+                question: "In a METAR, what does 'BKN025' indicate?",
+                options: [
+                    "Scattered clouds at 25,000 feet AGL",
+                    "Broken clouds at 2,500 feet AGL",
+                    "Broken clouds at 250 feet AGL"
+                ],
+                answer: 1,
+                explanation: "BKN means broken cloud cover (5/8 to 7/8 sky coverage). The number 025 represents the cloud base height in hundreds of feet AGL, so 025 = 2,500 feet AGL. BKN and OVC layers constitute a ceiling."
+            },
+            {
+                question: "What is the minimum distance a Part 107 drone must maintain below clouds?",
+                options: [
+                    "500 feet",
+                    "1,000 feet",
+                    "2,000 feet"
+                ],
+                answer: 0,
+                explanation: "Under 14 CFR 107.51, the minimum cloud clearance requirements are: 500 feet below clouds, 1,000 feet above clouds, and 2,000 feet horizontal distance from clouds. A helpful memory aid is '5-1-2-3' (500 below, 1,000 above, 2,000 horizontal, 3 SM visibility)."
+            },
+            {
+                question: "What does a small temperature-dew point spread (2 degrees C or less) indicate?",
+                options: [
+                    "High density altitude and reduced performance",
+                    "Fog, mist, or low clouds are likely to form",
+                    "Strong winds are expected at the surface"
+                ],
+                answer: 1,
+                explanation: "When the temperature-dew point spread narrows to 2 degrees Celsius or less, the air is approaching saturation (100% relative humidity). This means fog, mist, or low clouds are likely to form or are already present, potentially reducing visibility below Part 107 minimums."
+            },
+            {
+                question: "Which stage of a thunderstorm is considered the most hazardous?",
+                options: [
+                    "Cumulus (building) stage",
+                    "Mature stage",
+                    "Dissipating stage"
+                ],
+                answer: 1,
+                explanation: "The mature stage is the most dangerous phase of a thunderstorm. It features both updrafts and downdrafts, the heaviest precipitation, hail, lightning, severe turbulence, microbursts, and the greatest tornado potential."
+            },
+            {
+                question: "Given the following METAR, what is the visibility? SPECI KLAS 051753Z 22015KT 1/2SM +TSRA BKN008 OVC020CB 28/23 A2985",
+                options: [
+                    "1.5 statute miles",
+                    "2 statute miles",
+                    "1/2 statute mile"
+                ],
+                answer: 2,
+                explanation: "The visibility is reported as 1/2SM, meaning one-half statute mile. This is well below the Part 107 minimum of 3 statute miles. The +TSRA indicates heavy thunderstorm with rain, and CB in the cloud report indicates cumulonimbus clouds. This METAR describes conditions in which drone operations would be prohibited."
+            },
+            {
+                question: "In a TAF, what does the change group 'FM' indicate?",
+                options: [
+                    "Temporary fluctuations lasting less than one hour",
+                    "A gradual change expected over a period",
+                    "A rapid, significant, and sustained change beginning at the specified time"
+                ],
+                answer: 2,
+                explanation: "FM (From) indicates a rapid, significant, and sustained change in conditions expected at the specified time. When an FM group appears, all previously forecast conditions are replaced by the new conditions. For example, FM182000 means 'from the 18th at 2000Z.'"
+            },
+            {
+                question: "How long should you wait after a thunderstorm passes before resuming drone operations?",
+                options: [
+                    "10 minutes",
+                    "20 minutes",
+                    "30 minutes"
+                ],
+                answer: 2,
+                explanation: "The recommended minimum wait time after a thunderstorm passes through your operating area is 30 minutes from the last observed lightning, thunder, or heavy rain. Residual hazards such as wind shear, turbulence, and microbursts can persist even after the visible storm has passed."
+            },
+            {
+                question: "What effect does a temperature inversion have on surface conditions?",
+                options: [
+                    "It causes strong surface winds and clear visibility",
+                    "It traps pollutants and haze near the surface, reducing visibility",
+                    "It creates severe thunderstorm activity"
+                ],
+                answer: 1,
+                explanation: "A temperature inversion creates a stable layer where warm air sits above cooler surface air. This acts as a lid that traps pollutants, smoke, haze, and fog near the surface, often significantly reducing visibility. Inversions also create wind shear at the boundary between the cool and warm layers."
+            },
+            {
+                question: "What weather report provides a FORECAST of expected conditions at an airport over a 24- or 30-hour period?",
+                options: [
+                    "METAR",
+                    "TAF",
+                    "Convective SIGMET"
+                ],
+                answer: 1,
+                explanation: "A TAF (Terminal Aerodrome Forecast) provides forecast weather conditions for a 5 statute mile radius around an airport for a 24- or 30-hour period. METARs report current observed conditions. Convective SIGMETs warn of severe convective weather (thunderstorms)."
+            },
+            {
+                question: "What is a microburst?",
+                options: [
+                    "A sustained wind above 50 knots associated with a hurricane",
+                    "An intense, localized downdraft that produces damaging outflow winds at the surface",
+                    "A rapid increase in temperature caused by solar heating"
+                ],
+                answer: 1,
+                explanation: "A microburst is an intense, localized downdraft within or near a thunderstorm that spreads outward upon reaching the surface, producing outflow winds up to 45 knots or more. Microbursts affect a small area (1-2 miles across), last 5-15 minutes, and can occur with or without visible precipitation."
+            },
+            {
+                question: "In a METAR, the altimeter setting is reported as 'A2972'. What does this mean, and how does it affect density altitude compared to a standard day?",
+                options: [
+                    "29.72 inHg; pressure is lower than standard, so density altitude is higher than field elevation",
+                    "29.72 inHg; pressure is higher than standard, so density altitude is lower than field elevation",
+                    "29.72 inHg; this indicates standard pressure and has no effect on density altitude"
+                ],
+                answer: 0,
+                explanation: "A2972 means the altimeter setting is 29.72 inHg, which is lower than the standard 29.92 inHg. Lower pressure means thinner air, which increases pressure altitude (and therefore density altitude) above the actual field elevation. For every 0.01 inHg below 29.92, pressure altitude increases by approximately 10 feet. In this case, pressure altitude is about 200 feet above field elevation."
+            }
+        ], 'weather');
+        Progress.markChapterRead('weather');
+    </script>
+</body>
+</html>

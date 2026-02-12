@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Operations - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="regulations.html">1. Regulations</a></li>
+                        <li><a href="airspace.html">2. Airspace</a></li>
+                        <li><a href="weather.html">3. Weather</a></li>
+                        <li><a href="loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../flashcards.html">Flashcards</a></li>
+                <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li><a href="../reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="chapter-hero">
+        <div class="container">
+            <div class="chapter-label">Chapter 5</div>
+            <h1>Operations</h1>
+            <p class="chapter-desc">Preflight procedures, crew resource management, emergency procedures, night operations, Remote ID, risk management, and aeronautical decision making.</p>
+        </div>
+    </section>
+
+    <div class="chapter-content">
+
+        <!-- ============================================
+             SECTION 1: PRESENTATION SLIDES
+             ============================================ -->
+        <div class="presentation">
+            <h2>Presentation: Operations Overview</h2>
+            <div class="slide-deck" id="slideDeck1">
+
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <h3>Operations (35-45% of the Exam)</h3>
+                    <p>This is the <strong>largest section</strong> of the Part 107 knowledge test, covering roughly one-third to nearly half of all questions. Mastering this material is essential to passing.</p>
+                    <p>Operations encompasses everything related to actually conducting a safe sUAS flight, including:</p>
+                    <ul>
+                        <li>Preflight inspection and planning</li>
+                        <li>Crew roles and responsibilities (Remote PIC, Visual Observer)</li>
+                        <li>Visual line of sight (VLOS) requirements</li>
+                        <li>Emergency and lost-link procedures</li>
+                        <li>Aeronautical decision making (ADM) and risk management</li>
+                        <li>Night operations and anti-collision lighting</li>
+                        <li>Operations over people (Categories 1-4)</li>
+                        <li>Remote Identification (Remote ID)</li>
+                        <li>Alcohol and drug regulations</li>
+                        <li>Physiological factors affecting pilot performance</li>
+                        <li>Radio communications and airport operations</li>
+                    </ul>
+                    <div class="key-point">Because this topic dominates the exam, plan to spend the most study time here. Many questions are scenario-based, requiring you to apply rules rather than simply recall them.</div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <h3>Preflight Inspection</h3>
+                    <p>Before every flight, the Remote PIC must ensure the sUAS is in a condition for safe operation. A thorough preflight inspection includes:</p>
+                    <ul>
+                        <li><strong>Airframe:</strong> Check for cracks, loose screws, structural damage, and proper assembly</li>
+                        <li><strong>Propellers:</strong> Inspect for nicks, cracks, balance, and secure attachment</li>
+                        <li><strong>Batteries:</strong> Verify charge level, check for swelling or damage, confirm secure connection</li>
+                        <li><strong>Firmware &amp; Software:</strong> Ensure the flight controller and apps are up to date</li>
+                        <li><strong>Control Links:</strong> Verify the transmitter binds to the aircraft and all controls respond correctly</li>
+                        <li><strong>GPS Signal:</strong> Confirm adequate satellite lock before GPS-dependent flight modes</li>
+                        <li><strong>Surrounding Area:</strong> Survey the launch site for obstacles, people, and potential hazards</li>
+                    </ul>
+                    <div class="key-point">The Remote PIC is ultimately responsible for determining the sUAS is safe to fly. If anything is found to be defective during preflight, the flight must not take place until the issue is resolved.</div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <h3>Crew Roles: Remote Pilot in Command (Remote PIC)</h3>
+                    <p>The Remote PIC is the person who has final authority and responsibility for the operation and safety of an sUAS flight under Part 107.</p>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li>Must hold a current Remote Pilot Certificate with an sUAS rating</li>
+                        <li>Responsible for the safe conduct of the entire flight</li>
+                        <li>Must ensure the operation complies with all applicable regulations</li>
+                        <li>Can delegate tasks to other crew members (e.g., manipulation of controls) but <strong>cannot delegate responsibility</strong></li>
+                        <li>Must determine that the sUAS is in a condition for safe operation</li>
+                        <li>Must ensure the operation does not pose an undue hazard to people, aircraft, or property</li>
+                    </ul>
+                    <div class="warning-box"><strong>Exam Tip:</strong> The FAA frequently tests the concept that responsibility always stays with the Remote PIC, even when tasks are delegated. If a visual observer or person manipulating the controls makes an error, the Remote PIC is still responsible.</div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <h3>Crew Roles: Visual Observer (VO)</h3>
+                    <p>A Visual Observer assists the Remote PIC by helping to scan for traffic, obstacles, and hazards. Under Part 107, a VO is <strong>not required</strong> but is strongly recommended.</p>
+                    <h4>Visual Observer Duties</h4>
+                    <ul>
+                        <li>Helps maintain visual line of sight with the sUAS</li>
+                        <li>Scans the airspace for other aircraft, birds, and obstacles</li>
+                        <li>Communicates hazards and traffic to the Remote PIC in real time</li>
+                        <li>Does not need to hold a Remote Pilot Certificate</li>
+                        <li>Must be able to see the sUAS at all times and communicate effectively with the Remote PIC</li>
+                    </ul>
+                    <div class="key-point">A VO does not need a pilot certificate, but they must be trained by the Remote PIC on their duties and communication procedures before the flight.</div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <h3>Visual Line of Sight (VLOS) Requirements</h3>
+                    <p>Under 14 CFR 107.31, the Remote PIC or the Visual Observer must maintain visual line of sight with the sUAS throughout the entire flight.</p>
+                    <h4>VLOS Rules</h4>
+                    <ul>
+                        <li>Must be able to see the sUAS with <strong>unaided vision</strong> (corrective lenses such as glasses or contacts are permitted)</li>
+                        <li><strong>Binoculars, telescopes, and FPV goggles</strong> cannot serve as the primary means of maintaining VLOS</li>
+                        <li>Must be able to determine the sUAS orientation (know its direction of flight)</li>
+                        <li>Must be able to see the surrounding airspace to scan for hazards</li>
+                        <li>FPV (First Person View) flying is permitted only if a VO or the Remote PIC maintains unaided VLOS</li>
+                    </ul>
+                    <div class="warning-box"><strong>Common Exam Scenario:</strong> A question may describe a pilot using FPV goggles. The correct answer is that VLOS must still be maintained by someone (the PIC without goggles, or a VO). FPV alone does not satisfy the VLOS requirement.</div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide">
+                    <h3>Emergency Procedures</h3>
+                    <p>The Remote PIC must plan for emergencies before every flight. Having well-rehearsed procedures can prevent incidents from becoming accidents.</p>
+                    <h4>Lost Link Procedures</h4>
+                    <ul>
+                        <li>Know your aircraft's failsafe behavior (return-to-home, hover in place, or land immediately)</li>
+                        <li>Program a safe return-to-home altitude before flight</li>
+                        <li>Ensure the return-to-home point is set to the correct location</li>
+                    </ul>
+                    <h4>Flyaway Protocols</h4>
+                    <ul>
+                        <li>If the sUAS is unresponsive, try switching flight modes</li>
+                        <li>Alert any nearby manned aircraft if the drone enters uncontrolled flight</li>
+                        <li>Report the incident to the FAA if a flyaway results in serious injury or property damage exceeding $500</li>
+                    </ul>
+                    <h4>Battery Failure</h4>
+                    <ul>
+                        <li>Monitor voltage throughout the flight</li>
+                        <li>Set low-battery return thresholds conservatively</li>
+                        <li>Land immediately if voltage drops unexpectedly</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="slide">
+                    <h3>Aeronautical Decision Making (ADM)</h3>
+                    <p>ADM is a systematic approach to the mental process used by pilots to consistently determine the best course of action in response to a given set of circumstances.</p>
+                    <h4>IMSAFE Checklist (Personal Fitness)</h4>
+                    <ul>
+                        <li><strong>I</strong> - Illness: Am I feeling sick or unwell?</li>
+                        <li><strong>M</strong> - Medication: Am I taking any medications that could impair judgment?</li>
+                        <li><strong>S</strong> - Stress: Am I under unusual psychological pressure?</li>
+                        <li><strong>A</strong> - Alcohol: Have I consumed alcohol in the last 8 hours or am I under the influence?</li>
+                        <li><strong>F</strong> - Fatigue: Am I adequately rested?</li>
+                        <li><strong>E</strong> - Eating/Emotion: Have I eaten properly? Am I emotionally fit to fly?</li>
+                    </ul>
+                    <h4>PAVE Checklist (Flight Risk Assessment)</h4>
+                    <ul>
+                        <li><strong>P</strong> - Pilot: Am I fit and current to fly?</li>
+                        <li><strong>A</strong> - Aircraft: Is the sUAS airworthy and suitable for the mission?</li>
+                        <li><strong>V</strong> - enVironment: Are weather, terrain, and airspace safe?</li>
+                        <li><strong>E</strong> - External pressures: Am I being pressured to fly when it may not be safe?</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="slide">
+                    <h3>Risk Management</h3>
+                    <p>Risk management is the process of identifying hazards, assessing the level of risk, and developing strategies to mitigate those risks to an acceptable level.</p>
+                    <h4>Hazard Identification</h4>
+                    <ul>
+                        <li>Survey the operating area for obstacles (towers, power lines, trees)</li>
+                        <li>Identify airspace restrictions and nearby airports</li>
+                        <li>Consider weather conditions and forecasts</li>
+                        <li>Note the presence of people, vehicles, and structures</li>
+                    </ul>
+                    <h4>The 3P Model</h4>
+                    <ul>
+                        <li><strong>Perceive:</strong> Identify the hazards associated with the flight</li>
+                        <li><strong>Process:</strong> Evaluate the level of risk posed by each hazard</li>
+                        <li><strong>Perform:</strong> Take action to mitigate the risk (change the plan, add safety measures, or cancel the flight)</li>
+                    </ul>
+                    <div class="key-point"><strong>Personal Minimums:</strong> Set limits above regulatory requirements for conditions such as wind speed, visibility, proximity to obstacles, and battery level. Flying to personal minimums rather than regulatory minimums provides an extra margin of safety.</div>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="slide">
+                    <h3>Night Operations</h3>
+                    <p>Since the 2021 rule update, Part 107 pilots can fly at night without a waiver, provided they meet certain requirements.</p>
+                    <h4>Requirements for Night Flight</h4>
+                    <ul>
+                        <li>The sUAS must have <strong>anti-collision lights visible for at least 3 statute miles</strong></li>
+                        <li>The Remote PIC must have completed an updated initial knowledge test or recurrent training that covers night operations</li>
+                        <li>Must maintain VLOS (even harder at night, making bright lights essential)</li>
+                    </ul>
+                    <h4>Increased Risks at Night</h4>
+                    <ul>
+                        <li>Reduced ability to see obstacles, terrain, and other aircraft</li>
+                        <li>Difficulty judging distance and altitude</li>
+                        <li>Visual illusions (autokinesis, false horizons)</li>
+                        <li>Reduced ability to detect the sUAS orientation</li>
+                    </ul>
+                    <div class="warning-box"><strong>Exam Tip:</strong> The 3 statute mile visibility requirement applies to the anti-collision light, not the overall flight visibility. The anti-collision light can be reduced in intensity if the Remote PIC determines that it would create a safety hazard due to the nature of the operation.</div>
+                </div>
+
+                <!-- Slide 10 -->
+                <div class="slide">
+                    <h3>Operations Over People</h3>
+                    <p>The 2021 final rule established four categories for operations over people, each with different requirements based on risk.</p>
+                    <h4>The Four Categories</h4>
+                    <ul>
+                        <li><strong>Category 1:</strong> sUAS weighs 0.55 lbs (250g) or less, including everything on board. No additional requirements beyond standard Part 107 rules.</li>
+                        <li><strong>Category 2:</strong> sUAS must not cause injury severity equal to or greater than that caused by a rigid object with a kinetic energy of 11 ft-lbs. Requires an FAA-accepted means of compliance (MOC).</li>
+                        <li><strong>Category 3:</strong> Same injury threshold as Category 2, but the operation must not maintain sustained flight over open-air assemblies of people. People must be under a covered structure or inside a stationary vehicle. Requires a declaration of compliance (DOC).</li>
+                        <li><strong>Category 4:</strong> Requires a Part 21 airworthiness certificate and the pilot must operate in accordance with the operating limitations specified in the approved Flight Manual or equivalent.</li>
+                    </ul>
+                    <div class="key-point">Category 1 is the simplest path: if your drone weighs under 0.55 lbs at takeoff, you can fly over people with no special declaration or compliance document needed.</div>
+                </div>
+
+                <!-- Slide 11 -->
+                <div class="slide">
+                    <h3>Remote Identification (Remote ID)</h3>
+                    <p>Remote ID is sometimes called "a digital license plate for drones." Since March 16, 2024, most sUAS must comply with Remote ID requirements when flying.</p>
+                    <h4>What is Broadcast?</h4>
+                    <p>The drone must broadcast the following information:</p>
+                    <ul>
+                        <li>A unique identifier (serial number or session ID)</li>
+                        <li>The drone's latitude, longitude, and altitude</li>
+                        <li>The control station's latitude, longitude, and altitude</li>
+                        <li>A time mark and emergency status indication</li>
+                    </ul>
+                    <h4>Three Ways to Comply</h4>
+                    <ul>
+                        <li><strong>Standard Remote ID:</strong> Built into the drone by the manufacturer</li>
+                        <li><strong>Remote ID Broadcast Module:</strong> An add-on device attached to an existing drone; the pilot must remain within 400 feet of the module</li>
+                        <li><strong>FRIA (FAA-Recognized Identification Area):</strong> Fly within a designated area operated by a community-based organization or educational institution; no Remote ID equipment required within the FRIA</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 12 -->
+                <div class="slide">
+                    <h3>Alcohol &amp; Drugs (14 CFR 107.27)</h3>
+                    <p>The FAA strictly regulates the use of alcohol and drugs for all persons acting as Remote PIC, person manipulating the controls, or visual observer.</p>
+                    <h4>The Rules</h4>
+                    <ul>
+                        <li><strong>8-Hour Rule:</strong> No acting as a crew member within 8 hours of consuming any alcoholic beverage ("bottle to throttle")</li>
+                        <li><strong>0.04% BAC Limit:</strong> Must not have a blood alcohol concentration of 0.04% or greater</li>
+                        <li><strong>No Impairing Substances:</strong> Must not use any drug that affects the person's faculties in any way contrary to safety</li>
+                        <li><strong>Includes Prescription Drugs:</strong> Even legal medications can disqualify you if they impair your ability to safely operate</li>
+                    </ul>
+                    <div class="warning-box"><strong>Important:</strong> Both the 8-hour rule AND the 0.04% BAC limit must be met. Even if 8 hours have passed, if your BAC is still 0.04% or higher, you cannot legally operate. Similarly, you may be under 0.04% but still be "under the influence," which is also a violation.</div>
+                </div>
+
+                <!-- Slide 13 -->
+                <div class="slide">
+                    <h3>Physiological Factors</h3>
+                    <p>Even though drone pilots are typically on the ground, physiological factors can significantly impair performance and judgment.</p>
+                    <h4>Key Factors</h4>
+                    <ul>
+                        <li><strong>Hyperventilation:</strong> Rapid breathing caused by stress or anxiety; can cause dizziness, tingling, and impaired judgment. Treated by slowing breathing rate.</li>
+                        <li><strong>Spatial Disorientation:</strong> Can occur when using FPV systems or when the sUAS is far away; the pilot may lose awareness of the drone's attitude or position.</li>
+                        <li><strong>Fatigue:</strong> Reduces reaction time, impairs decision making, and degrades scanning ability. Acute fatigue comes from sleep deprivation; chronic fatigue builds over weeks.</li>
+                        <li><strong>Vision Limitations at Night:</strong> Central vision (cones) works poorly in low light. Use off-center viewing (rods) to detect objects at night. Full dark adaptation takes about 30 minutes.</li>
+                        <li><strong>Carbon Monoxide (CO):</strong> Can be a factor if operating near generators or vehicles; CO is colorless and odorless. Symptoms include headache, dizziness, and drowsiness.</li>
+                    </ul>
+                    <div class="key-point">The IMSAFE checklist is your go-to tool for self-assessing physiological readiness before every flight.</div>
+                </div>
+
+                <!-- Slide 14 -->
+                <div class="slide">
+                    <h3>Radio Communications &amp; Airport Operations</h3>
+                    <p>While Part 107 operations do not require a radio, communicating intentions is a critical safety practice, especially near airports and heliports.</p>
+                    <h4>CTAF (Common Traffic Advisory Frequency)</h4>
+                    <ul>
+                        <li>At non-towered airports, pilots self-announce on the CTAF</li>
+                        <li>Monitoring the CTAF helps sUAS operators maintain situational awareness of manned traffic patterns</li>
+                        <li>The CTAF is shown on sectional charts near the airport symbol</li>
+                    </ul>
+                    <h4>Airport and Heliport Hazards</h4>
+                    <ul>
+                        <li>Manned aircraft on approach and departure paths are the primary concern</li>
+                        <li>Jet blast and rotor wash from nearby aircraft</li>
+                        <li>Increased traffic during peak hours</li>
+                        <li>Always yield right-of-way to manned aircraft</li>
+                    </ul>
+                    <div class="key-point">sUAS operators must always yield the right-of-way to manned aircraft. If you see or hear a manned aircraft approaching, maneuver the sUAS to avoid conflict, typically by descending and moving away from the aircraft's flight path.</div>
+                </div>
+
+                <!-- Slide Controls -->
+                <div class="slide-controls">
+                    <button class="slide-btn prev" disabled>&larr; Previous</button>
+                    <span class="slide-counter">Slide 1 of 14</span>
+                    <button class="slide-btn next">Next &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 2: IN-DEPTH READING
+             ============================================ -->
+        <div class="reading-section">
+            <h2>In-Depth Reading: Operations</h2>
+            <div class="reading-content">
+
+                <h3>Preflight Inspection Checklist</h3>
+                <p>The Remote PIC is required by 14 CFR 107.49 to perform a preflight inspection of the small unmanned aircraft system before every flight. This inspection must be thorough enough to ensure the sUAS is in a condition for safe operation. While the FAA does not mandate a specific checklist format, the following items represent best practices based on the Remote Pilot Study Guide and industry standards.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>What to Check</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Airframe</td>
+                            <td>Structural integrity, loose fasteners, cracks, damage from previous flights</td>
+                        </tr>
+                        <tr>
+                            <td>Propellers / Rotors</td>
+                            <td>Nicks, cracks, warping, balance, secure mounting, correct rotation direction</td>
+                        </tr>
+                        <tr>
+                            <td>Motors</td>
+                            <td>Spin freely without grinding, no debris in motor bells, secure mounting</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>Charge level adequate for planned flight plus reserve, no swelling or damage, secure connection, proper voltage per cell</td>
+                        </tr>
+                        <tr>
+                            <td>Controller / Transmitter</td>
+                            <td>Battery charged, antennas extended and properly oriented, control sticks centered and responsive</td>
+                        </tr>
+                        <tr>
+                            <td>Control Link</td>
+                            <td>Successful binding between transmitter and aircraft, low latency, all channels responding correctly</td>
+                        </tr>
+                        <tr>
+                            <td>GPS / Navigation</td>
+                            <td>Adequate satellite count, home point recorded correctly, compass calibrated if prompted</td>
+                        </tr>
+                        <tr>
+                            <td>Firmware / Software</td>
+                            <td>Current versions installed on aircraft and controller app, no critical updates pending</td>
+                        </tr>
+                        <tr>
+                            <td>Payload</td>
+                            <td>Securely attached, within weight limits, does not obstruct sensors or affect CG</td>
+                        </tr>
+                        <tr>
+                            <td>Operating Area</td>
+                            <td>Obstacles identified, launch/landing zone clear, spectators at safe distance, airspace authorization confirmed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box"><strong>Tip:</strong> Develop a written checklist specific to your aircraft and use it consistently. Skipping preflight is one of the most common causes of preventable sUAS incidents.</div>
+
+                <h3>Remote PIC Responsibilities</h3>
+                <p>Under 14 CFR 107.19, the Remote Pilot in Command is directly responsible for and is the final authority regarding the operation of the sUAS. This is one of the most tested concepts on the Part 107 exam.</p>
+                <p>The Remote PIC must:</p>
+                <ul>
+                    <li>Hold a valid Remote Pilot Certificate with a small UAS rating (14 CFR 107.12)</li>
+                    <li>Make the final determination that the sUAS is safe to fly after the preflight inspection</li>
+                    <li>Ensure the operation does not create an undue hazard to other aircraft, people, or property in the event of a loss of control</li>
+                    <li>Ensure that all crew members and any person manipulating the controls are briefed on the operating conditions, emergency procedures, contingency procedures, roles, and responsibilities before the flight</li>
+                    <li>Ensure compliance with all applicable regulations, including airspace authorization, altitude limits, and right-of-way rules</li>
+                    <li>Report any accident to the FAA within 10 days if it results in serious injury to any person or damage to property (other than the sUAS) exceeding $500</li>
+                </ul>
+
+                <div class="warning-box"><strong>Critical Concept:</strong> The Remote PIC can designate another person to manipulate the flight controls, but the Remote PIC retains responsibility for the safe conduct of the flight. You cannot delegate responsibility, only tasks. If an accident occurs due to a control operator's mistake, the Remote PIC is still accountable.</div>
+
+                <h3>Visual Observer Role and When to Use One</h3>
+                <p>A Visual Observer is a crew member who assists the Remote PIC and the person manipulating the controls by maintaining awareness of the sUAS, the surrounding airspace, and any hazards. While not required under Part 107, a VO is strongly recommended in many operational scenarios.</p>
+                <p>Consider using a Visual Observer when:</p>
+                <ul>
+                    <li>Operating in areas with manned aircraft activity</li>
+                    <li>Flying near the edge of visual range</li>
+                    <li>The Remote PIC is also manipulating the controls and cannot easily scan for traffic</li>
+                    <li>Operating in congested areas with pedestrians or vehicles</li>
+                    <li>Using FPV equipment, where the PIC's view is limited to the camera feed</li>
+                </ul>
+                <p>The VO does not need a Remote Pilot Certificate but must be briefed by the Remote PIC before the flight. The VO and Remote PIC must maintain effective communication at all times. This communication can be direct verbal communication; it does not have to be through electronic means, but the VO and PIC must be able to communicate without delay.</p>
+
+                <div class="info-box"><strong>Note:</strong> If a VO is used, the VO and Remote PIC together must be able to maintain VLOS with the sUAS. The VO can serve as the person satisfying the VLOS requirement. A chain of visual observers (daisy-chaining) to extend the operational range is not permitted under Part 107.</div>
+
+                <h3>VLOS Rules and Common Violations</h3>
+                <p>Visual line of sight is fundamental to Part 107 operations. Under 107.31, either the Remote PIC or the VO must be able to see the unmanned aircraft with vision unaided by any device other than corrective lenses. This means the person must use their own natural eyesight.</p>
+                <p>Common VLOS violations and misunderstandings include:</p>
+                <ul>
+                    <li><strong>Using binoculars as the primary means of tracking the sUAS:</strong> Binoculars narrow the field of view and prevent scanning for other aircraft. They may be used briefly to enhance situational awareness, but not as the primary VLOS method.</li>
+                    <li><strong>Relying solely on FPV goggles or a monitor:</strong> A camera feed is not a substitute for VLOS. Someone (PIC or VO) must maintain unaided visual contact at all times.</li>
+                    <li><strong>Flying behind buildings or terrain:</strong> If the sUAS passes behind a structure and cannot be seen, VLOS is broken.</li>
+                    <li><strong>Flying beyond visual range:</strong> Weather, haze, distance, and small aircraft size can all cause the pilot to lose the ability to see the drone. If you cannot determine the sUAS orientation, you have lost VLOS.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Exam Tip:</strong> Questions often present a scenario where the pilot can see the drone on a monitor but not with unaided eyes. The correct answer is always that VLOS has been lost and the flight does not comply with Part 107.</div>
+
+                <h3>Emergency Procedures and Lost Link</h3>
+                <p>The Remote PIC should develop and brief emergency procedures before every flight. Common emergencies include:</p>
+
+                <p><strong>Loss of Control Link (Lost Link):</strong> This occurs when the communication link between the transmitter and the sUAS is interrupted. Most modern drones have programmable failsafe behaviors:</p>
+                <ul>
+                    <li><strong>Return-to-Home (RTH):</strong> The drone flies back to a pre-set GPS point at a pre-set altitude. This is the most common failsafe.</li>
+                    <li><strong>Hover in Place:</strong> The drone maintains position and altitude, waiting for the link to be restored.</li>
+                    <li><strong>Land Immediately:</strong> The drone descends and lands where it is, regardless of what is below.</li>
+                </ul>
+                <p>The Remote PIC should select the appropriate failsafe based on the operating environment. In an urban area with obstacles, RTH at a safe altitude may be best. Over open water, hovering may be preferable if a link can be re-established.</p>
+
+                <p><strong>Flyaway:</strong> A flyaway is an event where the sUAS does not respond to control inputs and flies away uncontrollably. In a flyaway scenario, the PIC should attempt to switch flight modes, toggle the control link, and alert nearby manned aircraft or ATC if possible. The incident must be reported to the FAA if it causes serious injury or property damage exceeding $500.</p>
+
+                <p><strong>Battery Emergency:</strong> If the battery voltage drops unexpectedly or a low-voltage warning triggers, the PIC should land the sUAS as soon as practicable. Planning every flight with adequate battery reserve (typically 20-30%) helps prevent this emergency.</p>
+
+                <div class="warning-box"><strong>Accident Reporting (14 CFR 107.9):</strong> The Remote PIC must report any operation that results in at least serious injury to any person or any loss of consciousness, or damage to any property (other than the small unmanned aircraft) of at least $500 to the FAA within 10 days of the operation.</div>
+
+                <h3>Aeronautical Decision Making and the IMSAFE Checklist</h3>
+                <p>Aeronautical Decision Making (ADM) is a systematic approach to making sound judgments about a flight. It applies the same human factors principles used in manned aviation to sUAS operations. The FAA tests ADM concepts heavily because poor decision making is a leading cause of aviation incidents.</p>
+
+                <p>The <strong>IMSAFE checklist</strong> is a personal readiness tool. Before every flight, ask yourself:</p>
+                <ul>
+                    <li><strong>Illness:</strong> Am I feeling ill? Even a mild cold can impair concentration and reaction time.</li>
+                    <li><strong>Medication:</strong> Am I taking any medication, prescription or over-the-counter, that could impair my abilities? Antihistamines, sleep aids, and certain pain medications are common culprits.</li>
+                    <li><strong>Stress:</strong> Am I under significant psychological stress from work, finances, or personal matters? Stress degrades cognitive performance and situational awareness.</li>
+                    <li><strong>Alcohol:</strong> Have I consumed alcohol in the last 8 hours? Is my BAC below 0.04%? Am I still feeling any effects?</li>
+                    <li><strong>Fatigue:</strong> Did I get adequate rest? Fatigue is insidious because fatigued individuals often do not recognize the extent of their impairment.</li>
+                    <li><strong>Eating/Emotion:</strong> Have I eaten properly to maintain blood sugar and cognitive function? Am I emotionally stable and focused?</li>
+                </ul>
+
+                <p>Hazardous attitudes the FAA has identified that undermine good ADM include:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hazardous Attitude</th>
+                            <th>Description</th>
+                            <th>Antidote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Anti-authority</td>
+                            <td>"The rules don't apply to me"</td>
+                            <td>"Follow the rules; they are usually right"</td>
+                        </tr>
+                        <tr>
+                            <td>Impulsivity</td>
+                            <td>"Do something quickly!" (without thinking)</td>
+                            <td>"Not so fast. Think first"</td>
+                        </tr>
+                        <tr>
+                            <td>Invulnerability</td>
+                            <td>"It won't happen to me"</td>
+                            <td>"It could happen to me"</td>
+                        </tr>
+                        <tr>
+                            <td>Macho</td>
+                            <td>"I can do it; I'll show them"</td>
+                            <td>"Taking chances is foolish"</td>
+                        </tr>
+                        <tr>
+                            <td>Resignation</td>
+                            <td>"What's the use? I have no control"</td>
+                            <td>"I'm not helpless. I can make a difference"</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box"><strong>Study Note:</strong> The FAA expects you to recognize these hazardous attitudes in scenario-based questions. For example, a pilot who says "I've flown in worse conditions and nothing happened" is exhibiting the <em>invulnerability</em> attitude.</div>
+
+                <h3>Risk Management with the 3P Model</h3>
+                <p>The 3P model provides a continuous loop for managing risk throughout a flight. It is not a one-time pre-flight check; rather, it should be applied before, during, and after the flight.</p>
+                <ul>
+                    <li><strong>Perceive:</strong> What hazards exist in the current situation? This includes weather, airspace, terrain, people, mechanical condition, and pilot fitness. Gather all relevant information.</li>
+                    <li><strong>Process:</strong> Evaluate the level of risk each hazard presents. Consider the likelihood of occurrence and the severity of consequences. Use a risk assessment matrix if helpful:
+                        <ul>
+                            <li>Likelihood: Improbable, Remote, Occasional, Probable, Frequent</li>
+                            <li>Severity: Negligible, Minor, Major, Hazardous, Catastrophic</li>
+                        </ul>
+                    </li>
+                    <li><strong>Perform:</strong> Take action. You have three options: mitigate the risk (add safety measures), avoid the risk (change the plan), or accept the risk if it falls within acceptable limits. If the risk cannot be reduced to an acceptable level, cancel or postpone the flight.</li>
+                </ul>
+
+                <p><strong>Personal Minimums</strong> are limits that you set for yourself that exceed the regulatory requirements. For example, while Part 107 allows flight in visibility as low as 3 statute miles, you might set a personal minimum of 5 statute miles. Personal minimums should account for your experience level, the complexity of the mission, and the operational environment. Establishing personal minimums is a hallmark of professional, safety-conscious operators.</p>
+
+                <div class="tip-box"><strong>Tip:</strong> Write down your personal minimums and review them before each flight. It is much easier to commit to safety standards on the ground than in the heat of the moment when external pressures mount.</div>
+
+                <h3>Night Operations Rules</h3>
+                <p>Effective April 21, 2021, Part 107 pilots can conduct night operations without a waiver, provided they meet the following requirements:</p>
+                <ul>
+                    <li>The sUAS must be equipped with anti-collision lighting that is visible for at least <strong>3 statute miles</strong> and has a flash rate sufficient to avoid a collision</li>
+                    <li>The anti-collision light can be reduced in intensity if the Remote PIC determines it would create a safety hazard (for example, during law enforcement operations)</li>
+                    <li>The Remote PIC must have completed an initial knowledge test or recurrent online training that includes night operations content (tests or training taken after January 2021)</li>
+                    <li>VLOS must still be maintained. The anti-collision light helps the PIC track the sUAS, but the PIC must still be able to see the aircraft and determine its location and direction of flight</li>
+                </ul>
+
+                <p><strong>Night Vision Considerations:</strong></p>
+                <ul>
+                    <li>Human eyes take approximately 30 minutes to fully adapt to darkness (dark adaptation)</li>
+                    <li>Bright lights (phone screens, car headlights) can destroy dark adaptation in seconds</li>
+                    <li>Off-center viewing (looking slightly to the side of an object) uses the rod cells in the retina, which are more sensitive in low light than the cone cells used in central vision</li>
+                    <li>Autokinesis is an illusion where a stationary light appears to move against a dark background; this can be mistaken for aircraft movement</li>
+                </ul>
+
+                <div class="info-box"><strong>Civil Twilight:</strong> Civil twilight is the period before sunrise and after sunset when the sun is no more than 6 degrees below the horizon. Part 107 allows flight during civil twilight with the same anti-collision lighting requirement as night flight. Operations during civil twilight require the anti-collision light to be turned on.</div>
+
+                <h3>Operations Over People Categories (1-4)</h3>
+                <p>The Operations Over People rule, effective April 21, 2021, created a risk-based framework with four categories. Understanding each category is essential for the exam.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Key Requirement</th>
+                            <th>Operations Over Open-Air Assembly</th>
+                            <th>Documentation Needed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Category 1</td>
+                            <td>Maximum 0.55 lbs (250g) at takeoff including everything onboard</td>
+                            <td>Permitted</td>
+                            <td>None (beyond standard Part 107)</td>
+                        </tr>
+                        <tr>
+                            <td>Category 2</td>
+                            <td>No exposed rotating parts that could lacerate skin; must not cause injury severity equal to or greater than a rigid object with 11 ft-lbs of kinetic energy</td>
+                            <td>Permitted</td>
+                            <td>FAA-accepted Declaration of Compliance (DOC)</td>
+                        </tr>
+                        <tr>
+                            <td>Category 3</td>
+                            <td>Same injury criteria as Category 2</td>
+                            <td>NOT permitted over open-air assemblies. People must be under cover, inside a vehicle, or notified and consenting</td>
+                            <td>FAA-accepted Declaration of Compliance (DOC)</td>
+                        </tr>
+                        <tr>
+                            <td>Category 4</td>
+                            <td>Must have an airworthiness certificate issued under Part 21</td>
+                            <td>Per the operating limitations in the approved Flight Manual</td>
+                            <td>Airworthiness certificate and Flight Manual</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box"><strong>Key Distinction:</strong> Category 2 allows sustained flight over people and open-air assemblies. Category 3 allows flight over people but prohibits sustained flight over open-air assemblies of people. An "open-air assembly" is a group of people gathered in an outdoor area for an event (such as a concert or sporting event).</div>
+
+                <h3>Remote ID Requirements</h3>
+                <p>Remote Identification became enforceable on March 16, 2024. It requires most drones to broadcast identification and location information during flight, similar to a transponder on a manned aircraft.</p>
+                <p>The broadcast includes:</p>
+                <ul>
+                    <li>A unique identifier for the drone (serial number for standard Remote ID, or a session ID for broadcast modules)</li>
+                    <li>Drone latitude, longitude, geometric altitude, and velocity</li>
+                    <li>Control station latitude, longitude, and altitude</li>
+                    <li>Time mark and emergency status indication</li>
+                </ul>
+
+                <p><strong>Three Methods of Compliance:</strong></p>
+                <ul>
+                    <li><strong>Standard Remote ID:</strong> The drone has built-in Remote ID capability from the manufacturer. It broadcasts directly from the aircraft. This is the most common method for new drones.</li>
+                    <li><strong>Remote ID Broadcast Module:</strong> A separate device attached to an older drone. It broadcasts the required information. The pilot must remain within 400 feet of the drone at all times when using a broadcast module.</li>
+                    <li><strong>FAA-Recognized Identification Area (FRIA):</strong> A specific geographic area where drones without Remote ID equipment can fly. FRIAs are established by community-based organizations (CBOs) and educational institutions. The drone must remain within the boundaries of the FRIA.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Exam Tip:</strong> Remember the 400-foot limit for broadcast modules: the pilot must stay within 400 feet of the drone when using a Remote ID broadcast module (not to be confused with the 400-foot AGL altitude limit for Part 107 flights).</div>
+
+                <h3>Alcohol and Drug Rules (14 CFR 107.27)</h3>
+                <p>The FAA applies strict standards regarding alcohol and drugs for all sUAS crew members. These rules apply to the Remote PIC, the person manipulating the controls, and any visual observer.</p>
+                <ul>
+                    <li><strong>8-Hour Rule:</strong> No person may act as a crew member within 8 hours after consuming any alcoholic beverage. This is often called the "bottle-to-throttle" rule.</li>
+                    <li><strong>0.04% BAC:</strong> No person may act as a crew member while having a blood alcohol concentration of 0.04% or greater. Note that this is half the legal limit for driving in most states (0.08%).</li>
+                    <li><strong>Under the Influence:</strong> No person may act as a crew member while under the influence of alcohol or any drug that affects their faculties in a way contrary to safety.</li>
+                    <li><strong>Refusal of Testing:</strong> A person who refuses to submit to a drug or alcohol test requested under the FAA's authority is grounds for denial, suspension, or revocation of any certificate.</li>
+                </ul>
+
+                <div class="warning-box"><strong>Important:</strong> Over-the-counter medications such as diphenhydramine (Benadryl), some cold medicines, and sleep aids can impair judgment and reaction time. These fall under the "any drug that affects faculties" clause. When in doubt, do not fly.</div>
+
+                <h3>Physiological Factors Affecting Performance</h3>
+                <p>Although drone pilots are on the ground rather than in the air, physiological factors can still impair their ability to safely operate an sUAS.</p>
+
+                <p><strong>Hyperventilation:</strong> Caused by rapid, shallow breathing, often triggered by stress, anxiety, or panic. Symptoms include lightheadedness, tingling in the extremities, visual impairment, and impaired judgment. Treatment involves consciously slowing the breathing rate and breathing into a bag if available.</p>
+
+                <p><strong>Spatial Disorientation:</strong> While primarily a concern for manned pilots, sUAS operators can experience disorientation when flying beyond visual range, in low-visibility conditions, or when relying on FPV systems. The brain may misinterpret visual cues from the camera, leading to incorrect control inputs.</p>
+
+                <p><strong>Fatigue:</strong> One of the most dangerous physiological conditions because the affected person often fails to recognize their impairment. Signs include difficulty concentrating, slow reaction time, poor decision making, and irritability. There are two types: acute fatigue (from immediate sleep deprivation or overwork) and chronic fatigue (accumulated over days or weeks from persistent stress or inadequate rest).</p>
+
+                <p><strong>Vision at Night:</strong> The retina has two types of photoreceptors: cones (central vision, color, daytime) and rods (peripheral vision, light/dark, nighttime). Rods are more sensitive in low light, so pilots should use off-center viewing to detect objects at night. Dark adaptation takes approximately 30 minutes. A single exposure to bright light can significantly impair night vision, requiring another period of adaptation.</p>
+
+                <p><strong>Carbon Monoxide Poisoning:</strong> CO can be present near running generators or vehicle exhaust. Because it is colorless and odorless, it can accumulate without the pilot's awareness. Symptoms include headache, drowsiness, dizziness, and in severe cases, loss of consciousness. If CO exposure is suspected, move to fresh air immediately.</p>
+
+                <div class="tip-box"><strong>Study Tip:</strong> Remember the mnemonic for hypoxia and hyperventilation symptoms: both conditions can produce similar symptoms (dizziness, tingling, impaired judgment), but they have opposite causes and treatments. Hyperventilation is treated by breathing slower; hypoxia is treated by supplemental oxygen (more relevant in manned aviation but may appear on the exam).</div>
+
+                <h3>Airport Operations and Radio Procedures</h3>
+                <p>When operating near airports and heliports, the Remote PIC must exercise extra caution and maintain situational awareness of manned aircraft traffic.</p>
+
+                <p><strong>Monitoring CTAF:</strong> The Common Traffic Advisory Frequency (CTAF) is the frequency used by pilots at non-towered airports to announce their positions and intentions. While Part 107 does not require sUAS operators to have a radio, monitoring the CTAF when operating near an airport is a best practice that significantly enhances safety. The CTAF for each airport is published on sectional charts, in the Chart Supplement (formerly the Airport/Facility Directory), and in flight planning apps.</p>
+
+                <p><strong>Right-of-Way:</strong> Under 14 CFR 107.37, the Remote PIC must yield the right-of-way to all manned aircraft. This is an unconditional requirement. If you see or become aware of a manned aircraft in the area, you must maneuver your sUAS to avoid it. The safest action is typically to descend and move away from the aircraft's path.</p>
+
+                <p><strong>Controlled Airspace Near Airports:</strong> Operations in Class B, C, D, or E surface airspace require prior authorization from ATC. The LAANC (Low Altitude Authorization and Notification Capability) system provides automated, near-real-time authorization for flights at or below published altitude ceilings in controlled airspace near airports. Without LAANC or manual ATC authorization, the sUAS must remain outside controlled airspace.</p>
+
+                <p><strong>NOTAMs:</strong> Before flying near any airport, always check Notices to Air Missions (NOTAMs) for temporary changes to airspace, runway closures, or other safety-critical information. NOTAMs are available through the FAA's NOTAM system, flight planning apps, and at 1800wxbrief.com.</p>
+
+                <div class="info-box"><strong>Remember:</strong> Even in uncontrolled airspace (Class G), if you are operating near an airport, manned aircraft will be present. The Remote PIC must always maintain awareness and yield to manned traffic. Safety is not optional just because authorization is not required.</div>
+
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 3: CHAPTER QUIZ (18 Questions)
+             ============================================ -->
+        <div class="quiz-section">
+            <h2>Chapter Quiz: Operations</h2>
+            <div class="quiz-container" id="chapterQuiz"></div>
+        </div>
+
+        <!-- Chapter Navigation -->
+        <nav class="chapter-nav">
+            <a href="loading-performance.html">
+                <span class="nav-label">Previous Chapter</span>
+                <span class="nav-title">Loading &amp; Performance</span>
+            </a>
+            <a href="../practice-exam.html">
+                <span class="nav-label">Ready to Test?</span>
+                <span class="nav-title">Take Practice Exam</span>
+            </a>
+        </nav>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This study guide is an educational resource and is not affiliated with or endorsed by the FAA. Always refer to the official <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107" target="_blank">14 CFR Part 107</a> and the <a href="https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf" target="_blank">FAA Remote Pilot Study Guide</a> for the most current and authoritative information.</p>
+            <p>&copy; 2026 Part 107 Exam Guide. For educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="../js/progress.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/slides.js"></script>
+    <script src="../js/quiz-engine.js"></script>
+    <script>
+        var deck = new SlideDeck('slideDeck1');
+        var quiz = new QuizEngine('chapterQuiz', [
+            {
+                question: "What is the Remote PIC required to do before each flight under Part 107?",
+                options: [
+                    "Perform a preflight inspection to ensure the sUAS is in a condition for safe operation",
+                    "File a flight plan with the nearest ATC facility",
+                    "Obtain a weather briefing from a certified dispatcher"
+                ],
+                answer: 0,
+                explanation: "Under 14 CFR 107.49, the Remote PIC must perform a preflight inspection of the sUAS to ensure it is in a condition for safe operation before each flight. Filing a flight plan and obtaining a certified dispatcher briefing are not required under Part 107."
+            },
+            {
+                question: "Who is ultimately responsible for the safe operation of an sUAS flight under Part 107?",
+                options: [
+                    "The visual observer",
+                    "The person manipulating the flight controls",
+                    "The Remote Pilot in Command"
+                ],
+                answer: 2,
+                explanation: "Under 14 CFR 107.19, the Remote PIC is directly responsible for and is the final authority as to the operation of the small unmanned aircraft system. While tasks can be delegated, responsibility cannot."
+            },
+            {
+                question: "Which of the following is true about visual line of sight (VLOS) under Part 107?",
+                options: [
+                    "VLOS may be maintained using binoculars as the primary means of tracking the sUAS",
+                    "VLOS must be maintained with unaided vision, except corrective lenses are permitted",
+                    "An FPV camera feed satisfies the VLOS requirement if the image is high definition"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.31, the Remote PIC or VO must maintain VLOS with unaided vision (corrective lenses like glasses or contacts are allowed). Binoculars and FPV cameras cannot serve as the primary means of satisfying VLOS."
+            },
+            {
+                question: "A Remote PIC delegates control of the sUAS to another person, and that person crashes the drone into a vehicle. Who is responsible?",
+                options: [
+                    "The person manipulating the controls, since they were flying at the time",
+                    "Both the control operator and the Remote PIC share equal responsibility",
+                    "The Remote PIC, because responsibility cannot be delegated"
+                ],
+                answer: 2,
+                explanation: "The Remote PIC can delegate tasks but cannot delegate responsibility. Under 14 CFR 107.19, the Remote PIC is directly responsible for the safe operation of the sUAS at all times."
+            },
+            {
+                question: "Under Part 107, what is required of a Visual Observer?",
+                options: [
+                    "They must hold a Remote Pilot Certificate",
+                    "They must be trained by the Remote PIC on their duties before the flight",
+                    "They must be able to manipulate the flight controls in an emergency"
+                ],
+                answer: 1,
+                explanation: "A Visual Observer does not need to hold a Remote Pilot Certificate. However, the Remote PIC must brief the VO on their duties, communication procedures, and emergency protocols before the flight."
+            },
+            {
+                question: "What does the 'I' in the IMSAFE checklist stand for?",
+                options: [
+                    "Inspection",
+                    "Illness",
+                    "Insurance"
+                ],
+                answer: 1,
+                explanation: "IMSAFE stands for Illness, Medication, Stress, Alcohol, Fatigue, and Eating/Emotion. It is a personal fitness self-assessment checklist used before every flight."
+            },
+            {
+                question: "What are the three steps of the 3P risk management model?",
+                options: [
+                    "Plan, Prepare, Proceed",
+                    "Perceive, Process, Perform",
+                    "Predict, Prevent, Protect"
+                ],
+                answer: 1,
+                explanation: "The 3P model is Perceive (identify hazards), Process (evaluate the risk level), and Perform (take action to mitigate the risk or cancel the flight)."
+            },
+            {
+                question: "What is required for night operations under the updated Part 107 rule?",
+                options: [
+                    "An FAA waiver for night flight operations",
+                    "Anti-collision lights visible for at least 3 statute miles",
+                    "A co-pilot to assist the Remote PIC at all times"
+                ],
+                answer: 1,
+                explanation: "Since the 2021 rule update, Part 107 pilots can fly at night without a waiver. The sUAS must have anti-collision lighting visible for at least 3 statute miles. No waiver or co-pilot is required."
+            },
+            {
+                question: "Which category of Operations Over People allows flight with an sUAS weighing 0.55 lbs (250g) or less with no special documentation?",
+                options: [
+                    "Category 1",
+                    "Category 2",
+                    "Category 4"
+                ],
+                answer: 0,
+                explanation: "Category 1 applies to drones weighing 0.55 lbs (250g) or less at takeoff, including everything onboard. No special declaration of compliance or airworthiness certificate is needed beyond standard Part 107 rules."
+            },
+            {
+                question: "What distinguishes Category 3 from Category 2 for Operations Over People?",
+                options: [
+                    "Category 3 requires a heavier drone than Category 2",
+                    "Category 3 does not allow sustained flight over open-air assemblies of people",
+                    "Category 3 does not require any declaration of compliance"
+                ],
+                answer: 1,
+                explanation: "Category 2 and Category 3 have the same injury criteria, but Category 3 prohibits sustained flight over open-air assemblies of people. Category 2 permits flight over open-air assemblies."
+            },
+            {
+                question: "Which of the following is a valid method of complying with Remote ID requirements?",
+                options: [
+                    "Attaching a visible registration number to the outside of the drone",
+                    "Flying within an FAA-Recognized Identification Area (FRIA)",
+                    "Broadcasting the pilot's name and address over Wi-Fi"
+                ],
+                answer: 1,
+                explanation: "The three methods of Remote ID compliance are: Standard Remote ID (built-in), a Remote ID Broadcast Module (add-on device), or flying within a FRIA. A visible registration number does not satisfy Remote ID, and broadcasting personal information is not required."
+            },
+            {
+                question: "When using a Remote ID Broadcast Module, how far can the pilot be from the drone?",
+                options: [
+                    "No more than 200 feet",
+                    "No more than 400 feet",
+                    "No distance limit as long as VLOS is maintained"
+                ],
+                answer: 1,
+                explanation: "When using a Remote ID Broadcast Module (as opposed to Standard Remote ID built into the aircraft), the pilot must remain within 400 feet of the drone at all times."
+            },
+            {
+                question: "Under 14 CFR 107.27, how many hours before acting as a crew member must a person abstain from consuming alcohol?",
+                options: [
+                    "12 hours",
+                    "8 hours",
+                    "4 hours"
+                ],
+                answer: 1,
+                explanation: "The 'bottle-to-throttle' rule under 14 CFR 107.27 requires 8 hours between consuming any alcoholic beverage and acting as Remote PIC, person manipulating controls, or visual observer."
+            },
+            {
+                question: "What is the maximum blood alcohol concentration (BAC) allowed for an sUAS crew member under Part 107?",
+                options: [
+                    "0.08%",
+                    "0.02%",
+                    "0.04%"
+                ],
+                answer: 2,
+                explanation: "Under 14 CFR 107.27, the maximum BAC for any sUAS crew member is 0.04%. This is half the standard legal driving limit of 0.08% in most states."
+            },
+            {
+                question: "What is the recommended technique for seeing objects at night?",
+                options: [
+                    "Stare directly at the object using central vision",
+                    "Use off-center viewing to take advantage of the rod cells in the retina",
+                    "Squint to reduce the amount of light entering the eye"
+                ],
+                answer: 1,
+                explanation: "At night, the rod cells in the periphery of the retina are more sensitive than the cone cells in the center. Off-center viewing (looking slightly to the side of an object) uses the rods and improves the ability to detect objects in low light."
+            },
+            {
+                question: "A pilot who says 'I've flown in worse conditions and nothing ever happened' is exhibiting which hazardous attitude?",
+                options: [
+                    "Anti-authority",
+                    "Macho",
+                    "Invulnerability"
+                ],
+                answer: 2,
+                explanation: "The invulnerability attitude is the belief that accidents happen to other people but not to you. The antidote is 'It could happen to me.' The macho attitude involves showing off, and anti-authority involves disregarding rules."
+            },
+            {
+                question: "What should a Remote PIC do if they lose the control link with their sUAS during flight?",
+                options: [
+                    "Immediately call 911 to report a flyaway",
+                    "Rely on the pre-programmed failsafe behavior (such as return-to-home) and attempt to re-establish the link",
+                    "Drive to the last known location of the sUAS and wait for it to land on its own"
+                ],
+                answer: 1,
+                explanation: "The Remote PIC should rely on the pre-programmed failsafe (return-to-home, hover, or land) and attempt to re-establish the control link. This is why setting up the failsafe behavior correctly during preflight is critical."
+            },
+            {
+                question: "Under Part 107, the Remote PIC must yield right-of-way to which of the following?",
+                options: [
+                    "Only aircraft on instrument approaches",
+                    "Only aircraft in distress",
+                    "All manned aircraft at all times"
+                ],
+                answer: 2,
+                explanation: "Under 14 CFR 107.37, the Remote PIC must yield the right-of-way to all manned aircraft, regardless of the type of operation the manned aircraft is conducting. This is an unconditional requirement."
+            }
+        ], 'operations');
+        Progress.markChapterRead('operations');
+    </script>
+</body>
+</html>

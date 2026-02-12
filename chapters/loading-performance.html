@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Loading &amp; Performance - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="regulations.html">1. Regulations</a></li>
+                        <li><a href="airspace.html">2. Airspace</a></li>
+                        <li><a href="weather.html">3. Weather</a></li>
+                        <li><a href="loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../flashcards.html">Flashcards</a></li>
+                <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li><a href="../reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="chapter-hero">
+        <div class="container">
+            <div class="chapter-label">Chapter 4</div>
+            <h1>Loading &amp; Performance</h1>
+            <p class="chapter-desc">Weight and balance, center of gravity, drone performance factors, and how environmental conditions affect flight.</p>
+        </div>
+    </section>
+
+    <div class="chapter-content">
+
+        <!-- ===================== SECTION 1: PRESENTATION ===================== -->
+        <div class="presentation">
+            <h2>Presentation: Loading &amp; Performance</h2>
+            <div class="slide-deck" id="slideDeck1">
+
+                <!-- Slide 1: Overview -->
+                <div class="slide active">
+                    <h3>Loading &amp; Performance Overview</h3>
+                    <p>This topic covers approximately <strong>7-11% of the Part 107 exam</strong> (roughly 4-6 questions out of 60). While it is the smallest exam category by percentage, the concepts are critical for safe flight operations.</p>
+                    <h4>What You Need to Know</h4>
+                    <ul>
+                        <li>Weight limitations for sUAS under Part 107</li>
+                        <li>Center of gravity (CG) concepts and why they matter</li>
+                        <li>How payload affects drone performance and stability</li>
+                        <li>Density altitude and its effect on lift and motor efficiency</li>
+                        <li>Battery performance factors and flight time planning</li>
+                        <li>Reading and interpreting manufacturer performance charts</li>
+                    </ul>
+                    <div class="key-point">Understanding loading and performance is essential for every flight. An overloaded or improperly balanced drone is dangerous, unpredictable, and far more likely to crash.</div>
+                </div>
+
+                <!-- Slide 2: Weight Limits -->
+                <div class="slide">
+                    <h3>Weight Limits Under Part 107</h3>
+                    <p>The FAA imposes a strict maximum weight for small unmanned aircraft systems (sUAS):</p>
+                    <ul>
+                        <li><strong>Maximum takeoff weight: 55 pounds (25 kg)</strong></li>
+                        <li>This includes everything on board at the time of takeoff: the aircraft itself, batteries, payload, cameras, sensors, and any attached equipment</li>
+                        <li>Operating above 55 lbs requires a Part 107 waiver or a different certification</li>
+                    </ul>
+                    <h4>How to Calculate Takeoff Weight</h4>
+                    <ul>
+                        <li><strong>Empty weight:</strong> The drone without batteries or payload</li>
+                        <li><strong>+ Battery weight:</strong> The installed flight batteries</li>
+                        <li><strong>+ Payload weight:</strong> Cameras, sensors, cargo, accessories</li>
+                        <li><strong>= Takeoff weight:</strong> Must be at or below 55 lbs</li>
+                    </ul>
+                    <div class="warning-box"><strong>Exam Tip:</strong> The 55-pound limit is measured at takeoff. This includes everything attached to or carried by the aircraft. If asked on the exam, remember it is total weight at liftoff, not just the airframe.</div>
+                </div>
+
+                <!-- Slide 3: Center of Gravity -->
+                <div class="slide">
+                    <h3>Center of Gravity (CG)</h3>
+                    <p>The <strong>center of gravity</strong> is the point at which the aircraft would balance if suspended. It is the theoretical point where the total weight of the aircraft is considered to be concentrated.</p>
+                    <h4>Why CG Matters</h4>
+                    <ul>
+                        <li>CG determines the drone's stability and controllability in flight</li>
+                        <li>An aircraft balanced at its proper CG responds predictably to control inputs</li>
+                        <li>The CG must remain within the manufacturer's specified limits</li>
+                    </ul>
+                    <h4>Effects of Improper CG</h4>
+                    <ul>
+                        <li><strong>CG too far forward:</strong> Nose-heavy; the drone pitches forward, requires constant correction, and may become uncontrollable</li>
+                        <li><strong>CG too far aft (rearward):</strong> Tail-heavy; the drone pitches up, becomes unstable, and may flip</li>
+                        <li><strong>CG off to one side:</strong> The drone drifts laterally; one set of motors works harder, draining the battery unevenly and reducing flight time</li>
+                    </ul>
+                    <div class="key-point">On a multirotor, the flight controller constantly compensates for minor CG shifts. But if the CG is significantly outside the envelope, the flight controller cannot compensate fast enough, and the aircraft becomes uncontrollable.</div>
+                </div>
+
+                <!-- Slide 4: Weight & Balance Concepts -->
+                <div class="slide">
+                    <h3>Weight &amp; Balance Concepts</h3>
+                    <p>Weight and balance go hand-in-hand. It is not enough to be under the weight limit; the weight must also be distributed correctly.</p>
+                    <h4>How Payload Placement Affects CG</h4>
+                    <ul>
+                        <li>Mounting a heavy camera on one side shifts the CG laterally</li>
+                        <li>A payload mounted too far forward or aft shifts the CG longitudinally</li>
+                        <li>Adding weight below the CG generally increases stability (pendulum effect)</li>
+                        <li>Adding weight above the CG decreases stability</li>
+                    </ul>
+                    <h4>Manufacturer Limits</h4>
+                    <ul>
+                        <li>Every drone manufacturer specifies a maximum payload capacity</li>
+                        <li>Some manufacturers provide a CG envelope diagram showing acceptable CG range</li>
+                        <li>Always consult the operator's manual before loading a new payload configuration</li>
+                        <li>Just because the total weight is under 55 lbs does not mean the drone can safely carry it; the drone's own structural and motor limits may be lower</li>
+                    </ul>
+                    <div class="warning-box"><strong>Remember:</strong> The 55-lb FAA limit is a regulatory ceiling. Your specific drone likely has a much lower maximum takeoff weight. Always follow the manufacturer's weight limits, which may be far below the FAA maximum.</div>
+                </div>
+
+                <!-- Slide 5: Effects of Overloading -->
+                <div class="slide">
+                    <h3>Effects of Overloading</h3>
+                    <p>Flying an overloaded drone is one of the most dangerous mistakes a remote pilot can make. Overloading affects every aspect of performance:</p>
+                    <ul>
+                        <li><strong>Reduced maneuverability:</strong> The aircraft responds more slowly to control inputs and cannot change direction as quickly</li>
+                        <li><strong>Increased battery drain:</strong> Motors must spin faster to generate enough lift, consuming power at a higher rate and significantly reducing flight time</li>
+                        <li><strong>Structural stress:</strong> Arms, motors, propellers, and mounting hardware are subjected to forces beyond their design limits, increasing the risk of mechanical failure</li>
+                        <li><strong>Longer stopping distance:</strong> An overloaded drone has more inertia; it takes longer to stop, slow down, or change direction</li>
+                        <li><strong>Higher stall speed:</strong> On fixed-wing drones, additional weight raises the stall speed, requiring faster flight to maintain lift</li>
+                        <li><strong>Reduced climb rate:</strong> The drone struggles to gain altitude, and in extreme cases may not be able to hover</li>
+                        <li><strong>Increased risk of motor burnout:</strong> Motors running at or near maximum capacity for extended periods can overheat and fail</li>
+                    </ul>
+                    <div class="key-point">An overloaded drone is harder to control, flies for less time, and is far more likely to experience a mechanical failure. Never exceed the manufacturer's stated maximum takeoff weight.</div>
+                </div>
+
+                <!-- Slide 6: Density Altitude & Performance -->
+                <div class="slide">
+                    <h3>Density Altitude &amp; Performance</h3>
+                    <p><strong>Density altitude</strong> is the altitude at which the air density corresponds to a standard atmosphere. It is the single most important environmental factor affecting drone performance.</p>
+                    <h4>The 3 H's: High, Hot, Humid</h4>
+                    <ul>
+                        <li><strong>High elevation:</strong> Air is thinner at higher elevations, producing less lift per propeller revolution</li>
+                        <li><strong>Hot temperature:</strong> Warm air is less dense than cool air, further reducing available lift</li>
+                        <li><strong>High humidity:</strong> Humid air is less dense than dry air (water vapor is lighter than nitrogen and oxygen)</li>
+                    </ul>
+                    <h4>Performance Effects</h4>
+                    <ul>
+                        <li>Propellers generate less lift in thinner air</li>
+                        <li>Motors must work harder (spin faster) to maintain the same altitude</li>
+                        <li>Battery drain increases due to higher motor load</li>
+                        <li>Maximum payload capacity decreases</li>
+                        <li>Climb rate and hover ceiling are reduced</li>
+                    </ul>
+                    <div class="example-box"><strong>Example:</strong> A drone rated for 30 minutes of hover time at sea level on a cool day might only achieve 18-22 minutes in Denver, Colorado (5,280 ft elevation) on a hot summer afternoon. The high elevation and high temperature both increase density altitude, forcing motors to work harder.</div>
+                </div>
+
+                <!-- Slide 7: Battery Performance Factors -->
+                <div class="slide">
+                    <h3>Battery Performance Factors</h3>
+                    <p>Most drones use Lithium Polymer (LiPo) batteries. Their performance is heavily influenced by environmental and operational conditions.</p>
+                    <h4>Temperature Effects on LiPo Batteries</h4>
+                    <ul>
+                        <li><strong>Cold weather (below 50&deg;F / 10&deg;C):</strong> Chemical reactions slow down, reducing available capacity by 10-30% or more. Voltage sags occur more readily under load.</li>
+                        <li><strong>Very cold (below 32&deg;F / 0&deg;C):</strong> Battery capacity can drop dramatically. The battery may report a high charge level but cannot deliver the current needed for flight, leading to sudden power loss.</li>
+                        <li><strong>Hot weather (above 95&deg;F / 35&deg;C):</strong> While discharge performance improves slightly, excessive heat accelerates degradation and increases the risk of thermal runaway.</li>
+                    </ul>
+                    <h4>Payload Weight &amp; Power Draw</h4>
+                    <ul>
+                        <li>Heavier payload = more power needed to hover = faster battery depletion</li>
+                        <li>Flight time decreases roughly proportionally with added weight</li>
+                        <li>Always calculate expected flight time based on the loaded weight, not the empty weight</li>
+                    </ul>
+                    <div class="warning-box"><strong>Cold Weather Tip:</strong> Keep batteries warm before flight (store in an insulated bag or vehicle). Monitor voltage closely during cold-weather operations. Land immediately if voltage drops unexpectedly.</div>
+                </div>
+
+                <!-- Slide 8: Performance Charts -->
+                <div class="slide">
+                    <h3>Performance Charts</h3>
+                    <p>Drone manufacturers provide performance data that remote pilots should understand and reference before each mission.</p>
+                    <h4>Common Performance Specifications</h4>
+                    <ul>
+                        <li><strong>Maximum takeoff weight (MTOW):</strong> The absolute heaviest the drone can weigh at liftoff</li>
+                        <li><strong>Maximum payload capacity:</strong> The most weight the drone can carry beyond its own weight and batteries</li>
+                        <li><strong>Hover time:</strong> How long the drone can remain stationary in the air (typically longer than forward-flight time at max speed)</li>
+                        <li><strong>Maximum flight time:</strong> Typically measured in forward flight at optimal speed with no payload (best case)</li>
+                        <li><strong>Maximum speed:</strong> Top horizontal speed, which varies with payload and wind conditions</li>
+                    </ul>
+                    <h4>Reading Performance Charts</h4>
+                    <ul>
+                        <li>Hover time is usually longer than max-speed flight time because forward flight requires additional power to overcome drag</li>
+                        <li>Payload charts show how flight time decreases as payload weight increases</li>
+                        <li>Altitude performance charts show reduced capability at higher elevations</li>
+                        <li>Always use the manufacturer's data for the specific configuration you plan to fly</li>
+                    </ul>
+                    <div class="key-point">Performance specifications from the manufacturer are measured under ideal conditions. Real-world performance will be lower due to wind, temperature, battery age, and payload.</div>
+                </div>
+
+                <!-- Slide 9: Wind Effects on Performance -->
+                <div class="slide">
+                    <h3>Wind Effects on Performance</h3>
+                    <p>Wind is one of the most significant external factors affecting drone performance and battery life.</p>
+                    <h4>Types of Wind Effects</h4>
+                    <ul>
+                        <li><strong>Headwind:</strong> The drone must fly faster relative to the air mass to maintain ground speed, consuming more power. Flight time is reduced during headwind legs.</li>
+                        <li><strong>Tailwind:</strong> The drone benefits from the wind, requiring less power to maintain ground speed. However, the return trip will be into a headwind.</li>
+                        <li><strong>Crosswind:</strong> The drone must crab (angle) into the wind to maintain its track. This requires additional power and reduces effective speed.</li>
+                    </ul>
+                    <h4>Planning for Wind</h4>
+                    <ul>
+                        <li>Always reserve enough battery to return against the wind at its worst expected speed</li>
+                        <li>Fly the outbound leg into the headwind so the return trip benefits from a tailwind</li>
+                        <li>Wind speed generally increases with altitude; performance at 400 ft may be worse than at ground level</li>
+                        <li>Gusty or turbulent wind requires more motor corrections, draining the battery faster than steady wind</li>
+                    </ul>
+                    <div class="warning-box"><strong>Critical Planning Rule:</strong> If the wind speed approaches or exceeds the drone's maximum speed, the drone may not be able to return. Always check wind forecasts and monitor conditions throughout the flight.</div>
+                </div>
+
+                <!-- Slide 10: Loading Best Practices -->
+                <div class="slide">
+                    <h3>Loading Best Practices</h3>
+                    <p>Follow these best practices to ensure every flight is safe and within performance limits:</p>
+                    <h4>Pre-Flight Loading Checklist</h4>
+                    <ul>
+                        <li><strong>1. Verify total weight:</strong> Weigh the fully loaded drone (with batteries and payload) before flight. Ensure it is under 55 lbs and within the manufacturer's MTOW.</li>
+                        <li><strong>2. Check CG position:</strong> Confirm the payload is mounted symmetrically and the CG is within the manufacturer's envelope. Lift the drone by its center point to verify balance.</li>
+                        <li><strong>3. Secure all payload:</strong> Ensure cameras, sensors, and cargo are firmly attached. Loose items can shift in flight, changing the CG and potentially falling.</li>
+                        <li><strong>4. Consult manufacturer limits:</strong> Review the operator's manual for maximum payload, recommended CG range, and any restrictions for the planned configuration.</li>
+                        <li><strong>5. Test hover:</strong> After loading a new payload configuration, perform a low hover test (3-5 feet) to verify stability and controllability before flying the full mission.</li>
+                        <li><strong>6. Account for conditions:</strong> Factor in density altitude, temperature, and wind when determining if the loaded weight is safe for the day's conditions.</li>
+                        <li><strong>7. Plan battery reserves:</strong> Calculate expected flight time for the loaded weight and reserve at least 20-25% battery for the return trip and emergencies.</li>
+                    </ul>
+                    <div class="key-point">A responsible remote pilot always verifies weight and balance before every flight, not just when a new payload is added. Conditions change, equipment gets added or removed, and assumptions should be verified.</div>
+                </div>
+
+                <div class="slide-controls">
+                    <button class="slide-btn prev">&larr; Previous</button>
+                    <span class="slide-counter">Slide 1 of 10</span>
+                    <button class="slide-btn next">Next &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 2: IN-DEPTH READING ===================== -->
+        <div class="reading-section">
+            <h2>In-Depth Reading: Loading &amp; Performance</h2>
+            <div class="reading-content">
+
+                <h3>Weight Limitations Under Part 107</h3>
+                <p>Under 14 CFR Part 107, a small unmanned aircraft system (sUAS) is defined as an unmanned aircraft weighing less than 55 pounds (25 kilograms) at takeoff, including everything that is on board or otherwise attached to the aircraft. This 55-pound threshold is the dividing line between small UAS operations governed by Part 107 and larger UAS that require different certifications and operational approvals.</p>
+                <p>The takeoff weight calculation is straightforward but must be precise. It includes the airframe, all installed batteries, the payload (cameras, sensors, LIDAR equipment, delivery packages, or any other cargo), propeller guards, landing gear extensions, and any other accessories mounted on the aircraft. If a tether is attached, the weight of the tether line and any ground-based tension does not count toward the 55-pound limit, but any equipment the tether carries on the aircraft side does.</p>
+                <p>It is important to understand that the 55-pound FAA regulatory limit is a ceiling, not a target. Most commercial drones used under Part 107 weigh far less than 55 pounds. A typical consumer or prosumer drone weighs between 1 and 10 pounds fully loaded. However, industrial drones used for heavy-lift applications such as LIDAR surveying, agricultural spraying, or package delivery can approach or reach the 55-pound limit. Operators of these heavier aircraft must be especially diligent about weight calculations.</p>
+
+                <div class="info-box"><strong>Regulatory Note:</strong> If your operation requires a takeoff weight exceeding 55 pounds, you must obtain a waiver from the FAA under 14 CFR 107.205 or operate under a different certification framework. Operating over 55 lbs without authorization is a violation of federal regulations.</div>
+
+                <h3>Center of Gravity Principles</h3>
+                <p>The center of gravity (CG) is the point at which the total weight of the aircraft is effectively concentrated. If you could place the drone on a single point and have it balance perfectly in all directions, that point would be the CG. In a properly loaded multirotor, the CG should be located at or very near the geometric center of the motor layout, directly below the propeller plane.</p>
+                <p>The CG is critical because it determines how the aircraft responds to control inputs and external forces. When the CG is in the correct position, the flight controller can distribute motor power evenly across all rotors, and the aircraft flies predictably. When the CG is out of position, the flight controller must command some motors to work harder than others to maintain level flight, which introduces several problems:</p>
+                <ul>
+                    <li><strong>Uneven motor loading:</strong> Motors compensating for a CG offset run at higher RPM, generating more heat and consuming more power. This leads to uneven battery drain and can cause individual motors to overheat or fail prematurely.</li>
+                    <li><strong>Reduced control authority:</strong> If the CG offset is large enough, the compensating motors may approach their maximum output. When that happens, the drone has little or no reserve power available on those motors for maneuvers, wind gusts, or emergency responses.</li>
+                    <li><strong>Oscillation and instability:</strong> A significant CG offset can cause the flight controller to overcorrect, leading to oscillations (wobbling) that worsen over time and can result in loss of control.</li>
+                </ul>
+
+                <p>Consider a practical example: a remote pilot mounts a heavy DSLR camera on the front of a quadcopter using an aftermarket gimbal. The camera weighs 2 pounds and is mounted 6 inches forward of the drone's geometric center. This shifts the CG forward, making the drone nose-heavy. The rear motors must now spin faster to compensate, consuming more power. In calm conditions, the flight controller may handle this adequately, but in gusty winds, the drone may pitch forward unexpectedly because the rear motors are already near their maximum output and cannot provide additional corrective thrust.</p>
+
+                <div class="tip-box"><strong>Practical Tip:</strong> After mounting any new payload, pick up the drone by its center point (many drones have a handle or carry point for this purpose). If it tilts noticeably in any direction, the CG is off. Reposition the payload until the drone hangs level. Then perform a low-altitude hover test to confirm stability before flying the full mission.</div>
+
+                <h3>Density Altitude and Drone Performance</h3>
+                <p>Density altitude is the pressure altitude corrected for nonstandard temperature. In simpler terms, it represents the altitude at which the current air density would be found in a standard atmosphere. When density altitude is high, the air is thin, and aerodynamic performance suffers.</p>
+                <p>For drone pilots, the concept is straightforward: <strong>thinner air means less lift per propeller revolution</strong>. To generate the same amount of lift in thinner air, the propellers must spin faster, which means the motors draw more power from the batteries, which means shorter flight times and reduced payload capacity.</p>
+
+                <p>Three environmental factors increase density altitude, remembered by the mnemonic <strong>"the 3 H's"</strong>:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>How It Increases Density Altitude</th>
+                            <th>Practical Effect on Drones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>High Elevation</strong></td>
+                            <td>Air pressure decreases with altitude; less air above means fewer air molecules per unit volume</td>
+                            <td>Reduced lift, higher motor RPM required, shorter flight times</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hot Temperature</strong></td>
+                            <td>Warm air molecules move faster and spread apart, reducing air density</td>
+                            <td>Less propeller efficiency, increased battery drain, lower payload capacity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>High Humidity</strong></td>
+                            <td>Water vapor (molecular weight ~18) displaces heavier nitrogen (~28) and oxygen (~32) molecules</td>
+                            <td>Slightly less lift; effect is smaller than temperature or elevation but still measurable</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>A high density altitude scenario combines all three factors. Imagine flying a survey mission in Phoenix, Arizona (elevation 1,086 ft) during a humid monsoon afternoon when the temperature is 110 degrees F. The density altitude could easily exceed 4,000-5,000 feet. A drone that hovers for 30 minutes at sea level on a cool morning might only achieve 20-22 minutes under those conditions, and its maximum payload capacity would be reduced accordingly.</p>
+
+                <div class="warning-box"><strong>Exam Alert:</strong> The Part 107 exam frequently tests density altitude concepts. Remember: high elevation + hot temperature + high humidity = high density altitude = decreased aircraft performance. The opposite conditions (low elevation, cool temperature, dry air) produce low density altitude and the best performance.</div>
+
+                <h3>Battery Management and Performance Planning</h3>
+                <p>Battery management is one of the most practical aspects of loading and performance. Unlike manned aircraft that can often extend a flight by reducing power or gliding, a multirotor drone that runs out of battery power falls out of the sky. Effective battery management is therefore a safety-critical skill.</p>
+
+                <p>LiPo (Lithium Polymer) batteries, which power the vast majority of consumer and commercial drones, have several performance characteristics that remote pilots must understand:</p>
+                <ul>
+                    <li><strong>Nominal voltage:</strong> A fully charged LiPo cell is 4.2V. Nominal voltage is 3.7V per cell. The drone's battery management system (BMS) monitors total pack voltage and individual cell voltages.</li>
+                    <li><strong>Capacity is rated at room temperature:</strong> The milliamp-hour (mAh) rating on a battery is measured at approximately 77 degrees F (25 degrees C). At lower temperatures, the actual usable capacity decreases.</li>
+                    <li><strong>Discharge rate (C rating):</strong> The C rating indicates how quickly the battery can safely deliver current. A higher C rating means the battery can support more aggressive flying and heavier payloads, but does not increase total energy stored.</li>
+                    <li><strong>Voltage sag under load:</strong> When motors draw heavy current (during climb, aggressive maneuvers, or when heavily loaded), battery voltage temporarily drops. In cold weather, this sag is worse and can trigger low-voltage warnings even when the battery has significant charge remaining.</li>
+                </ul>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Effect on Flight Time</th>
+                            <th>Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cold temperature (below 50&deg;F)</td>
+                            <td>10-30% reduction in usable capacity</td>
+                            <td>Pre-warm batteries; hover briefly at low altitude to warm the pack before the mission</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy payload</td>
+                            <td>Flight time decreases roughly proportionally with added weight</td>
+                            <td>Calculate expected flight time using loaded weight, not manufacturer's best-case spec</td>
+                        </tr>
+                        <tr>
+                            <td>High density altitude</td>
+                            <td>Motors work harder, draining batteries 10-25% faster</td>
+                            <td>Reduce payload, plan shorter missions, increase battery reserves</td>
+                        </tr>
+                        <tr>
+                            <td>Windy conditions</td>
+                            <td>Constant motor corrections drain batteries 15-40% faster depending on wind speed</td>
+                            <td>Fly outbound into the wind; reserve extra battery for the return leg</td>
+                        </tr>
+                        <tr>
+                            <td>Aggressive flying</td>
+                            <td>Rapid acceleration, climbing, and high-speed runs consume power quickly</td>
+                            <td>Fly smooth, steady flight profiles for maximum endurance</td>
+                        </tr>
+                        <tr>
+                            <td>Aged batteries</td>
+                            <td>After many charge cycles, capacity decreases and internal resistance increases</td>
+                            <td>Track charge cycles; retire batteries per manufacturer recommendations</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box"><strong>Flight Time Rule of Thumb:</strong> Plan your mission using 75-80% of the manufacturer's stated maximum flight time. Reserve the remaining 20-25% for the return trip, unexpected wind, and a safety margin. In challenging conditions (cold, windy, high altitude), increase the reserve to 30-35%.</div>
+
+                <h3>Effects of Overloading</h3>
+                <p>Overloading a drone means exceeding either the manufacturer's maximum takeoff weight (MTOW) or the FAA's 55-pound regulatory limit. Both are serious issues with potentially dangerous consequences.</p>
+                <p>When a drone is overloaded, every aspect of its performance degrades:</p>
+                <ul>
+                    <li><strong>Reduced maneuverability:</strong> The aircraft responds sluggishly to control inputs. The pilot may need to make larger, earlier corrections to achieve the desired flight path. In an emergency, the drone may not be able to avoid an obstacle quickly enough.</li>
+                    <li><strong>Increased stall speed (fixed-wing):</strong> For fixed-wing drones, additional weight raises the minimum speed needed to maintain lift. The aircraft must fly faster to avoid stalling, which increases the danger during takeoff, landing, and turns.</li>
+                    <li><strong>Higher disc loading (multirotor):</strong> More weight per unit of propeller disc area means each propeller must work harder. This reduces the power margin available for maneuvers, wind response, and climbing.</li>
+                    <li><strong>Structural risk:</strong> Arms, motor mounts, propeller shafts, and the airframe are engineered for a specific load range. Exceeding that range can cause cracks, failures, or in-flight breakups, especially under the vibration and G-forces of normal maneuvering.</li>
+                    <li><strong>Propeller and motor stress:</strong> Propellers flex more under higher loads, and motors draw more current. Sustained operation under overloaded conditions can cause propellers to fatigue-crack and motors to overheat, both of which can cause catastrophic failure.</li>
+                </ul>
+
+                <div class="warning-box"><strong>Safety Warning:</strong> There is no safe margin for overloading. The manufacturer's MTOW is not a conservative estimate with extra room built in; it represents the maximum weight at which the aircraft can be operated safely under normal conditions. Exceeding it places the drone, people on the ground, and other aircraft at risk.</div>
+
+                <h3>Wind and Environmental Effects</h3>
+                <p>Wind is the most common environmental challenge for drone operations. Understanding how wind affects performance helps remote pilots plan safer, more efficient missions.</p>
+                <p><strong>Headwinds</strong> slow the drone's ground speed, meaning it must fly longer to cover the same distance. The motors work harder to push against the wind, increasing power consumption. A flight that takes 10 minutes in calm air might take 14-16 minutes into a 15 mph headwind, consuming significantly more battery.</p>
+                <p><strong>Tailwinds</strong> boost ground speed and reduce power consumption for that leg of the flight. However, remote pilots must remember that a tailwind on the outbound leg becomes a headwind on the return. It is always better to fly the outbound leg into the wind so the return trip, when the battery is lower, benefits from the tailwind.</p>
+                <p><strong>Crosswinds</strong> require the drone to crab (angle) into the wind to maintain a straight ground track. This wastes energy because part of the propulsive force is used to counteract the wind instead of moving forward. Crosswinds also make precision operations like photography and surveying more difficult.</p>
+                <p><strong>Gusts and turbulence</strong> are more dangerous than steady wind because they produce sudden, unpredictable forces on the aircraft. The flight controller must constantly adjust motor speeds to compensate, consuming extra battery. Gusts near structures, trees, or terrain features (mechanical turbulence) are especially hazardous. Thermal turbulence on hot days can also cause unexpected altitude changes.</p>
+                <p>Other environmental factors to consider include:</p>
+                <ul>
+                    <li><strong>Rain and moisture:</strong> Most consumer drones are not waterproof. Moisture can damage electronics and increase weight if it accumulates on the airframe.</li>
+                    <li><strong>Snow and ice:</strong> Ice accumulation on propellers changes their aerodynamic profile, reducing lift and potentially causing dangerous vibration. Snow can obscure sensors and cameras.</li>
+                    <li><strong>Dust and sand:</strong> Fine particles can enter motors and bearings, causing wear and overheating. They can also scratch camera lenses and block cooling vents.</li>
+                </ul>
+
+                <div class="tip-box"><strong>Wind Planning Rule:</strong> As a general guideline, do not fly if sustained wind speeds exceed 2/3 of the drone's maximum speed. For example, if your drone has a maximum speed of 30 mph, avoid flying in sustained winds above 20 mph. Always check wind forecasts at your planned flight altitude, not just surface winds.</div>
+
+                <h3>Pre-Flight Weight and Balance Checks</h3>
+                <p>Every pre-flight inspection should include a weight and balance check, especially when the payload configuration has changed since the last flight. This check takes only a few minutes and can prevent serious accidents.</p>
+                <p>A thorough pre-flight weight and balance check includes the following steps:</p>
+                <ol>
+                    <li><strong>Weigh the loaded aircraft:</strong> Use a scale to measure the total takeoff weight with all batteries, payload, and accessories installed. Verify it is within both the FAA's 55-lb limit and the manufacturer's MTOW.</li>
+                    <li><strong>Verify payload security:</strong> Physically check that all payload items (cameras, sensors, packages) are firmly attached to the aircraft. Tug on mounting hardware to ensure nothing is loose. Check that any quick-release mechanisms are fully locked.</li>
+                    <li><strong>Assess CG position:</strong> Pick up the loaded drone by its center carry point or balance it on a finger at the geometric center. It should hang approximately level in all axes. If it tilts significantly in any direction, reposition the payload.</li>
+                    <li><strong>Check propellers:</strong> If carrying a heavier-than-usual payload, verify that propellers are in good condition with no cracks, chips, or deformities. Heavier loads stress propellers more, and a damaged propeller is more likely to fail under high load.</li>
+                    <li><strong>Review battery status:</strong> Ensure batteries are fully charged and in good health. Check cell balance (all cells within 0.1V of each other). Batteries with unbalanced cells deliver less power and can fail unpredictably.</li>
+                    <li><strong>Perform a hover test:</strong> After any new payload configuration, hover at 3-5 feet for 15-30 seconds. Observe the drone for unusual tilting, oscillation, or sluggish control response. If it does not fly normally, land and reassess the loading.</li>
+                    <li><strong>Calculate flight time:</strong> Based on the loaded weight, current conditions (temperature, altitude, wind), and battery capacity, estimate how long you can fly safely. Subtract your reserve margin (20-25% minimum) to determine the maximum mission time.</li>
+                </ol>
+
+                <div class="info-box"><strong>Documentation:</strong> For commercial operations, it is good practice to log the takeoff weight, payload configuration, and environmental conditions for each flight in your operations log. This data helps you plan future missions more accurately and demonstrates professionalism during any FAA inquiry.</div>
+
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 3: CHAPTER QUIZ ===================== -->
+        <div class="quiz-section">
+            <h2>Chapter Quiz: Loading &amp; Performance</h2>
+            <div class="quiz-container" id="chapterQuiz"></div>
+        </div>
+
+        <!-- ===================== CHAPTER NAVIGATION ===================== -->
+        <div class="chapter-nav">
+            <a href="weather.html">
+                <span class="nav-label">&larr; Previous Chapter</span>
+                <span class="nav-title">3. Weather</span>
+            </a>
+            <a href="operations.html" style="text-align: right;">
+                <span class="nav-label">Next Chapter &rarr;</span>
+                <span class="nav-title">5. Operations</span>
+            </a>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This study guide is an educational resource and is not affiliated with or endorsed by the FAA. Always refer to the official <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107" target="_blank">14 CFR Part 107</a> and the <a href="https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf" target="_blank">FAA Remote Pilot Study Guide</a> for the most current and authoritative information.</p>
+            <p>&copy; 2026 Part 107 Exam Guide. For educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="../js/progress.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/slides.js"></script>
+    <script src="../js/quiz-engine.js"></script>
+    <script>
+        var deck = new SlideDeck('slideDeck1');
+        var quiz = new QuizEngine('chapterQuiz', [
+            {
+                question: "Under Part 107, what is the maximum allowable takeoff weight for a small unmanned aircraft system (sUAS)?",
+                options: [
+                    "55 pounds, including everything on board at takeoff",
+                    "55 pounds for the airframe only, excluding payload",
+                    "25 pounds including payload"
+                ],
+                answer: 0,
+                explanation: "Under 14 CFR Part 107, the maximum takeoff weight for a sUAS is 55 pounds (25 kg). This includes the aircraft itself plus everything on board at the time of takeoff: batteries, payload, cameras, sensors, and all attached equipment."
+            },
+            {
+                question: "What does 'center of gravity' (CG) refer to in the context of drone operations?",
+                options: [
+                    "The maximum weight that can be placed at the center of the aircraft",
+                    "The point at which the aircraft's total weight is effectively concentrated and it would balance if suspended",
+                    "The geographic center of the planned flight area"
+                ],
+                answer: 1,
+                explanation: "The center of gravity (CG) is the theoretical point at which the total weight of the aircraft is concentrated. If the drone were suspended from this single point, it would balance perfectly. The CG must remain within the manufacturer's specified limits for safe flight."
+            },
+            {
+                question: "What is likely to happen if the center of gravity of a multirotor is shifted significantly forward?",
+                options: [
+                    "The drone will pitch forward; rear motors must work harder to compensate, reducing flight time and control authority",
+                    "The drone will gain additional forward speed with no negative effects",
+                    "The drone will automatically rebalance itself with no pilot input required"
+                ],
+                answer: 0,
+                explanation: "A forward CG shift makes the drone nose-heavy. The rear motors must spin faster to keep the aircraft level, consuming more power and reducing the control authority available for maneuvers and wind correction. In severe cases, the drone may become uncontrollable."
+            },
+            {
+                question: "Which combination of conditions results in the highest density altitude and worst drone performance?",
+                options: [
+                    "Low elevation, cold temperature, low humidity",
+                    "High elevation, hot temperature, high humidity",
+                    "High elevation, cold temperature, low humidity"
+                ],
+                answer: 1,
+                explanation: "High density altitude is caused by the '3 H's': High elevation, Hot temperature, and High humidity. All three reduce air density, which means propellers produce less lift, motors must work harder, and flight times decrease. The opposite conditions (low, cool, dry) provide the best performance."
+            },
+            {
+                question: "How does cold weather primarily affect LiPo battery performance?",
+                options: [
+                    "It increases battery capacity, allowing longer flights",
+                    "It has no effect on battery performance",
+                    "It reduces usable battery capacity and can cause voltage sag under load, potentially leading to sudden power loss"
+                ],
+                answer: 2,
+                explanation: "Cold temperatures slow the chemical reactions inside LiPo batteries, reducing their usable capacity by 10-30% or more. Cold batteries also experience greater voltage sag under load, meaning they can report a high charge level but fail to deliver sufficient current, risking sudden power loss during flight."
+            },
+            {
+                question: "A remote pilot is planning a mission and the drone's manufacturer specifies a maximum takeoff weight of 8 pounds. The drone weighs 5 pounds empty. Which payload is acceptable?",
+                options: [
+                    "A 4-pound camera system, because the total is under the FAA's 55-pound limit",
+                    "A 3-pound camera system, because the total of 8 pounds equals the manufacturer's MTOW",
+                    "A 2.5-pound camera system is the safest choice, keeping the total below the manufacturer's MTOW with a margin"
+                ],
+                answer: 2,
+                explanation: "While the manufacturer's MTOW is 8 lbs (allowing up to 3 lbs of payload), the safest choice is to stay below the maximum to allow performance margin for wind, maneuvering, and environmental conditions. A 2.5-lb payload keeps the total at 7.5 lbs, leaving margin. Loading to exactly MTOW leaves zero safety margin."
+            },
+            {
+                question: "What is the primary risk of flying an overloaded multirotor drone?",
+                options: [
+                    "The GPS signal will be weaker due to the extra weight",
+                    "The drone transmitter range will decrease",
+                    "Reduced maneuverability, increased battery drain, higher risk of structural failure, and longer stopping distances"
+                ],
+                answer: 2,
+                explanation: "Overloading affects every aspect of flight performance: the drone responds more slowly to controls, batteries drain faster because motors must work harder, structural components are stressed beyond their design limits, and the increased inertia makes it harder to stop or change direction. GPS and transmitter range are not affected by weight."
+            },
+            {
+                question: "When planning a drone mission with a round-trip flight, how should a remote pilot account for wind?",
+                options: [
+                    "Fly the outbound leg with a tailwind so you can cover more ground first",
+                    "Fly the outbound leg into the headwind so the return trip benefits from a tailwind when battery levels are lower",
+                    "Wind does not significantly affect battery consumption and can be ignored"
+                ],
+                answer: 1,
+                explanation: "The safest approach is to fly the outbound leg into the headwind. This uses more battery early when reserves are high. The return trip then benefits from a tailwind, requiring less power when battery levels are lower. Flying out with a tailwind risks not having enough battery to return against the headwind."
+            },
+            {
+                question: "Why does high humidity decrease drone performance?",
+                options: [
+                    "Humid air is denser than dry air, creating more drag on the propellers",
+                    "Water vapor is lighter than nitrogen and oxygen, so humid air is less dense, reducing the lift generated by propellers",
+                    "Humidity causes the battery to discharge faster through electrical conductivity"
+                ],
+                answer: 1,
+                explanation: "Water vapor molecules (H2O, molecular weight ~18) displace heavier nitrogen (N2, ~28) and oxygen (O2, ~32) molecules in the air. This makes humid air less dense than dry air at the same temperature and pressure. Less dense air means less lift per propeller revolution, requiring more motor power to maintain flight."
+            },
+            {
+                question: "After mounting a new payload configuration, what should a remote pilot do before flying the full mission?",
+                options: [
+                    "Immediately fly the full mission to save time, since the flight controller will compensate",
+                    "Perform a low hover test at 3-5 feet to verify stability and controllability with the new loading",
+                    "Only check that the total weight is under 55 pounds and then fly normally"
+                ],
+                answer: 1,
+                explanation: "After any change in payload configuration, a remote pilot should perform a low-altitude hover test (3-5 feet) for 15-30 seconds to verify the drone is stable and responding normally. This test reveals CG issues, loose payloads, or other loading problems before the drone is at an altitude where a problem could cause a dangerous crash."
+            },
+            {
+                question: "A drone manufacturer rates a drone for 28 minutes of flight time. Under which conditions would the actual flight time most likely be significantly less than 28 minutes?",
+                options: [
+                    "Flying at sea level on a calm, 70-degree day with no payload",
+                    "Flying at 5,000 feet elevation on a hot day with a full payload in moderate wind",
+                    "Flying at sea level on a calm, cool morning with a light payload"
+                ],
+                answer: 1,
+                explanation: "Manufacturer flight time ratings are measured under ideal conditions (typically at sea level, moderate temperature, no wind, no payload). High elevation increases density altitude, hot temperature further reduces air density, a full payload increases motor load, and wind requires constant motor corrections. All of these factors reduce actual flight time well below the rated 28 minutes."
+            },
+            {
+                question: "Which statement about the relationship between payload weight and flight time is most accurate?",
+                options: [
+                    "Payload weight has minimal impact on flight time as long as the drone can take off",
+                    "Heavier payloads decrease flight time because motors must work harder to generate lift, consuming battery power at a faster rate",
+                    "Heavier payloads increase flight time because the additional weight stabilizes the aircraft"
+                ],
+                answer: 1,
+                explanation: "Flight time decreases roughly proportionally with added payload weight. Heavier payloads require the motors to spin faster to generate enough lift, drawing more current from the battery. This is a fundamental relationship in drone operations: more weight always means more power consumption and shorter flights."
+            }
+        ], 'loading-performance');
+        Progress.markChapterRead('loading-performance');
+    </script>
+</body>
+</html>
