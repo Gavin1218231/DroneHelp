@@ -15,9 +15,13 @@ var Progress = {
     },
 
     set: function (key, value) {
-        var data = this.getAll();
-        data[key] = value;
-        localStorage.setItem(this.KEY, JSON.stringify(data));
+        try {
+            var data = this.getAll();
+            data[key] = value;
+            localStorage.setItem(this.KEY, JSON.stringify(data));
+        } catch (e) {
+            // localStorage may be full or disabled (e.g., private browsing)
+        }
     },
 
     // Chapter completion

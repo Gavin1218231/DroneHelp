@@ -41,12 +41,12 @@
         <div class="container" style="padding: 48px 24px;">
 
             <div class="flashcard-controls">
-                <button class="filter-btn active" onclick="filterCards('all')">All</button>
-                <button class="filter-btn" onclick="filterCards('regulations')">Regulations</button>
-                <button class="filter-btn" onclick="filterCards('airspace')">Airspace</button>
-                <button class="filter-btn" onclick="filterCards('weather')">Weather</button>
-                <button class="filter-btn" onclick="filterCards('loading')">Loading</button>
-                <button class="filter-btn" onclick="filterCards('operations')">Operations</button>
+                <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+                <button class="filter-btn" onclick="filterCards('regulations', this)">Regulations</button>
+                <button class="filter-btn" onclick="filterCards('airspace', this)">Airspace</button>
+                <button class="filter-btn" onclick="filterCards('weather', this)">Weather</button>
+                <button class="filter-btn" onclick="filterCards('loading', this)">Loading</button>
+                <button class="filter-btn" onclick="filterCards('operations', this)">Operations</button>
             </div>
 
             <p style="text-align:center;margin-bottom:24px;color:#5f6368;" id="cardStats">Card 1 of 110 | 0 mastered</p>
@@ -267,13 +267,13 @@
         showCard();
     }
 
-    function filterCards(category) {
+    function filterCards(category, btn) {
         // Update active button
         var buttons = document.querySelectorAll('.filter-btn');
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].classList.remove('active');
         }
-        event.target.classList.add('active');
+        if (btn) btn.classList.add('active');
 
         // Filter cards
         if (category === 'all') {

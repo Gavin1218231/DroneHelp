@@ -904,6 +904,7 @@
         updateTimerDisplay();
         timerInterval = setInterval(function () {
             timeRemaining--;
+            updateTimerDisplay();
             if (timeRemaining <= 0) {
                 timeRemaining = 0;
                 clearInterval(timerInterval);
@@ -911,7 +912,6 @@
                 alert('Time is up! Your exam will be submitted automatically.');
                 calculateAndShowResults();
             }
-            updateTimerDisplay();
         }, 1000);
     }
 
