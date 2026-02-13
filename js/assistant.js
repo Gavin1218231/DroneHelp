@@ -454,7 +454,7 @@
         showSuggestions('initial');
 
         // Detect current chapter page context and show relevant suggestions
-        var path = window.location.pathname;
+        var path = window.location.pathname.toLowerCase();
         if (path.indexOf('regulations') !== -1) lastTopic = 'regulations';
         else if (path.indexOf('airspace') !== -1) lastTopic = 'airspace';
         else if (path.indexOf('weather') !== -1) lastTopic = 'weather';
