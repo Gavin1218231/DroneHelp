@@ -529,169 +529,154 @@
         var deck = new SlideDeck('slideDeck1');
         var quiz = new QuizEngine('chapterQuiz', [
             {
-                question: "What is the minimum age required to obtain a Remote Pilot Certificate under Part 107?",
+                question: "A 15-year-old student wants to obtain a Remote Pilot Certificate so they can start a drone photography business. Under Part 107, what should they do?",
                 options: [
-                    "14 years old",
-                    "16 years old",
-                    "18 years old",
-                    "21 years old"
+                    "Apply for the certificate, since there is no minimum age requirement",
+                    "Wait until they are at least 16 years old, which is the minimum age to obtain a Remote Pilot Certificate",
+                    "Have a parent or guardian apply on their behalf as a designated representative"
                 ],
                 answer: 1,
-                explanation: "Under 14 CFR 107.61, a person must be at least 16 years of age to obtain a Remote Pilot Certificate with a small UAS rating."
+                explanation: "Under 14 CFR 107.61, a person must be at least 16 years of age to obtain a Remote Pilot Certificate with a small UAS rating. There are no provisions for a guardian to apply on behalf of a minor."
             },
             {
-                question: "What is the maximum allowable altitude for sUAS operations under Part 107?",
+                question: "You are hired to photograph a 250-foot communications tower. Under the Part 107 altitude exception, what is the maximum altitude you may fly while within 400 feet of the structure?",
                 options: [
-                    "200 feet AGL",
-                    "300 feet AGL",
-                    "400 feet AGL",
-                    "500 feet AGL"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.51, the maximum altitude for sUAS operations is 400 feet above ground level (AGL). An exception allows flight up to 400 feet above a structure if the drone is within a 400-foot radius of that structure."
-            },
-            {
-                question: "What is the minimum flight visibility required for sUAS operations under Part 107?",
-                options: [
-                    "1 statute mile",
-                    "2 statute miles",
-                    "3 statute miles",
-                    "5 statute miles"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.51, the minimum flight visibility from the control station is 3 statute miles."
-            },
-            {
-                question: "Under Part 107, how far must a small UAS remain below clouds?",
-                options: [
-                    "200 feet",
-                    "500 feet",
-                    "1,000 feet",
-                    "2,000 feet"
+                    "400 feet AGL, the standard Part 107 ceiling",
+                    "650 feet AGL, which is 400 feet above the top of the 250-foot structure",
+                    "550 feet AGL, which is 300 feet above the top of the 250-foot structure"
                 ],
                 answer: 1,
-                explanation: "Under 14 CFR 107.51, a small UAS must maintain at least 500 feet below clouds and 2,000 feet horizontal distance from clouds."
-            },
-            {
-                question: "What is the maximum groundspeed allowed for small UAS under Part 107?",
-                options: [
-                    "50 knots (57 mph)",
-                    "75 knots (86 mph)",
-                    "87 knots (100 mph)",
-                    "100 knots (115 mph)"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.51, the maximum groundspeed for a small UAS is 87 knots, which is equivalent to 100 miles per hour."
-            },
-            {
-                question: "When must an sUAS accident be reported to the FAA under Part 107?",
-                options: [
-                    "Within 24 hours",
-                    "Within 48 hours",
-                    "Within 10 calendar days",
-                    "Within 30 calendar days"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.9, an sUAS accident must be reported to the FAA within 10 calendar days if it results in serious injury, loss of consciousness, or at least $500 in property damage (other than damage to the drone itself)."
-            },
-            {
-                question: "What is the minimum property damage threshold (other than the sUAS itself) that triggers FAA accident reporting under Part 107?",
-                options: [
-                    "$100",
-                    "$250",
-                    "$500",
-                    "$1,000"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.9, damage to property other than the small UAS of at least $500 to repair or replace at fair market value triggers the accident reporting requirement."
-            },
-            {
-                question: "Under Part 107, a remote pilot in command must yield right of way to:",
-                options: [
-                    "Only aircraft on final approach",
-                    "Only helicopters and emergency aircraft",
-                    "All manned aircraft",
-                    "Only aircraft below 500 feet AGL"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.37, the remote PIC must yield the right of way to all other aircraft, manned and unmanned. This is an absolute requirement."
-            },
-            {
-                question: "Which of the following is TRUE regarding visual observers (VOs) under Part 107?",
-                options: [
-                    "A VO is required for all Part 107 operations",
-                    "A VO must hold a Remote Pilot Certificate",
-                    "A VO is optional but must maintain communication with the remote PIC when used",
-                    "A VO may operate the flight controls of the sUAS"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.33, a visual observer is optional. When used, the VO must be able to communicate directly with the remote PIC at all times. The VO does not need a Remote Pilot Certificate."
-            },
-            {
-                question: "Under Part 107, operating an sUAS from a moving vehicle is permitted:",
-                options: [
-                    "At any time without restrictions",
-                    "Only in sparsely populated areas",
-                    "Only with a visual observer present",
-                    "Only at night with anti-collision lighting"
-                ],
-                answer: 1,
-                explanation: "Under 14 CFR 107.25, operating from a moving land or water vehicle is only permitted in sparsely populated areas. Operations from a moving vehicle in populated areas require a waiver."
-            },
-            {
-                question: "How often must a remote pilot complete recurrent training to maintain Part 107 privileges?",
-                options: [
-                    "Every 12 calendar months",
-                    "Every 24 calendar months",
-                    "Every 36 calendar months",
-                    "Every 5 years"
-                ],
-                answer: 1,
-                explanation: "Under 14 CFR 107.65, a remote pilot must complete recurrent training every 24 calendar months. This can be done through a free online FAASTeam course or by retaking the proctored knowledge test."
-            },
-            {
-                question: "What is the maximum takeoff weight for a small UAS operating under Part 107?",
-                options: [
-                    "25 pounds",
-                    "44 pounds",
-                    "Less than 55 pounds",
-                    "55 pounds exactly"
-                ],
-                answer: 2,
-                explanation: "Under 14 CFR 107.3, a small unmanned aircraft is defined as weighing less than 55 pounds (25 kg) at takeoff, including everything on board or otherwise attached."
-            },
-            {
-                question: "Which of the following is a valid method of complying with Remote ID requirements?",
-                options: [
-                    "Filing a flight plan with the FAA before each operation",
-                    "Operating with Standard Remote ID, a Remote ID broadcast module, or within a FRIA",
-                    "Attaching a physical identification tag visible from 50 feet",
-                    "Broadcasting your Remote Pilot Certificate number via ADS-B"
-                ],
-                answer: 1,
-                explanation: "Under 14 CFR Part 89, there are three ways to comply with Remote ID: Standard Remote ID built into the drone, a Remote ID broadcast module attached to the drone, or operating within an FAA-Recognized Identification Area (FRIA)."
-            },
-            {
-                question: "A small UAS is operating near a 250-foot tall structure. Under the Part 107 altitude exception, what is the maximum altitude the drone may fly?",
-                options: [
-                    "400 feet AGL",
-                    "500 feet AGL",
-                    "650 feet AGL",
-                    "800 feet AGL"
-                ],
-                answer: 2,
                 explanation: "Under 14 CFR 107.51, when operating within a 400-foot radius of a structure, the drone may fly up to 400 feet above the top of the structure. For a 250-foot structure, this means 250 + 400 = 650 feet AGL maximum."
             },
             {
-                question: "Under the Operations Over People rule, which category allows operations over people with a drone weighing 0.55 lbs (250 grams) or less with no additional requirements beyond standard Part 107?",
+                question: "During a commercial mapping operation, weather conditions drop to 2 statute miles visibility. What must the Remote PIC do?",
                 options: [
-                    "Category 1",
-                    "Category 2",
-                    "Category 3",
-                    "Category 4"
+                    "Continue the flight as long as the drone is still visible",
+                    "Land immediately; the minimum flight visibility under Part 107 is 3 statute miles",
+                    "Climb above the haze layer to regain visual reference"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.51, the minimum flight visibility from the control station is 3 statute miles. If visibility drops below this minimum, the pilot must cease operations. There is no exception based on the drone being visually observable."
+            },
+            {
+                question: "Your drone collides with a parked car during a real estate photography job, causing $600 in damage. No one is injured. What is your reporting obligation?",
+                options: [
+                    "No report is required since no one was injured",
+                    "Report the accident to the FAA within 10 calendar days",
+                    "Report the accident to local law enforcement within 24 hours"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.9, an sUAS accident must be reported to the FAA within 10 calendar days if it results in serious injury, loss of consciousness, or at least $500 in property damage (other than damage to the drone itself). The $600 car damage exceeds the $500 threshold."
+            },
+            {
+                question: "A client asks you to fly a drone survey from the back of a moving pickup truck driving through a rural farming area. Under Part 107, is this permitted?",
+                options: [
+                    "Yes, operating from a moving vehicle is permitted in sparsely populated areas",
+                    "No, operating from a moving vehicle is never permitted under Part 107",
+                    "Yes, but only if a visual observer is standing on the ground"
                 ],
                 answer: 0,
-                explanation: "Category 1 allows operations over people with small unmanned aircraft weighing 0.55 lbs (250 grams) or less, including everything on board or attached. No FAA-accepted Declaration of Compliance is needed for Category 1."
+                explanation: "Under 14 CFR 107.25, operating from a moving land or water vehicle is permitted in sparsely populated areas. A rural farming area qualifies. Operations from moving vehicles in populated areas require a waiver."
+            },
+            {
+                question: "You are flying your drone at 390 feet AGL when a manned helicopter appears at roughly the same altitude heading toward your position. What must you do?",
+                options: [
+                    "Maintain your altitude since you are below the 400-foot limit",
+                    "Yield the right-of-way by maneuvering your drone to avoid the helicopter",
+                    "Flash your anti-collision lights to alert the helicopter of your position"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.37, the Remote PIC must yield the right-of-way to all other aircraft, manned and unmanned. This is an absolute requirement — you must take immediate action to avoid a conflict."
+            },
+            {
+                question: "A remote pilot obtained their certificate in March 2024. By what date must they complete recurrent training to maintain their Part 107 privileges?",
+                options: [
+                    "March 2025 (12 calendar months)",
+                    "March 2026 (24 calendar months)",
+                    "March 2029 (5 years)"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.65, a remote pilot must complete recurrent training every 24 calendar months. This can be done through a free online FAASTeam course (WINGS) or by retaking the proctored knowledge test."
+            },
+            {
+                question: "You are planning a commercial drone operation and your sUAS weighs 52 pounds at takeoff with all equipment attached. Is this within Part 107 limits?",
+                options: [
+                    "No, the maximum takeoff weight under Part 107 is 44 pounds",
+                    "Yes, Part 107 allows operations of sUAS weighing less than 55 pounds at takeoff",
+                    "Yes, but only with a special weight waiver from the FAA"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.3, a small unmanned aircraft is defined as weighing less than 55 pounds (25 kg) at takeoff, including everything on board or otherwise attached. At 52 pounds, the aircraft qualifies."
+            },
+            {
+                question: "During an inspection flight, your visual observer spots a hazard you cannot see from your position. Under Part 107, which statement about visual observers is correct?",
+                options: [
+                    "The VO must hold their own Remote Pilot Certificate to participate",
+                    "The VO is optional but must be able to communicate directly with the Remote PIC at all times when used",
+                    "The VO must be able to take over the flight controls in an emergency"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.33, a visual observer is optional. When used, the VO must maintain effective communication with the Remote PIC at all times. The VO does not need a Remote Pilot Certificate and does not operate flight controls."
+            },
+            {
+                question: "Your drone's maximum groundspeed is listed at 45 mph. A colleague's racing drone can reach 110 mph. Under Part 107, is the racing drone's speed permissible for commercial operations?",
+                options: [
+                    "Yes, there is no speed limit under Part 107",
+                    "No, the maximum groundspeed under Part 107 is 87 knots (100 mph)",
+                    "No, the maximum groundspeed under Part 107 is 60 knots (69 mph)"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.51, the maximum groundspeed for a small UAS is 87 knots (100 mph). The colleague's 110 mph racing drone would exceed this limit during commercial operations."
+            },
+            {
+                question: "An sUAS accident results in a crew member briefly losing consciousness but no property damage occurs. Must this be reported to the FAA?",
+                options: [
+                    "No, only property damage over $500 triggers reporting",
+                    "Yes, any serious injury or loss of consciousness must be reported within 10 calendar days",
+                    "Yes, but only if the person requires hospitalization"
+                ],
+                answer: 1,
+                explanation: "Under 14 CFR 107.9, loss of consciousness is specifically listed as a reportable event, regardless of whether property damage occurred. The report must be made within 10 calendar days."
+            },
+            {
+                question: "Your new drone has Standard Remote ID built in. Your older drone does not. What options do you have to fly the older drone legally?",
+                options: [
+                    "Attach a Remote ID broadcast module to the older drone, or fly it only within an FAA-Recognized Identification Area (FRIA)",
+                    "No additional equipment is needed as long as you carry your Remote Pilot Certificate",
+                    "Register the older drone on the FAA DroneZone website, which satisfies Remote ID"
+                ],
+                answer: 0,
+                explanation: "Under 14 CFR Part 89, there are three ways to comply with Remote ID: Standard Remote ID built in, a Remote ID broadcast module attached to the drone, or operating within a FRIA. Registration alone does not satisfy Remote ID."
+            },
+            {
+                question: "Under Part 107, what minimum cloud clearance must a remote pilot maintain from clouds?",
+                options: [
+                    "500 feet below and 2,000 feet horizontal",
+                    "1,000 feet below and 1 statute mile horizontal",
+                    "200 feet below and 500 feet horizontal"
+                ],
+                answer: 0,
+                explanation: "Under 14 CFR 107.51, the minimum cloud clearance is 500 feet below clouds and 2,000 feet horizontal distance from clouds."
+            },
+            {
+                question: "A client wants you to fly a small drone (0.4 lbs) over a crowd at an outdoor festival. Under the Operations Over People rule, which category applies?",
+                options: [
+                    "Category 1, since the drone weighs 0.55 lbs (250g) or less with no additional requirements beyond standard Part 107",
+                    "Category 2, which requires an FAA-accepted Declaration of Compliance",
+                    "No category permits flight over people without an FAA waiver"
+                ],
+                answer: 0,
+                explanation: "Category 1 allows operations over people with small unmanned aircraft weighing 0.55 lbs (250g) or less at takeoff, including everything on board. No Declaration of Compliance is needed for Category 1. The 0.4-lb drone qualifies."
+            },
+            {
+                question: "You passed your initial Part 107 knowledge test and received your temporary certificate. What happens next?",
+                options: [
+                    "You must log 10 hours of flight time before the permanent certificate is issued",
+                    "You apply through IACRA, pass TSA vetting, and your permanent certificate is mailed within weeks",
+                    "You must complete a practical flight test at an FAA-designated facility"
+                ],
+                answer: 1,
+                explanation: "After passing the knowledge test, you apply for your Remote Pilot Certificate through IACRA (Integrated Airman Certification and Rating Application). A TSA background check is conducted, and upon approval, your permanent certificate is mailed. No flight test is required."
             }
         ], 'regulations');
         Progress.markChapterRead('regulations');

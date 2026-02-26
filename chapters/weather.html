@@ -706,24 +706,24 @@
                 explanation: "14 CFR 107.51(c) requires a minimum flight visibility of 3 statute miles as observed from the location of the control station."
             },
             {
-                question: "What is the standard sea-level temperature and pressure used in the International Standard Atmosphere (ISA)?",
+                question: "You are calculating density altitude for a drone flight and need the ISA baseline values. What are the standard sea-level temperature and pressure?",
                 options: [
                     "20 degrees C and 30.12 inHg",
                     "15 degrees C and 29.92 inHg",
                     "10 degrees C and 28.92 inHg"
                 ],
                 answer: 1,
-                explanation: "The International Standard Atmosphere (ISA) baseline conditions are 15 degrees Celsius and 29.92 inches of mercury at sea level. These values are used as the reference for all aviation performance calculations."
+                explanation: "The International Standard Atmosphere (ISA) baseline conditions are 15 degrees Celsius (59 degrees F) and 29.92 inches of mercury at sea level. These values are used as the reference for all aviation performance calculations, including density altitude."
             },
             {
-                question: "Which three factors contribute to high density altitude?",
+                question: "You are planning a drone flight in Denver, CO on a hot, humid summer afternoon. Your drone manufacturer warns of reduced performance at high density altitude. Which combination of conditions creates this high density altitude?",
                 options: [
                     "Low altitude, cold temperature, dry air",
                     "High altitude, hot temperature, humid air",
                     "High altitude, cold temperature, dry air"
                 ],
                 answer: 1,
-                explanation: "The '3 H's' of high density altitude are: High altitude, Hot temperature, and Humid air. All three reduce air density, causing the aircraft to perform as if it were at a higher altitude than its actual elevation."
+                explanation: "The '3 H's' of high density altitude are: High altitude (Denver is at ~5,280 ft), Hot temperature, and Humid air. All three reduce air density, causing the aircraft to perform as if it were at a higher altitude than its actual elevation. Denver on a hot humid day is a worst-case scenario."
             },
             {
                 question: "In a METAR, what does 'BKN025' indicate?",
@@ -746,14 +746,14 @@
                 explanation: "Under 14 CFR 107.51, the minimum cloud clearance requirements are: 500 feet below clouds, 1,000 feet above clouds, and 2,000 feet horizontal distance from clouds. A helpful memory aid is '5-1-2-3' (500 below, 1,000 above, 2,000 horizontal, 3 SM visibility)."
             },
             {
-                question: "What does a small temperature-dew point spread (2 degrees C or less) indicate?",
+                question: "A METAR reports the temperature as 18 degrees C and the dew point as 17 degrees C. What weather condition should you be concerned about for your drone flight?",
                 options: [
-                    "High density altitude and reduced performance",
-                    "Fog, mist, or low clouds are likely to form",
-                    "Strong winds are expected at the surface"
+                    "High density altitude and reduced motor performance",
+                    "Fog, mist, or low clouds are likely, potentially reducing visibility below Part 107 minimums",
+                    "Strong gusty winds are expected at the surface"
                 ],
                 answer: 1,
-                explanation: "When the temperature-dew point spread narrows to 2 degrees Celsius or less, the air is approaching saturation (100% relative humidity). This means fog, mist, or low clouds are likely to form or are already present, potentially reducing visibility below Part 107 minimums."
+                explanation: "When the temperature-dew point spread narrows to 2 degrees Celsius or less (here it is only 1 degree), the air is approaching saturation (100% relative humidity). Fog, mist, or low clouds are likely to form or are already present, potentially reducing visibility below the Part 107 minimum of 3 statute miles."
             },
             {
                 question: "Which stage of a thunderstorm is considered the most hazardous?",
