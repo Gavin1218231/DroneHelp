@@ -276,9 +276,52 @@
                     </div>
                 </div>
 
+                <!-- Slide 13: UAS Facility Maps (UASFM) -->
+                <div class="slide">
+                    <h3>UAS Facility Maps (UASFM)</h3>
+                    <p>UAS Facility Maps are FAA-published grid overlays around airports that define pre-approved altitude ceilings for LAANC authorizations.</p>
+                    <h4>How to Read a UASFM</h4>
+                    <ul>
+                        <li>Each airport's surrounding airspace is divided into a grid of cells</li>
+                        <li>Each cell displays a number representing the <strong>maximum altitude (in feet AGL)</strong> pre-approved for drone operations</li>
+                        <li>Common ceiling values: 0, 50, 100, 150, 200, 300, 400 feet AGL</li>
+                        <li>A ceiling of <strong>0</strong> means no automatic LAANC approval is available &mdash; you must submit a Further Coordination request</li>
+                        <li>Cells closer to the runway typically have lower ceilings (often 0); cells farther away have higher ceilings</li>
+                    </ul>
+                    <div class="key-point">
+                        <strong>Exam Tip:</strong> If a UASFM grid cell shows a ceiling of 200 feet and you request 200 feet or below, LAANC grants automatic approval. If you request 250 feet, the request goes to Further Coordination (manual FAA review, up to 90 days).
+                    </div>
+                    <div class="example-box">
+                        <strong>Example:</strong> You plan to fly near a Class C airport. The UASFM shows your grid cell has a ceiling of 100 ft AGL. LAANC will automatically approve operations up to 100 ft. To fly at 200 ft, you must submit a Further Coordination request.
+                    </div>
+                </div>
+
+                <!-- Slide 14: Reading Sectional Chart Altitude Labels -->
+                <div class="slide">
+                    <h3>Reading Altitude Labels on Sectional Charts</h3>
+                    <p>Understanding how altitude information is presented on sectional charts is one of the most critical skills for the Part 107 exam.</p>
+                    <h4>Airspace Altitude Fractions</h4>
+                    <ul>
+                        <li>Altitudes for airspace boundaries are shown as <strong>fractions</strong>: ceiling over floor, in hundreds of feet MSL</li>
+                        <li>Example: <strong>80/20</strong> means ceiling at 8,000 ft MSL and floor at 2,000 ft MSL</li>
+                        <li><strong>SFC</strong> means the floor is the surface</li>
+                        <li>Example: <strong>100/SFC</strong> means ceiling at 10,000 ft MSL, floor at the surface</li>
+                    </ul>
+                    <h4>Obstacle Height Labels</h4>
+                    <ul>
+                        <li>Obstacles show two numbers: the <strong>bold top number</strong> is height in feet MSL</li>
+                        <li>The <strong>number in parentheses</strong> below is the height in feet AGL</li>
+                        <li>Example: <strong>1548</strong> over <strong>(307)</strong> means the obstacle is 1,548 ft MSL and 307 ft AGL</li>
+                        <li>Part 107 pilots care most about AGL height &mdash; if an obstacle is 307 ft AGL, your 400 ft AGL limit gives only 93 ft of clearance above it</li>
+                    </ul>
+                    <div class="warning-box">
+                        <strong>Critical:</strong> Always convert between MSL and AGL using field elevation. If field elevation is 1,241 ft MSL and an obstacle is 1,548 ft MSL, the obstacle is 307 ft AGL (1,548 &minus; 1,241 = 307).
+                    </div>
+                </div>
+
                 <div class="slide-controls">
                     <button class="slide-btn prev" disabled>&larr; Previous</button>
-                    <span class="slide-counter">Slide 1 of 12</span>
+                    <span class="slide-counter">Slide 1 of 14</span>
                     <button class="slide-btn next">Next &rarr;</button>
                 </div>
             </div>
@@ -535,6 +578,24 @@
                 </ul>
                 <div class="tip-box">
                     <strong>Practical Tip:</strong> Always use LAANC when available, as it is much faster than the DroneZone manual process. Download a LAANC app before your flight to check airspace restrictions and request authorization on-site. Even if you are flying in Class G, these apps are valuable for checking TFRs and other restrictions.
+                </div>
+
+                <h3>Reading Altitude Labels and Converting MSL to AGL</h3>
+                <p>One of the most frequently tested skills on the Part 107 exam is the ability to read altitude information from sectional charts and convert between MSL (mean sea level) and AGL (above ground level) references. Altitudes on sectional charts are almost always given in feet MSL, but Part 107 limits are measured in AGL. Converting between the two requires knowing the ground elevation at your operating location.</p>
+                <p>The conversion formula is simple: <strong>Height AGL = Altitude MSL &minus; Ground Elevation MSL</strong>. For example, if an obstacle is marked at 2,150 feet MSL and the ground elevation at that location is 850 feet MSL, the obstacle is 2,150 &minus; 850 = 1,300 feet AGL. Since Part 107 limits drone operations to 400 feet AGL, this obstacle is well above your maximum operating altitude.</p>
+                <p>Airspace boundary altitudes are displayed as fractions on the chart. The top number is the ceiling and the bottom number is the floor, both in hundreds of feet MSL. For example, "80/20" means the airspace extends from 2,000 feet MSL (floor) to 8,000 feet MSL (ceiling). The abbreviation "SFC" means the surface (floor is at ground level). When you see "100/SFC" on a Class B shelf, it means that particular shelf extends from the surface to 10,000 feet MSL.</p>
+
+                <div class="tip-box">
+                    <strong>Exam Strategy:</strong> When presented with a sectional chart question, first identify the ground elevation (found in the airport data block), then convert any MSL values to AGL by subtracting the ground elevation. This technique will help you answer questions about obstacle clearance, airspace floors, and operating altitude limits.
+                </div>
+
+                <h3>UAS Facility Maps in Detail</h3>
+                <p>UAS Facility Maps (UASFMs) are the backbone of the LAANC authorization system. Published by the FAA, these maps overlay a grid on the airspace around each LAANC-participating airport. Each grid cell is assigned a maximum altitude ceiling (in feet AGL) that represents the highest altitude at which the FAA has pre-approved drone operations.</p>
+                <p>The ceiling values reflect the FAA&rsquo;s assessment of risk based on proximity to runways, approach and departure paths, and other operational factors. Grid cells directly over or adjacent to active runways typically have a ceiling of 0 feet, meaning no automatic authorization is available and any operation requires manual FAA review through the Further Coordination process. Cells farther from the runway may allow operations at 50, 100, 200, or up to 400 feet AGL.</p>
+                <p>When a pilot submits a LAANC request through an approved service supplier, the system compares the requested altitude against the UASFM ceiling for that specific grid cell. If the request is at or below the ceiling, authorization is granted automatically, usually within seconds. If the request exceeds the ceiling, it is forwarded to the FAA for manual review, which can take up to 90 days. LAANC authorizations are valid for a specific location, altitude, date, and time window.</p>
+
+                <div class="warning-box">
+                    <strong>Planning Tip:</strong> Before flying near any airport, check the UASFM for your planned location using a LAANC app. If the ceiling is 0, plan to submit your request well in advance (up to 90 days) through the FAA DroneZone Further Coordination process. Do not assume you can get same-day authorization for a 0-ceiling grid cell.
                 </div>
 
                 <h3>Special Use Airspace in Detail</h3>
