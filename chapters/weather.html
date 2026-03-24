@@ -276,10 +276,115 @@
                     <div class="key-point"><strong>Remember:</strong> The passage of a front brings the most significant and rapid weather changes. Always check prognostic charts and forecasts for frontal movement before planning a drone operation. If a front is expected during your flight window, have a contingency plan ready.</div>
                 </div>
 
+                <!-- Slide 15: Winds Aloft Forecasts -->
+                <div class="slide">
+                    <h3>Winds Aloft Forecasts (FB/FD)</h3>
+                    <p>The Winds and Temperatures Aloft Forecast (FB, formerly FD) provides predicted wind direction, wind speed, and temperature at specified altitudes above reporting stations. This is essential for understanding wind conditions your drone may encounter at altitude.</p>
+                    <h4>Decoding FB Reports</h4>
+                    <ul>
+                        <li><strong>Station identifier:</strong> 3-letter station code (e.g., DEN, ORD, MIA)</li>
+                        <li><strong>Altitude levels:</strong> Data reported for 3,000, 6,000, 9,000, 12,000 ft and higher</li>
+                        <li><strong>Format:</strong> 4 or 6 digits &mdash; first 2 digits &times; 10 = wind direction (true north); next 2 digits = wind speed in knots; last 2 digits (if present) = temperature in Celsius</li>
+                        <li><strong>Example:</strong> 2714+03 = wind from 270&deg; at 14 knots, temperature +3&deg;C</li>
+                    </ul>
+                    <h4>Special Codes</h4>
+                    <ul>
+                        <li><strong>9900:</strong> Light and variable winds (less than 5 knots)</li>
+                        <li><strong>Direction &gt; 36:</strong> Add 100 knots to the speed and subtract 50 from the direction. Example: 7545 = direction (75 &minus; 50) &times; 10 = 250&deg;, speed 45 + 100 = 145 knots</li>
+                        <li><strong>No data at 3,000 ft:</strong> Temperatures are not forecast within 2,500 ft of station elevation; wind data is not reported when the station elevation is within 1,500 ft of the altitude level</li>
+                    </ul>
+                    <div class="key-point"><strong>Important distinction:</strong> Winds aloft in FB reports are given in TRUE north direction, not magnetic. Surface winds reported in METARs also reference true north, but pilots should be aware that wind direction indicators at airports (ATIS, AWOS) may reference magnetic north. This difference matters when correlating reports.</div>
+                </div>
+
+                <!-- Slide 16: Icing, Frost & Cold Weather Operations -->
+                <div class="slide">
+                    <h3>Icing, Frost &amp; Cold Weather Operations</h3>
+                    <p>Icing and frost are serious hazards for all aircraft, including small drones. Even a thin layer of frost or ice on propellers and airframe surfaces degrades performance and can lead to loss of control.</p>
+                    <h4>Types of Aircraft Icing</h4>
+                    <ul>
+                        <li><strong>Clear ice:</strong> Forms from large supercooled water droplets; heavy, hard, and difficult to remove. Most dangerous type.</li>
+                        <li><strong>Rime ice:</strong> Forms from small supercooled droplets; rough, milky, opaque appearance. Lighter than clear ice but disrupts airflow.</li>
+                        <li><strong>Mixed ice:</strong> Combination of clear and rime; has characteristics of both types.</li>
+                    </ul>
+                    <h4>Conditions for Icing</h4>
+                    <ul>
+                        <li>Visible moisture (clouds, rain, drizzle) combined with temperatures at or below 0&deg;C (32&deg;F)</li>
+                        <li>Most common between 0&deg;C and &minus;20&deg;C</li>
+                        <li><strong>AIRMET Zulu</strong> warns of moderate icing conditions</li>
+                    </ul>
+                    <h4>Frost Effects</h4>
+                    <ul>
+                        <li>Disrupts the smooth airflow over propeller blades and airframe surfaces</li>
+                        <li>Reduces lift, increases drag, and decreases thrust efficiency</li>
+                        <li>Can form on a drone left outdoors overnight when surface temperature drops below the dew point and below freezing</li>
+                    </ul>
+                    <div class="warning-box"><strong>Cold weather battery impact:</strong> Lithium polymer (LiPo) batteries lose significant capacity in cold temperatures. At 0&deg;C, expect 20&ndash;30% reduced capacity. Below &minus;10&deg;C, batteries may fail to deliver adequate current. Keep batteries warm until just before flight and monitor voltage closely.</div>
+                    <div class="key-point"><strong>Critical rule:</strong> Any frost, ice, or snow on aircraft surfaces must be removed before flight. This applies to drones just as it does to manned aircraft. Even a thin frost layer on propeller blades significantly reduces efficiency and can cause dangerous vibration.</div>
+                </div>
+
+                <!-- Slide 17: Weather Briefings & Aviation Weather Products -->
+                <div class="slide">
+                    <h3>Weather Briefings &amp; Aviation Weather Products</h3>
+                    <p>Obtaining a proper weather briefing is a fundamental responsibility for every remote pilot. The FAA provides several products and services to help pilots assess weather conditions.</p>
+                    <h4>Three Types of Weather Briefings</h4>
+                    <ul>
+                        <li><strong>Standard briefing:</strong> Most comprehensive; used when you have not previously received any weather information. Covers adverse conditions, synopsis, current and forecast conditions, winds aloft, and NOTAMs.</li>
+                        <li><strong>Abbreviated briefing:</strong> Used to update a previous standard briefing or to obtain specific items only.</li>
+                        <li><strong>Outlook briefing:</strong> Requested when the planned departure is 6+ hours away; provides a general weather overview for preliminary planning.</li>
+                    </ul>
+                    <h4>PIREPs (Pilot Reports)</h4>
+                    <ul>
+                        <li>Real-time reports from pilots in flight describing actual conditions encountered</li>
+                        <li>Include location, time, altitude, aircraft type, sky conditions, visibility, temperature, wind, turbulence, and icing</li>
+                        <li>Particularly valuable because they describe conditions as actually experienced, not forecast</li>
+                    </ul>
+                    <h4>SIGMETs vs AIRMETs</h4>
+                    <ul>
+                        <li><strong>SIGMET:</strong> Issued for severe weather hazards affecting ALL aircraft &mdash; severe icing, severe or extreme turbulence, dust storms, volcanic ash. Valid for 4 hours (6 hours for volcanic ash SIGMETs).</li>
+                        <li><strong>Convective SIGMET:</strong> Issued for severe thunderstorms (surface winds &ge;50 kt, hail &ge;3/4 inch), tornadoes, or lines of thunderstorms. Valid for 2 hours.</li>
+                        <li><strong>AIRMET:</strong> Issued for moderate hazards &mdash; Sierra (IFR/mountain obscuration), Tango (turbulence, strong surface winds), Zulu (moderate icing). Valid for 6 hours.</li>
+                    </ul>
+                    <div class="key-point"><strong>Validity periods to memorize:</strong> SIGMETs are valid for 4 hours (6 hours for volcanic ash). Convective SIGMETs are valid for 2 hours. AIRMETs are valid for 6 hours. These validity periods are commonly tested on the Part 107 exam.</div>
+                </div>
+
+                <!-- Slide 18: Atmospheric Stability & Air Masses -->
+                <div class="slide">
+                    <h3>Atmospheric Stability &amp; Air Masses</h3>
+                    <p>Atmospheric stability determines the type of weather you will encounter. Stability refers to the atmosphere&rsquo;s resistance to vertical motion &mdash; whether a parcel of air, once displaced, tends to return to its original position (stable) or continue moving (unstable).</p>
+                    <h4>Stable Atmosphere Characteristics</h4>
+                    <ul>
+                        <li><strong>Clouds:</strong> Stratiform (stratus, nimbostratus) &mdash; flat, layered</li>
+                        <li><strong>Precipitation:</strong> Steady, continuous rain or drizzle</li>
+                        <li><strong>Turbulence:</strong> Smooth air with little vertical mixing</li>
+                        <li><strong>Visibility:</strong> Poor &mdash; haze, fog, and smoke trapped near the surface</li>
+                    </ul>
+                    <h4>Unstable Atmosphere Characteristics</h4>
+                    <ul>
+                        <li><strong>Clouds:</strong> Cumuliform (cumulus, cumulonimbus) &mdash; puffy, towering</li>
+                        <li><strong>Precipitation:</strong> Showery, intermittent, sometimes heavy</li>
+                        <li><strong>Turbulence:</strong> Moderate to severe; thermals and convective currents</li>
+                        <li><strong>Visibility:</strong> Generally good, except in precipitation</li>
+                    </ul>
+                    <h4>Determining Stability</h4>
+                    <ul>
+                        <li>Compare the environmental lapse rate to the standard lapse rate (2&deg;C per 1,000 ft)</li>
+                        <li>If temperature decreases faster than standard &rarr; unstable</li>
+                        <li>If temperature decreases slower than standard (or increases = inversion) &rarr; stable</li>
+                    </ul>
+                    <h4>Air Mass Types</h4>
+                    <ul>
+                        <li><strong>mT (maritime Tropical):</strong> Warm, moist &mdash; originates over tropical oceans; brings humidity and potential thunderstorms</li>
+                        <li><strong>mP (maritime Polar):</strong> Cool, moist &mdash; originates over cold oceans; brings clouds, rain, and reduced visibility</li>
+                        <li><strong>cT (continental Tropical):</strong> Hot, dry &mdash; originates over desert regions; brings high density altitude</li>
+                        <li><strong>cP (continental Polar):</strong> Cold, dry &mdash; originates over cold land masses; brings clear skies but extreme cold</li>
+                    </ul>
+                    <div class="key-point"><strong>Remember for the exam:</strong> An unstable atmosphere produces cumuliform clouds, turbulence, showery precipitation, and good visibility (except in storms). A stable atmosphere produces stratiform clouds, smooth air, continuous precipitation, and restricted visibility due to trapped haze and fog.</div>
+                </div>
+
                 <!-- Slide Controls -->
                 <div class="slide-controls">
                     <button class="slide-btn prev" disabled>&larr; Previous</button>
-                    <span class="slide-counter">Slide 1 of 14</span>
+                    <span class="slide-counter">Slide 1 of 18</span>
                     <button class="slide-btn next">Next &rarr;</button>
                 </div>
             </div>
