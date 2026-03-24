@@ -745,6 +745,130 @@
                     <strong>Best Practice:</strong> Even experienced remote pilots should run through this checklist before every flight. Airspace conditions can change daily due to TFRs, NOTAMs, and schedule changes at airports. What was Class G yesterday could be under a TFR today.
                 </div>
 
+                <h3>Advanced Sectional Chart Symbology</h3>
+                <p>Beyond the airspace boundaries, airport symbols, and obstacle markings covered earlier, VFR Sectional Charts contain a rich set of additional symbology that Part 107 pilots are expected to understand for the FAA exam. Navigational aids (navaids) are prominent features on every sectional chart. A <strong>VOR (VHF Omnidirectional Range)</strong> station appears as a compass rose or hexagonal symbol with radial lines extending outward; it serves as a reference point for manned aircraft navigation and often marks the center of airspace boundaries. A <strong>VORTAC</strong> combines a VOR with a military TACAN station and is depicted with a similar compass rose but with a distinctive three-cornered shape inside the symbol; it provides both bearing and distance information to equipped aircraft. An <strong>NDB (Non-Directional Beacon)</strong> appears as a small circle surrounded by dots and represents an older navigation technology still in use at some locations. While drone pilots do not navigate using these aids, recognizing them on charts helps you orient yourself relative to airspace boundaries and understand references in NOTAMs and airport facility directories.</p>
+                <p>Terrain and obstruction awareness is another critical skill tested on the Part 107 exam. Each latitude/longitude quadrant on a sectional chart displays a <strong>Maximum Elevation Figure (MEF)</strong> &mdash; a large, bold two-digit number representing the highest known feature (terrain or man-made obstruction) within that quadrant, plus a safety buffer, expressed in hundreds of feet MSL. For example, an MEF of "37" means the highest feature in that quadrant reaches approximately 3,700 feet MSL. The MEF calculation adds the highest terrain or obstacle elevation, rounds up to the next hundred-foot increment, and then adds an additional 100 to 200 feet as a safety buffer. For Part 107 pilots, MEF values provide a quick way to assess the maximum terrain elevation in your operating area, which is essential when converting between MSL and AGL altitudes and ensuring you maintain safe clearance.</p>
+                <p><strong>Isogonic lines</strong> are dashed magenta lines that cross the chart and indicate magnetic variation &mdash; the angular difference between true north and magnetic north at a given location. Each line is labeled with a value such as "10&deg;W" or "5&deg;E," meaning the magnetic compass points that many degrees west or east of true north. While drone pilots rarely navigate by magnetic compass, understanding isogonic lines is important for interpreting runway headings, chart orientations, and any exam questions about magnetic variation. <strong>Victor airways</strong> are depicted as blue lines connecting VOR stations and are labeled with a "V" prefix followed by a number (e.g., V-16). These airways represent controlled airspace corridors in the low-altitude IFR structure, with a floor of 1,200 feet AGL and a ceiling of 18,000 feet MSL. Although Part 107 operations occur well below Victor airway altitudes, understanding them helps you recognize that IFR traffic may be overhead along these routes.</p>
+                <p>Sectional charts also depict <strong>stadium and arena TFR symbols</strong> as open stadium icons near major venues. These symbols alert pilots that temporary flight restrictions may be imposed during events at venues with seating capacity of 30,000 or more. The standard stadium TFR extends 3 NM in radius and up to 3,000 feet AGL, beginning one hour before and ending one hour after the event. On the exam, you may be presented with a sectional chart excerpt showing a stadium symbol and asked about the associated TFR dimensions and timing. Always cross-reference stadium symbols with active TFR notices before flying near any major venue.</p>
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Chart Depiction</th>
+                        <th>Relevance to Part 107</th>
+                    </tr>
+                    <tr>
+                        <td>VOR</td>
+                        <td>VHF Omnidirectional Range</td>
+                        <td>Compass rose / hexagonal symbol with radials</td>
+                        <td>Marks airspace boundary centers; reference in NOTAMs</td>
+                    </tr>
+                    <tr>
+                        <td>VORTAC</td>
+                        <td>VOR + TACAN</td>
+                        <td>Compass rose with three-cornered inner shape</td>
+                        <td>Same as VOR; provides distance info for manned aircraft</td>
+                    </tr>
+                    <tr>
+                        <td>NDB</td>
+                        <td>Non-Directional Beacon</td>
+                        <td>Small circle with surrounding dots</td>
+                        <td>Older navaid; may define approach segments near airports</td>
+                    </tr>
+                    <tr>
+                        <td>MEF</td>
+                        <td>Maximum Elevation Figure</td>
+                        <td>Large bold number in each lat/long quadrant</td>
+                        <td>Highest feature + buffer in hundreds of feet MSL; critical for altitude awareness</td>
+                    </tr>
+                    <tr>
+                        <td>Victor Airway</td>
+                        <td>Low-altitude IFR route</td>
+                        <td>Blue line between VORs labeled "V-##"</td>
+                        <td>Indicates IFR traffic corridors overhead</td>
+                    </tr>
+                    <tr>
+                        <td>Stadium Symbol</td>
+                        <td>Stadium / Arena TFR</td>
+                        <td>Open stadium icon near venue</td>
+                        <td>Potential TFR: 3 NM radius, 3,000 ft AGL during events</td>
+                    </tr>
+                </table>
+                <div class="warning-box">
+                    <strong>Exam Alert:</strong> MEF questions are common on the Part 107 exam. Remember that MEF values are in hundreds of feet MSL and include a safety buffer above the highest known feature. An MEF of "32" means 3,200 feet MSL &mdash; not 3,200 feet AGL. To determine the AGL height of features in a quadrant, subtract the local ground elevation from the MEF value.
+                </div>
+                <div class="tip-box">
+                    <strong>Tip:</strong> When studying for the exam, practice identifying all symbol types on sample sectional chart excerpts. The FAA frequently provides chart snippets and asks you to identify navaids, airways, MEF values, and stadium symbols. Familiarity with these features will save time during the test.
+                </div>
+
+                <h3>DroneZone &amp; Manual Authorization</h3>
+                <p>While LAANC has dramatically simplified the airspace authorization process for Part 107 pilots, there are important scenarios where LAANC is not available and manual authorization through the FAA DroneZone portal becomes necessary. Understanding when and how to use the manual process is essential for both the exam and real-world operations. Manual authorization is required when the airport in question is not LAANC-enabled (some smaller airports and Part 91 airports lack LAANC coverage), when the UAS Facility Map (UASFM) grid cell ceiling is 0 (meaning no automatic approval is possible), when you need to fly above the pre-approved UASFM ceiling for your grid cell, or when your operation involves complex conditions that exceed LAANC parameters.</p>
+                <p>The FAA DroneZone portal at <strong>faadronezone.faa.gov</strong> is the official gateway for manual authorization requests. The step-by-step process involves logging in with your Part 107 credentials, selecting "Request Part 107 Airspace Authorization," defining your operating area on the map (including coordinates, radius, and altitude), specifying the date and time window for your operation, providing details about the nature of the operation and any safety mitigations, and submitting the request for FAA review. Once submitted, you can monitor the status of your request through the portal. The FAA reviews each request individually, consulting with local Air Traffic Control facilities to assess the impact on manned aircraft operations.</p>
+                <p>The <strong>Further Coordination</strong> process is triggered in two primary ways: when a LAANC request exceeds the UASFM pre-approved ceiling, or when the grid cell ceiling is 0. In either case, the request is forwarded to FAA Air Traffic personnel for manual review. This process can take a considerable amount of time &mdash; the FAA states that manual authorizations may take <strong>up to 90 days</strong>, and in practice some complex requests take even longer. The timeline depends on the complexity of the airspace, the volume of requests being processed, and the specific concerns of the local ATC facility. For time-sensitive operations, this delay can be a significant planning challenge.</p>
+                <p>It is critical to understand the difference between LAANC auto-approval and manual approval. LAANC auto-approval is nearly instantaneous (often within seconds) and is available for requests at or below the UASFM ceiling at LAANC-enabled airports. Manual approval through DroneZone requires FAA staff review and can take weeks or months. A UASFM ceiling of <strong>0</strong> is particularly important to recognize: it means that no automatic LAANC approval is available for that grid cell, and all operations require Further Coordination regardless of the requested altitude. Grid cells with a 0 ceiling are typically found directly over or immediately adjacent to active runways, approach corridors, and departure paths.</p>
+                <div class="info-box">
+                    <strong>Scenario:</strong> You are hired to photograph a construction site located 1.5 NM from a Class C airport. You check a LAANC app and find that your grid cell has a UASFM ceiling of 0. You cannot receive automatic LAANC approval. You must submit a manual authorization request through the FAA DroneZone portal and wait for FAA review, which could take up to 90 days. Plan your project timeline accordingly and submit the request as early as possible.
+                </div>
+                <div class="warning-box">
+                    <strong>Key Point:</strong> Always check LAANC availability first; manual authorizations can take 90+ days. Never assume same-day approval for manual requests, and never fly in controlled airspace without a valid authorization in hand. Operating without authorization is a violation that can result in certificate action and civil penalties.
+                </div>
+                <div class="tip-box">
+                    <strong>Exam Tip:</strong> The Part 107 exam may present a scenario where a pilot needs to fly near an airport without LAANC coverage. The correct answer will involve submitting a manual authorization through the FAA DroneZone and allowing sufficient time for processing. Know that "Further Coordination" is the term used when LAANC routes a request to the FAA for manual review.
+                </div>
+
+                <h3>Traffic Patterns &amp; Airport Operations for sUAS</h3>
+                <p>Although Part 107 drones do not fly in airport traffic patterns, understanding how manned aircraft operate in and around airports is a fundamental safety skill and a testable topic on the FAA exam. The standard airport traffic pattern is a rectangular flight path around a runway that provides an organized flow of arriving and departing aircraft. The pattern consists of five legs: the <strong>upwind leg</strong> (parallel to the runway in the direction of landing, flown on departure), the <strong>crosswind leg</strong> (a perpendicular turn after departure, climbing to pattern altitude), the <strong>downwind leg</strong> (parallel to the runway in the opposite direction of landing, at pattern altitude), the <strong>base leg</strong> (a descending turn toward the runway, perpendicular to the extended centerline), and the <strong>final approach</strong> (the last segment aligned with the runway for landing). All turns in a standard pattern are to the left, creating a left-hand rectangular circuit around the runway.</p>
+                <p>The standard traffic pattern altitude for small propeller-driven aircraft is typically <strong>1,000 feet AGL</strong>. This means that aircraft on the downwind leg are flying at approximately 1,000 feet above the airport elevation &mdash; well above the 400-foot AGL Part 107 ceiling, but close enough that situational awareness is critical. Aircraft on the base leg and final approach are descending and may pass through altitudes that overlap with drone operating areas, particularly within a few miles of the runway. Understanding which direction and altitude manned aircraft are flying helps Part 107 pilots position themselves safely and anticipate potential conflicts.</p>
+                <p>While left-hand turns are the default, some runways use <strong>right-hand traffic patterns</strong> due to terrain, noise abatement, or airspace considerations. Right-hand patterns are indicated on sectional charts with the notation <strong>"RP"</strong> next to the affected runway number in the airport data block. For example, "RP 27" means Runway 27 uses a right-hand pattern. This changes the direction of the rectangular circuit, and knowing this helps a drone pilot predict which side of the airport manned aircraft will be circling. The <strong>CTAF (Common Traffic Advisory Frequency)</strong> and <strong>UNICOM</strong> frequencies are printed on sectional charts near each airport's data block. At non-towered airports, manned pilots self-announce their position and intentions on the CTAF. While Part 107 does not require drone pilots to have a radio, monitoring the CTAF with a handheld aviation radio can significantly enhance situational awareness when operating near non-towered airports.</p>
+                <p>Consider a real-world scenario: you are hired to inspect a cell tower located 2 NM east of a non-towered airport. By checking the sectional chart, you determine the airport uses a standard left-hand pattern for Runway 9 (landing to the east). This means aircraft on the downwind leg will fly east of the airport at approximately 1,000 feet AGL &mdash; directly over your operating area. Aircraft turning base will descend through your altitude range. Armed with this knowledge, you can position your visual observer to watch for incoming traffic, time your flights to avoid peak activity periods, and maintain extra vigilance when aircraft announce their positions on the CTAF.</p>
+                <table>
+                    <tr>
+                        <th>Pattern Leg</th>
+                        <th>Direction (Standard Left Pattern)</th>
+                        <th>Typical Altitude</th>
+                        <th>Risk Level for Drone Pilots</th>
+                    </tr>
+                    <tr>
+                        <td>Upwind</td>
+                        <td>Parallel to runway, departure direction</td>
+                        <td>Climbing from surface</td>
+                        <td>Moderate (near runway, climbing through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Crosswind</td>
+                        <td>Perpendicular turn after departure</td>
+                        <td>Climbing to ~1,000 ft AGL</td>
+                        <td>Moderate (transitioning through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Downwind</td>
+                        <td>Parallel to runway, opposite landing direction</td>
+                        <td>~1,000 ft AGL (level)</td>
+                        <td>Lower (above typical drone operations)</td>
+                    </tr>
+                    <tr>
+                        <td>Base</td>
+                        <td>Perpendicular turn toward runway</td>
+                        <td>Descending from ~1,000 ft AGL</td>
+                        <td>High (descending through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Final</td>
+                        <td>Aligned with runway centerline</td>
+                        <td>Descending to surface</td>
+                        <td>High (low altitude, focused on landing)</td>
+                    </tr>
+                </table>
+                <div class="warning-box">
+                    <strong>Safety Warning:</strong> Aircraft on base leg and final approach are descending through altitudes where drones commonly operate. Pilots on final approach are focused on landing and may have limited ability to see and avoid a small drone. Always maintain heightened awareness when operating within 3 NM of any airport, and consider using a visual observer dedicated to scanning for manned aircraft.
+                </div>
+                <div class="info-box">
+                    <strong>Exam Scenario:</strong> The Part 107 exam may show you a diagram of a traffic pattern and ask you to identify which leg an aircraft is on, or ask about standard pattern altitude. Remember: standard pattern altitude is 1,000 feet AGL for small aircraft, all turns are to the left unless "RP" is noted, and the downwind leg is flown parallel to the runway in the opposite direction of landing.
+                </div>
+                <div class="tip-box">
+                    <strong>Tip:</strong> Monitoring the CTAF frequency is one of the best ways to maintain situational awareness near non-towered airports. Handheld aviation radios are available for under $200 and allow you to hear pilot position reports such as "Cessna 12345, entering left downwind Runway 27." This real-time information helps you anticipate where aircraft will be relative to your drone operating area.
+                </div>
+
             </div>
         </section>
 
