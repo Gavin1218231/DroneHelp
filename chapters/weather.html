@@ -791,6 +791,147 @@
 
                 <div class="tip-box"><strong>The PAVE checklist</strong> is a useful personal minimums framework: <strong>P</strong>ilot (Am I fit to fly?), <strong>A</strong>ircraft (Is the drone airworthy?), en<strong>V</strong>ironment (Weather, airspace, terrain), <strong>E</strong>xternal pressures (Am I being pressured to fly in marginal conditions?). If any element is unsatisfactory, do not fly.</div>
 
+                <h3>Winds Aloft Forecasts (FB/FD)</h3>
+                <p>The Winds and Temperatures Aloft Forecast, designated FB (formerly FD), is an essential aviation weather product that provides predicted wind direction, wind speed, and temperature at specific altitudes above selected reporting stations. These forecasts are issued four times daily and are valid for 6- and 12-hour periods. For Part 107 remote pilots, FB reports are valuable because surface winds alone do not tell the whole story &mdash; wind conditions can change dramatically within the first few hundred feet of altitude. A drone launching in calm surface winds may encounter significantly stronger winds at 200 or 300 feet AGL, and the FB report helps you anticipate this.</p>
+                <p>Decoding an FB report requires understanding the data format. Each station lists wind and temperature data for standard altitude levels: 3,000, 6,000, 9,000, 12,000 feet, and higher. The data at each level is presented as a group of 4 or 6 digits. The first two digits, multiplied by 10, give the wind direction in degrees TRUE (not magnetic). The next two digits give the wind speed in knots. If a 6-digit group is present, the last two digits represent the temperature in degrees Celsius (a plus sign is implied above 24,000 ft where temperatures are always negative; below that level, the sign is included).</p>
+
+                <table>
+                    <tr>
+                        <th>FB Code</th>
+                        <th>Wind Direction</th>
+                        <th>Wind Speed</th>
+                        <th>Temperature</th>
+                    </tr>
+                    <tr>
+                        <td>2714+03</td>
+                        <td>27 &times; 10 = 270&deg; (west)</td>
+                        <td>14 knots</td>
+                        <td>+3&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td>3425-08</td>
+                        <td>34 &times; 10 = 340&deg; (north-northwest)</td>
+                        <td>25 knots</td>
+                        <td>&minus;8&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td>9900</td>
+                        <td colspan="2">Light and variable (below 5 knots)</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>7545</td>
+                        <td>(75 &minus; 50) &times; 10 = 250&deg;</td>
+                        <td>45 + 100 = 145 knots</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+
+                <p>Two special codes appear frequently and are tested on the Part 107 exam. The code <strong>9900</strong> means &ldquo;light and variable&rdquo; &mdash; winds are less than 5 knots with no consistent direction. When the first two digits of the direction exceed 36, it signals a high-speed encoding: subtract 50 from the direction digits and add 100 to the speed digits. For example, 7545 decodes as direction (75 &minus; 50) &times; 10 = 250&deg;, speed 45 + 100 = 145 knots. Additionally, temperature data is not forecast for altitudes within 2,500 feet of the station elevation, and wind data is omitted entirely when the station elevation is within 1,500 feet of the altitude level.</p>
+
+                <div class="tip-box"><strong>Exam tip:</strong> A common Part 107 test question asks you to decode an FB entry. Practice converting the coded groups: remember that direction digits are multiplied by 10, the code 9900 means light and variable, and direction values above 36 use the special high-speed encoding. Also remember that FB winds are referenced to TRUE north, which differs from how wind direction indicators at airports may reference magnetic north.</div>
+
+                <h3>Icing, Frost &amp; Cold Weather Operations</h3>
+                <p>Icing is a significant hazard for all aircraft, and small drones are not immune. Structural icing occurs when supercooled water droplets (liquid water existing below 0&deg;C) strike an aircraft surface and freeze on contact. There are three types of structural icing. <strong>Clear ice</strong> forms from large supercooled droplets or freezing rain; it is smooth, heavy, hard to see, and extremely difficult to remove &mdash; making it the most dangerous type. <strong>Rime ice</strong> forms from small supercooled droplets that freeze rapidly on contact, creating a rough, milky, opaque accumulation. While lighter than clear ice, rime ice disrupts smooth airflow over surfaces. <strong>Mixed ice</strong> is a combination of clear and rime, with properties of both. Even a thin coating of any ice type on drone propeller blades can significantly alter their aerodynamic profile, causing vibration, reduced thrust, and potential loss of control.</p>
+                <p>The conditions necessary for icing are straightforward: visible moisture (clouds, precipitation, drizzle) combined with temperatures at or below 0&deg;C (32&deg;F). The most hazardous icing zone is generally between 0&deg;C and &minus;20&deg;C, because below &minus;20&deg;C most moisture has already frozen into ice crystals, which are less likely to adhere to surfaces. <strong>AIRMET Zulu</strong> is the advisory product that warns of moderate icing conditions, and any active AIRMET Zulu in your area should prompt serious reconsideration of your flight plan.</p>
+                <p>Frost is a related but distinct hazard. It forms when the surface temperature of an object drops below the dew point and below freezing &mdash; moisture deposits directly as ice crystals on the surface. Even a thin layer of frost on propeller blades and airframe surfaces disrupts the smooth airflow that is essential for generating lift and thrust. Frost increases drag and reduces propeller efficiency, which can lead to degraded climb performance, increased power consumption, and potential control difficulties. The critical rule, tested repeatedly on the Part 107 exam, is simple: <strong>any frost, ice, or snow must be removed from all aircraft surfaces before flight.</strong> This applies to drones just as it does to manned aircraft.</p>
+
+                <div class="warning-box"><strong>Cold weather battery warning:</strong> Lithium polymer (LiPo) batteries are severely affected by cold temperatures. At 0&deg;C (32&deg;F), expect a 20&ndash;30% reduction in available capacity. Below &minus;10&deg;C (14&deg;F), batteries may fail to deliver adequate current for stable flight. Best practices include: storing batteries in an insulated container until just before flight, pre-warming batteries to at least 20&deg;C before use, shortening planned flight times to account for reduced capacity, and monitoring battery voltage closely throughout the flight. A sudden voltage drop in cold conditions can cause an unplanned emergency landing or crash.</div>
+
+                <div class="tip-box"><strong>Exam scenario:</strong> A Part 107 test question may describe a drone left outdoors overnight during winter and ask what must be done before flight. The answer is always that all frost, ice, and snow must be completely removed from all surfaces. Another common question involves identifying AIRMET Zulu as the advisory for moderate icing conditions (as opposed to AIRMET Sierra for IFR/mountain obscuration and AIRMET Tango for turbulence).</div>
+
+                <h3>Weather Briefings &amp; Aviation Weather Products</h3>
+                <p>Obtaining a thorough weather briefing is one of the most fundamental responsibilities of a remote pilot in command. The FAA provides weather briefing services through <strong>1800WxBrief</strong> (operated by Leidos Flight Service), accessible online at 1800wxbrief.com or by telephone at 1-800-WX-BRIEF. Three types of briefings are available. A <strong>Standard briefing</strong> is the most comprehensive and should be requested when you have not previously received any weather information for your planned operation; it covers adverse conditions, weather synopsis, current conditions, forecast conditions, winds aloft, NOTAMs, and ATC delays. An <strong>Abbreviated briefing</strong> is used to supplement or update a previous standard briefing, or when you need only specific items of weather data. An <strong>Outlook briefing</strong> is appropriate when your planned flight is 6 or more hours away; it provides general weather trends and expected conditions for preliminary planning purposes, with the understanding that you will request a standard or abbreviated briefing closer to your flight time.</p>
+                <p><strong>PIREPs (Pilot Reports)</strong> are among the most valuable weather products because they describe conditions as actually experienced by pilots in flight, rather than forecast or remotely observed. A PIREP includes the reporting pilot&rsquo;s location, time, altitude, aircraft type, sky conditions, flight visibility, temperature, wind, turbulence intensity, and icing type and intensity. For remote pilots, PIREPs provide real-world confirmation of what conditions are actually like at low altitudes in your area. They are especially useful for verifying or contradicting forecast products.</p>
+                <p>Several graphical weather products are important for Part 107 exam preparation. <strong>Surface Analysis Charts</strong> show current positions of fronts, pressure systems, and surface observations, providing a snapshot of current conditions. <strong>Prognostic (Prog) Charts</strong> are forecast charts showing expected positions of fronts, pressure systems, and areas of precipitation at 12, 24, 36, and 48 hours into the future. <strong>Significant Weather Charts</strong> depict areas of IFR and MVFR conditions, turbulence, and freezing levels. These products help remote pilots develop a &ldquo;big picture&rdquo; understanding of the weather patterns affecting their area.</p>
+
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Type</th>
+                        <th>Validity Period</th>
+                        <th>Covers</th>
+                    </tr>
+                    <tr>
+                        <td>SIGMET</td>
+                        <td>Warning &mdash; all aircraft</td>
+                        <td>4 hours (6 hours for volcanic ash)</td>
+                        <td>Severe icing, severe/extreme turbulence, dust storms, volcanic ash</td>
+                    </tr>
+                    <tr>
+                        <td>Convective SIGMET</td>
+                        <td>Warning &mdash; all aircraft</td>
+                        <td>2 hours</td>
+                        <td>Severe thunderstorms (surface winds &ge;50 kt, hail &ge;3/4 inch), tornadoes, lines of thunderstorms</td>
+                    </tr>
+                    <tr>
+                        <td>AIRMET Sierra</td>
+                        <td>Advisory &mdash; all aircraft</td>
+                        <td>6 hours</td>
+                        <td>IFR conditions, mountain obscuration</td>
+                    </tr>
+                    <tr>
+                        <td>AIRMET Tango</td>
+                        <td>Advisory &mdash; all aircraft</td>
+                        <td>6 hours</td>
+                        <td>Moderate turbulence, sustained surface winds &ge;30 knots</td>
+                    </tr>
+                    <tr>
+                        <td>AIRMET Zulu</td>
+                        <td>Advisory &mdash; all aircraft</td>
+                        <td>6 hours</td>
+                        <td>Moderate icing, freezing levels</td>
+                    </tr>
+                </table>
+
+                <div class="key-point"><strong>Memorize these validity periods for the exam:</strong> SIGMETs are valid for 4 hours (except volcanic ash SIGMETs, which are valid for 6 hours). Convective SIGMETs are valid for 2 hours. AIRMETs are valid for 6 hours. A key distinction: SIGMETs address <em>severe</em> hazards dangerous to ALL aircraft, while AIRMETs address <em>moderate</em> hazards. Convective SIGMETs specifically address severe thunderstorm activity.</div>
+
+                <div class="tip-box"><strong>Exam tip:</strong> The Part 107 test frequently asks about the difference between SIGMETs and AIRMETs. Remember: SIGMET = Significant Meteorological Information = severe hazards for ALL aircraft. AIRMET = Airmen&rsquo;s Meteorological Information = moderate hazards. If a question describes severe icing or severe turbulence, the answer is SIGMET. If it describes moderate icing or moderate turbulence, the answer is AIRMET.</div>
+
+                <h3>Atmospheric Stability &amp; Air Masses</h3>
+                <p>Atmospheric stability is a foundational concept that determines the character of the weather you will encounter. Stability refers to the atmosphere&rsquo;s tendency to resist or enhance vertical motion. In a <strong>stable atmosphere</strong>, a parcel of air that is displaced vertically tends to return to its original position because it is cooler (and therefore denser) than the surrounding air. This suppresses vertical motion and produces characteristic weather: stratiform clouds (stratus, nimbostratus, altostratus) with flat, layered appearances; smooth air with little turbulence; continuous, steady precipitation (rain or drizzle); and poor visibility caused by haze, fog, and smoke trapped near the surface. The very smoothness of stable air is deceptive &mdash; while it may feel comfortable to fly in, the restricted visibility can easily drop below Part 107 minimums.</p>
+                <p>In an <strong>unstable atmosphere</strong>, a displaced air parcel continues to rise because it remains warmer (less dense) than the surrounding environment. This enhances vertical motion and produces dramatically different weather: cumuliform clouds (cumulus, towering cumulus, cumulonimbus) that develop vertically; moderate to severe turbulence from convective currents and thermals; showery, intermittent precipitation that can be heavy; and generally good visibility between showers because vertical mixing disperses haze and pollutants. However, visibility within precipitation can be extremely poor, and the turbulence associated with instability poses a direct threat to small drone operations.</p>
+                <p>Stability is determined by comparing the environmental lapse rate (the actual rate at which temperature decreases with altitude) to the standard lapse rate of approximately 2&deg;C per 1,000 feet. If the environmental temperature decreases faster than the standard rate, the atmosphere is unstable. If it decreases more slowly (or increases, as in a temperature inversion), the atmosphere is stable. Temperature inversions represent the most extremely stable conditions possible.</p>
+
+                <table>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Stable Atmosphere</th>
+                        <th>Unstable Atmosphere</th>
+                    </tr>
+                    <tr>
+                        <td>Cloud type</td>
+                        <td>Stratiform (flat, layered)</td>
+                        <td>Cumuliform (puffy, towering)</td>
+                    </tr>
+                    <tr>
+                        <td>Turbulence</td>
+                        <td>Smooth air</td>
+                        <td>Moderate to severe; thermals</td>
+                    </tr>
+                    <tr>
+                        <td>Precipitation</td>
+                        <td>Continuous, steady</td>
+                        <td>Showery, intermittent</td>
+                    </tr>
+                    <tr>
+                        <td>Visibility</td>
+                        <td>Poor (haze, fog, smoke trapped)</td>
+                        <td>Good (except in precipitation)</td>
+                    </tr>
+                    <tr>
+                        <td>Lapse rate</td>
+                        <td>Less than standard (or inversion)</td>
+                        <td>Greater than standard</td>
+                    </tr>
+                </table>
+
+                <p><strong>Air masses</strong> are large bodies of air with relatively uniform temperature and moisture characteristics, determined by the region where the air mass formed. Four primary air mass types affect the United States: <strong>mT (maritime Tropical)</strong> &mdash; warm and moist, originating over tropical oceans, bringing humidity, haze, and potential thunderstorms; <strong>mP (maritime Polar)</strong> &mdash; cool and moist, originating over cold ocean waters, bringing clouds, rain, and reduced visibility; <strong>cT (continental Tropical)</strong> &mdash; hot and dry, originating over desert regions like the American Southwest, creating high density altitude and thermal turbulence; and <strong>cP (continental Polar)</strong> &mdash; cold and dry, originating over northern land masses like Canada, bringing very cold temperatures with clear skies but significant battery performance concerns for drone operators.</p>
+
+                <div class="key-point"><strong>Remember for the exam:</strong> The characteristics of stable vs. unstable air are among the most frequently tested weather topics on the Part 107 knowledge test. An unstable atmosphere produces cumuliform clouds, turbulence, showery precipitation, and good visibility (except in storms). A stable atmosphere produces stratiform clouds, smooth air, continuous precipitation, and restricted visibility due to trapped haze and fog. If a question describes layered clouds with steady drizzle and haze, the atmosphere is stable. If it describes towering clouds with rain showers and bumpy air, the atmosphere is unstable.</div>
+
+                <div class="tip-box"><strong>Practical application:</strong> When planning a drone mission, consider atmospheric stability. On a stable day with haze, your primary concern is visibility &mdash; can you maintain the 3 SM minimum and keep visual line of sight with your drone? On an unstable day with cumulus development, your primary concerns are turbulence and sudden wind gusts that could affect control, plus the potential for rapid thunderstorm development in the afternoon. Both conditions require different risk mitigation strategies.</div>
+
             </div>
         </div>
 
