@@ -838,6 +838,190 @@
 
                 <div class="info-box"><strong>30-Minute Dark Adaptation Rule:</strong> The human eye requires approximately 30 minutes to fully adapt to darkness. This adaptation is essential for detecting your sUAS and surrounding obstacles during night operations. Plan your schedule to include this adaptation period before every night flight. Avoid all bright light sources during this time &mdash; including phone screens, vehicle headlights, and white flashlights. If your dark adaptation is disrupted, the 30-minute clock starts over. Using red-filtered lighting preserves your night vision while still allowing you to read charts and operate equipment.</div>
 
+                <h3>ATC Communication &amp; Coordination</h3>
+                <p>While Part 107 does not require remote pilots to carry or use an aviation radio, understanding how Air Traffic Control (ATC) operates and how drone pilots interact with the ATC system is critical knowledge for the FAA exam and for safe real-world operations. The primary method for Part 107 pilots to coordinate with ATC is through the <strong>Low Altitude Authorization and Notification Capability (LAANC)</strong> system. LAANC provides near-real-time automated authorization to fly in controlled airspace (Class B, C, D, and surface area E) at or below FAA-published altitude ceilings. When LAANC is not available at a particular facility, pilots must request authorization manually through the FAA DroneZone portal, which can take up to 90 days to process.</p>
+
+                <p>There are specific situations where a drone pilot may need to communicate directly with ATC. If an sUAS enters controlled airspace without authorization &mdash; for example, during a flyaway or lost-link event &mdash; the Remote PIC should contact the controlling ATC facility as soon as possible to alert them to the hazard. During emergencies, prompt communication can prevent a dangerous conflict with manned aircraft. ATC has full authority to deny or terminate sUAS operations in controlled airspace at any time, and pilots must comply immediately with any ATC instruction to cease operations. Understanding basic radio phraseology, even if you do not carry a radio, helps you interpret communications if you monitor a CTAF or interact with ATC during an emergency.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Situation</th>
+                            <th>Primary Coordination Method</th>
+                            <th>Radio Communication Needed?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Routine flight in controlled airspace</td>
+                            <td>LAANC authorization</td>
+                            <td>No (authorization is automated)</td>
+                        </tr>
+                        <tr>
+                            <td>LAANC unavailable at facility</td>
+                            <td>FAA DroneZone manual authorization</td>
+                            <td>No (coordination is via portal)</td>
+                        </tr>
+                        <tr>
+                            <td>Flight near non-towered airport</td>
+                            <td>LAANC or DroneZone; monitor CTAF recommended</td>
+                            <td>Recommended but not required</td>
+                        </tr>
+                        <tr>
+                            <td>Emergency / flyaway into controlled airspace</td>
+                            <td>Contact ATC directly by phone or radio</td>
+                            <td>Yes, if possible</td>
+                        </tr>
+                        <tr>
+                            <td>Lost link in controlled airspace</td>
+                            <td>Pre-programmed failsafe activates; notify ATC</td>
+                            <td>Yes, contact ATC to advise</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Basic radio phraseology follows a standard format: identify who you are calling, state who you are, state your position, and state your request or intentions. For example: "Springfield Tower, sUAS operator November-One-Two-Three, one mile south of the field at 200 feet, requesting advisories." Always use the NATO phonetic alphabet (Alpha, Bravo, Charlie, etc.) for clarity, and read back all ATC instructions to confirm understanding. In the drone world, lost-link procedures serve as the equivalent of emergency transponder codes in manned aviation. Just as a manned pilot squawks 7700 to declare an emergency, a drone pilot relies on pre-programmed failsafe behaviors (return-to-home, hover, or land) to manage a communication loss. Programming these failsafes correctly before every flight in controlled airspace is not optional &mdash; it is a critical safety measure.</p>
+
+                <div class="tip-box"><strong>Tip:</strong> Even if you never plan to use a radio, familiarize yourself with the phonetic alphabet and basic ATC phraseology. The Part 107 exam may include questions about radio communication, and understanding these procedures makes you a safer operator when flying near airports.</div>
+
+                <h3>Terrain Awareness &amp; Obstacle Avoidance</h3>
+                <p>Collisions with stationary objects &mdash; power lines, towers, trees, buildings, and guy wires &mdash; represent one of the most common categories of sUAS accidents. Unlike manned aircraft, which typically operate at altitudes well above most ground-level obstacles, drones routinely fly at heights where these hazards are omnipresent. A thorough pre-flight site survey is the single most effective measure a Remote PIC can take to prevent an obstacle strike. This survey should be conducted on foot, walking the entire planned operating area to identify hazards that may not be visible from a single vantage point or on satellite imagery. Pay particular attention to wires, which are nearly invisible from a distance and do not appear on most maps or charts.</p>
+
+                <p>Sectional aeronautical charts provide valuable terrain and obstacle information for flight planning. Terrain elevation is indicated by contour lines and color shading, while man-made obstacles over 200 feet AGL are depicted with specific symbols showing their height above ground level (AGL) and above mean sea level (MSL). However, sectional charts do not show every obstacle: construction cranes, newly erected cell towers, temporary structures, and most power lines will not appear on charts. This is why the on-foot site survey is indispensable. Supplement chart information with satellite imagery from mapping applications, but remember that satellite images may be months or even years old and may not reflect current conditions on the ground.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Obstacle Type</th>
+                            <th>Visibility</th>
+                            <th>Charted?</th>
+                            <th>Avoidance Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Communication towers</td>
+                            <td>Moderate (often lit at night)</td>
+                            <td>Yes, if over 200 ft AGL</td>
+                            <td>Identify on chart; maintain lateral and vertical clearance; watch for guy wires</td>
+                        </tr>
+                        <tr>
+                            <td>Power lines</td>
+                            <td>Very low (thin wires nearly invisible)</td>
+                            <td>Rarely</td>
+                            <td>Look for poles/towers and assume wires between them; fly above or well below wire height</td>
+                        </tr>
+                        <tr>
+                            <td>Guy wires</td>
+                            <td>Extremely low (thin, angled cables)</td>
+                            <td>No</td>
+                            <td>Identify parent tower; assume guy wires extend outward at 45-degree angles; give wide berth</td>
+                        </tr>
+                        <tr>
+                            <td>Construction cranes</td>
+                            <td>Moderate to high</td>
+                            <td>No (temporary)</td>
+                            <td>Check NOTAMs; survey site day-of; maintain generous clearance</td>
+                        </tr>
+                        <tr>
+                            <td>Trees and buildings</td>
+                            <td>High</td>
+                            <td>No</td>
+                            <td>Survey on foot; account for tree height variation; watch for turbulence behind structures</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>When planning safe distance margins, account for GPS drift (which can be several meters), wind gusts that may push the sUAS off course, and the reaction time needed to maneuver away from an obstacle. A general best practice is to maintain at least 50 feet of lateral clearance from any obstacle and to fly at least 20 feet above the tallest obstacle in the area when transiting. Wire strike avoidance deserves special emphasis: when you see two poles or towers, always assume wires are strung between them, even if you cannot see the wires. Approach wire crossings by flying well above or well below the wire height &mdash; never attempt to fly between wires at the same altitude. Consider the catenary curve of power lines, which sag significantly at the midpoint between poles, meaning the lowest point of the wire may be much lower than the attachment points.</p>
+
+                <div class="warning-box"><strong>Warning:</strong> Power lines and guy wires are the most difficult obstacles to see during flight. They are thin, often blend into the background, and are virtually invisible from certain angles and lighting conditions. Never assume an area is clear of wires based on visual observation from your ground station alone &mdash; always walk the site and look for poles, towers, and any structures that could support wires.</div>
+
+                <h3>Accident &amp; Incident Investigation</h3>
+                <p>Under 14 CFR 107.9, the Remote PIC is required to report any sUAS operation that results in <strong>serious injury</strong> to any person, <strong>loss of consciousness</strong> of any person, or <strong>damage to any property</strong> (other than the small unmanned aircraft itself) of at least <strong>$500</strong>. This report must be submitted to the FAA within <strong>10 days</strong> of the operation, using the FAA DroneZone online portal. The 10-day clock does not necessarily start on the date of the accident &mdash; it starts on the date the Remote PIC knew or should have known about the reportable event. For example, if a drone strikes a rooftop air conditioning unit and the property owner does not discover the damage until a week later, the 10-day period begins when the PIC is informed of the damage, not when the flight occurred.</p>
+
+                <p>Post-accident actions should follow a systematic approach. First, ensure the scene is safe and provide aid to any injured persons. Second, secure the sUAS and the accident area to prevent further harm or tampering with evidence. Third, document everything thoroughly: take photographs and video of the scene, the sUAS, and any damage from multiple angles; collect witness statements with contact information; record weather conditions, GPS coordinates, and the time of the incident. Fourth, preserve all flight data: telemetry logs, controller logs, video recordings, battery data, and any maintenance records. This data may be critical for understanding what happened and may be requested by the FAA during an investigation.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reporting Trigger</th>
+                            <th>Threshold</th>
+                            <th>Deadline</th>
+                            <th>Report To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Serious injury to any person</td>
+                            <td>Any serious injury</td>
+                            <td>10 days from knowledge of event</td>
+                            <td>FAA via DroneZone</td>
+                        </tr>
+                        <tr>
+                            <td>Loss of consciousness</td>
+                            <td>Any loss of consciousness</td>
+                            <td>10 days from knowledge of event</td>
+                            <td>FAA via DroneZone</td>
+                        </tr>
+                        <tr>
+                            <td>Property damage (not the sUAS)</td>
+                            <td>&ge; $500</td>
+                            <td>10 days from knowledge of event</td>
+                            <td>FAA via DroneZone</td>
+                        </tr>
+                        <tr>
+                            <td>Damage only to the sUAS itself</td>
+                            <td>Any amount</td>
+                            <td>Not reportable under 107.9</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>The National Transportation Safety Board (NTSB) generally does not investigate Part 107 sUAS accidents unless the incident involves a manned aircraft (for example, a mid-air collision between a drone and a helicopter). The FAA, however, may investigate any reported incident and can take enforcement action against the Remote PIC's certificate if violations are found. From a practical standpoint, every commercial drone operator should carry appropriate liability insurance. While Part 107 does not require insurance, the financial exposure from property damage claims or personal injury lawsuits can be substantial. Many clients and job sites require proof of insurance before allowing drone operations on their property. Document your flights thoroughly, maintain your aircraft meticulously, and always report as required &mdash; failure to report a reportable accident is itself a violation that can result in certificate action.</p>
+
+                <div class="warning-box"><strong>Key Exam Point:</strong> The 10-day reporting clock starts from the date you KNEW or SHOULD HAVE KNOWN about a reportable event &mdash; not necessarily the date of the accident itself. If you cause damage that you do not discover until later, the clock starts when you become aware of it. Ignorance of damage you reasonably should have noticed is not a defense.</div>
+
+                <h3>Multi-Crew Operations &amp; Communication</h3>
+                <p>Many commercial sUAS operations involve more than just a single pilot. Part 107 defines three distinct crew roles: the <strong>Remote Pilot in Command (Remote PIC)</strong>, the <strong>Visual Observer (VO)</strong>, and the <strong>Person Manipulating the Controls</strong>. The Remote PIC must hold a valid Remote Pilot Certificate with a small UAS rating and bears ultimate responsibility for the safety of the entire operation. The person manipulating the controls physically operates the flight controls under the direction and supervision of the Remote PIC; this person does not need to hold a Remote Pilot Certificate, but the Remote PIC must ensure they are competent and briefed. The Visual Observer scans for traffic, obstacles, and hazards, communicating findings to the Remote PIC in real time. A VO also does not need a certificate but must be trained and briefed by the PIC before the flight.</p>
+
+                <p>A thorough pre-flight briefing is the foundation of safe multi-crew operations. Before every flight, the Remote PIC should brief all crew members on the following: the mission objectives and flight plan, including the planned route, altitude, and duration; emergency procedures, including lost-link contingencies, flyaway protocols, and what to do if a manned aircraft approaches; the communication plan, which should define standard callouts (such as "traffic left," "battery at 50 percent," or "obstacle ahead"), hand signals for noisy environments, and procedures for lost communication between crew members; and clearly defined roles and responsibilities so every person knows exactly what they are responsible for during the flight. This briefing should be interactive &mdash; encourage questions and confirm that every crew member understands their duties.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Crew Role</th>
+                            <th>Certificate Required?</th>
+                            <th>Primary Responsibilities</th>
+                            <th>Can They Fly the Drone?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Remote PIC</td>
+                            <td>Yes &mdash; Remote Pilot Certificate</td>
+                            <td>Final authority for safety; ensures regulatory compliance; briefs crew; makes go/no-go decisions</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Person Manipulating the Controls</td>
+                            <td>No</td>
+                            <td>Physically operates flight controls under PIC direction; follows PIC instructions</td>
+                            <td>Yes, under PIC supervision</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Observer</td>
+                            <td>No</td>
+                            <td>Scans for traffic, obstacles, and hazards; communicates findings to PIC; helps maintain VLOS</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Transferring control of the sUAS between operators requires clear verbal coordination. The standard protocol involves a positive three-way exchange: the pilot relinquishing control announces "You have the controls," the receiving pilot confirms "I have the controls," and the relinquishing pilot acknowledges "You have the controls." Only one person may manipulate the flight controls at any given time. Regarding multiple drone operations, 14 CFR 107.35 prohibits a single person from operating more than one sUAS simultaneously unless the FAA has granted a waiver. Even with a waiver, the Remote PIC must still ensure that all Part 107 requirements &mdash; including VLOS, right-of-way, and altitude limits &mdash; are met for every aircraft under their control. Multi-drone waivers are evaluated on a case-by-case basis and typically require demonstration of specialized equipment and procedures that enable safe simultaneous operation.</p>
+
+                <div class="info-box"><strong>Remember:</strong> The Remote PIC always maintains final authority and responsibility for the safe conduct of the flight, even when delegating the physical manipulation of controls to another person or relying on a Visual Observer to maintain situational awareness. Responsibility cannot be transferred &mdash; only tasks can be delegated. If an accident occurs, the FAA will hold the Remote PIC accountable regardless of which crew member was physically operating the controls at the time.</div>
+
             </div>
         </div>
 
