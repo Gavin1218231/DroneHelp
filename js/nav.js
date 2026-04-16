@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var navLinks = document.querySelector('.nav-links');
     var dropdowns = document.querySelectorAll('.dropdown');
 
-    if (toggle && navLinks) {
+    if (!navLinks) return;
+
+    if (toggle) {
         toggle.addEventListener('click', function () {
             navLinks.classList.toggle('open');
         });
@@ -12,12 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mobile dropdown toggle
     dropdowns.forEach(function (dd) {
-        dd.querySelector('a').addEventListener('click', function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dd.classList.toggle('open');
-            }
-        });
+        var link = dd.querySelector('a');
+        if (link) {
+            link.addEventListener('click', function (e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dd.classList.toggle('open');
+                }
+            });
+        }
     });
 
     // Close menu on link click

@@ -276,9 +276,131 @@
                     </div>
                 </div>
 
+                <!-- Slide 13: UAS Facility Maps (UASFM) -->
+                <div class="slide">
+                    <h3>UAS Facility Maps (UASFM)</h3>
+                    <p>UAS Facility Maps are FAA-published grid overlays around airports that define pre-approved altitude ceilings for LAANC authorizations.</p>
+                    <h4>How to Read a UASFM</h4>
+                    <ul>
+                        <li>Each airport's surrounding airspace is divided into a grid of cells</li>
+                        <li>Each cell displays a number representing the <strong>maximum altitude (in feet AGL)</strong> pre-approved for drone operations</li>
+                        <li>Common ceiling values: 0, 50, 100, 150, 200, 300, 400 feet AGL</li>
+                        <li>A ceiling of <strong>0</strong> means no automatic LAANC approval is available &mdash; you must submit a Further Coordination request</li>
+                        <li>Cells closer to the runway typically have lower ceilings (often 0); cells farther away have higher ceilings</li>
+                    </ul>
+                    <div class="key-point">
+                        <strong>Exam Tip:</strong> If a UASFM grid cell shows a ceiling of 200 feet and you request 200 feet or below, LAANC grants automatic approval. If you request 250 feet, the request goes to Further Coordination (manual FAA review, up to 90 days).
+                    </div>
+                    <div class="example-box">
+                        <strong>Example:</strong> You plan to fly near a Class C airport. The UASFM shows your grid cell has a ceiling of 100 ft AGL. LAANC will automatically approve operations up to 100 ft. To fly at 200 ft, you must submit a Further Coordination request.
+                    </div>
+                </div>
+
+                <!-- Slide 14: Reading Sectional Chart Altitude Labels -->
+                <div class="slide">
+                    <h3>Reading Altitude Labels on Sectional Charts</h3>
+                    <p>Understanding how altitude information is presented on sectional charts is one of the most critical skills for the Part 107 exam.</p>
+                    <h4>Airspace Altitude Fractions</h4>
+                    <ul>
+                        <li>Altitudes for airspace boundaries are shown as <strong>fractions</strong>: ceiling over floor, in hundreds of feet MSL</li>
+                        <li>Example: <strong>80/20</strong> means ceiling at 8,000 ft MSL and floor at 2,000 ft MSL</li>
+                        <li><strong>SFC</strong> means the floor is the surface</li>
+                        <li>Example: <strong>100/SFC</strong> means ceiling at 10,000 ft MSL, floor at the surface</li>
+                    </ul>
+                    <h4>Obstacle Height Labels</h4>
+                    <ul>
+                        <li>Obstacles show two numbers: the <strong>bold top number</strong> is height in feet MSL</li>
+                        <li>The <strong>number in parentheses</strong> below is the height in feet AGL</li>
+                        <li>Example: <strong>1548</strong> over <strong>(307)</strong> means the obstacle is 1,548 ft MSL and 307 ft AGL</li>
+                        <li>Part 107 pilots care most about AGL height &mdash; if an obstacle is 307 ft AGL, your 400 ft AGL limit gives only 93 ft of clearance above it</li>
+                    </ul>
+                    <div class="warning-box">
+                        <strong>Critical:</strong> Always convert between MSL and AGL using field elevation. If field elevation is 1,241 ft MSL and an obstacle is 1,548 ft MSL, the obstacle is 307 ft AGL (1,548 &minus; 1,241 = 307).
+                    </div>
+                </div>
+
+                <!-- Slide 15: Advanced Sectional Chart Symbology -->
+                <div class="slide">
+                    <h3>Advanced Sectional Chart Symbology</h3>
+                    <p>Beyond basic airspace boundaries and airport symbols, VFR Sectional Charts contain a wealth of additional symbology that Part 107 pilots should understand for safe operations and the FAA exam.</p>
+                    <h4>Navigational Aids (Navaids)</h4>
+                    <ul>
+                        <li><strong>VOR:</strong> Depicted as a compass rose (hexagonal symbol with radials). VHF Omnidirectional Range stations are used by manned aircraft for navigation and often serve as center points for airspace boundaries.</li>
+                        <li><strong>VORTAC:</strong> A VOR combined with military TACAN &mdash; shown with a similar compass rose but with a distinct three-cornered shape inside. Provides both bearing and distance information.</li>
+                        <li><strong>NDB:</strong> Non-Directional Beacon &mdash; depicted as a small circle with dots around it. Older navaid still in use at some locations.</li>
+                    </ul>
+                    <h4>Terrain and Obstruction Markings</h4>
+                    <ul>
+                        <li><strong>Maximum Elevation Figures (MEF):</strong> Large bold numbers printed in each latitude/longitude quadrant representing the highest known elevation (terrain or obstacle) plus a safety buffer, in hundreds of feet MSL</li>
+                        <li><strong>Isogonic lines:</strong> Dashed magenta lines crossing the chart that indicate magnetic variation (the difference between true north and magnetic north). Important for compass navigation and flight planning.</li>
+                    </ul>
+                    <h4>Victor Airways and Stadium TFR Symbols</h4>
+                    <ul>
+                        <li><strong>Victor airways:</strong> Blue-line routes between VORs (labeled "V" followed by a number, e.g., V-16). These are controlled airspace corridors in the low-altitude structure used by manned IFR traffic.</li>
+                        <li><strong>Stadium/arena TFR symbols:</strong> Open stadium symbols on sectional charts indicate venues where temporary flight restrictions may apply during events (3 NM radius, 3,000 ft AGL).</li>
+                    </ul>
+                    <div class="key-point">
+                        <strong>Key Point:</strong> MEF values on charts represent the highest known elevation plus a safety buffer in each quadrant &mdash; critical for maintaining safe altitude awareness. For example, an MEF of "37" means the highest feature in that quadrant reaches 3,700 feet MSL.
+                    </div>
+                </div>
+
+                <!-- Slide 16: DroneZone & Manual Authorization -->
+                <div class="slide">
+                    <h3>DroneZone &amp; Manual Authorization</h3>
+                    <p>While LAANC provides near-instant authorization at many airports, there are situations where manual authorization through the FAA DroneZone portal is required.</p>
+                    <h4>When Manual Authorization Is Needed</h4>
+                    <ul>
+                        <li>No LAANC coverage at the airport (some smaller airports and Part 91 airports are not LAANC-enabled)</li>
+                        <li>The UASFM grid cell ceiling is <strong>0</strong>, meaning no auto-approval is available</li>
+                        <li>You need to fly above the UASFM pre-approved ceiling for your grid cell</li>
+                        <li>Complex operations requiring special conditions or extended duration</li>
+                    </ul>
+                    <h4>FAA DroneZone Portal Steps</h4>
+                    <ul>
+                        <li>Log in at <strong>faadronezone.faa.gov</strong> with your Part 107 credentials</li>
+                        <li>Select "Request Part 107 Airspace Authorization"</li>
+                        <li>Define your operating area, altitude, date/time window, and operational details</li>
+                        <li>Submit and monitor the request status through the portal</li>
+                    </ul>
+                    <h4>Further Coordination</h4>
+                    <ul>
+                        <li>Triggered when LAANC requests exceed UASFM ceilings or when grid cell shows 0</li>
+                        <li>Reviewed manually by FAA Air Traffic personnel</li>
+                        <li>Typical timeline: <strong>up to 90 days</strong>, though some may take longer</li>
+                        <li>UASFM ceiling of <strong>0</strong> means no automatic approval is possible &mdash; all requests require Further Coordination</li>
+                    </ul>
+                    <div class="key-point">
+                        <strong>Key Point:</strong> Always check LAANC availability first; manual authorizations can take 90+ days. Plan ahead and never assume same-day approval for manual requests.
+                    </div>
+                </div>
+
+                <!-- Slide 17: Traffic Patterns & Airport Operations for sUAS -->
+                <div class="slide">
+                    <h3>Traffic Patterns &amp; Airport Operations for sUAS</h3>
+                    <p>Understanding airport traffic patterns is essential for Part 107 pilots operating near airports, even though drones do not fly in the pattern themselves. This knowledge helps predict where manned aircraft will be.</p>
+                    <h4>Standard Left-Hand Traffic Pattern Components</h4>
+                    <ul>
+                        <li><strong>Upwind leg:</strong> The flight path parallel to and in the direction of landing, on the departure end of the runway</li>
+                        <li><strong>Crosswind leg:</strong> A perpendicular climbing turn from the upwind leg</li>
+                        <li><strong>Downwind leg:</strong> Flight path parallel to the runway in the opposite direction of landing, typically at pattern altitude</li>
+                        <li><strong>Base leg:</strong> A descending turn from downwind toward the runway, perpendicular to the runway</li>
+                        <li><strong>Final approach:</strong> The last leg, aligned with the runway centerline for landing</li>
+                    </ul>
+                    <h4>Key Facts for Part 107 Pilots</h4>
+                    <ul>
+                        <li><strong>Standard pattern altitude:</strong> Typically 1,000 feet AGL for small propeller-driven aircraft</li>
+                        <li><strong>Left-hand turns</strong> are standard unless the chart indicates <strong>"RP"</strong> (Right Pattern) for a particular runway</li>
+                        <li><strong>CTAF/UNICOM frequencies</strong> are shown on sectional charts near airport data blocks &mdash; manned pilots announce positions on these frequencies</li>
+                        <li>Monitoring CTAF with a handheld radio can enhance situational awareness for drone pilots operating near airports</li>
+                    </ul>
+                    <div class="key-point">
+                        <strong>Key Point:</strong> Understanding traffic patterns helps predict where manned aircraft will be, improving safety when operating near airports. Aircraft on the downwind and base legs are at low altitudes and may be near your drone operating area.
+                    </div>
+                </div>
+
                 <div class="slide-controls">
                     <button class="slide-btn prev" disabled>&larr; Previous</button>
-                    <span class="slide-counter">Slide 1 of 12</span>
+                    <span class="slide-counter">Slide 1 of 17</span>
                     <button class="slide-btn next">Next &rarr;</button>
                 </div>
             </div>
@@ -537,6 +659,24 @@
                     <strong>Practical Tip:</strong> Always use LAANC when available, as it is much faster than the DroneZone manual process. Download a LAANC app before your flight to check airspace restrictions and request authorization on-site. Even if you are flying in Class G, these apps are valuable for checking TFRs and other restrictions.
                 </div>
 
+                <h3>Reading Altitude Labels and Converting MSL to AGL</h3>
+                <p>One of the most frequently tested skills on the Part 107 exam is the ability to read altitude information from sectional charts and convert between MSL (mean sea level) and AGL (above ground level) references. Altitudes on sectional charts are almost always given in feet MSL, but Part 107 limits are measured in AGL. Converting between the two requires knowing the ground elevation at your operating location.</p>
+                <p>The conversion formula is simple: <strong>Height AGL = Altitude MSL &minus; Ground Elevation MSL</strong>. For example, if an obstacle is marked at 2,150 feet MSL and the ground elevation at that location is 850 feet MSL, the obstacle is 2,150 &minus; 850 = 1,300 feet AGL. Since Part 107 limits drone operations to 400 feet AGL, this obstacle is well above your maximum operating altitude.</p>
+                <p>Airspace boundary altitudes are displayed as fractions on the chart. The top number is the ceiling and the bottom number is the floor, both in hundreds of feet MSL. For example, "80/20" means the airspace extends from 2,000 feet MSL (floor) to 8,000 feet MSL (ceiling). The abbreviation "SFC" means the surface (floor is at ground level). When you see "100/SFC" on a Class B shelf, it means that particular shelf extends from the surface to 10,000 feet MSL.</p>
+
+                <div class="tip-box">
+                    <strong>Exam Strategy:</strong> When presented with a sectional chart question, first identify the ground elevation (found in the airport data block), then convert any MSL values to AGL by subtracting the ground elevation. This technique will help you answer questions about obstacle clearance, airspace floors, and operating altitude limits.
+                </div>
+
+                <h3>UAS Facility Maps in Detail</h3>
+                <p>UAS Facility Maps (UASFMs) are the backbone of the LAANC authorization system. Published by the FAA, these maps overlay a grid on the airspace around each LAANC-participating airport. Each grid cell is assigned a maximum altitude ceiling (in feet AGL) that represents the highest altitude at which the FAA has pre-approved drone operations.</p>
+                <p>The ceiling values reflect the FAA&rsquo;s assessment of risk based on proximity to runways, approach and departure paths, and other operational factors. Grid cells directly over or adjacent to active runways typically have a ceiling of 0 feet, meaning no automatic authorization is available and any operation requires manual FAA review through the Further Coordination process. Cells farther from the runway may allow operations at 50, 100, 200, or up to 400 feet AGL.</p>
+                <p>When a pilot submits a LAANC request through an approved service supplier, the system compares the requested altitude against the UASFM ceiling for that specific grid cell. If the request is at or below the ceiling, authorization is granted automatically, usually within seconds. If the request exceeds the ceiling, it is forwarded to the FAA for manual review, which can take up to 90 days. LAANC authorizations are valid for a specific location, altitude, date, and time window.</p>
+
+                <div class="warning-box">
+                    <strong>Planning Tip:</strong> Before flying near any airport, check the UASFM for your planned location using a LAANC app. If the ceiling is 0, plan to submit your request well in advance (up to 90 days) through the FAA DroneZone Further Coordination process. Do not assume you can get same-day authorization for a 0-ceiling grid cell.
+                </div>
+
                 <h3>Special Use Airspace in Detail</h3>
                 <p>Special Use Airspace (SUA) areas exist to confine certain activities that may be hazardous to other aircraft. Part 107 pilots must be aware of these areas and the restrictions they impose:</p>
 
@@ -605,6 +745,130 @@
                     <strong>Best Practice:</strong> Even experienced remote pilots should run through this checklist before every flight. Airspace conditions can change daily due to TFRs, NOTAMs, and schedule changes at airports. What was Class G yesterday could be under a TFR today.
                 </div>
 
+                <h3>Advanced Sectional Chart Symbology</h3>
+                <p>Beyond the airspace boundaries, airport symbols, and obstacle markings covered earlier, VFR Sectional Charts contain a rich set of additional symbology that Part 107 pilots are expected to understand for the FAA exam. Navigational aids (navaids) are prominent features on every sectional chart. A <strong>VOR (VHF Omnidirectional Range)</strong> station appears as a compass rose or hexagonal symbol with radial lines extending outward; it serves as a reference point for manned aircraft navigation and often marks the center of airspace boundaries. A <strong>VORTAC</strong> combines a VOR with a military TACAN station and is depicted with a similar compass rose but with a distinctive three-cornered shape inside the symbol; it provides both bearing and distance information to equipped aircraft. An <strong>NDB (Non-Directional Beacon)</strong> appears as a small circle surrounded by dots and represents an older navigation technology still in use at some locations. While drone pilots do not navigate using these aids, recognizing them on charts helps you orient yourself relative to airspace boundaries and understand references in NOTAMs and airport facility directories.</p>
+                <p>Terrain and obstruction awareness is another critical skill tested on the Part 107 exam. Each latitude/longitude quadrant on a sectional chart displays a <strong>Maximum Elevation Figure (MEF)</strong> &mdash; a large, bold two-digit number representing the highest known feature (terrain or man-made obstruction) within that quadrant, plus a safety buffer, expressed in hundreds of feet MSL. For example, an MEF of "37" means the highest feature in that quadrant reaches approximately 3,700 feet MSL. The MEF calculation adds the highest terrain or obstacle elevation, rounds up to the next hundred-foot increment, and then adds an additional 100 to 200 feet as a safety buffer. For Part 107 pilots, MEF values provide a quick way to assess the maximum terrain elevation in your operating area, which is essential when converting between MSL and AGL altitudes and ensuring you maintain safe clearance.</p>
+                <p><strong>Isogonic lines</strong> are dashed magenta lines that cross the chart and indicate magnetic variation &mdash; the angular difference between true north and magnetic north at a given location. Each line is labeled with a value such as "10&deg;W" or "5&deg;E," meaning the magnetic compass points that many degrees west or east of true north. While drone pilots rarely navigate by magnetic compass, understanding isogonic lines is important for interpreting runway headings, chart orientations, and any exam questions about magnetic variation. <strong>Victor airways</strong> are depicted as blue lines connecting VOR stations and are labeled with a "V" prefix followed by a number (e.g., V-16). These airways represent controlled airspace corridors in the low-altitude IFR structure, with a floor of 1,200 feet AGL and a ceiling of 18,000 feet MSL. Although Part 107 operations occur well below Victor airway altitudes, understanding them helps you recognize that IFR traffic may be overhead along these routes.</p>
+                <p>Sectional charts also depict <strong>stadium and arena TFR symbols</strong> as open stadium icons near major venues. These symbols alert pilots that temporary flight restrictions may be imposed during events at venues with seating capacity of 30,000 or more. The standard stadium TFR extends 3 NM in radius and up to 3,000 feet AGL, beginning one hour before and ending one hour after the event. On the exam, you may be presented with a sectional chart excerpt showing a stadium symbol and asked about the associated TFR dimensions and timing. Always cross-reference stadium symbols with active TFR notices before flying near any major venue.</p>
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Chart Depiction</th>
+                        <th>Relevance to Part 107</th>
+                    </tr>
+                    <tr>
+                        <td>VOR</td>
+                        <td>VHF Omnidirectional Range</td>
+                        <td>Compass rose / hexagonal symbol with radials</td>
+                        <td>Marks airspace boundary centers; reference in NOTAMs</td>
+                    </tr>
+                    <tr>
+                        <td>VORTAC</td>
+                        <td>VOR + TACAN</td>
+                        <td>Compass rose with three-cornered inner shape</td>
+                        <td>Same as VOR; provides distance info for manned aircraft</td>
+                    </tr>
+                    <tr>
+                        <td>NDB</td>
+                        <td>Non-Directional Beacon</td>
+                        <td>Small circle with surrounding dots</td>
+                        <td>Older navaid; may define approach segments near airports</td>
+                    </tr>
+                    <tr>
+                        <td>MEF</td>
+                        <td>Maximum Elevation Figure</td>
+                        <td>Large bold number in each lat/long quadrant</td>
+                        <td>Highest feature + buffer in hundreds of feet MSL; critical for altitude awareness</td>
+                    </tr>
+                    <tr>
+                        <td>Victor Airway</td>
+                        <td>Low-altitude IFR route</td>
+                        <td>Blue line between VORs labeled "V-##"</td>
+                        <td>Indicates IFR traffic corridors overhead</td>
+                    </tr>
+                    <tr>
+                        <td>Stadium Symbol</td>
+                        <td>Stadium / Arena TFR</td>
+                        <td>Open stadium icon near venue</td>
+                        <td>Potential TFR: 3 NM radius, 3,000 ft AGL during events</td>
+                    </tr>
+                </table>
+                <div class="warning-box">
+                    <strong>Exam Alert:</strong> MEF questions are common on the Part 107 exam. Remember that MEF values are in hundreds of feet MSL and include a safety buffer above the highest known feature. An MEF of "32" means 3,200 feet MSL &mdash; not 3,200 feet AGL. To determine the AGL height of features in a quadrant, subtract the local ground elevation from the MEF value.
+                </div>
+                <div class="tip-box">
+                    <strong>Tip:</strong> When studying for the exam, practice identifying all symbol types on sample sectional chart excerpts. The FAA frequently provides chart snippets and asks you to identify navaids, airways, MEF values, and stadium symbols. Familiarity with these features will save time during the test.
+                </div>
+
+                <h3>DroneZone &amp; Manual Authorization</h3>
+                <p>While LAANC has dramatically simplified the airspace authorization process for Part 107 pilots, there are important scenarios where LAANC is not available and manual authorization through the FAA DroneZone portal becomes necessary. Understanding when and how to use the manual process is essential for both the exam and real-world operations. Manual authorization is required when the airport in question is not LAANC-enabled (some smaller airports and Part 91 airports lack LAANC coverage), when the UAS Facility Map (UASFM) grid cell ceiling is 0 (meaning no automatic approval is possible), when you need to fly above the pre-approved UASFM ceiling for your grid cell, or when your operation involves complex conditions that exceed LAANC parameters.</p>
+                <p>The FAA DroneZone portal at <strong>faadronezone.faa.gov</strong> is the official gateway for manual authorization requests. The step-by-step process involves logging in with your Part 107 credentials, selecting "Request Part 107 Airspace Authorization," defining your operating area on the map (including coordinates, radius, and altitude), specifying the date and time window for your operation, providing details about the nature of the operation and any safety mitigations, and submitting the request for FAA review. Once submitted, you can monitor the status of your request through the portal. The FAA reviews each request individually, consulting with local Air Traffic Control facilities to assess the impact on manned aircraft operations.</p>
+                <p>The <strong>Further Coordination</strong> process is triggered in two primary ways: when a LAANC request exceeds the UASFM pre-approved ceiling, or when the grid cell ceiling is 0. In either case, the request is forwarded to FAA Air Traffic personnel for manual review. This process can take a considerable amount of time &mdash; the FAA states that manual authorizations may take <strong>up to 90 days</strong>, and in practice some complex requests take even longer. The timeline depends on the complexity of the airspace, the volume of requests being processed, and the specific concerns of the local ATC facility. For time-sensitive operations, this delay can be a significant planning challenge.</p>
+                <p>It is critical to understand the difference between LAANC auto-approval and manual approval. LAANC auto-approval is nearly instantaneous (often within seconds) and is available for requests at or below the UASFM ceiling at LAANC-enabled airports. Manual approval through DroneZone requires FAA staff review and can take weeks or months. A UASFM ceiling of <strong>0</strong> is particularly important to recognize: it means that no automatic LAANC approval is available for that grid cell, and all operations require Further Coordination regardless of the requested altitude. Grid cells with a 0 ceiling are typically found directly over or immediately adjacent to active runways, approach corridors, and departure paths.</p>
+                <div class="info-box">
+                    <strong>Scenario:</strong> You are hired to photograph a construction site located 1.5 NM from a Class C airport. You check a LAANC app and find that your grid cell has a UASFM ceiling of 0. You cannot receive automatic LAANC approval. You must submit a manual authorization request through the FAA DroneZone portal and wait for FAA review, which could take up to 90 days. Plan your project timeline accordingly and submit the request as early as possible.
+                </div>
+                <div class="warning-box">
+                    <strong>Key Point:</strong> Always check LAANC availability first; manual authorizations can take 90+ days. Never assume same-day approval for manual requests, and never fly in controlled airspace without a valid authorization in hand. Operating without authorization is a violation that can result in certificate action and civil penalties.
+                </div>
+                <div class="tip-box">
+                    <strong>Exam Tip:</strong> The Part 107 exam may present a scenario where a pilot needs to fly near an airport without LAANC coverage. The correct answer will involve submitting a manual authorization through the FAA DroneZone and allowing sufficient time for processing. Know that "Further Coordination" is the term used when LAANC routes a request to the FAA for manual review.
+                </div>
+
+                <h3>Traffic Patterns &amp; Airport Operations for sUAS</h3>
+                <p>Although Part 107 drones do not fly in airport traffic patterns, understanding how manned aircraft operate in and around airports is a fundamental safety skill and a testable topic on the FAA exam. The standard airport traffic pattern is a rectangular flight path around a runway that provides an organized flow of arriving and departing aircraft. The pattern consists of five legs: the <strong>upwind leg</strong> (parallel to the runway in the direction of landing, flown on departure), the <strong>crosswind leg</strong> (a perpendicular turn after departure, climbing to pattern altitude), the <strong>downwind leg</strong> (parallel to the runway in the opposite direction of landing, at pattern altitude), the <strong>base leg</strong> (a descending turn toward the runway, perpendicular to the extended centerline), and the <strong>final approach</strong> (the last segment aligned with the runway for landing). All turns in a standard pattern are to the left, creating a left-hand rectangular circuit around the runway.</p>
+                <p>The standard traffic pattern altitude for small propeller-driven aircraft is typically <strong>1,000 feet AGL</strong>. This means that aircraft on the downwind leg are flying at approximately 1,000 feet above the airport elevation &mdash; well above the 400-foot AGL Part 107 ceiling, but close enough that situational awareness is critical. Aircraft on the base leg and final approach are descending and may pass through altitudes that overlap with drone operating areas, particularly within a few miles of the runway. Understanding which direction and altitude manned aircraft are flying helps Part 107 pilots position themselves safely and anticipate potential conflicts.</p>
+                <p>While left-hand turns are the default, some runways use <strong>right-hand traffic patterns</strong> due to terrain, noise abatement, or airspace considerations. Right-hand patterns are indicated on sectional charts with the notation <strong>"RP"</strong> next to the affected runway number in the airport data block. For example, "RP 27" means Runway 27 uses a right-hand pattern. This changes the direction of the rectangular circuit, and knowing this helps a drone pilot predict which side of the airport manned aircraft will be circling. The <strong>CTAF (Common Traffic Advisory Frequency)</strong> and <strong>UNICOM</strong> frequencies are printed on sectional charts near each airport's data block. At non-towered airports, manned pilots self-announce their position and intentions on the CTAF. While Part 107 does not require drone pilots to have a radio, monitoring the CTAF with a handheld aviation radio can significantly enhance situational awareness when operating near non-towered airports.</p>
+                <p>Consider a real-world scenario: you are hired to inspect a cell tower located 2 NM east of a non-towered airport. By checking the sectional chart, you determine the airport uses a standard left-hand pattern for Runway 9 (landing to the east). This means aircraft on the downwind leg will fly east of the airport at approximately 1,000 feet AGL &mdash; directly over your operating area. Aircraft turning base will descend through your altitude range. Armed with this knowledge, you can position your visual observer to watch for incoming traffic, time your flights to avoid peak activity periods, and maintain extra vigilance when aircraft announce their positions on the CTAF.</p>
+                <table>
+                    <tr>
+                        <th>Pattern Leg</th>
+                        <th>Direction (Standard Left Pattern)</th>
+                        <th>Typical Altitude</th>
+                        <th>Risk Level for Drone Pilots</th>
+                    </tr>
+                    <tr>
+                        <td>Upwind</td>
+                        <td>Parallel to runway, departure direction</td>
+                        <td>Climbing from surface</td>
+                        <td>Moderate (near runway, climbing through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Crosswind</td>
+                        <td>Perpendicular turn after departure</td>
+                        <td>Climbing to ~1,000 ft AGL</td>
+                        <td>Moderate (transitioning through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Downwind</td>
+                        <td>Parallel to runway, opposite landing direction</td>
+                        <td>~1,000 ft AGL (level)</td>
+                        <td>Lower (above typical drone operations)</td>
+                    </tr>
+                    <tr>
+                        <td>Base</td>
+                        <td>Perpendicular turn toward runway</td>
+                        <td>Descending from ~1,000 ft AGL</td>
+                        <td>High (descending through drone altitudes)</td>
+                    </tr>
+                    <tr>
+                        <td>Final</td>
+                        <td>Aligned with runway centerline</td>
+                        <td>Descending to surface</td>
+                        <td>High (low altitude, focused on landing)</td>
+                    </tr>
+                </table>
+                <div class="warning-box">
+                    <strong>Safety Warning:</strong> Aircraft on base leg and final approach are descending through altitudes where drones commonly operate. Pilots on final approach are focused on landing and may have limited ability to see and avoid a small drone. Always maintain heightened awareness when operating within 3 NM of any airport, and consider using a visual observer dedicated to scanning for manned aircraft.
+                </div>
+                <div class="info-box">
+                    <strong>Exam Scenario:</strong> The Part 107 exam may show you a diagram of a traffic pattern and ask you to identify which leg an aircraft is on, or ask about standard pattern altitude. Remember: standard pattern altitude is 1,000 feet AGL for small aircraft, all turns are to the left unless "RP" is noted, and the downwind leg is flown parallel to the runway in the opposite direction of landing.
+                </div>
+                <div class="tip-box">
+                    <strong>Tip:</strong> Monitoring the CTAF frequency is one of the best ways to maintain situational awareness near non-towered airports. Handheld aviation radios are available for under $200 and allow you to hear pilot position reports such as "Cessna 12345, entering left downwind Runway 27." This real-time information helps you anticipate where aircraft will be relative to your drone operating area.
+                </div>
+
             </div>
         </section>
 
@@ -641,174 +905,160 @@
     <script src="../js/nav.js"></script>
     <script src="../js/slides.js"></script>
     <script src="../js/quiz-engine.js"></script>
+    <script src="../js/assistant.js"></script>
     <script>
-        var defined = new SlideDeck('slideDeck1');
+        var deck = new SlideDeck('slideDeck1');
 
         var quiz = new QuizEngine('chapterQuiz', [
             {
-                question: "On a VFR Sectional Chart, Class B airspace is depicted by what type of line?",
+                question: "You are examining a VFR Sectional Chart to plan a flight near a major airport. You notice the airspace boundary is depicted with solid blue lines. What class of airspace does this indicate?",
                 options: [
-                    "Solid blue lines",
-                    "Dashed blue lines",
-                    "Solid magenta lines",
-                    "Dashed magenta lines"
+                    "Class B airspace",
+                    "Class C airspace",
+                    "Class D airspace"
                 ],
                 answer: 0,
-                explanation: "Class B airspace is depicted on VFR Sectional Charts with solid blue lines. Solid magenta lines indicate Class C, dashed blue lines indicate Class D, and dashed magenta lines indicate Class E surface areas."
+                explanation: "Class B airspace is depicted on VFR Sectional Charts with solid blue lines. Solid magenta lines indicate Class C, and dashed blue lines indicate Class D."
             },
             {
-                question: "Which classes of airspace require a Part 107 remote pilot to obtain ATC authorization before flying?",
+                question: "You are planning a commercial drone flight near a regional airport. Which classes of airspace require you to obtain ATC authorization through LAANC or DroneZone before flying?",
                 options: [
-                    "Class A, B, C, and D only",
                     "Class B, C, D, and surface Class E",
                     "Class B and C only",
                     "All controlled airspace including Class E at 700 feet AGL"
                 ],
-                answer: 1,
-                explanation: "Part 107 requires ATC authorization for operations in Class B, C, D, and Class E airspace that extends to the surface (depicted by dashed magenta lines). Class A is above the 400-foot drone altitude limit, and Class E with floors at 700 or 1,200 feet AGL does not require authorization for Part 107 flights below those floors."
+                answer: 0,
+                explanation: "Part 107 requires ATC authorization for operations in Class B, C, D, and Class E airspace that extends to the surface (depicted by dashed magenta lines). Class E with floors at 700 or 1,200 feet AGL does not require authorization for Part 107 flights below those floors."
             },
             {
-                question: "What happens to Class D airspace when the control tower is closed?",
+                question: "You plan to fly near a Class D airport at 9 PM, but the control tower closes at 8 PM. A dashed magenta line surrounds the airport on the chart. What airspace classification applies when you fly?",
                 options: [
-                    "It becomes Class B airspace",
-                    "It remains Class D airspace",
-                    "It reverts to Class E surface area or Class G, depending on the charted designation",
-                    "It becomes Restricted airspace"
+                    "It remains Class D airspace regardless of tower hours",
+                    "It reverts to Class E surface area, and you still need ATC authorization",
+                    "It becomes Class G uncontrolled airspace, and no authorization is needed"
                 ],
-                answer: 2,
-                explanation: "When a Class D tower closes, the airspace reverts to another classification. If a dashed magenta line is shown on the chart around the airport, it becomes Class E surface area. If no dashed magenta line exists, it typically reverts to Class G."
+                answer: 1,
+                explanation: "When a Class D tower closes, the airspace reverts to another classification. If a dashed magenta line is shown on the chart around the airport, it becomes Class E surface area. Class E surface area still requires ATC authorization for Part 107 operations."
             },
             {
-                question: "A faded (vignette) magenta shading on a sectional chart indicates that Class E airspace begins at what altitude?",
+                question: "While reviewing a sectional chart, you notice faded magenta shading (vignette) around your planned operating area. At what altitude does Class E airspace begin in this area?",
                 options: [
-                    "The surface",
+                    "At the surface",
                     "700 feet AGL",
-                    "1,200 feet AGL",
-                    "14,500 feet MSL"
+                    "1,200 feet AGL"
                 ],
                 answer: 1,
-                explanation: "Faded magenta shading (vignette) on a sectional chart indicates that Class E airspace begins at 700 feet AGL. Below 700 feet AGL in these areas, the airspace is Class G. Dashed magenta lines indicate Class E at the surface, and blue vignette indicates Class E at 1,200 feet AGL."
+                explanation: "Faded magenta shading (vignette) on a sectional chart indicates that Class E airspace begins at 700 feet AGL. Below 700 feet AGL in these areas, the airspace is Class G. Since Part 107 limits operations to 400 feet AGL, most operations under this shading remain in Class G."
             },
             {
-                question: "What does LAANC stand for?",
+                question: "You need to fly in controlled airspace near a busy airport and want authorization quickly. What FAA system provides near real-time airspace authorization for Part 107 pilots?",
                 options: [
-                    "Low Altitude Airspace Navigation Clearance",
-                    "Low Altitude Authorization and Notification Capability",
-                    "Limited Airspace Access and Navigation Control",
-                    "Local Area Authorization and Notification Channel"
+                    "ADS-B (Automatic Dependent Surveillance-Broadcast)",
+                    "LAANC (Low Altitude Authorization and Notification Capability)",
+                    "NOTAM (Notice to Air Missions) system"
                 ],
                 answer: 1,
-                explanation: "LAANC stands for Low Altitude Authorization and Notification Capability. It is the FAA's system for providing near real-time airspace authorization to Part 107 and recreational drone pilots flying in controlled airspace."
+                explanation: "LAANC stands for Low Altitude Authorization and Notification Capability. It is the FAA's system for providing near real-time airspace authorization to Part 107 and recreational drone pilots flying in controlled airspace near airports."
             },
             {
-                question: "On a sectional chart, a blue number enclosed in a dashed blue box near an airport indicates:",
+                question: "On a sectional chart, you see a blue number [25] enclosed in a dashed blue box near an airport. What does this number indicate?",
                 options: [
-                    "The airport field elevation in feet MSL",
-                    "The CTAF frequency for the airport",
-                    "The ceiling of Class D airspace in hundreds of feet MSL",
-                    "The maximum authorized drone altitude in the area"
+                    "The airport field elevation is 2,500 feet MSL",
+                    "The ceiling of Class D airspace is 2,500 feet MSL",
+                    "The maximum LAANC authorization altitude is 250 feet AGL"
                 ],
-                answer: 2,
-                explanation: "A blue number in a dashed blue box near an airport symbol indicates the ceiling of Class D airspace in hundreds of feet MSL. For example, [25] means 2,500 feet MSL. This is specific to Class D airspace depictions."
+                answer: 1,
+                explanation: "A blue number in a dashed blue box near an airport symbol indicates the ceiling of Class D airspace in hundreds of feet MSL. [25] means 2,500 feet MSL. This is specific to Class D airspace depictions."
             },
             {
-                question: "Where do the majority of Part 107 drone operations take place?",
+                question: "You are planning a drone flight over a rural farm 15 miles from any airport with no airspace markings on the sectional chart below 1,200 feet. What class of airspace are you most likely operating in?",
                 options: [
-                    "Class B airspace near major airports",
-                    "Class D airspace at medium airports",
-                    "Class E airspace at 700 feet AGL",
-                    "Class G (uncontrolled) airspace"
+                    "Class E airspace",
+                    "Class G (uncontrolled) airspace",
+                    "Restricted airspace"
                 ],
-                answer: 3,
-                explanation: "The majority of Part 107 operations take place in Class G (uncontrolled) airspace because no ATC authorization is needed, and it covers vast areas at low altitudes, particularly in suburban and rural settings where most drone flights occur."
+                answer: 1,
+                explanation: "In rural areas far from airports with no charted airspace markings below 1,200 feet, the airspace is Class G (uncontrolled). The majority of Part 107 operations take place in Class G because no ATC authorization is needed."
             },
             {
-                question: "Which type of special use airspace is NOT depicted on sectional charts?",
+                question: "While examining a sectional chart, you notice several types of special use airspace depicted. Which type of special use airspace is NOT shown on sectional charts?",
                 options: [
                     "Prohibited Areas",
-                    "Restricted Areas",
                     "Military Operations Areas (MOAs)",
                     "Controlled Firing Areas (CFAs)"
                 ],
-                answer: 3,
+                answer: 2,
                 explanation: "Controlled Firing Areas (CFAs) are the only type of special use airspace not depicted on sectional charts. This is because activities within CFAs are suspended when spotters detect approaching aircraft, making them self-correcting."
             },
             {
-                question: "A stadium TFR typically extends to what radius and altitude?",
+                question: "You want to fly your drone to photograph a stadium during a professional football game with 65,000 attendees. A TFR is in effect. What are the typical dimensions of a stadium TFR?",
                 options: [
-                    "1 NM radius, 1,000 feet AGL",
-                    "3 NM radius, 3,000 feet AGL",
-                    "5 NM radius, 5,000 feet AGL",
-                    "10 NM radius, 10,000 feet AGL"
+                    "1 NM radius up to 1,000 feet AGL",
+                    "3 NM radius up to 3,000 feet AGL",
+                    "5 NM radius up to 5,000 feet AGL"
                 ],
                 answer: 1,
                 explanation: "Under 14 CFR 91.145, stadium TFRs prohibit flight within a 3 nautical mile radius and up to 3,000 feet AGL of major sporting events at stadiums with seating capacities of 30,000 or more, beginning one hour before and ending one hour after the event."
             },
             {
-                question: "On a sectional chart, an obstacle is marked with two numbers: 1,548 (bold) on top and (307) in parentheses below. What do these numbers represent?",
+                question: "On a sectional chart, you see an obstacle marked with 1,548 in bold on top and (307) in parentheses below. What do these numbers tell you?",
                 options: [
-                    "1,548 feet AGL height and 307 feet MSL height",
-                    "1,548 feet MSL height and 307 feet AGL height",
-                    "1,548 is the latitude coordinate and 307 is the obstacle ID number",
-                    "1,548 feet is the total height and 307 feet is the lighted portion"
+                    "The obstacle is 1,548 feet AGL and 307 feet MSL",
+                    "The obstacle is 1,548 feet MSL and 307 feet AGL",
+                    "The obstacle is 1,548 feet tall total, with 307 feet being the lighted portion"
                 ],
                 answer: 1,
-                explanation: "On a sectional chart, the bold number on top (1,548) is the obstacle height in feet MSL (Mean Sea Level), and the number in parentheses below (307) is the height in feet AGL (Above Ground Level). This means the obstacle rises 307 feet above the surrounding terrain."
+                explanation: "On a sectional chart, the bold number on top (1,548) is the obstacle height in feet MSL (Mean Sea Level), and the number in parentheses below (307) is the height in feet AGL (Above Ground Level). For drone pilots, the AGL number is most relevant — this obstacle rises 307 feet above the surrounding terrain."
             },
             {
-                question: "If a LAANC request is for an altitude above the pre-approved UASFM ceiling, what happens?",
+                question: "You submit a LAANC request for 200 feet AGL, but the pre-approved UASFM ceiling for that grid cell is only 100 feet. What happens to your request?",
                 options: [
-                    "The request is automatically denied",
-                    "The request is submitted as a Further Coordination request to the FAA for manual review",
-                    "The pilot must call the local control tower for verbal authorization",
+                    "The request is automatically denied and you must resubmit at 100 feet or below",
+                    "The request enters Further Coordination and is sent to the FAA for manual review, which can take up to 90 days",
                     "LAANC automatically approves up to 400 feet AGL regardless of the UASFM ceiling"
                 ],
                 answer: 1,
                 explanation: "When a LAANC request exceeds the pre-approved UASFM ceiling for that grid cell, it enters 'Further Coordination' and is sent to the FAA for manual review. This process can take up to 90 days, similar to the traditional DroneZone authorization process."
             },
             {
-                question: "Solid magenta lines on a sectional chart surrounding an airport indicate which class of airspace?",
+                question: "You see solid magenta lines surrounding an airport on a sectional chart. What class of airspace does this indicate?",
                 options: [
                     "Class B",
                     "Class C",
-                    "Class D",
                     "Class E surface area"
                 ],
                 answer: 1,
-                explanation: "Solid magenta lines on a sectional chart indicate Class C airspace. Class B uses solid blue lines, Class D uses dashed blue lines, and Class E surface areas use dashed magenta lines."
+                explanation: "Solid magenta lines on a sectional chart indicate Class C airspace. Class B uses solid blue lines, and Class E surface areas use dashed magenta lines."
             },
             {
-                question: "An airport symbol on a sectional chart is colored magenta. This tells you that the airport:",
+                question: "While planning a flight, you notice the airport symbol on the sectional chart is colored magenta rather than blue. What does this tell you about the airport?",
                 options: [
-                    "Has at least one paved runway longer than 8,069 feet",
-                    "Does not have an operating control tower",
-                    "Is located within Class C airspace",
-                    "Has an operating control tower"
+                    "The airport has an operating control tower",
+                    "The airport does not have an operating control tower",
+                    "The airport is located within Class C airspace"
                 ],
                 answer: 1,
-                explanation: "A magenta-colored airport symbol indicates a non-towered (uncontrolled) airport - one without an operating control tower. Blue airport symbols indicate airports with operating control towers (towered airports)."
+                explanation: "A magenta-colored airport symbol indicates a non-towered (uncontrolled) airport — one without an operating control tower. Blue airport symbols indicate airports with operating control towers (towered airports)."
             },
             {
-                question: "Which of the following is a reliable source for checking Temporary Flight Restrictions (TFRs) before a Part 107 flight?",
+                question: "Before a commercial drone flight, you want to check for any active Temporary Flight Restrictions in the area. Which of the following is a reliable source?",
                 options: [
-                    "Google Maps satellite view",
-                    "The FAA TFR website at tfr.faa.gov",
-                    "The airport's official website",
-                    "Local police department records"
+                    "Google Maps satellite imagery",
+                    "The FAA TFR website (tfr.faa.gov) or the B4UFLY app",
+                    "The local airport's website"
                 ],
                 answer: 1,
-                explanation: "The FAA TFR website (tfr.faa.gov) is an official and reliable source for checking active and upcoming TFRs. Other recommended sources include the FAA B4UFLY app and LAANC service supplier apps like Aloft or AirMap. Google Maps and airport websites do not provide TFR information."
+                explanation: "The FAA TFR website (tfr.faa.gov) and the B4UFLY app are official and reliable sources for checking active and upcoming TFRs. LAANC service supplier apps like Aloft also provide TFR information. Google Maps and airport websites do not provide TFR data."
             },
             {
-                question: "What is the shape typically used to describe Class B airspace?",
+                question: "You notice on a sectional chart that Class B airspace around a major airport has multiple tiers with fractions like '100/40' on the outer ring. What do these numbers represent?",
                 options: [
-                    "A cylinder extending from the surface",
-                    "An upside-down wedding cake with multiple tiers",
-                    "A two-shelf dome structure",
-                    "A cone shape narrowing toward the airport"
+                    "The ceiling is 10,000 feet MSL and the floor is 4,000 feet MSL, giving the airspace its 'upside-down wedding cake' shape",
+                    "The airspace extends 100 NM horizontally and 40 NM vertically",
+                    "The frequency for contacting approach control is 100.4 MHz"
                 ],
-                answer: 1,
-                explanation: "Class B airspace is commonly described as an 'upside-down wedding cake' because it consists of multiple tiers that extend outward at progressively higher altitudes. The innermost ring starts at the surface and the outer rings have higher floor altitudes, creating the wedding cake appearance."
+                answer: 0,
+                explanation: "Class B airspace is commonly described as an 'upside-down wedding cake' with multiple tiers. The fractions indicate the ceiling and floor in hundreds of feet MSL — '100/40' means the ceiling is 10,000 feet MSL and the floor is 4,000 feet MSL. The innermost ring typically starts at the surface."
             }
         ], 'airspace');
 

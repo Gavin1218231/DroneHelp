@@ -41,12 +41,12 @@
         <div class="container" style="padding: 48px 24px;">
 
             <div class="flashcard-controls">
-                <button class="filter-btn active" onclick="filterCards('all')">All</button>
-                <button class="filter-btn" onclick="filterCards('regulations')">Regulations</button>
-                <button class="filter-btn" onclick="filterCards('airspace')">Airspace</button>
-                <button class="filter-btn" onclick="filterCards('weather')">Weather</button>
-                <button class="filter-btn" onclick="filterCards('loading')">Loading</button>
-                <button class="filter-btn" onclick="filterCards('operations')">Operations</button>
+                <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+                <button class="filter-btn" onclick="filterCards('regulations', this)">Regulations</button>
+                <button class="filter-btn" onclick="filterCards('airspace', this)">Airspace</button>
+                <button class="filter-btn" onclick="filterCards('weather', this)">Weather</button>
+                <button class="filter-btn" onclick="filterCards('loading', this)">Loading</button>
+                <button class="filter-btn" onclick="filterCards('operations', this)">Operations</button>
             </div>
 
             <p style="text-align:center;margin-bottom:24px;color:#5f6368;" id="cardStats">Card 1 of 110 | 0 mastered</p>
@@ -66,7 +66,7 @@
 
                 <div class="flashcard-nav">
                     <button class="fc-nav-btn" onclick="prevCard()" aria-label="Previous card">&#8592;</button>
-                    <span class="flashcard-counter" id="cardCounter">1 / 110</span>
+                    <span class="flashcard-counter" id="cardCounter">1 / 130</span>
                     <button class="fc-nav-btn" onclick="nextCard()" aria-label="Next card">&#8594;</button>
                     <button class="mastered-btn" id="masteredBtn" onclick="toggleMastered()">Mastered</button>
                 </div>
@@ -84,6 +84,7 @@
 
     <script src="js/progress.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/assistant.js"></script>
     <script>
     var cards = [
         // ===== REGULATIONS (25 cards) =====
@@ -204,7 +205,27 @@
         { id: 107, category: "operations", front: "What is the difference between visual line of sight (VLOS) and beyond visual line of sight (BVLOS)?", back: "VLOS means the PIC (or VO) can see the drone with unaided vision (except corrective lenses) at all times. BVLOS is beyond that range and requires a waiver under Part 107." },
         { id: 108, category: "operations", front: "What actions should be taken if a drone experiences a flyaway?", back: "Attempt to regain control, activate return-to-home if available, alert nearby people, note last known position, and report the incident if it causes injury or significant property damage." },
         { id: 109, category: "operations", front: "What is the role of a visual observer in a drone operation?", back: "To maintain visual contact with the drone and scan for hazards, traffic, and obstacles. The VO communicates this information to the Remote PIC to maintain situational awareness." },
-        { id: 110, category: "operations", front: "What does DECIDE stand for in aeronautical decision making?", back: "Detect the problem, Estimate the need to react, Choose a course of action, Identify solutions, Do the action, Evaluate the effect." }
+        { id: 110, category: "operations", front: "What does DECIDE stand for in aeronautical decision making?", back: "Detect the problem, Estimate the need to react, Choose a course of action, Identify solutions, Do the action, Evaluate the effect." },
+        { id: 111, category: "operations", front: "What is the antidote for the 'Anti-authority' hazardous attitude?", back: "'Follow the rules — they are usually right.' Anti-authority is the attitude of resisting rules and regulations ('Don't tell me what to do')." },
+        { id: 112, category: "operations", front: "What is the antidote for the 'Impulsivity' hazardous attitude?", back: "'Not so fast — think first.' Impulsivity is the urge to act immediately without thinking through consequences ('Do something quickly!')." },
+        { id: 113, category: "operations", front: "What is the antidote for the 'Invulnerability' hazardous attitude?", back: "'It could happen to me.' Invulnerability is the belief that accidents only happen to other people ('It won't happen to me')." },
+        { id: 114, category: "operations", front: "What is the antidote for the 'Macho' hazardous attitude?", back: "'Taking chances is foolish.' Macho is the attitude of taking risks to prove oneself or impress others ('I can do it — watch this')." },
+        { id: 115, category: "operations", front: "What is the antidote for the 'Resignation' hazardous attitude?", back: "'I'm not helpless — I can make a difference.' Resignation is the feeling of giving up or believing nothing you do matters ('What's the use?')." },
+        { id: 116, category: "regulations", front: "What is IACRA?", back: "The Integrated Airman Certification and Rating Application system. After passing the UAG knowledge test, you apply for your Remote Pilot Certificate through IACRA, which triggers a TSA background check. A temporary certificate is typically issued within days." },
+        { id: 117, category: "regulations", front: "How can a Part 61 pilot obtain a Remote Pilot Certificate without taking the proctored knowledge test?", back: "A holder of a Part 61 pilot certificate (other than student pilot) with a current flight review within the preceding 24 calendar months can complete an FAA online training course through FAASTeam instead of taking the proctored UAG test." },
+        { id: 118, category: "airspace", front: "What does a UASFM ceiling of 0 mean for LAANC?", back: "A ceiling of 0 on a UAS Facility Map means no automatic LAANC authorization is available for that grid cell. You must submit a Further Coordination request through the FAA DroneZone, which can take up to 90 days for approval." },
+        { id: 119, category: "airspace", front: "How do you read airspace altitude fractions on a sectional chart?", back: "Fractions show ceiling/floor in hundreds of feet MSL. Example: '80/20' means ceiling at 8,000 ft MSL and floor at 2,000 ft MSL. 'SFC' means the floor is at the surface. '100/SFC' = surface to 10,000 ft MSL." },
+        { id: 120, category: "airspace", front: "How do you convert MSL altitude to AGL?", back: "Height AGL = Altitude MSL minus Ground Elevation MSL. Example: If an obstacle is 1,548 ft MSL and ground elevation is 1,241 ft MSL, the obstacle is 307 ft AGL (1,548 - 1,241 = 307)." },
+        { id: 121, category: "weather", front: "What is radiation fog and when does it form?", back: "Radiation fog forms on clear, calm nights when the ground cools rapidly by radiating heat. It is most common in valleys and low-lying areas. It typically 'burns off' after sunrise as the sun heats the ground. Check temp/dewpoint spread — when within 2°C, expect fog." },
+        { id: 122, category: "weather", front: "What is advection fog?", back: "Advection fog forms when warm, moist air moves over a cooler surface. Unlike radiation fog, it can persist during the day and is not dependent on calm winds. It is common along coastlines where warm oceanic air moves over cold coastal waters." },
+        { id: 123, category: "weather", front: "What weather is associated with a cold front?", back: "Cold fronts move fast with a steep slope. They produce a narrow band of intense weather: thunderstorms, heavy rain, gusty winds, and turbulence. After passage, conditions typically clear quickly with cooler temperatures and improved visibility." },
+        { id: 124, category: "weather", front: "What is a Convective SIGMET?", back: "A Convective SIGMET warns of severe thunderstorms, tornadoes, or lines of thunderstorms (squall lines). They are valid for 2 hours and cover areas where convective activity poses a significant hazard to all aircraft. Do not fly near areas covered by a Convective SIGMET." },
+        { id: 125, category: "loading", front: "What are the four forces of flight?", back: "Lift (upward, opposes weight), Weight (downward, force of gravity), Thrust (forward, produced by propellers), and Drag (backward, air resistance). In level flight: Lift = Weight and Thrust = Drag." },
+        { id: 126, category: "loading", front: "What is load factor and how does it change in turns?", back: "Load factor is the ratio of lift to weight (in G's). In level flight = 1G. At 30° bank ≈ 1.15G, at 45° ≈ 1.41G, at 60° = 2G (double the weight). Higher load factor means more power consumption and structural stress." },
+        { id: 127, category: "operations", front: "What is Crew Resource Management (CRM)?", back: "CRM is the effective use of all available resources (people, equipment, information) to achieve safe flight operations. Core principles: clear communication, situational awareness, workload management, and structured decision making. FAA research shows ADM training reduces errors by 10-50%." },
+        { id: 128, category: "operations", front: "How long does full dark adaptation take, and what can reset it?", back: "Full dark adaptation takes approximately 30 minutes. Even brief exposure to bright light (screens, flashlights) can reset it, requiring another 30-minute adaptation period. Use red lighting and dim screens to protect night vision." },
+        { id: 129, category: "operations", front: "What is autokinesis?", back: "Autokinesis is a visual illusion where a stationary light in darkness appears to move. It can occur during night drone operations and may cause the pilot to make unnecessary control corrections or lose spatial orientation. Use reference points to counter this illusion." },
+        { id: 130, category: "operations", front: "Under 14 CFR 107.21, when can a Remote PIC deviate from Part 107 rules?", back: "The Remote PIC may deviate from any rule of Part 107 to the extent necessary to meet an emergency. However, the PIC must report any deviation to the FAA upon request." }
     ];
 
     var currentIndex = 0;
@@ -266,13 +287,13 @@
         showCard();
     }
 
-    function filterCards(category) {
+    function filterCards(category, btn) {
         // Update active button
         var buttons = document.querySelectorAll('.filter-btn');
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].classList.remove('active');
         }
-        event.target.classList.add('active');
+        if (btn) btn.classList.add('active');
 
         // Filter cards
         if (category === 'all') {
