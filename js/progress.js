@@ -77,6 +77,95 @@ var Progress = {
         return mastered;
     },
 
+    // Spaced Repetition (SM-2)
+    getAllSRData: function () {
+        return this.get('card_sr_data') || {};
+    },
+
+    getCardSRData: function (cardId) {
+        var all = this.getAllSRData();
+        var data = all[cardId];
+        if (!data) {
+            return { ef: 2.5, interval: 0, reps: 0, due: Date.now() };
+        }
+        return {
+            ef: typeof data.ef === 'number' ? data.ef : 2.5,
+            interval: typeof data.interval === 'number' ? data.interval : 0,
+            reps: typeof data.reps === 'number' ? data.reps : 0,
+            due: typeof data.due === 'number' ? data.due : Date.now()
+        };
+    },
+
+    updateCardSR: function (cardId, quality) {
+        var data = this.getCardSRData(cardId);
+        var prevInterval = data.interval;
+
+        if (quality < 3) {
+            data.reps = 0;
+            data.interval = 1;
+        } else {
+            data.reps = data.reps + 1;
+            if (data.reps === 1) {
+                data.interval = 1;
+            } else if (data.reps === 2) {
+                data.interval = 6;
+            } else {
+                data.interval = Math.round(prevInterval * data.ef);
+                if (data.interval < 1) data.interval = 1;
+            }
+        }
+
+        var newEf = data.ef + 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
+        if (newEf < 1.3) newEf = 1.3;
+        data.ef = newEf;
+
+        var msPerDay = 24 * 60 * 60 * 1000;
+        data.due = Date.now() + data.interval * msPerDay;
+
+        var all = this.getAllSRData();
+        all[cardId] = data;
+        this.set('card_sr_data', all);
+
+        return data;
+    },
+
+    getDueCards: function (allCardIds) {
+        var all = this.getAllSRData();
+        var now = Date.now();
+        var due = [];
+        for (var i = 0; i < allCardIds.length; i++) {
+            var id = allCardIds[i];
+            var data = all[id];
+            if (!data || typeof data.due !== 'number' || data.due <= now) {
+                due.push(id);
+            }
+        }
+        return due;
+    },
+
+    getSRStats: function () {
+        var all = this.getAllSRData();
+        var keys = Object.keys(all);
+        var learning = 0;
+        var mastered = 0;
+        var now = Date.now();
+        var dueCount = 0;
+        for (var i = 0; i < keys.length; i++) {
+            var d = all[keys[i]];
+            var reps = typeof d.reps === 'number' ? d.reps : 0;
+            var ef = typeof d.ef === 'number' ? d.ef : 2.5;
+            if (reps > 0 && reps < 3) learning++;
+            if (reps >= 3 && ef >= 2.5) mastered++;
+            if (typeof d.due === 'number' && d.due <= now) dueCount++;
+        }
+        return {
+            total: keys.length,
+            due: dueCount,
+            learning: learning,
+            mastered: mastered
+        };
+    },
+
     // Exam attempts
     saveExamAttempt: function (score, total) {
         var attempts = this.get('exam_attempts') || [];
