@@ -1671,3 +1671,138 @@ section h2 {
     0%, 60%, 100% { transform: translateY(0); }
     30% { transform: translateY(-6px); }
 }
+
+/* --- METAR / TAF Decoder --- */
+.metar-input {
+    width: 100%;
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    resize: vertical;
+    line-height: 1.5;
+    background: var(--bg-white);
+    color: var(--text);
+}
+
+.metar-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.metar-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.metar-subhead {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.metar-raw {
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 1rem;
+    background: #1e1e1e;
+    color: #f0f0f0;
+    padding: 16px;
+    border-radius: var(--radius);
+    line-height: 2.2;
+    word-spacing: 4px;
+    overflow-x: auto;
+}
+
+.metar-raw .tok {
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: help;
+    white-space: nowrap;
+}
+
+.metar-table-wrap {
+    overflow-x: auto;
+}
+
+.metar-table {
+    margin-top: 8px;
+}
+
+.metar-table .tok-code {
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background: var(--bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* Category color coding (used in both raw view and table badges) */
+.type-report,      .metar-raw .tok-report      { background: #6a1b9a; color: white; }
+.type-station,     .metar-raw .tok-station     { background: #1a73e8; color: white; }
+.type-time,        .metar-raw .tok-time        { background: #455a64; color: white; }
+.type-wind,        .metar-raw .tok-wind        { background: #1976d2; color: white; }
+.type-visibility,  .metar-raw .tok-visibility  { background: #2e7d32; color: white; }
+.type-weather,     .metar-raw .tok-weather     { background: #ef6c00; color: white; }
+.type-sky,         .metar-raw .tok-sky         { background: #607d8b; color: white; }
+.type-temp,        .metar-raw .tok-temp        { background: #c2185b; color: white; }
+.type-altimeter,   .metar-raw .tok-altimeter   { background: #00838f; color: white; }
+.type-change,      .metar-raw .tok-change      { background: #8e24aa; color: white; }
+.type-remarks,     .metar-raw .tok-remarks     { background: #5d4037; color: white; }
+.type-other,       .metar-raw .tok-other       { background: #9e9e9e; color: white; }
+
+.metar-details > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+    border: none;
+}
+
+.metar-details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.metar-details > summary::before {
+    content: '\25B6';
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    transition: transform 0.2s;
+}
+
+.metar-details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+    .metar-raw {
+        font-size: 0.85rem;
+        line-height: 2;
+    }
+
+    .metar-controls .btn {
+        flex: 1 1 auto;
+        padding: 10px 16px;
+    }
+}

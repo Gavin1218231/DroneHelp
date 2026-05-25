@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Dashboard - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* --- Dashboard-specific styles --- */
+        .dashboard-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .dashboard-hero h1 {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .dashboard-hero p {
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+
+        .dashboard-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        .dashboard-block {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .dashboard-block h2 {
+            text-align: left;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+            color: var(--text);
+        }
+
+        .empty-state {
+            color: var(--text-light);
+            font-style: italic;
+            padding: 16px 0;
+            text-align: center;
+        }
+
+        /* Trend chart */
+        .trend-chart {
+            width: 100%;
+            height: 220px;
+            display: block;
+        }
+
+        .trend-chart .axis {
+            stroke: var(--border);
+            stroke-width: 1;
+        }
+
+        .trend-chart .gridline {
+            stroke: #f0f0f0;
+            stroke-width: 1;
+        }
+
+        .trend-chart .trend-line {
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 2.5;
+        }
+
+        .trend-chart .trend-dot {
+            fill: var(--primary);
+        }
+
+        .trend-chart .axis-label {
+            font-size: 11px;
+            fill: var(--text-light);
+        }
+
+        /* Chapter strength bars */
+        .strength-row {
+            margin-bottom: 18px;
+        }
+
+        .strength-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .strength-name {
+            font-weight: 600;
+        }
+
+        .strength-score {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .strength-track {
+            height: 14px;
+            background: #e8eaed;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .strength-fill {
+            height: 100%;
+            border-radius: 7px;
+            transition: width 0.6s ease;
+        }
+
+        .strength-fill.low {
+            background: var(--accent);
+        }
+
+        .strength-fill.mid {
+            background: var(--warning);
+        }
+
+        .strength-fill.high {
+            background: var(--secondary);
+        }
+
+        .strength-fill.none {
+            background: #c0c0c0;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        /* Recommendations */
+        .rec-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rec-list li {
+            padding: 14px 18px;
+            margin-bottom: 10px;
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .rec-list li.priority {
+            background: #fce8e6;
+            border-left-color: var(--accent);
+        }
+
+        .rec-list li.success {
+            background: #e8f5e9;
+            border-left-color: var(--secondary);
+        }
+
+        /* Activity log */
+        .activity-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .activity-list li:last-child {
+            border-bottom: none;
+        }
+
+        .activity-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .activity-score {
+            font-weight: 700;
+        }
+
+        .activity-score.pass {
+            color: var(--secondary);
+        }
+
+        .activity-score.fail {
+            color: var(--accent);
+        }
+
+        /* Reset button area */
+        .reset-area {
+            text-align: center;
+            padding: 32px 0 16px;
+        }
+
+        .btn-danger {
+            background: var(--bg-white);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-danger:hover {
+            background: var(--accent);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-block {
+                padding: 20px 18px;
+            }
+            .dashboard-hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chapters/regulations.html">1. Regulations</a></li>
+                        <li><a href="chapters/airspace.html">2. Airspace</a></li>
+                        <li><a href="chapters/weather.html">3. Weather</a></li>
+                        <li><a href="chapters/loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="chapters/operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="practice-exam.html">Practice Exam</a></li>
+                <li><a href="reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard-hero">
+        <div class="container">
+            <h1>Your Study Dashboard</h1>
+            <p>Track your progress, spot weak areas, and focus your study time</p>
+        </div>
+    </section>
+
+    <main class="dashboard-section">
+        <!-- Header stat cards -->
+        <section class="progress-section" style="padding:0 0 24px;">
+            <div class="progress-dashboard" id="progressDashboard">
+                <div class="progress-card">
+                    <h4>Chapters Completed</h4>
+                    <div class="progress-ring-container">
+                        <div class="progress-text" id="chaptersCompleted">0 / 5</div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <h4>Quiz Average</h4>
+                    <div class="progress-ring-container">
+                        <div class="progress-text" id="quizAverage">--</div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <h4>Flashcards Mastered</h4>
+                    <div class="progress-ring-container">
+                        <div class="progress-text" id="flashcardsMastered">0</div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <h4>Practice Exams Taken</h4>
+                    <div class="progress-ring-container">
+                        <div class="progress-text" id="examsTaken">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam score trend -->
+        <div class="dashboard-block">
+            <h2>Exam Score Trend</h2>
+            <div id="trendArea"></div>
+        </div>
+
+        <!-- Chapter strength breakdown -->
+        <div class="dashboard-block">
+            <h2>Chapter Strength Breakdown</h2>
+            <p style="color:var(--text-light);font-size:0.875rem;margin-bottom:18px;">Sorted weakest first. Red &lt; 70%, yellow 70-89%, green 90%+</p>
+            <div id="strengthArea"></div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="dashboard-block">
+            <h2>Weak-Area Recommendations</h2>
+            <ul class="rec-list" id="recArea"></ul>
+        </div>
+
+        <!-- Recent activity -->
+        <div class="dashboard-block">
+            <h2>Recent Practice Exam Activity</h2>
+            <ul class="activity-list" id="activityArea"></ul>
+        </div>
+
+        <!-- Reset button -->
+        <div class="reset-area">
+            <button class="btn btn-danger" id="resetBtn">Reset All Progress</button>
+            <p style="color:var(--text-lighter);font-size:0.8rem;margin-top:8px;">This will permanently delete all chapter, quiz, flashcard, and exam progress.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This study guide is an educational resource and is not affiliated with or endorsed by the FAA. Always refer to the official <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107" target="_blank">14 CFR Part 107</a> and the <a href="https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf" target="_blank">FAA Remote Pilot Study Guide</a> for the most current and authoritative information.</p>
+            <p>&copy; 2026 Part 107 Exam Guide. For educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="js/progress.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/assistant.js"></script>
+</body>
+</html>

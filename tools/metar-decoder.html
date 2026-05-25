@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAR / TAF Decoder - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../chapters/regulations.html">1. Regulations</a></li>
+                        <li><a href="../chapters/airspace.html">2. Airspace</a></li>
+                        <li><a href="../chapters/weather.html">3. Weather</a></li>
+                        <li><a href="../chapters/loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="../chapters/operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../flashcards.html">Flashcards</a></li>
+                <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li><a href="../reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reference-hero">
+        <div class="container">
+            <h1>METAR / TAF Decoder</h1>
+            <p style="opacity:0.9;margin-top:8px;">Paste a raw weather report and see it translated into plain English</p>
+        </div>
+    </section>
+
+    <div class="reference-content">
+
+        <!-- Instructions -->
+        <div class="ref-section">
+            <h2>How to Use</h2>
+            <p style="margin-bottom:12px;">
+                Paste a raw <strong>METAR</strong> (current observation) or <strong>TAF</strong> (forecast)
+                into the textbox below and click <strong>Decode</strong>. Each token will be color-coded
+                by category and translated into plain English. Use <strong>Load Example</strong> to cycle
+                through sample reports.
+            </p>
+            <div class="tip-box">
+                <strong>Exam tip:</strong> On the Part 107 exam you'll be expected to read METARs and TAFs
+                directly. Use this tool to build familiarity &mdash; not as a crutch during testing.
+            </div>
+
+            <label for="metar-input" style="display:block;font-weight:600;margin-top:20px;margin-bottom:8px;">
+                Raw METAR / TAF:
+            </label>
+            <textarea id="metar-input" class="metar-input"
+                placeholder="METAR KJFK 121651Z 18012G18KT 10SM FEW250 26/14 A2992 RMK AO2 SLP132 T02560144"
+                rows="4"></textarea>
+
+            <div class="metar-controls">
+                <button id="decode-btn" class="btn btn-action" type="button">Decode</button>
+                <button id="example-btn" class="btn btn-secondary" type="button">Load Example</button>
+                <button id="clear-btn" class="btn btn-secondary" type="button">Clear</button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="ref-section" id="results-section" style="display:none;">
+            <h2>Decoded Output</h2>
+
+            <h3 class="metar-subhead">Plain English Summary</h3>
+            <div id="summary-box" class="info-box"></div>
+
+            <h3 class="metar-subhead">Raw (Token-Colored)</h3>
+            <div id="raw-output" class="metar-raw"></div>
+
+            <h3 class="metar-subhead">Token-by-Token Breakdown</h3>
+            <div class="metar-table-wrap">
+                <table class="ref-table metar-table">
+                    <thead>
+                        <tr>
+                            <th style="width:25%;">Token</th>
+                            <th style="width:20%;">Type</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody id="decoded-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Common Codes Reference (collapsible) -->
+        <div class="ref-section">
+            <details class="metar-details">
+                <summary><h2 style="display:inline-block;margin:0;border:none;padding:0;">Common Codes Reference</h2></summary>
+
+                <h3 class="metar-subhead">Weather Phenomena</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">DZ</span><span class="ref-value">Drizzle</span></div>
+                    <div class="ref-item"><span class="ref-label">RA</span><span class="ref-value">Rain</span></div>
+                    <div class="ref-item"><span class="ref-label">SN</span><span class="ref-value">Snow</span></div>
+                    <div class="ref-item"><span class="ref-label">SG</span><span class="ref-value">Snow grains</span></div>
+                    <div class="ref-item"><span class="ref-label">PL</span><span class="ref-value">Ice pellets</span></div>
+                    <div class="ref-item"><span class="ref-label">GR</span><span class="ref-value">Hail</span></div>
+                    <div class="ref-item"><span class="ref-label">GS</span><span class="ref-value">Small hail / snow pellets</span></div>
+                    <div class="ref-item"><span class="ref-label">IC</span><span class="ref-value">Ice crystals</span></div>
+                    <div class="ref-item"><span class="ref-label">UP</span><span class="ref-value">Unknown precipitation</span></div>
+                </div>
+
+                <h3 class="metar-subhead">Obscurations</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">BR</span><span class="ref-value">Mist (vis &ge; 5/8 SM)</span></div>
+                    <div class="ref-item"><span class="ref-label">FG</span><span class="ref-value">Fog (vis &lt; 5/8 SM)</span></div>
+                    <div class="ref-item"><span class="ref-label">FU</span><span class="ref-value">Smoke</span></div>
+                    <div class="ref-item"><span class="ref-label">HZ</span><span class="ref-value">Haze</span></div>
+                    <div class="ref-item"><span class="ref-label">DU</span><span class="ref-value">Widespread dust</span></div>
+                    <div class="ref-item"><span class="ref-label">SA</span><span class="ref-value">Sand</span></div>
+                    <div class="ref-item"><span class="ref-label">VA</span><span class="ref-value">Volcanic ash</span></div>
+                    <div class="ref-item"><span class="ref-label">PY</span><span class="ref-value">Spray</span></div>
+                </div>
+
+                <h3 class="metar-subhead">Descriptors</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">TS</span><span class="ref-value">Thunderstorm</span></div>
+                    <div class="ref-item"><span class="ref-label">SH</span><span class="ref-value">Showers</span></div>
+                    <div class="ref-item"><span class="ref-label">FZ</span><span class="ref-value">Freezing</span></div>
+                    <div class="ref-item"><span class="ref-label">MI</span><span class="ref-value">Shallow</span></div>
+                    <div class="ref-item"><span class="ref-label">BC</span><span class="ref-value">Patches</span></div>
+                    <div class="ref-item"><span class="ref-label">BL</span><span class="ref-value">Blowing</span></div>
+                    <div class="ref-item"><span class="ref-label">DR</span><span class="ref-value">Low drifting</span></div>
+                    <div class="ref-item"><span class="ref-label">PR</span><span class="ref-value">Partial</span></div>
+                </div>
+
+                <h3 class="metar-subhead">Intensity</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">-</span><span class="ref-value">Light</span></div>
+                    <div class="ref-item"><span class="ref-label">(none)</span><span class="ref-value">Moderate</span></div>
+                    <div class="ref-item"><span class="ref-label">+</span><span class="ref-value">Heavy</span></div>
+                    <div class="ref-item"><span class="ref-label">VC</span><span class="ref-value">In the vicinity (5&ndash;10 SM)</span></div>
+                </div>
+
+                <h3 class="metar-subhead">Sky Coverage</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">SKC / CLR</span><span class="ref-value">Sky clear</span></div>
+                    <div class="ref-item"><span class="ref-label">FEW</span><span class="ref-value">Few (1/8&ndash;2/8)</span></div>
+                    <div class="ref-item"><span class="ref-label">SCT</span><span class="ref-value">Scattered (3/8&ndash;4/8)</span></div>
+                    <div class="ref-item"><span class="ref-label">BKN</span><span class="ref-value">Broken (5/8&ndash;7/8)</span></div>
+                    <div class="ref-item"><span class="ref-label">OVC</span><span class="ref-value">Overcast (8/8)</span></div>
+                    <div class="ref-item"><span class="ref-label">VV###</span><span class="ref-value">Vertical visibility (obscured)</span></div>
+                    <div class="ref-item"><span class="ref-label">CB</span><span class="ref-value">Cumulonimbus</span></div>
+                    <div class="ref-item"><span class="ref-label">TCU</span><span class="ref-value">Towering cumulus</span></div>
+                </div>
+
+                <h3 class="metar-subhead">TAF Change Groups</h3>
+                <div class="ref-grid">
+                    <div class="ref-item"><span class="ref-label">FM</span><span class="ref-value">From (rapid change)</span></div>
+                    <div class="ref-item"><span class="ref-label">BECMG</span><span class="ref-value">Becoming (gradual)</span></div>
+                    <div class="ref-item"><span class="ref-label">TEMPO</span><span class="ref-value">Temporary (&lt; 1 hr)</span></div>
+                    <div class="ref-item"><span class="ref-label">PROB30</span><span class="ref-value">30% probability</span></div>
+                    <div class="ref-item"><span class="ref-label">PROB40</span><span class="ref-value">40% probability</span></div>
+                    <div class="ref-item"><span class="ref-label">NOSIG</span><span class="ref-value">No significant change</span></div>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This decoder is an educational tool for studying Part 107 weather products. Always verify weather information from official sources (aviationweather.gov, 1800wxbrief.com) before flight.</p>
+            <p>&copy; 2026 Part 107 Exam Guide</p>
+        </div>
+    </footer>
+
+    <script src="../js/progress.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/assistant.js"></script>
+    <script src="../js/metar-decoder.js"></script>
+    <script>
+        (function () {
+            var EXAMPLES = [
+                'METAR KJFK 121651Z 18012G18KT 10SM FEW250 26/14 A2992',
+                'METAR KDEN 251853Z 32018G28KT 1/2SM TSRA BKN015CB OVC050 18/16 A2987 RMK TS OHD',
+                'METAR KLAX 121753Z VRB03KT 2SM BR SCT002 BKN008 16/15 A3001',
+                'TAF KORD 121120Z 1212/1318 25010KT P6SM SCT040 FM121800 28015G25KT P6SM SCT070 PROB30 1300/1306 VRB05KT 3SM TSRA'
+            ];
+            var exampleIdx = 0;
+
+            var input        = document.getElementById('metar-input');
+            var decodeBtn    = document.getElementById('decode-btn');
+            var exampleBtn   = document.getElementById('example-btn');
+            var clearBtn     = document.getElementById('clear-btn');
+            var resultsSec   = document.getElementById('results-section');
+            var summaryBox   = document.getElementById('summary-box');
+            var rawOut       = document.getElementById('raw-output');
+            var tbody        = document.getElementById('decoded-body');
+
+            function escapeHtml(s) {
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+            }
+
+            function renderRaw(tokens) {
+                var parts = [];
+                for (var i = 0; i < tokens.length; i++) {
+                    var t = tokens[i];
+                    parts.push(
+                        '<span class="tok tok-' + (t.category || 'other') + '" title="' +
+                        escapeHtml(t.type + ': ' + t.meaning) + '">' +
+                        escapeHtml(t.raw) + '</span>'
+                    );
+                }
+                rawOut.innerHTML = parts.join(' ');
+            }
+
+            function renderTable(tokens) {
+                var rows = [];
+                for (var i = 0; i < tokens.length; i++) {
+                    var t = tokens[i];
+                    rows.push(
+                        '<tr>' +
+                        '<td><code class="tok-code">' + escapeHtml(t.raw) + '</code></td>' +
+                        '<td><span class="type-badge type-' + (t.category || 'other') + '">' +
+                        escapeHtml(t.type) + '</span></td>' +
+                        '<td>' + escapeHtml(t.meaning) + '</td>' +
+                        '</tr>'
+                    );
+                }
+                tbody.innerHTML = rows.join('');
+            }
+
+            function doDecode() {
+                var text = (input.value || '').trim();
+                if (!text) {
+                    resultsSec.style.display = 'none';
+                    return;
+                }
+                var result = MetarDecoder.decode(text);
+                summaryBox.textContent = result.summary;
+                renderRaw(result.tokens);
+                renderTable(result.tokens);
+                resultsSec.style.display = '';
+                resultsSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            decodeBtn.addEventListener('click', doDecode);
+
+            exampleBtn.addEventListener('click', function () {
+                input.value = EXAMPLES[exampleIdx % EXAMPLES.length];
+                exampleIdx++;
+                doDecode();
+            });
+
+            clearBtn.addEventListener('click', function () {
+                input.value = '';
+                resultsSec.style.display = 'none';
+                input.focus();
+            });
+
+            // Decode on Ctrl+Enter
+            input.addEventListener('keydown', function (e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    doDecode();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
