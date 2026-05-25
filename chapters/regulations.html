@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 1: Regulations - Part 107 Exam Guide</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#0b3d91">
 </head>
 <body>
     <header class="site-header">
@@ -25,6 +27,14 @@
                 </li>
                 <li><a href="../flashcards.html">Flashcards</a></li>
                 <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li class="dropdown">
+                    <a href="#">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../dashboard.html">Progress Dashboard</a></li>
+                        <li><a href="../tools/metar-decoder.html">METAR Decoder</a></li>
+                        <li><a href="../tools/chart-quiz.html">Chart Quiz</a></li>
+                    </ul>
+                </li>
                 <li><a href="../reference.html">Quick Reference</a></li>
             </ul>
         </nav>
@@ -886,6 +896,13 @@
             }
         ], 'regulations');
         Progress.markChapterRead('regulations');
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(e) { console.log('SW reg failed:', e); });
+      });
+    }
     </script>
 </body>
 </html>
