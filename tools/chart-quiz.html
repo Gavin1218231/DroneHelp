@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectional Chart Quiz - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Page-specific layout for the chart quiz */
+        .cq-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .cq-hero h1 {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+        .cq-hero p {
+            opacity: 0.92;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cq-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .cq-intro {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+        .cq-intro h2 {
+            text-align: left;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        .cq-intro p {
+            font-size: 0.975rem;
+            color: var(--text);
+            margin-bottom: 14px;
+            line-height: 1.65;
+        }
+        .cq-intro .start-btn-wrap {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Side-by-side layout: chart on left, question on right */
+        .cq-stage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+        }
+        .cq-chart-panel {
+            background: #fbfaf6;
+            border: 1px solid #e6e2d6;
+            border-radius: var(--radius);
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+        }
+        .cq-question-panel {
+            display: flex;
+            flex-direction: column;
+        }
+        .cq-progress {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .cq-question-text {
+            font-size: 1.05rem;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        #cqOptions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        #cqOptions .quiz-option {
+            text-align: left;
+            background: var(--bg-white);
+            font-family: inherit;
+        }
+        .cq-footer {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .cq-footer button:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        /* Results screen */
+        .cq-results-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .cq-results-card .score-display {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 16px 0;
+        }
+        .cq-results-card .score-display.pass {
+            color: var(--secondary);
+        }
+        .cq-results-card .score-display.fail {
+            color: var(--accent);
+        }
+        .cq-results-card h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .cq-results-card p {
+            color: var(--text-light);
+            margin-bottom: 24px;
+            font-size: 1.025rem;
+        }
+        .cq-results-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Mobile: stack chart over question */
+        @media (max-width: 768px) {
+            .cq-stage {
+                grid-template-columns: 1fr;
+                padding: 18px;
+                gap: 16px;
+            }
+            .cq-chart-panel {
+                min-height: 260px;
+            }
+            .cq-hero h1 {
+                font-size: 1.65rem;
+            }
+            .cq-question-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="../index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../chapters/regulations.html">1. Regulations</a></li>
+                        <li><a href="../chapters/airspace.html">2. Airspace</a></li>
+                        <li><a href="../chapters/weather.html">3. Weather</a></li>
+                        <li><a href="../chapters/loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="../chapters/operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../flashcards.html">Flashcards</a></li>
+                <li><a href="../practice-exam.html">Practice Exam</a></li>
+                <li><a href="../reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cq-hero">
+        <div class="container">
+            <h1>Sectional Chart Quiz</h1>
+            <p>Practice identifying airspace classes, special use airspace, obstacles, and airport symbology on simplified sectional chart snippets.</p>
+        </div>
+    </section>
+
+    <div class="cq-page">
+
+        <!-- ====== INTRO SCREEN ====== -->
+        <div id="cqIntro">
+            <div class="cq-intro">
+                <h2>How this quiz works</h2>
+                <p>This is a learning tool that uses <strong>simplified illustrations</strong> drawn in the browser &mdash; they are not actual FAA chart excerpts. The shapes, colors, and labels follow the real sectional chart conventions you will see on the Part 107 exam:</p>
+                <ul style="margin-left:24px;margin-bottom:14px;color:var(--text);line-height:1.7;">
+                    <li><strong>Blue lines</strong> = Class B (solid), Class D (dashed), or restricted-area hashing</li>
+                    <li><strong>Magenta lines</strong> = Class C (solid), Class E surface (dashed), or MOA hashing</li>
+                    <li><strong>Faded blue or magenta shading</strong> = Class E airspace floor (1,200 ft or 700 ft AGL)</li>
+                    <li><strong>Blue airport symbol</strong> = towered &middot; <strong>Magenta airport symbol</strong> = non-towered</li>
+                </ul>
+                <p>For each scenario, pick the best answer. You will see the correct answer and a brief explanation immediately. Your final score appears after the last question.</p>
+                <div class="start-btn-wrap">
+                    <button class="btn btn-action" onclick="cqStart()" style="font-size:1.05rem;padding:14px 36px;">Start Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== QUIZ SCREEN ====== -->
+        <div id="cqQuiz" style="display:none;">
+            <div class="cq-stage">
+                <div class="cq-chart-panel">
+                    <div id="cqChart" style="width:100%;"></div>
+                </div>
+                <div class="cq-question-panel">
+                    <div class="cq-progress" id="cqProgress">Question 1 of 10</div>
+                    <div class="cq-question-text" id="cqQuestionText"></div>
+                    <div id="cqOptions"></div>
+                    <div class="quiz-explanation" id="cqExplanation"></div>
+                    <div class="cq-footer">
+                        <button class="btn btn-secondary" id="cqPrev" onclick="cqPrev()">&larr; Previous</button>
+                        <button class="btn btn-action" id="cqNext" onclick="cqNext()">Next &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== RESULTS SCREEN ====== -->
+        <div id="cqResults" style="display:none;">
+            <div class="cq-results-card">
+                <h2>Quiz Complete</h2>
+                <div class="score-display" id="cqScore">0%</div>
+                <p id="cqResultMsg"></p>
+                <div class="cq-results-actions">
+                    <button class="btn btn-action" onclick="cqRetake()">Retake Quiz</button>
+                    <a href="../chapters/airspace.html" class="btn btn-secondary">Back to Study (Airspace)</a>
+                    <a href="../index.html" class="btn btn-secondary">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> The chart snippets used in this quiz are simplified illustrations rendered as SVG &mdash; they are not actual FAA sectional charts. They are designed to teach the standard symbology you will encounter on the Part 107 exam.</p>
+            <p>&copy; 2026 Part 107 Exam Guide</p>
+        </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/chart-quiz.js"></script>
+</body>
+</html>
