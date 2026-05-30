@@ -1806,3 +1806,204 @@ section h2 {
         padding: 10px 16px;
     }
 }
+
+/* ========================================
+   Site Enhancements: skip link, theme
+   toggle, back-to-top, offline banner
+   ======================================== */
+
+/* --- Skip to content (a11y) --- */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 20px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 0 0 var(--radius) 0;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    left: 0;
+    text-decoration: none;
+    outline: 3px solid var(--warning);
+}
+
+/* Make keyboard focus visible everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+.flashcard:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* --- Theme toggle button (in nav) --- */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-left: 4px;
+    padding: 0;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+/* --- Back to top button --- */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    z-index: 90;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+}
+
+/* --- Offline banner --- */
+.offline-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    padding: 10px 16px;
+    text-align: center;
+    background: var(--text);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.offline-banner.show {
+    transform: translateY(0);
+}
+
+/* ========================================
+   Dark mode
+   ======================================== */
+[data-theme="dark"] {
+    --primary-light: #1a2740;
+    --bg: #121316;
+    --bg-white: #1e1f24;
+    --text: #e8eaed;
+    --text-light: #9aa0a6;
+    --text-lighter: #80868b;
+    --border: #3c4043;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.6);
+    color-scheme: dark;
+}
+
+/* Defensive surface overrides so chrome that may use literal
+   light colors still reads correctly in dark mode. */
+[data-theme="dark"] body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+[data-theme="dark"] .site-header {
+    background: var(--bg-white);
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .site-footer {
+    background: var(--bg-white);
+}
+
+[data-theme="dark"] .chat-window,
+[data-theme="dark"] .chat-input {
+    background: var(--bg-white);
+    color: var(--text);
+}
+
+/* ========================================
+   Print stylesheet
+   ======================================== */
+@media print {
+    .site-header,
+    .nav-bar,
+    .site-footer,
+    .chat-fab,
+    .chat-window,
+    .slide-controls,
+    .back-to-top,
+    .theme-toggle,
+    .skip-link,
+    .offline-banner {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Reveal every slide when printing the reading material */
+    .slide {
+        display: block !important;
+        page-break-inside: avoid;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 16px;
+    }
+
+    .card,
+    .reading-section,
+    .info-box,
+    .tip-box,
+    .warning-box,
+    .example-box,
+    .key-point {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}

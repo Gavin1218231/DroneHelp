@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="free METAR/TAF decoder that translates aviation weather reports into plain English for drone pilots">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="../icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="METAR / TAF Decoder - Part 107 Exam Guide">
+    <meta property="og:description" content="free METAR/TAF decoder that translates aviation weather reports into plain English for drone pilots">
+    <meta property="og:image" content="../icons/icon-512.png">
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="../index.html" class="logo">Part 107 Exam Guide</a>
@@ -47,7 +56,7 @@
         </div>
     </section>
 
-    <div class="reference-content">
+    <div class="reference-content" id="main">
 
         <!-- Instructions -->
         <div class="ref-section">
@@ -185,10 +194,11 @@
         </div>
     </footer>
 
-    <script src="../js/progress.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/assistant.js"></script>
-    <script src="../js/metar-decoder.js"></script>
+    <script src="../js/progress.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/assistant.js" defer></script>
+    <script src="../js/metar-decoder.js" defer></script>
+    <script src="../js/ui.js" defer></script>
     <script>
         (function () {
             var EXAMPLES = [

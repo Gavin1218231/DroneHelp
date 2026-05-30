@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="interactive sectional chart quiz testing airspace identification and symbology for the Part 107 exam">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="../icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sectional Chart Quiz - Part 107 Exam Guide">
+    <meta property="og:description" content="interactive sectional chart quiz testing airspace identification and symbology for the Part 107 exam">
+    <meta property="og:image" content="../icons/icon-512.png">
     <style>
         /* Page-specific layout for the chart quiz */
         .cq-hero {
@@ -172,8 +179,10 @@
             }
         }
     </style>
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="../index.html" class="logo">Part 107 Exam Guide</a>
@@ -212,7 +221,7 @@
         </div>
     </section>
 
-    <div class="cq-page">
+    <div class="cq-page" id="main">
 
         <!-- ====== INTRO SCREEN ====== -->
         <div id="cqIntro">
@@ -273,8 +282,9 @@
         </div>
     </footer>
 
-    <script src="../js/nav.js"></script>
-    <script src="../js/chart-quiz.js"></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/chart-quiz.js" defer></script>
+    <script src="../js/ui.js" defer></script>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
