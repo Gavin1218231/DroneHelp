@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Master 14 CFR Part 107 rules: remote pilot certification, operating limits, altitude and visibility minimums, waivers, accident reporting, and Remote ID.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="../icons/favicon.svg">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Chapter 1: Regulations - Part 107 Exam Guide">
+    <meta property="og:description" content="Master 14 CFR Part 107 rules: remote pilot certification, operating limits, altitude and visibility minimums, waivers, accident reporting, and Remote ID.">
+    <meta property="og:image" content="../icons/icon-512.png">
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="../index.html" class="logo">Part 107 Exam Guide</a>
@@ -48,7 +57,7 @@
         </div>
     </section>
 
-    <div class="chapter-content">
+    <div class="chapter-content" id="main">
             <!-- ============================================ -->
             <!-- SECTION 1: PRESENTATION SLIDE DECK           -->
             <!-- ============================================ -->
@@ -736,11 +745,12 @@
         </div>
     </footer>
 
-    <script src="../js/progress.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/slides.js"></script>
-    <script src="../js/quiz-engine.js"></script>
-    <script src="../js/assistant.js"></script>
+    <script src="../js/progress.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/slides.js" defer></script>
+    <script src="../js/quiz-engine.js" defer></script>
+    <script src="../js/assistant.js" defer></script>
+    <script src="../js/ui.js" defer></script>
     <script>
         var deck = new SlideDeck('slideDeck1');
         var quiz = new QuizEngine('chapterQuiz', [
