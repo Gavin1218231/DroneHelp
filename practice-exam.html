@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Take a full 60-question, 120-minute timed FAA Part 107 practice exam that simulates the real test, then review your score and missed questions.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Practice Exam - Part 107 Exam Guide">
+    <meta property="og:description" content="Take a full 60-question, 120-minute timed FAA Part 107 practice exam that simulates the real test, then review your score and missed questions.">
+    <meta property="og:image" content="icons/icon-512.png">
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="index.html" class="logo">Part 107 Exam Guide</a>
@@ -40,7 +49,7 @@
         </nav>
     </header>
 
-    <section class="exam-hero">
+    <section class="exam-hero" id="main">
         <div class="container">
             <h1>Part 107 Practice Exam</h1>
             <p>Simulate the real FAA knowledge test with 60 questions and a 120-minute time limit</p>
@@ -122,9 +131,10 @@
         </div>
     </footer>
 
-    <script src="js/progress.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/assistant.js"></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/assistant.js" defer></script>
+    <script src="js/ui.js" defer></script>
     <script>
     /* =============================================
        Part 107 Practice Exam - 60 Questions

@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Study 130 FAA Part 107 flashcards with smart spaced-repetition review to lock in regulations, airspace, weather, and operations knowledge for your exam.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Flashcards - Part 107 Exam Guide">
+    <meta property="og:description" content="Study 130 FAA Part 107 flashcards with smart spaced-repetition review to lock in regulations, airspace, weather, and operations knowledge for your exam.">
+    <meta property="og:image" content="icons/icon-512.png">
     <style>
         .mode-toggle {
             display: flex;
@@ -100,8 +107,10 @@
             color: #5f6368;
         }
     </style>
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="index.html" class="logo">Part 107 Exam Guide</a>
@@ -140,7 +149,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="main">
         <div class="container" style="padding: 48px 24px;">
 
             <div class="mode-toggle">
@@ -158,10 +167,10 @@
                     <button class="filter-btn" onclick="filterCards('operations', this)">Operations</button>
                 </div>
 
-                <p style="text-align:center;margin-bottom:24px;color:#5f6368;" id="cardStats">Card 1 of 110 | 0 mastered</p>
+                <p style="text-align:center;margin-bottom:24px;color:#5f6368;" id="cardStats">Card 1 of 130 | 0 mastered</p>
 
                 <div class="flashcard-area">
-                    <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="flashcard" id="flashcard" onclick="flipCard()" role="button" tabindex="0" aria-label="Flashcard. Press Enter or Space to flip.">
                         <div class="flashcard-inner">
                             <div class="flashcard-front">
                                 <h3 id="cardFront">Loading...</h3>
@@ -223,9 +232,10 @@
         </div>
     </footer>
 
-    <script src="js/progress.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/assistant.js"></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/assistant.js" defer></script>
+    <script src="js/ui.js" defer></script>
     <script>
     var cards = [
         // ===== REGULATIONS (25 cards) =====
@@ -597,6 +607,16 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         showCard();
+        // Keyboard support for flipping the card (Enter / Space)
+        var flashcardEl = document.getElementById('flashcard');
+        if (flashcardEl) {
+            flashcardEl.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                    e.preventDefault();
+                    flipCard();
+                }
+            });
+        }
     });
     </script>
     <script>

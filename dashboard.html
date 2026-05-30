@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Your personal Part 107 progress dashboard: track chapter completion, quiz and practice-exam scores, flashcards mastered, and spot weak areas to study.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Study Dashboard - Part 107 Exam Guide">
+    <meta property="og:description" content="Your personal Part 107 progress dashboard: track chapter completion, quiz and practice-exam scores, flashcards mastered, and spot weak areas to study.">
+    <meta property="og:image" content="icons/icon-512.png">
     <style>
         /* --- Dashboard-specific styles --- */
         .dashboard-hero {
@@ -230,8 +237,10 @@
             }
         }
     </style>
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <nav class="nav-bar">
             <a href="index.html" class="logo">Part 107 Exam Guide</a>
@@ -270,7 +279,7 @@
         </div>
     </section>
 
-    <main class="dashboard-section">
+    <main id="main" class="dashboard-section">
         <!-- Header stat cards -->
         <section class="progress-section" style="padding:0 0 24px;">
             <div class="progress-dashboard" id="progressDashboard">
@@ -340,10 +349,11 @@
         </div>
     </footer>
 
-    <script src="js/progress.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/dashboard.js"></script>
-    <script src="js/assistant.js"></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+    <script src="js/assistant.js" defer></script>
+    <script src="js/ui.js" defer></script>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
