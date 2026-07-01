@@ -46,6 +46,23 @@
         updateToggleIcon(currentTheme());
     }
 
+    // ----- Search link (injected so it appears on every page) -----
+    function injectSearchLink() {
+        var navLinks = document.querySelector('.nav-links');
+        if (!navLinks || document.getElementById('navSearchLink')) return;
+        var path = location.pathname;
+        var prefix = /\/(chapters|tools)\//.test(path) ? '../' : '';
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.id = 'navSearchLink';
+        a.href = prefix + 'search.html';
+        a.textContent = 'Search';
+        // Mark active if we're on the search page
+        if (/search\.html$/.test(path)) a.className = 'active';
+        li.appendChild(a);
+        navLinks.appendChild(li);
+    }
+
     // ----- Back to top -----
     function injectBackToTop() {
         if (document.querySelector('.back-to-top')) return;
@@ -98,6 +115,7 @@
     }
 
     function init() {
+        injectSearchLink();
         injectThemeToggle();
         injectBackToTop();
         injectOfflineBanner();

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Part 107 Exam Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Search the Part 107 study guide across chapters, flashcards, tools, and quick-reference topics to find any drone exam concept fast.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Search - Part 107 Exam Guide">
+    <meta property="og:description" content="Search the Part 107 study guide across chapters, flashcards, tools, and quick-reference topics.">
+    <meta property="og:image" content="icons/icon-512.png">
+    <script>(function(){try{var t=localStorage.getItem('part107_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Part 107 Exam Guide</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Study Chapters</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chapters/regulations.html">1. Regulations</a></li>
+                        <li><a href="chapters/airspace.html">2. Airspace</a></li>
+                        <li><a href="chapters/weather.html">3. Weather</a></li>
+                        <li><a href="chapters/loading-performance.html">4. Loading &amp; Performance</a></li>
+                        <li><a href="chapters/operations.html">5. Operations</a></li>
+                    </ul>
+                </li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="practice-exam.html">Practice Exam</a></li>
+                <li class="dropdown">
+                    <a href="#">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dashboard.html">Progress Dashboard</a></li>
+                        <li><a href="tools/metar-decoder.html">METAR Decoder</a></li>
+                        <li><a href="tools/chart-quiz.html">Chart Quiz</a></li>
+                    </ul>
+                </li>
+                <li><a href="reference.html">Quick Reference</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="search-wrap">
+        <h1>Search the Study Guide</h1>
+        <p style="color:var(--text-light);margin-bottom:20px;">
+            Find topics across all chapters, flashcards, tools, and the quick reference.
+            Try &ldquo;airspace&rdquo;, &ldquo;density altitude&rdquo;, or &ldquo;load factor&rdquo;.
+        </p>
+
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="Search topics, rules, weather, flashcards…"
+                   autocomplete="off" aria-label="Search the study guide">
+        </div>
+
+        <div class="search-meta">
+            <span id="searchCount"></span>
+            <span id="searchStatus"></span>
+        </div>
+
+        <div id="searchResults" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> This study guide is an educational resource and is not affiliated with or endorsed by the FAA. Always refer to the official <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107" target="_blank">14 CFR Part 107</a> and the <a href="https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf" target="_blank">FAA Remote Pilot Study Guide</a> for the most current and authoritative information.</p>
+            <p>&copy; 2026 Part 107 Exam Guide. For educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="js/progress.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/assistant.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(e) { console.log('SW reg failed:', e); });
+      });
+    }
+    </script>
+</body>
+</html>

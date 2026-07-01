@@ -11,13 +11,32 @@ var Dashboard = {
         { id: 'operations',          label: 'Operations',            href: 'chapters/operations.html' }
     ],
 
-    // Approximate total flashcards available — used to estimate mastery percentage.
+    // Total flashcards available — used to estimate mastery percentage.
+    // Loaded dynamically from data/flashcards.json (see init); the value
+    // here is a fallback if the fetch fails.
     TOTAL_FLASHCARDS: 130,
 
     // Threshold below which we recommend more exam practice (avg of last 3 attempts).
     RECENT_AVG_THRESHOLD: 85,
 
     init: function () {
+        var self = this;
+        // Derive the real flashcard count so mastery math stays accurate as
+        // cards are added/removed, then render. Falls back to the constant.
+        if (typeof fetch === 'function') {
+            fetch('data/flashcards.json')
+                .then(function (r) { return r.ok ? r.json() : null; })
+                .then(function (data) {
+                    if (data && data.length) self.TOTAL_FLASHCARDS = data.length;
+                })
+                .catch(function () { /* keep fallback constant */ })
+                .then(function () { self.render(); });
+        } else {
+            self.render();
+        }
+    },
+
+    render: function () {
         this.renderHeaderStats();
         this.renderTrend();
         this.renderStrengthBreakdown();

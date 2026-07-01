@@ -1,7 +1,7 @@
 // Part 107 Exam Guide - Service Worker
 // Provides offline support via cache-first for static assets and network-first for HTML.
 
-const CACHE_NAME = 'part107-v1';
+const CACHE_NAME = 'part107-v2';
 
 // Core app shell — pre-cached on install so the app works offline.
 const CORE_ASSETS = [
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   '/practice-exam.html',
   '/reference.html',
   '/dashboard.html',
+  '/search.html',
   '/tools/metar-decoder.html',
   '/tools/chart-quiz.html',
   '/chapters/regulations.html',
@@ -26,6 +27,11 @@ const CORE_ASSETS = [
   '/js/progress.js',
   '/js/quiz-engine.js',
   '/js/slides.js',
+  '/js/search.js',
+  '/js/ui.js',
+  '/data/flashcards.json',
+  '/data/search-index.json',
+  '/icons/favicon.svg',
   '/manifest.json'
 ];
 

@@ -1,0 +1,782 @@
+[
+  {
+    "id": 1,
+    "category": "regulations",
+    "front": "What is the maximum altitude for sUAS under Part 107?",
+    "back": "400 feet AGL, or higher if within a 400-foot radius of a structure and not flying above the top of that structure."
+  },
+  {
+    "id": 2,
+    "category": "regulations",
+    "front": "What is the maximum groundspeed allowed under Part 107?",
+    "back": "87 knots (100 mph)."
+  },
+  {
+    "id": 3,
+    "category": "regulations",
+    "front": "What is the minimum age to obtain a Remote Pilot Certificate?",
+    "back": "16 years old."
+  },
+  {
+    "id": 4,
+    "category": "regulations",
+    "front": "What is the minimum flight visibility required under Part 107?",
+    "back": "3 statute miles from the control station."
+  },
+  {
+    "id": 5,
+    "category": "regulations",
+    "front": "What is the maximum takeoff weight for an sUAS under Part 107?",
+    "back": "Less than 55 pounds (including everything on board at the time of takeoff)."
+  },
+  {
+    "id": 6,
+    "category": "regulations",
+    "front": "How long is a Remote Pilot Certificate valid before recurrent training is required?",
+    "back": "24 calendar months. You must complete recurrent training or testing to maintain currency."
+  },
+  {
+    "id": 7,
+    "category": "regulations",
+    "front": "What incidents must be reported to the FAA and within what timeframe?",
+    "back": "Serious injury to any person, loss of consciousness, or property damage exceeding $500 (other than the sUAS) must be reported within 10 days."
+  },
+  {
+    "id": 8,
+    "category": "regulations",
+    "front": "What is the FAA drone registration fee and how long is it valid?",
+    "back": "$5 for a 3-year registration period."
+  },
+  {
+    "id": 9,
+    "category": "regulations",
+    "front": "What is the weight range requiring FAA drone registration?",
+    "back": "0.55 lbs (250 grams) up to 55 lbs. Drones under 0.55 lbs do not require registration."
+  },
+  {
+    "id": 10,
+    "category": "regulations",
+    "front": "Can you fly a drone from a moving vehicle under Part 107?",
+    "back": "Yes, but only over sparsely populated areas and the operation cannot be for compensation or hire from the moving vehicle (unless in certain approved circumstances)."
+  },
+  {
+    "id": 11,
+    "category": "regulations",
+    "front": "What are the cloud clearance requirements under Part 107?",
+    "back": "At least 500 feet below clouds and 2,000 feet horizontally from clouds."
+  },
+  {
+    "id": 12,
+    "category": "regulations",
+    "front": "Can a Remote PIC operate multiple drones simultaneously?",
+    "back": "No. A Remote PIC may only operate one sUAS at a time unless a waiver is obtained."
+  },
+  {
+    "id": 13,
+    "category": "regulations",
+    "front": "What is the alcohol rule (bottle-to-throttle) for drone pilots?",
+    "back": "No operation within 8 hours of consuming alcohol, and blood alcohol concentration must be below 0.04%."
+  },
+  {
+    "id": 14,
+    "category": "regulations",
+    "front": "Who has right of way in the National Airspace System?",
+    "back": "Manned aircraft always have the right of way. The remote PIC must yield to all manned aircraft."
+  },
+  {
+    "id": 15,
+    "category": "regulations",
+    "front": "When can you fly a drone at night under Part 107?",
+    "back": "Night flight is permitted if the sUAS has anti-collision lighting visible for at least 3 statute miles."
+  },
+  {
+    "id": 16,
+    "category": "regulations",
+    "front": "Can Part 107 waivers be obtained, and for what?",
+    "back": "Yes. Waivers can be requested for operations beyond standard Part 107 rules, such as flying over people (beyond allowed categories), beyond visual line of sight, or from a moving vehicle."
+  },
+  {
+    "id": 17,
+    "category": "regulations",
+    "front": "Is a visual observer (VO) required under Part 107?",
+    "back": "No. A visual observer is not required but is recommended. If used, the VO must be able to communicate directly with the PIC."
+  },
+  {
+    "id": 18,
+    "category": "regulations",
+    "front": "What are the four categories for operations over people?",
+    "back": "Category 1: under 0.55 lbs. Category 2: must not cause injury exceeding certain thresholds. Category 3: similar to Cat 2 but restricted to certain areas. Category 4: must have an airworthiness certificate."
+  },
+  {
+    "id": 19,
+    "category": "regulations",
+    "front": "What is Remote ID?",
+    "back": "Remote ID is a system that broadcasts identification and location information from the drone during flight, allowing the FAA and law enforcement to identify and locate the drone and its operator."
+  },
+  {
+    "id": 20,
+    "category": "regulations",
+    "front": "How can a Part 61 certificated pilot obtain a Remote Pilot Certificate?",
+    "back": "By completing an initial online training course (Part 107 small UAS ALC) at the FAA Safety website, rather than taking the full knowledge test, if their pilot certificate is current."
+  },
+  {
+    "id": 21,
+    "category": "regulations",
+    "front": "What is the difference between Part 107 (commercial) and recreational drone flight?",
+    "back": "Part 107 allows commercial operations and requires a Remote Pilot Certificate. Recreational flight is for hobby/fun only and follows the Exception for Recreational Flyers (Section 44809)."
+  },
+  {
+    "id": 22,
+    "category": "regulations",
+    "front": "Where must FAA registration markings be placed on the drone?",
+    "back": "On the exterior surface of the aircraft or in an enclosed, accessible compartment. The registration number must be legible."
+  },
+  {
+    "id": 23,
+    "category": "regulations",
+    "front": "What must you do before each flight under Part 107?",
+    "back": "The Remote PIC must perform a preflight inspection of the sUAS to ensure it is in a condition for safe operation."
+  },
+  {
+    "id": 24,
+    "category": "regulations",
+    "front": "Can you fly a drone over a person who is not part of your operation?",
+    "back": "Only under specific categories (1-4) that set requirements based on the drone's weight, kinetic energy, and exposed rotating parts."
+  },
+  {
+    "id": 25,
+    "category": "regulations",
+    "front": "What is the penalty for operating a drone in an unsafe or illegal manner?",
+    "back": "Civil penalties up to $27,500 per violation. Criminal penalties can include fines up to $250,000 and/or imprisonment for up to 3 years."
+  },
+  {
+    "id": 26,
+    "category": "airspace",
+    "front": "Class B airspace is indicated by what on a sectional chart?",
+    "back": "Solid blue lines."
+  },
+  {
+    "id": 27,
+    "category": "airspace",
+    "front": "Class C airspace is indicated by what on a sectional chart?",
+    "back": "Solid magenta lines."
+  },
+  {
+    "id": 28,
+    "category": "airspace",
+    "front": "Class D airspace is indicated by what on a sectional chart?",
+    "back": "Dashed blue lines."
+  },
+  {
+    "id": 29,
+    "category": "airspace",
+    "front": "Does Class G airspace require authorization for Part 107 operations?",
+    "back": "No. Class G is uncontrolled airspace and does not require ATC authorization for Part 107 flights."
+  },
+  {
+    "id": 30,
+    "category": "airspace",
+    "front": "What does LAANC stand for?",
+    "back": "Low Altitude Authorization and Notification Capability. It provides near real-time authorization to fly in controlled airspace."
+  },
+  {
+    "id": 31,
+    "category": "airspace",
+    "front": "Class E airspace starting at the surface is shown by what?",
+    "back": "Dashed magenta lines."
+  },
+  {
+    "id": 32,
+    "category": "airspace",
+    "front": "Class E airspace starting at 700 feet AGL is shown by what?",
+    "back": "A faded (vignette) magenta border, shaded on the outside."
+  },
+  {
+    "id": 33,
+    "category": "airspace",
+    "front": "What class of airspace is considered 'uncontrolled'?",
+    "back": "Class G airspace."
+  },
+  {
+    "id": 34,
+    "category": "airspace",
+    "front": "In which classes of airspace do you need ATC authorization to fly a drone?",
+    "back": "Class B, Class C, Class D, and surface-level Class E airspace."
+  },
+  {
+    "id": 35,
+    "category": "airspace",
+    "front": "What is a TFR?",
+    "back": "Temporary Flight Restriction. A TFR temporarily restricts flight in a defined area, often for presidential movements, sporting events, wildfires, or emergencies."
+  },
+  {
+    "id": 36,
+    "category": "airspace",
+    "front": "Class A airspace extends from what altitudes?",
+    "back": "From 18,000 feet MSL up to and including 60,000 feet MSL (FL600). Drone operations are not permitted in Class A."
+  },
+  {
+    "id": 37,
+    "category": "airspace",
+    "front": "What shape describes Class B airspace?",
+    "back": "An upside-down wedding cake (inverted tiered layers that expand at higher altitudes)."
+  },
+  {
+    "id": 38,
+    "category": "airspace",
+    "front": "What is a Military Operations Area (MOA)?",
+    "back": "Airspace designated for military training activities. While VFR flight is permitted, drone pilots should exercise extreme caution and check NOTAMs."
+  },
+  {
+    "id": 39,
+    "category": "airspace",
+    "front": "What is a Prohibited Area on a sectional chart?",
+    "back": "Airspace where flight is completely prohibited for security or national welfare reasons (e.g., P-56 over the White House). Indicated by blue hatching."
+  },
+  {
+    "id": 40,
+    "category": "airspace",
+    "front": "What is a Restricted Area?",
+    "back": "Airspace with unusual hazards such as artillery firing, aerial gunnery, or guided missiles. Flight requires permission from the controlling agency."
+  },
+  {
+    "id": 41,
+    "category": "airspace",
+    "front": "What is the typical Class D airspace radius?",
+    "back": "Approximately 4 nautical miles from the airport center, from the surface up to a designated altitude (typically 2,500 feet AGL)."
+  },
+  {
+    "id": 42,
+    "category": "airspace",
+    "front": "What does a blue and magenta airport symbol indicate on a sectional chart?",
+    "back": "Blue indicates a towered (controlled) airport. Magenta indicates a non-towered (uncontrolled) airport."
+  },
+  {
+    "id": 43,
+    "category": "airspace",
+    "front": "What is a NOTAM?",
+    "back": "Notice to Air Missions. NOTAMs provide essential information about temporary changes or hazards in the National Airspace System."
+  },
+  {
+    "id": 44,
+    "category": "airspace",
+    "front": "Where does Class E airspace typically begin when not otherwise designated?",
+    "back": "At 14,500 feet MSL, extending up to but not including 18,000 feet MSL (Class A)."
+  },
+  {
+    "id": 45,
+    "category": "airspace",
+    "front": "What is the typical inner and outer radius of Class C airspace?",
+    "back": "Inner ring: 5 nautical mile radius from surface to 4,000 ft AGL. Outer ring: 10 NM radius from 1,200 ft AGL to 4,000 ft AGL."
+  },
+  {
+    "id": 46,
+    "category": "airspace",
+    "front": "What is a Victor Airway?",
+    "back": "A federal airway in the low-altitude route structure (below 18,000 ft MSL), identified by a \"V\" designation. Shown as blue lines on sectional charts."
+  },
+  {
+    "id": 47,
+    "category": "airspace",
+    "front": "What does a magenta flag with a number indicate on a sectional chart?",
+    "back": "A Visual Flight Rules (VFR) checkpoint used for position reporting or navigation reference."
+  },
+  {
+    "id": 48,
+    "category": "airspace",
+    "front": "What is the purpose of the UAS Facility Map (UASFM)?",
+    "back": "It shows the FAA-approved maximum altitudes for LAANC authorizations near airports in controlled airspace."
+  },
+  {
+    "id": 49,
+    "category": "airspace",
+    "front": "What is an Alert Area?",
+    "back": "Airspace with a high volume of pilot training or unusual aerial activity. No special permission is needed, but pilots should be extra cautious."
+  },
+  {
+    "id": 50,
+    "category": "airspace",
+    "front": "What is a Warning Area?",
+    "back": "Airspace extending from 3 NM offshore that contains hazardous activity (similar to Restricted Areas but over international waters)."
+  },
+  {
+    "id": 51,
+    "category": "weather",
+    "front": "What does METAR stand for?",
+    "back": "Meteorological Aerodrome Report. It is a routine weather observation report issued hourly or when significant changes occur."
+  },
+  {
+    "id": 52,
+    "category": "weather",
+    "front": "What does TAF stand for?",
+    "back": "Terminal Aerodrome Forecast. It provides a weather forecast for a 5-mile radius around an airport, covering a 24-30 hour period."
+  },
+  {
+    "id": 53,
+    "category": "weather",
+    "front": "What is density altitude?",
+    "back": "Pressure altitude corrected for non-standard temperature. It represents the altitude at which the aircraft 'thinks' it is flying based on air density."
+  },
+  {
+    "id": 54,
+    "category": "weather",
+    "front": "What are the '3 H's' that increase density altitude?",
+    "back": "High altitude (elevation), Hot temperature, and High humidity (Humid conditions). All three reduce air density and degrade performance."
+  },
+  {
+    "id": 55,
+    "category": "weather",
+    "front": "What is the standard atmosphere at sea level?",
+    "back": "Temperature of 15 degrees Celsius (59 degrees Fahrenheit) and pressure of 29.92 inches of mercury (inHg) or 1013.2 millibars."
+  },
+  {
+    "id": 56,
+    "category": "weather",
+    "front": "What happens when temperature and dew point converge?",
+    "back": "Moisture condenses out of the air, forming fog, mist, or clouds. When the spread is 3 degrees C or less and decreasing, fog is likely."
+  },
+  {
+    "id": 57,
+    "category": "weather",
+    "front": "What is a temperature inversion?",
+    "back": "A condition where temperature increases with altitude instead of the normal decrease. Inversions trap pollutants, reduce visibility, and can create wind shear."
+  },
+  {
+    "id": 58,
+    "category": "weather",
+    "front": "What are the three stages of a thunderstorm?",
+    "back": "Cumulus (building/updrafts), Mature (strongest with updrafts and downdrafts, heaviest precipitation), and Dissipating (mostly downdrafts, storm weakens)."
+  },
+  {
+    "id": 59,
+    "category": "weather",
+    "front": "What is wind shear?",
+    "back": "A sudden change in wind speed and/or direction over a short distance. It can be horizontal or vertical and is extremely hazardous to aircraft."
+  },
+  {
+    "id": 60,
+    "category": "weather",
+    "front": "In a METAR, what does 'G' indicate in the wind group?",
+    "back": "Gusting. For example, 12G20KT means wind at 12 knots gusting to 20 knots."
+  },
+  {
+    "id": 61,
+    "category": "weather",
+    "front": "What is a SIGMET?",
+    "back": "Significant Meteorological Information. An advisory for severe weather hazards (severe turbulence, icing, volcanic ash) that affect all aircraft."
+  },
+  {
+    "id": 62,
+    "category": "weather",
+    "front": "What is an AIRMET?",
+    "back": "Airmen's Meteorological Information. An advisory for moderate weather hazards: IFR conditions (AIRMET Sierra), turbulence (Tango), or icing/freezing levels (Zulu)."
+  },
+  {
+    "id": 63,
+    "category": "weather",
+    "front": "What type of clouds indicate thunderstorm activity?",
+    "back": "Cumulonimbus (CB) clouds. Towering cumulus (TCU) clouds are precursors to thunderstorm development."
+  },
+  {
+    "id": 64,
+    "category": "weather",
+    "front": "What weather conditions does a low-pressure system typically bring?",
+    "back": "Clouds, precipitation, poor visibility, and generally bad weather. Air circulates counterclockwise around a low in the Northern Hemisphere."
+  },
+  {
+    "id": 65,
+    "category": "weather",
+    "front": "What weather conditions does a high-pressure system typically bring?",
+    "back": "Clear skies, good visibility, and generally fair weather. Air circulates clockwise around a high in the Northern Hemisphere."
+  },
+  {
+    "id": 66,
+    "category": "weather",
+    "front": "What is the standard temperature lapse rate?",
+    "back": "Approximately 2 degrees Celsius (3.5 degrees Fahrenheit) decrease per 1,000 feet of altitude gain."
+  },
+  {
+    "id": 67,
+    "category": "weather",
+    "front": "What are the characteristics of a cold front?",
+    "back": "Fast-moving, steep slope, narrow band of weather. Brings thunderstorms, heavy rain, turbulence, and wind shifts. Weather clears quickly after passage."
+  },
+  {
+    "id": 68,
+    "category": "weather",
+    "front": "What are the characteristics of a warm front?",
+    "back": "Slow-moving, gradual slope, wide area of weather. Brings extended periods of low ceilings, poor visibility, steady rain, and fog."
+  },
+  {
+    "id": 69,
+    "category": "weather",
+    "front": "In a METAR, what does 'VV' followed by a number indicate?",
+    "back": "Vertical Visibility in hundreds of feet, indicating an obscured sky (sky not visible due to fog, heavy rain, etc.). Example: VV005 = vertical visibility 500 feet."
+  },
+  {
+    "id": 70,
+    "category": "weather",
+    "front": "How does relative humidity affect drone operations?",
+    "back": "High humidity reduces air density, degrading propeller efficiency and lift. It also increases the risk of fog and precipitation, and can cause moisture damage to electronics."
+  },
+  {
+    "id": 71,
+    "category": "loading",
+    "front": "What is the maximum takeoff weight for an sUAS under Part 107?",
+    "back": "Less than 55 pounds, including everything on board at the time of takeoff (payload, batteries, accessories)."
+  },
+  {
+    "id": 72,
+    "category": "loading",
+    "front": "What is center of gravity (CG)?",
+    "back": "The point at which the aircraft would balance if suspended. It is the theoretical point where the total weight of the aircraft is concentrated."
+  },
+  {
+    "id": 73,
+    "category": "loading",
+    "front": "How does high density altitude affect drone performance?",
+    "back": "It decreases air density, reducing propeller efficiency and lift. The drone requires more power to hover and has reduced overall performance, payload capacity, and flight time."
+  },
+  {
+    "id": 74,
+    "category": "loading",
+    "front": "What is the effect of cold temperature on LiPo batteries?",
+    "back": "Cold temperatures reduce battery capacity, voltage output, and overall performance. LiPo batteries should be warmed to at least 20 degrees Celsius before flight."
+  },
+  {
+    "id": 75,
+    "category": "loading",
+    "front": "What happens if the CG is too far forward on a multirotor?",
+    "back": "The drone becomes nose-heavy, requiring more power from rear motors to maintain level flight. This reduces efficiency, flight time, and can affect stability."
+  },
+  {
+    "id": 76,
+    "category": "loading",
+    "front": "What is the effect of overloading a drone beyond its design limits?",
+    "back": "Reduced climb rate, decreased maneuverability, higher stall speed, shorter flight time, structural stress, and potential loss of control."
+  },
+  {
+    "id": 77,
+    "category": "loading",
+    "front": "How does wind affect drone performance and battery life?",
+    "back": "Wind forces the drone to use more power to maintain position and heading. Strong headwinds reduce speed and range; crosswinds require constant correction. Both drain batteries faster."
+  },
+  {
+    "id": 78,
+    "category": "loading",
+    "front": "What factors should you consider when planning a payload?",
+    "back": "Payload weight, attachment security, CG shift, effect on flight characteristics, increased power demand, reduced flight time, and weather conditions."
+  },
+  {
+    "id": 79,
+    "category": "loading",
+    "front": "How does altitude affect battery performance?",
+    "back": "At higher altitudes (lower air density), propellers are less efficient, requiring higher motor RPM and more current draw, which drains batteries faster."
+  },
+  {
+    "id": 80,
+    "category": "loading",
+    "front": "What happens if the CG is too far aft on a multirotor?",
+    "back": "The drone becomes tail-heavy, potentially causing pitch-up tendencies. This can make the drone difficult to control and lead to instability."
+  },
+  {
+    "id": 81,
+    "category": "loading",
+    "front": "What is the relationship between weight and flight time?",
+    "back": "As weight increases, the motors must work harder to produce enough thrust, drawing more current from the battery. Heavier loads significantly reduce flight time."
+  },
+  {
+    "id": 82,
+    "category": "loading",
+    "front": "How does hot weather affect drone performance?",
+    "back": "Hot temperatures reduce air density (higher density altitude), decreasing lift and propeller efficiency. Motors may also overheat more quickly, reducing performance and reliability."
+  },
+  {
+    "id": 83,
+    "category": "loading",
+    "front": "What should you check regarding batteries before flight?",
+    "back": "Charge level, physical condition (no swelling, damage, or punctures), voltage of individual cells, temperature, and number of charge cycles."
+  },
+  {
+    "id": 84,
+    "category": "loading",
+    "front": "What is the effect of a lateral CG imbalance?",
+    "back": "The drone will tend to drift or roll to the heavier side, requiring constant correction from the flight controller. This increases power consumption and reduces stability."
+  },
+  {
+    "id": 85,
+    "category": "loading",
+    "front": "Why is it important to follow manufacturer weight limits?",
+    "back": "Exceeding weight limits can overstress the airframe and motors, reduce control authority, violate Part 107 regulations, void warranties, and create unsafe flight conditions."
+  },
+  {
+    "id": 86,
+    "category": "operations",
+    "front": "What does IMSAFE stand for?",
+    "back": "Illness, Medication, Stress, Alcohol, Fatigue, Eating. It is a personal checklist to assess pilot fitness before flight."
+  },
+  {
+    "id": 87,
+    "category": "operations",
+    "front": "What does PAVE stand for?",
+    "back": "Pilot, Aircraft, enVironment, External pressures. A risk assessment framework for evaluating preflight hazards."
+  },
+  {
+    "id": 88,
+    "category": "operations",
+    "front": "What is the 3P model for aeronautical decision making?",
+    "back": "Perceive (identify hazards), Process (evaluate the risk level), Perform (take action to mitigate the risk)."
+  },
+  {
+    "id": 89,
+    "category": "operations",
+    "front": "Who is ultimately responsible for the safe operation of a drone flight?",
+    "back": "The Remote Pilot in Command (Remote PIC). They have final authority and responsibility for the operation."
+  },
+  {
+    "id": 90,
+    "category": "operations",
+    "front": "Is a visual observer required under Part 107?",
+    "back": "No, a visual observer is not required, but is recommended. If used, the VO must be able to see the drone and communicate effectively with the PIC."
+  },
+  {
+    "id": 91,
+    "category": "operations",
+    "front": "What is hyperventilation and how does it affect drone pilots?",
+    "back": "Rapid breathing that reduces carbon dioxide in the blood, causing tingling, dizziness, lightheadedness, and impaired judgment. To recover, slow your breathing rate."
+  },
+  {
+    "id": 92,
+    "category": "operations",
+    "front": "What is the Category 1 weight limit for operations over people?",
+    "back": "0.55 lbs (250 grams) or less at takeoff, including everything on board. No exposed rotating parts that could lacerate skin."
+  },
+  {
+    "id": 93,
+    "category": "operations",
+    "front": "What must anti-collision lights be visible for during night operations?",
+    "back": "At least 3 statute miles. The lights must be operational and visible during all night operations."
+  },
+  {
+    "id": 94,
+    "category": "operations",
+    "front": "What is a lost link procedure?",
+    "back": "A predetermined set of actions the drone automatically performs when it loses communication with the controller. Common actions include return-to-home, hover in place, or land immediately."
+  },
+  {
+    "id": 95,
+    "category": "operations",
+    "front": "What are the three types of Remote ID compliance?",
+    "back": "Standard Remote ID (built-in broadcast), Remote ID broadcast module (add-on device), or flying within an FAA-Recognized Identification Area (FRIA)."
+  },
+  {
+    "id": 96,
+    "category": "operations",
+    "front": "What items should be included in a preflight inspection?",
+    "back": "Airframe condition, propellers, battery charge and condition, control links, GPS signal, firmware updates, payload security, and all moving parts."
+  },
+  {
+    "id": 97,
+    "category": "operations",
+    "front": "What is crew resource management (CRM) in drone operations?",
+    "back": "Effective use of all available resources (people, equipment, information) to achieve safe and efficient operations. Includes clear communication and defined roles."
+  },
+  {
+    "id": 98,
+    "category": "operations",
+    "front": "What is spatial disorientation?",
+    "back": "A condition where a pilot loses awareness of orientation or position. For drone pilots, this often occurs when the drone is at distance and its orientation relative to the pilot is unclear."
+  },
+  {
+    "id": 99,
+    "category": "operations",
+    "front": "How does fatigue affect drone pilot performance?",
+    "back": "Fatigue slows reaction time, impairs judgment and decision-making, reduces attention span, and increases the likelihood of errors. Pilots should be well-rested before flying."
+  },
+  {
+    "id": 100,
+    "category": "operations",
+    "front": "What should you do if you see a manned aircraft approaching your area?",
+    "back": "Immediately yield right of way. Descend and/or move the drone away from the manned aircraft's flight path. Land if necessary."
+  },
+  {
+    "id": 101,
+    "category": "operations",
+    "front": "What is the purpose of a site survey before a drone operation?",
+    "back": "To identify potential hazards, obstacles, emergency landing areas, nearby airports, airspace restrictions, and people or property that could be affected by the operation."
+  },
+  {
+    "id": 102,
+    "category": "operations",
+    "front": "What is the 'sterile cockpit' concept applied to drone operations?",
+    "back": "During critical phases of flight (takeoff, landing, low altitude), the crew should limit conversation and activity to only what is essential for the operation."
+  },
+  {
+    "id": 103,
+    "category": "operations",
+    "front": "What is ADM (Aeronautical Decision Making)?",
+    "back": "A systematic approach to making decisions about flight operations by identifying hazards, assessing risks, and choosing the best course of action."
+  },
+  {
+    "id": 104,
+    "category": "operations",
+    "front": "What are the five hazardous attitudes in aviation?",
+    "back": "Anti-authority ('Don't tell me'), Impulsivity ('Do something quickly'), Invulnerability ('It won't happen to me'), Macho ('I can do it'), Resignation ('What's the use')."
+  },
+  {
+    "id": 105,
+    "category": "operations",
+    "front": "What is the phonetic alphabet letter for 'B'?",
+    "back": "Bravo. The NATO phonetic alphabet is used in radio communications: Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, etc."
+  },
+  {
+    "id": 106,
+    "category": "operations",
+    "front": "When should you establish emergency procedures for a drone flight?",
+    "back": "Before the flight, during preflight planning. Emergency procedures should be established for loss of link, flyaway, low battery, injuries, and other contingencies."
+  },
+  {
+    "id": 107,
+    "category": "operations",
+    "front": "What is the difference between visual line of sight (VLOS) and beyond visual line of sight (BVLOS)?",
+    "back": "VLOS means the PIC (or VO) can see the drone with unaided vision (except corrective lenses) at all times. BVLOS is beyond that range and requires a waiver under Part 107."
+  },
+  {
+    "id": 108,
+    "category": "operations",
+    "front": "What actions should be taken if a drone experiences a flyaway?",
+    "back": "Attempt to regain control, activate return-to-home if available, alert nearby people, note last known position, and report the incident if it causes injury or significant property damage."
+  },
+  {
+    "id": 109,
+    "category": "operations",
+    "front": "What is the role of a visual observer in a drone operation?",
+    "back": "To maintain visual contact with the drone and scan for hazards, traffic, and obstacles. The VO communicates this information to the Remote PIC to maintain situational awareness."
+  },
+  {
+    "id": 110,
+    "category": "operations",
+    "front": "What does DECIDE stand for in aeronautical decision making?",
+    "back": "Detect the problem, Estimate the need to react, Choose a course of action, Identify solutions, Do the action, Evaluate the effect."
+  },
+  {
+    "id": 111,
+    "category": "operations",
+    "front": "What is the antidote for the 'Anti-authority' hazardous attitude?",
+    "back": "'Follow the rules — they are usually right.' Anti-authority is the attitude of resisting rules and regulations ('Don't tell me what to do')."
+  },
+  {
+    "id": 112,
+    "category": "operations",
+    "front": "What is the antidote for the 'Impulsivity' hazardous attitude?",
+    "back": "'Not so fast — think first.' Impulsivity is the urge to act immediately without thinking through consequences ('Do something quickly!')."
+  },
+  {
+    "id": 113,
+    "category": "operations",
+    "front": "What is the antidote for the 'Invulnerability' hazardous attitude?",
+    "back": "'It could happen to me.' Invulnerability is the belief that accidents only happen to other people ('It won't happen to me')."
+  },
+  {
+    "id": 114,
+    "category": "operations",
+    "front": "What is the antidote for the 'Macho' hazardous attitude?",
+    "back": "'Taking chances is foolish.' Macho is the attitude of taking risks to prove oneself or impress others ('I can do it — watch this')."
+  },
+  {
+    "id": 115,
+    "category": "operations",
+    "front": "What is the antidote for the 'Resignation' hazardous attitude?",
+    "back": "'I'm not helpless — I can make a difference.' Resignation is the feeling of giving up or believing nothing you do matters ('What's the use?')."
+  },
+  {
+    "id": 116,
+    "category": "regulations",
+    "front": "What is IACRA?",
+    "back": "The Integrated Airman Certification and Rating Application system. After passing the UAG knowledge test, you apply for your Remote Pilot Certificate through IACRA, which triggers a TSA background check. A temporary certificate is typically issued within days."
+  },
+  {
+    "id": 117,
+    "category": "regulations",
+    "front": "How can a Part 61 pilot obtain a Remote Pilot Certificate without taking the proctored knowledge test?",
+    "back": "A holder of a Part 61 pilot certificate (other than student pilot) with a current flight review within the preceding 24 calendar months can complete an FAA online training course through FAASTeam instead of taking the proctored UAG test."
+  },
+  {
+    "id": 118,
+    "category": "airspace",
+    "front": "What does a UASFM ceiling of 0 mean for LAANC?",
+    "back": "A ceiling of 0 on a UAS Facility Map means no automatic LAANC authorization is available for that grid cell. You must submit a Further Coordination request through the FAA DroneZone, which can take up to 90 days for approval."
+  },
+  {
+    "id": 119,
+    "category": "airspace",
+    "front": "How do you read airspace altitude fractions on a sectional chart?",
+    "back": "Fractions show ceiling/floor in hundreds of feet MSL. Example: '80/20' means ceiling at 8,000 ft MSL and floor at 2,000 ft MSL. 'SFC' means the floor is at the surface. '100/SFC' = surface to 10,000 ft MSL."
+  },
+  {
+    "id": 120,
+    "category": "airspace",
+    "front": "How do you convert MSL altitude to AGL?",
+    "back": "Height AGL = Altitude MSL minus Ground Elevation MSL. Example: If an obstacle is 1,548 ft MSL and ground elevation is 1,241 ft MSL, the obstacle is 307 ft AGL (1,548 - 1,241 = 307)."
+  },
+  {
+    "id": 121,
+    "category": "weather",
+    "front": "What is radiation fog and when does it form?",
+    "back": "Radiation fog forms on clear, calm nights when the ground cools rapidly by radiating heat. It is most common in valleys and low-lying areas. It typically 'burns off' after sunrise as the sun heats the ground. Check temp/dewpoint spread — when within 2°C, expect fog."
+  },
+  {
+    "id": 122,
+    "category": "weather",
+    "front": "What is advection fog?",
+    "back": "Advection fog forms when warm, moist air moves over a cooler surface. Unlike radiation fog, it can persist during the day and is not dependent on calm winds. It is common along coastlines where warm oceanic air moves over cold coastal waters."
+  },
+  {
+    "id": 123,
+    "category": "weather",
+    "front": "What weather is associated with a cold front?",
+    "back": "Cold fronts move fast with a steep slope. They produce a narrow band of intense weather: thunderstorms, heavy rain, gusty winds, and turbulence. After passage, conditions typically clear quickly with cooler temperatures and improved visibility."
+  },
+  {
+    "id": 124,
+    "category": "weather",
+    "front": "What is a Convective SIGMET?",
+    "back": "A Convective SIGMET warns of severe thunderstorms, tornadoes, or lines of thunderstorms (squall lines). They are valid for 2 hours and cover areas where convective activity poses a significant hazard to all aircraft. Do not fly near areas covered by a Convective SIGMET."
+  },
+  {
+    "id": 125,
+    "category": "loading",
+    "front": "What are the four forces of flight?",
+    "back": "Lift (upward, opposes weight), Weight (downward, force of gravity), Thrust (forward, produced by propellers), and Drag (backward, air resistance). In level flight: Lift = Weight and Thrust = Drag."
+  },
+  {
+    "id": 126,
+    "category": "loading",
+    "front": "What is load factor and how does it change in turns?",
+    "back": "Load factor is the ratio of lift to weight (in G's). In level flight = 1G. At 30° bank ≈ 1.15G, at 45° ≈ 1.41G, at 60° = 2G (double the weight). Higher load factor means more power consumption and structural stress."
+  },
+  {
+    "id": 127,
+    "category": "operations",
+    "front": "What is Crew Resource Management (CRM)?",
+    "back": "CRM is the effective use of all available resources (people, equipment, information) to achieve safe flight operations. Core principles: clear communication, situational awareness, workload management, and structured decision making. FAA research shows ADM training reduces errors by 10-50%."
+  },
+  {
+    "id": 128,
+    "category": "operations",
+    "front": "How long does full dark adaptation take, and what can reset it?",
+    "back": "Full dark adaptation takes approximately 30 minutes. Even brief exposure to bright light (screens, flashlights) can reset it, requiring another 30-minute adaptation period. Use red lighting and dim screens to protect night vision."
+  },
+  {
+    "id": 129,
+    "category": "operations",
+    "front": "What is autokinesis?",
+    "back": "Autokinesis is a visual illusion where a stationary light in darkness appears to move. It can occur during night drone operations and may cause the pilot to make unnecessary control corrections or lose spatial orientation. Use reference points to counter this illusion."
+  },
+  {
+    "id": 130,
+    "category": "operations",
+    "front": "Under 14 CFR 107.21, when can a Remote PIC deviate from Part 107 rules?",
+    "back": "The Remote PIC may deviate from any rule of Part 107 to the extent necessary to meet an emergency. However, the PIC must report any deviation to the FAA upon request."
+  }
+]
