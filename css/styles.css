@@ -2108,3 +2108,13 @@ button:focus-visible,
     color: var(--text-light);
     font-size: 0.92rem;
 }
+
+/* ========================================
+   Quick Reference page helpers
+   ======================================== */
+.ref-list { list-style: none; padding: 0; }
+.ref-row { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.ref-row-lg { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.ref-row-tight { padding: 8px 0; }
+.ref-indent { padding-left: 24px; }
+.ref-accent { color: var(--primary); }
