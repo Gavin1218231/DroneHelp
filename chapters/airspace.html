@@ -927,6 +927,7 @@
     <script src="../js/assistant.js" defer></script>
     <script src="../js/ui.js" defer></script>
     <script>
+      document.addEventListener('DOMContentLoaded', function () {
         var deck = new SlideDeck('slideDeck1');
 
         var quiz = new QuizEngine('chapterQuiz', [
@@ -1083,6 +1084,7 @@
         ], 'airspace');
 
         Progress.markChapterRead('airspace');
+      });
     </script>
     <script>
     if ('serviceWorker' in navigator) {
