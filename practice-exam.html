@@ -157,14 +157,14 @@
         {
             id: 2,
             category: "regulations",
-            question: "A remote pilot certificate issued under Part 107 must be renewed by completing recurrent training or testing every:",
+            question: "A remote pilot certificate issued under Part 107 is kept current by completing recurrent training every:",
             options: [
                 "12 calendar months",
                 "24 calendar months",
                 "36 calendar months"
             ],
             answer: 1,
-            explanation: "Under 14 CFR 107.65, a remote pilot must complete recurrent training or testing every 24 calendar months to maintain the privileges of the certificate."
+            explanation: "Under 14 CFR 107.65, a remote pilot must complete recurrent training every 24 calendar months to maintain the privileges of the certificate. Since April 2021 this is a free online training course — there is no longer a recurrent knowledge test at a testing center."
         },
         {
             id: 3,
@@ -303,7 +303,7 @@
         {
             id: 14,
             category: "airspace",
-            question: "A magenta shaded area on a sectional chart extending from the surface up to but not including a designated altitude indicates:",
+            question: "A dashed magenta line on a sectional chart surrounding an airport and extending from the surface up to a designated altitude indicates:",
             options: [
                 "Class C airspace",
                 "Class D airspace",
@@ -387,14 +387,14 @@
         {
             id: 21,
             category: "airspace",
-            question: "On a sectional chart, the number '30' inside a scalloped magenta line surrounding an airport indicates the UAS Facility Map ceiling for that grid is:",
+            question: "A UAS Facility Map (UASFM) shows a grid value of '50' over your planned operating area. What does this value represent?",
             options: [
-                "30 feet AGL",
-                "300 feet AGL",
-                "3,000 feet MSL"
+                "The maximum altitude in feet AGL that LAANC will automatically authorize in that grid",
+                "The floor of controlled airspace in that grid, in hundreds of feet MSL",
+                "The maximum groundspeed in knots permitted in that grid"
             ],
-            answer: 1,
-            explanation: "UAS Facility Map altitudes shown on sectional charts represent the maximum altitude in tens of feet AGL at which automated LAANC authorization can be obtained. A value of '30' means 300 feet AGL."
+            answer: 0,
+            explanation: "UASFM grid values are ceilings expressed in feet AGL up to which LAANC grants near-automatic authorization in controlled airspace. Common values are 0, 50, 100, 150, 200, 300, and 400 feet; a value of 0 means no automatic approval (further coordination is required). These maps are viewed in LAANC apps and FAA UASFM data — they are not depicted on VFR sectional charts."
         },
         {
             id: 22,
@@ -496,7 +496,7 @@
         },
         {
             id: 30,
-            category: "weather",
+            category: "loading",
             question: "A remote pilot is flying an aggressive mapping pattern with steep 60-degree bank turns. Compared to straight-and-level flight, what load factor is being placed on the aircraft during these turns?",
             options: [
                 "Approximately 1.15G — only slightly more than level flight",

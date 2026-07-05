@@ -33,7 +33,7 @@
     "id": 6,
     "category": "regulations",
     "front": "How long is a Remote Pilot Certificate valid before recurrent training is required?",
-    "back": "24 calendar months. You must complete recurrent training or testing to maintain currency."
+    "back": "24 calendar months. You must complete the free online recurrent training course to maintain currency (since April 2021 there is no recurrent knowledge test at a testing center)."
   },
   {
     "id": 7,
@@ -129,7 +129,7 @@
     "id": 22,
     "category": "regulations",
     "front": "Where must FAA registration markings be placed on the drone?",
-    "back": "On the exterior surface of the aircraft or in an enclosed, accessible compartment. The registration number must be legible."
+    "back": "On an external surface of the aircraft, where the registration number is legible and readable without tools. (Since February 2019, placing it inside an enclosed compartment is no longer permitted.)"
   },
   {
     "id": 23,
@@ -147,7 +147,7 @@
     "id": 25,
     "category": "regulations",
     "front": "What is the penalty for operating a drone in an unsafe or illegal manner?",
-    "back": "Civil penalties up to $27,500 per violation. Criminal penalties can include fines up to $250,000 and/or imprisonment for up to 3 years."
+    "back": "Enforcement ranges from warning letters and civil penalties (which can exceed $30,000 per violation — the exact maximum is adjusted for inflation each year) to suspension or revocation of your remote pilot certificate. Violations that endanger the safety of aircraft can also carry criminal penalties."
   },
   {
     "id": 26,
@@ -759,7 +759,7 @@
     "id": 127,
     "category": "operations",
     "front": "What is Crew Resource Management (CRM)?",
-    "back": "CRM is the effective use of all available resources (people, equipment, information) to achieve safe flight operations. Core principles: clear communication, situational awareness, workload management, and structured decision making. FAA research shows ADM training reduces errors by 10-50%."
+    "back": "CRM is the effective use of all available resources (people, equipment, information) to achieve safe flight operations. Core principles: clear communication, situational awareness, workload management, and structured decision making. Good ADM and CRM measurably reduce pilot error."
   },
   {
     "id": 128,

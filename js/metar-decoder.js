@@ -216,11 +216,19 @@ var MetarDecoder = (function () {
                 'Ceiling and visibility OK: visibility >= 10 km, no clouds below 5,000 ft / MSA, no significant weather',
                 'visibility');
         }
-        if (tok === 'P6SM') {
-            return mkToken(tok, 'Visibility', 'Visibility greater than 6 statute miles', 'visibility');
+        // P-prefixed = "greater than" (e.g. P6SM)
+        var mp = tok.match(/^P(\d{1,2})SM$/);
+        if (mp) {
+            return mkToken(tok, 'Visibility', 'Visibility greater than ' + mp[1] + ' statute miles', 'visibility');
         }
-        if (tok === 'M1/4SM') {
-            return mkToken(tok, 'Visibility', 'Visibility less than 1/4 statute mile', 'visibility');
+        // M-prefixed = "less than" (e.g. M1/4SM, M1/8SM, M1SM)
+        var mm = tok.match(/^M(\d)\/(\d)SM$/);
+        if (mm) {
+            return mkToken(tok, 'Visibility', 'Visibility less than ' + mm[1] + '/' + mm[2] + ' statute mile', 'visibility');
+        }
+        mm = tok.match(/^M(\d{1,2})SM$/);
+        if (mm) {
+            return mkToken(tok, 'Visibility', 'Visibility less than ' + mm[1] + ' statute mile(s)', 'visibility');
         }
         // Whole SM: e.g. 10SM, 2SM
         var m = tok.match(/^(\d{1,2})SM$/);
