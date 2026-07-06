@@ -3,7 +3,7 @@
     "id": 1,
     "category": "regulations",
     "front": "What is the maximum altitude for sUAS under Part 107?",
-    "back": "400 feet AGL, or higher if within a 400-foot radius of a structure and not flying above the top of that structure."
+    "back": "400 feet AGL. You may exceed 400 feet only when flying within a 400-foot radius of a structure, and then no higher than 400 feet above the structure’s uppermost limit."
   },
   {
     "id": 2,
@@ -57,7 +57,7 @@
     "id": 10,
     "category": "regulations",
     "front": "Can you fly a drone from a moving vehicle under Part 107?",
-    "back": "Yes, but only over sparsely populated areas and the operation cannot be for compensation or hire from the moving vehicle (unless in certain approved circumstances)."
+    "back": "Yes, but only over sparsely populated areas, and you may not transport property for compensation or hire from the moving vehicle."
   },
   {
     "id": 11,
@@ -105,7 +105,7 @@
     "id": 18,
     "category": "regulations",
     "front": "What are the four categories for operations over people?",
-    "back": "Category 1: under 0.55 lbs. Category 2: must not cause injury exceeding certain thresholds. Category 3: similar to Cat 2 but restricted to certain areas. Category 4: must have an airworthiness certificate."
+    "back": "Category 1: 0.55 lb (250 g) or less with no exposed rotating parts that could lacerate skin. Category 2: must not cause injury above a set threshold (requires a Declaration of Compliance). Category 3: like Category 2 but may not operate over open-air assemblies. Category 4: must hold an airworthiness certificate."
   },
   {
     "id": 19,
@@ -189,7 +189,7 @@
     "id": 32,
     "category": "airspace",
     "front": "Class E airspace starting at 700 feet AGL is shown by what?",
-    "back": "A faded (vignette) magenta border, shaded on the outside."
+    "back": "A faded (vignette) magenta shading around the airport — the magenta fade marks where Class E begins at 700 feet AGL."
   },
   {
     "id": 33,
