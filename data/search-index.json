@@ -336,7 +336,7 @@
     "keywords": "loading performance weight balance center of gravity cg density altitude battery lipo load factor four forces payload"
   },
   {
-    "title": "Maximum Takeoff Weight (55 lb)",
+    "title": "Maximum Takeoff Weight (under 55 lb)",
     "type": "Performance",
     "url": "chapters/loading-performance.html",
     "snippet": "Total takeoff weight including payload must be under 55 pounds.",
