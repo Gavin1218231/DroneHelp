@@ -106,7 +106,7 @@
         for (var i = 0; i < results.length; i++) {
             var e = results[i].e;
             html += '<li class="search-result">' +
-                '<a href="' + e.url + '">' +
+                '<a href="' + escapeHtml(e.url) + '">' +
                 '<div class="search-result-head">' +
                 '<span class="search-result-title">' + escapeHtml(e.title) + '</span>' +
                 '<span class="search-result-type">' + escapeHtml(e.type) + '</span>' +
