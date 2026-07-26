@@ -19,6 +19,17 @@ var Dashboard = {
     // Threshold below which we recommend more exam practice (avg of last 3 attempts).
     RECENT_AVG_THRESHOLD: 85,
 
+    // Escape any value that reaches innerHTML. Progress data comes from
+    // localStorage, which another script on this origin could tamper with.
+    escapeHtml: function (v) {
+        return String(v == null ? '' : v)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    },
+
     init: function () {
         var self = this;
         // Derive the real flashcard count so mastery math stays accurate as
@@ -99,7 +110,7 @@ var Dashboard = {
             var y = yToPx(attempts[i].pct);
             pathParts.push((i === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1));
             dotsSvg += '<circle class="trend-dot" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="4">';
-            dotsSvg += '<title>Attempt ' + (i + 1) + ': ' + attempts[i].pct + '%</title>';
+            dotsSvg += '<title>Attempt ' + (i + 1) + ': ' + Number(attempts[i].pct) + '%</title>';
             dotsSvg += '</circle>';
         }
 
@@ -121,8 +132,8 @@ var Dashboard = {
         svg += '</svg>';
 
         // Summary text under the chart.
-        var first = attempts[0].pct;
-        var last = attempts[n - 1].pct;
+        var first = Number(attempts[0].pct);
+        var last = Number(attempts[n - 1].pct);
         var delta = last - first;
         var deltaText;
         if (delta > 0) {
@@ -182,9 +193,9 @@ var Dashboard = {
                 html += '<div class="strength-row">' +
                     '<div class="strength-info">' +
                         '<span class="strength-name"><a href="' + row.href + '">' + row.label + '</a></span>' +
-                        '<span class="strength-score">' + row.pct + '%</span>' +
+                        '<span class="strength-score">' + Number(row.pct) + '%</span>' +
                     '</div>' +
-                    '<div class="strength-track"><div class="strength-fill ' + cls + '" style="width:' + row.pct + '%"></div></div>' +
+                    '<div class="strength-track"><div class="strength-fill ' + cls + '" style="width:' + Number(row.pct) + '%"></div></div>' +
                 '</div>';
             }
         }
@@ -217,7 +228,7 @@ var Dashboard = {
         if (lowestChapter && lowestPct < 90) {
             recs.push({
                 priority: lowestPct < 70,
-                text: 'Your weakest chapter is <strong>' + lowestChapter.label + ' (' + lowestPct + '%)</strong> — ' +
+                text: 'Your weakest chapter is <strong>' + this.escapeHtml(lowestChapter.label) + ' (' + Number(lowestPct) + '%)</strong> — ' +
                       '<a href="' + lowestChapter.href + '">review the chapter slides and retake the quiz</a>.'
             });
         }
@@ -235,7 +246,7 @@ var Dashboard = {
         if (masteryPct < 30) {
             recs.push({
                 priority: false,
-                text: 'Your flashcard mastery is low (<strong>' + mastered.length + ' / ' + this.TOTAL_FLASHCARDS + '</strong>) — ' +
+                text: 'Your flashcard mastery is low (<strong>' + Number(mastered.length) + ' / ' + Number(this.TOTAL_FLASHCARDS) + '</strong>) — ' +
                       '<a href="flashcards.html">try Spaced Review mode</a> to lock in the facts.'
             });
         }
@@ -250,7 +261,7 @@ var Dashboard = {
                 recs.push({
                     priority: recentAvg < 70,
                     text: 'Your last ' + lastN.length + ' practice exam' + (lastN.length === 1 ? '' : 's') +
-                          ' averaged <strong>' + recentAvg + '%</strong>, below the 85% confidence target — ' +
+                          ' averaged <strong>' + Number(recentAvg) + '%</strong>, below the 85% confidence target — ' +
                           '<a href="practice-exam.html">take another</a> to keep building stamina.'
                 });
             }
@@ -296,12 +307,12 @@ var Dashboard = {
         var html = '';
         for (var i = 0; i < recent.length; i++) {
             var a = recent[i];
-            var dateStr = this.formatDate(a.date);
+            var dateStr = this.escapeHtml(this.formatDate(a.date));
             var passCls = a.pct >= 70 ? 'pass' : 'fail';
             html += '<li>' +
-                '<span><strong>' + a.score + ' / ' + a.total + '</strong> ' +
+                '<span><strong>' + Number(a.score) + ' / ' + Number(a.total) + '</strong> ' +
                 '<span class="activity-date">— ' + dateStr + '</span></span>' +
-                '<span class="activity-score ' + passCls + '">' + a.pct + '%</span>' +
+                '<span class="activity-score ' + passCls + '">' + Number(a.pct) + '%</span>' +
             '</li>';
         }
         container.innerHTML = html;
